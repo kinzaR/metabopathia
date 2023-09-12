@@ -13,65 +13,69 @@ cat("Welcome to MetaboPathia")
 # library("e1071", warn.conflicts = F)
 # suppressPackageStartupMessages(library(R.utils, warn.conflicts = F))
 library(hipathia, warn.conflicts = F)
-#### INPUT DATA (from web)
-args <- commandArgs(trailingOnly = F, asValues = T,excludeEnvVars = F)
-codebase <- paste0(dirname(normalizePath(args[["file"]])),"/")
 
-# species
-species <- args[['species']]
-
-# Genomics: gene variant List file (optional/if there is variants)
-variant_file <- args[['variant_file']]
-
-# Transcriptomics/protemoics: expression
-## custom exp file
-custom <- args[["custom"]] # boolean
-exp_file <- args[['exp_file']]
-## specific tissue from healthi Gtex
-# this will be removed because I will launch it in parallel
-# in this code I will use either custom or gtex tissue
-# TissueList <- args[['TissueList']]
-Tissue <- args[['tissue']]
-
-# metabolomics
-met_file <- args[['met_file']]
-
-# param
-unadjusted <- args[["unadjusted"]] # do not adjust pvalue
-paired <- args[["paired"]] # do not adjust pvalue
-
-#design: here I have to think which scenario will we allow
-design_type <- args[['design_type']]
-design_file <- args[['design_file']]
-cond1 <- args[['cond1']]
-cond2 <- args[['cond2']]
-
-# method parameters
-pathways_list <- args[['pathways_list']]
-decompose <- args[['decompose']]
-difexp <- args[['difexp']]
-#difexp <- TRUE  overwritten / but removed now because has to be false in prediction test
-
-# functional analysis
-go <- args[['go']]
-uniprot <- args[['uniprot']]
-
-# output
-output_folder <- paste(args[['output_folder']], collapse=" ")
-
-verbose <- args[['verbose']]
-report <- args[['report']]
-
-## EXAMPLE 1
+################################################################################
+# #### INPUT DATA (from web) ## START
+# args <- commandArgs(trailingOnly = F, asValues = T,excludeEnvVars = F)
+# codebase <- paste0(dirname(normalizePath(args[["file"]])),"/")
+# 
+# # species
+# species <- args[['species']]
+# 
+# # Genomics: gene variant List file (optional/if there is variants)
+# variant_file <- args[['variant_file']]
+# 
+# # Transcriptomics/protemoics: expression
+# ## custom exp file
+# custom <- args[["custom"]] # boolean
+# exp_file <- args[['exp_file']]
+# ## specific tissue from healthi Gtex
+# # this will be removed because I will launch it in parallel
+# # in this code I will use either custom or gtex tissue
+# # TissueList <- args[['TissueList']]
+# Tissue <- args[['tissue']]
+# 
+# # metabolomics
+# met_file <- args[['met_file']]
+# 
+# # param
+# unadjusted <- args[["unadjusted"]] # do not adjust pvalue
+# paired <- args[["paired"]] # do not adjust pvalue
+# 
+# #design: here I have to think which scenario will we allow
+# design_type <- args[['design_type']]
+# design_file <- args[['design_file']]
+# cond1 <- args[['cond1']]
+# cond2 <- args[['cond2']]
+# 
+# # method parameters
+# pathways_list <- args[['pathways_list']]
+# decompose <- args[['decompose']]
+# difexp <- args[['difexp']]
+# #difexp <- TRUE  overwritten / but removed now because has to be false in prediction test
+# 
+# # functional analysis
+# go <- args[['go']]
+# uniprot <- args[['uniprot']]
+# 
+# # output
+# output_folder <- paste(args[['output_folder']], collapse=" ")
+# 
+# verbose <- args[['verbose']]
+# report <- args[['report']]
+# #### INPUT DATA (from web) ## END
+################################################################################
+## EXAMPLE 1: brca_fake_integration
 codebase <- dirname(rstudioapi::getActiveDocumentContext()$path)
 setwd(codebase)
 species <- "hsa"
 pathways_list <- c("hsa04071")
-exp_file <- "data_examples/brca_example1_40__exp.txt"
-design_file <- "data_examples/brca_example1_40__design.txt"
-met_file <-"data_examples/metabo_brca_data.tsv"
-cond1 <- "Tumor"
-cond2 <- "Normal"
+exp_file <- "data_examples/brca_fake_integration/exp_toy_brca_data_fake.tsv"
+design_file <- "data_examples/brca_fake_integration/metabo_brca_design.tsv"
+met_file <-"data_examples/brca_fake_integration/metabo_brca_data.tsv"
+cond1 <- "TUMOR"
+cond2 <- "NORMAL"
+paired <- T # not sure !
 decompose <- F
 difexp <- T
 go <- T
@@ -126,7 +130,7 @@ if(!exists("decompose") || is.null(decompose)) decompose <- F
 if(!exists("go") || is.null(go)) go <- F
 if(!exists("uniprot") || is.null(uniprot)) uniprot <- F
 if(!exists("difexp") || is.null(difexp)) difexp <- F
-if(!exists("analysis") || is.null(analysis)) analysis <- "compare"
+if(!exists("analysis") || is.null(analysis)) analysis <- "compare"# or integration .... 
 if(!exists("unadjusted") || is.null(unadjusted)) unadjusted <- F
 if(!exists("paired") || is.null(paired)) {
   paired <- F
@@ -199,50 +203,47 @@ if(dataset=="gex"){
 }
 # load metabolite concentrations
 metabo_data <- read.table(met_file,header=T,sep="\t",stringsAsFactors=F,row.names = 1,comment.char="",check.names=F)
+# HERE: I have to translate_data() from metabo names to KEGG IDs
+
 # load design
 des <- read.table(design_file,header=F,stringsAsFactors=F)
-  #paired data has to be ordred
+#paired data has to be ordred # HERE I am assuming that they are ordered forthe fake example
   #if(paired==F){
-  colnames(des) <- c("sample",c("group","value")[(design_type == "continuous")+1])
-  cat("colnames(exp) ")
-  print(colnames(exp) )
+colnames(des) <- c("sample",c("group","value")[(design_type == "continuous")+1])
   #} else {
   #  colnames(des) <- c("sample",c("group","value")[(design_type == "continuous")+1], "donor")
   #}
-  rownames(des) <- des$sample
-  if(design_type == "categorical"){
-    des <- des[ des$group==cond1 | des$group==cond2, ]
-  }
-  
-  sel_samples <- intersect(colnames(exp),rownames(des))
+rownames(des) <- des$sample
+# Filter only the cond1 and cond2
+if(design_type == "categorical"){
+  des <- des[ des$group==cond1 | des$group==cond2, ]
+}
+# Make sure that the exp data is the same in the design file
+sel_samples <- intersect(colnames(exp),rownames(des))
+if(length(sel_samples)==0){
+  stop("ERROR: No intersection between samples names in the Expression matrix and the Design matrix; please check your input data ")
+}
+# at least 3 complete pairs of observation
+if(length(sel_samples)<3){
+  stop("ERROR: Not enough samples in the Expression matrix (at least 3 complete pairs); please check your input data ")
+}
+exp <- exp[,sel_samples]
+des <- des[sel_samples,]
+#paired data suppose t o be ordred
+#  if(paired==T & FALSE){
+#   sample_order <- order(des$donor)
+#    ordered_samples <- des[sample_order,"sample"]
+#    exp <- exp[,ordered_samples]
+#    des <- des[ordered_samples,]
+#  }
 
-  if(length(sel_samples)==0){
-    stop("ERROR: No intersection between samples names in the Expression matrix and the Design matrix; please check your input data ")
-  }
-  # at least 3 complete pairs of observation
-  if(length(sel_samples)<3){
-    stop("ERROR: Not enough samples in the Expression matrix (at least 3 complete pairs); please check your input data ")
-  }
-  exp <- exp[,sel_samples]
-  des <- des[sel_samples,]
-  
-  #paired data suppose t o be ordred
-  #  if(paired==T & FALSE){
-  #   sample_order <- order(des$donor)
-  #    ordered_samples <- des[sample_order,"sample"]
-  #    exp <- exp[,ordered_samples]
-  #    des <- des[ordered_samples,]
-  #  }
-  View(des)
-  View(head(exp))
 #### PREPROCESS DATA
 status("20")
 
 #### RUN
-
-# pretty results
 cat("Propagating signaling...\n")
-### here I have to check pathways metab-nodes 
+### here I have to check pathways metab-nodes
+names(pathways)
 # and maybe  merge data 
 hidata <- hipathia::hipathia(exp, pathways, uni.terms = TRUE, GO.terms = TRUE,
                    decompose = FALSE, verbose=TRUE)
