@@ -248,7 +248,9 @@ names(pathways)
 hidata <- hipathia::hipathia(exp, pathways, uni.terms = TRUE, GO.terms = TRUE,
                    decompose = FALSE, verbose=TRUE)
 # source from file 
-metdata <- metabopathia(exp, metabo_data, pathways, uni.terms = TRUE, GO.terms = TRUE,
+source("utils.R")
+metabo_pathways <- add_metabolite_to_mgi(pathways)
+metdata <- metabopathia(exp, metabo_data, metabo_pathways, uni.terms = TRUE, GO.terms = TRUE,
                    decompose = FALSE, verbose=TRUE)
 
 status("50")

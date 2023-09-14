@@ -1,9 +1,3 @@
-# ### to be removed 
-# pathigraphs <- pathways$pathigraphs
-# x <- pathways$pathigraphs$hsa04071
-# mgi <- pathways
-# ##############################################
-
 library(igraph)
 library(stringr)
 
@@ -22,15 +16,30 @@ add_param_metaboID <- function(ig){
   V(ig)$metaboID <- str_extract(V(ig)$tooltip, "(?<=href=http://www.kegg.jp/dbget-bin/www_bget\\?)[^>]+")
   return(ig)
 }
+add_param_metaboID_subgraphs <- function(subgraphs){
+  # subgraphs <-pathigraphs[[pathway]]$subgraphs
+  for (sg in names(subgraphs)){
+    subgraphs[[sg]] <-add_param_metaboID(subgraphs[[sg]])
+  }
+  return(subgraphs)
+}
+
 metabo_graphs <-function(pathigraphs){
   newpathigraphs <- list()
   for (pathway in names(pathigraphs)) {
     newpathigraphs[[pathway]]$graph <- add_param_metaboID(pathigraphs[[pathway]]$graph)
-    # no, because thse has no fnction nodes !!!!!!!!!!!!!!!!
-    subs <- hipathia:::create_subgraphs(newpathigraphs[[pathway]]$graph)
-    newpathigraphs[[pathway]]$subgraphs <- subs[[1]]
-    newpathigraphs[[pathway]]$subgraphs.mean.length <- subs[[2]]
+    newpathigraphs[[pathway]]$subgraphs <- add_param_metaboID_subgraphs(pathigraphs[[pathway]]$subgraphs)
+    newpathigraphs[[pathway]]$subgraphs.mean.length <- pathigraphs[[pathway]]$subgraphs.mean.length
+    newpathigraphs[[pathway]]$effector.subgraphs <- add_param_metaboID_subgraphs(pathigraphs[[pathway]]$effector.subgraphs)
+    newpathigraphs[[pathway]]$path.name <- pathigraphs[[pathway]]$path.name
+    newpathigraphs[[pathway]]$path.id <- pathigraphs[[pathway]]$path.id
+    newpathigraphs[[pathway]]$label.id <- pathigraphs[[pathway]]$label.id
+    newpathigraphs[[pathway]]$subgraphs_funs <- add_param_metaboID_subgraphs(pathigraphs[[pathway]]$subgraphs_funs)
+    newpathigraphs[[pathway]]$effector.subgraphs_funs <- add_param_metaboID_subgraphs(pathigraphs[[pathway]]$effector.subgraphs_funs)
+    newpathigraphs[[pathway]]$rl <- pathigraphs[[pathway]]$rl
+    newpathigraphs[[pathway]]$fixed <- pathigraphs[[pathway]]$fixed
   }
+  return(newpathigraphs)
 }
 add_metabolite_to_mgi <- function(mgi, verbose = FALSE){
   newmgi <- list()
@@ -40,5 +49,7 @@ add_metabolite_to_mgi <- function(mgi, verbose = FALSE){
   newmgi$path.norm  <- mgi$path.norm ## to change?
   newmgi$eff.norm  <- mgi$eff.norm ## to change?
   newmgi$pathigraphs <- metabo_graphs(mgi$pathigraphs)
+  newmgi$all.labelids <- mgi$all.labelids
+  newmgi$group.by <- mgi$group.by
   return(newmgi)
 }
