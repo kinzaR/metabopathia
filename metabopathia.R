@@ -1,10 +1,8 @@
+metaginfo <- metabo_pathways
 metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE, GO.terms = FALSE, 
           custom.terms = NA, sel_assay = 1, decompose = FALSE, maxnum = 100, 
           verbose = TRUE, tol = 1e-06, test = TRUE) {
-  # normalize both  data as a block ?! 
-  
-  genes_vals <- normalize_data(genes_vals, by_quantiles = FALSE, 
-                               by_gene = FALSE, percentil = FALSE)
+
   if (is(genes_vals, "SummarizedExperiment")) {
     coldata <- colData(genes_vals)
     genes_vals <- assay(genes_vals, sel_assay)
@@ -18,12 +16,13 @@ metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE,
       stop("Missing input matrix")
     if (is.null(metaginfo)) 
       stop("Missing pathways object")
-    test_matrix(genes_vals)
-    test_pathways_object(metaginfo)
-    test_tolerance(tol)
+    hipathia:::test_matrix(genes_vals)
+    hipathia:::test_pathways_object(metaginfo)
+    hipathia:::test_tolerance(tol)
   }
   pathigraphs <- metaginfo$pathigraphs
-  genes_vals <- add_missing_genes(genes_vals, genes = metaginfo$all.genes)
+  genes_vals <- hipathia:::add_missing_genes(genes_vals, genes = metaginfo$all.genes)
+  genes_vals <- add_missing_metabolites(metabo_vals, metabolites = metaginfo$all.metabolite)
   results <- list()
   if (verbose == TRUE) 
     cat("Computing pathways...\n")

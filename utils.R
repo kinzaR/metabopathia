@@ -53,3 +53,20 @@ add_metabolite_to_mgi <- function(mgi, verbose = FALSE){
   newmgi$group.by <- mgi$group.by
   return(newmgi)
 }
+
+add_missing_metabolites <- function(metabo_vals, metabolites, default = NULL){
+  if (is.null(default)) 
+    default <- stats::median(metabo_vals) # here I have to add more sophisticated method
+  missing_metabolites <- setdiff(metabolites, rownames(metabo_vals))
+  if (length(missing_metabolites > 0)) {
+    fakemat <- default + matrix(0, nrow = length(missing_metabolites), 
+                                ncol = ncol(metabo_vals))
+    rownames(fakemat) <- missing_metabolites
+    colnames(fakemat) <- colnames(metabo_vals)
+    metabo_vals <- rbind(metabo_vals, fakemat)
+    message("Added missing genes: ", length(missing_metabolites), 
+            " (", round(length(missing_metabolites)/nrow(metabo_vals) * 
+                          100, digits = 2), "%)")
+  }
+  return(metabo_vals)
+}

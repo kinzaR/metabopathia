@@ -244,12 +244,20 @@ status("20")
 cat("Propagating signaling...\n")
 ### here I have to check pathways metab-nodes
 names(pathways)
-# and maybe  merge data 
-hidata <- hipathia::hipathia(exp, pathways, uni.terms = TRUE, GO.terms = TRUE,
-                   decompose = FALSE, verbose=TRUE)
+# # and maybe  merge data 
+# hidata <- hipathia::hipathia(exp, pathways, uni.terms = TRUE, GO.terms = TRUE,
+#                    decompose = FALSE, verbose=TRUE)
 # source from file 
 source("utils.R")
 metabo_pathways <- add_metabolite_to_mgi(pathways)
+# test if the max is dif from min 
+# normalize both  data as a block ?! 
+# ensure that data from different sources are on a comparable scale 
+# they contribute equally to downstream analysis?
+genes_vals <- normalize_data(exp, by_quantiles = FALSE, 
+                             by_gene = FALSE, percentil = FALSE)
+metabo_vals <- normalize_data(as.matrix(metabo_data), by_quantiles = FALSE, 
+                             by_gene = FALSE, percentil = FALSE)
 metdata <- metabopathia(exp, metabo_data, metabo_pathways, uni.terms = TRUE, GO.terms = TRUE,
                    decompose = FALSE, verbose=TRUE)
 
