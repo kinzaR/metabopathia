@@ -1,7 +1,7 @@
 library(igraph)
 library(stringr)
 
-all_needed_metabolites <- function (pathigraphs) 
+all_needed_metabolites <- function (pathigraphs)
 {
   metabolite <- unique(unlist(sapply(pathigraphs, function(x) {
     tooltip<-V(x$graph)$tooltip[which(V(x$graph)$shape == 
@@ -69,4 +69,41 @@ add_missing_metabolites <- function(metabo_vals, metabolites, default = NULL){
                           100, digits = 2), "%)")
   }
   return(metabo_vals)
+}
+
+translate_metab_matrix <- function (metabo_vals, species, verbose = TRUE) 
+{
+  
+  
+  # Print the mapping
+  print(kegg_ids)
+  ###
+  xref <- hipathia:::load_xref(species)
+  
+  new_ids <- gsub("^\\s+|\\s+", " ", trimws(rownames(metabo_vals)))
+  tt <- hipathia:::translate_ids(new_ids, xref)
+  exp2 <- exp[!tt$is_na, , drop = FALSE]
+  valid_translation <- tt$translation[!tt$is_na]
+  raw_exp3 <- by(exp2, valid_translation, colMeans, na.rm = TRUE)
+  if (ncol(exp2) > 1) {
+    exp3 <- do.call("rbind", raw_exp3)
+  }
+  else {
+    exp3 <- matrix(raw_exp3, ncol = 1)
+    rownames(exp3) <- names(raw_exp3)
+    colnames(exp3) <- colnames(exp2)
+  }
+  if (verbose == TRUE) {
+    cat("translated ids = ", tt$translated_ids_count, " (", 
+        format(digits = 2, tt$translated_ids_ratio), ") \n", 
+        sep = "")
+    cat("untranslated ids = ", tt$untranslated_ids_count, 
+        " (", format(digits = 2, tt$untranslated_ids_ratio), 
+        ") \n", sep = "")
+    cat("multihit ids = ", sum(tt$duplicated_ids_count), 
+        " (", format(digits = 2, tt$duplicated_ids_ratio), 
+        ") \n", sep = "")
+  }
+  attr(exp3, "translation") <- tt
+  return(exp3)
 }
