@@ -1,0 +1,35 @@
+label	tooltip	nodeID	path.id	path.name
+Leukotriene B4	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02165+C14776>Leukotriene B4</a>	C02165+C14776	hsa03320	PPAR signaling pathway
+9(S)-HODE	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C14767+C14762>9(S)-HODE</a>	C14767+C14762	hsa03320	PPAR signaling pathway
+Endothelin-1	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16010+C16012+C16013>Endothelin-1</a>	C16010+C16012+C16013	hsa04024	cAMP signaling pathway
+Somatostatin-14	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16022+C16021>Somatostatin-14</a>	C16022+C16021	hsa04024	cAMP signaling pathway
+Pituitary adenylate cyclase-activating peptide-38	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16088+C16089>Pituitary adenylate cyclase-activating peptide-38</a>	C16088+C16089	hsa04024	cAMP signaling pathway
+Endothelin-1	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16010+C16012+C16013>Endothelin-1</a>	C16010+C16012+C16013	hsa04270	Vascular smooth muscle contraction
+Phosphatidylinositol-3,4,5-trisphosphate PLCG1	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981+hsa:5335+hsa:5336>Phosphatidylinositol-3,4,5-trisphosphate PLCG1</a>	C05981+hsa:5335+hsa:5336	hsa04666	Fc gamma R-mediated phagocytosis
+1-Phosphatidyl-D-myo-inositol 4,5-bisphosphate GSN	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C04637+hsa:2934+hsa:85477>1-Phosphatidyl-D-myo-inositol 4,5-bisphosphate GSN</a>	C04637+hsa:2934+hsa:85477	hsa04666	Fc gamma R-mediated phagocytosis
+Pituitary adenylate cyclase-activating peptide-38	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16088+C16089>Pituitary adenylate cyclase-activating peptide-38</a>	C16088+C16089	hsa04713	Circadian entrainment
+Sodium cation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01330+C00076>Sodium cation</a>	C01330+C00076	hsa04725	Cholinergic synapse
+Saccharin sodium anhydrous	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C12284+D08836+C19378+C11045>Saccharin sodium anhydrous</a>	C12284+D08836+C19378+C11045	hsa04742	Taste transduction
+Sucrose	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00089+C00095+C00031+C00208>Sucrose</a>	C00089+C00095+C00031+C00208	hsa04742	Taste transduction
+D-Phenylalanine	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02265+C00133+C00740>D-Phenylalanine</a>	C02265+C00133+C00740	hsa04742	Taste transduction
+5,6-EET	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C14768+C14769>5,6-EET</a>	C14768+C14769	hsa04750	Inflammatory mediator regulation of TRP channels
+12(S)-HPETE	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05965+C05966+C04805+C04742+C02165>12(S)-HPETE</a>	C05965+C05966+C04805+C04742+C02165	hsa04750	Inflammatory mediator regulation of TRP channels
+(+)-Camphor	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00808+C00809>(+)-Camphor</a>	C00808+C00809	hsa04750	Inflammatory mediator regulation of TRP channels
+Arachidonate*	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00219+C12083>Arachidonate*</a>	C00219+C12083	hsa04750	Inflammatory mediator regulation of TRP channels
+Endothelin-1	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16010+C16012+C16013>Endothelin-1</a>	C16010+C16012+C16013	hsa04924	Renin secretion
+[Protein]-N(epsilon)-(carboxymethyl)lysine	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C21011+C21012+C21013+C21014>[Protein]-N(epsilon)-(carboxymethyl)lysine</a>	C21011+C21012+C21013+C21014	hsa04933	AGE-RAGE signaling pathway in diabetic complications
+[Protein]-N(epsilon)-(carboxymethyl)lysine*	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C21011+C21012+C21013+C21014>[Protein]-N(epsilon)-(carboxymethyl)lysine*</a>	C21011+C21012+C21013+C21014	hsa04933	AGE-RAGE signaling pathway in diabetic complications
+O2.-	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00704+C00027+C16845+C16844>O2.-</a>	C00704+C00027+C16845+C16844	hsa05014	Amyotrophic lateral sclerosis (ALS)
+Calcium cation CALML6	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076+hsa:163688+hsa:51806+hsa:801+hsa:805+hsa:808+hsa:810>Calcium cation CALML6</a>	C00076+hsa:163688+hsa:51806+hsa:801+hsa:805+hsa:808+hsa:810	hsa05031	Amphetamine addiction
+D00842	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?D00842+D02271+D08233+D08234>D00842</a>	D00842+D02271+D08233+D08234	hsa05032	Morphine addiction
+D00842*	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?D00842+D02271+D08233+D08234>D00842*</a>	D00842+D02271+D08233+D08234	hsa05032	Morphine addiction
+alpha,alpha-Trehalose 6,6-bismycolate	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C04465+C19190>alpha,alpha-Trehalose 6,6-bismycolate</a>	C04465+C19190	hsa05152	Tuberculosis
+Estradiol-17beta	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00951+C00410+C07653+C01227+C00280+C00735+C00762>Estradiol-17beta</a>	C00951+C00410+C07653+C01227+C00280+C00735+C00762	hsa05200	Pathways in cancer
+Retinoate	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00777+C15493>Retinoate</a>	C00777+C15493	hsa05200	Pathways in cancer
+Cholesterol SHH	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00187+hsa:6469>Cholesterol SHH</a>	C00187+hsa:6469	hsa05200	Pathways in cancer
+G10505 CD44	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?G10505+hsa:960>G10505 CD44</a>	G10505+hsa:960	hsa05205	Proteoglycans in cancer
+Heparan sulfate WNT16	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00925+hsa:51384+hsa:54361+hsa:7471+hsa:7472+hsa:7473+hsa:7474+hsa:7475+hsa:7476+hsa:7477+hsa:7478+hsa:7479+hsa:7480+hsa:7481+hsa:7482+hsa:7483+hsa:7484+hsa:80326+hsa:81029+hsa:89780>Heparan sulfate WNT16</a>	C00925+hsa:51384+hsa:54361+hsa:7471+hsa:7472+hsa:7473+hsa:7474+hsa:7475+hsa:7476+hsa:7477+hsa:7478+hsa:7479+hsa:7480+hsa:7481+hsa:7482+hsa:7483+hsa:7484+hsa:80326+hsa:81029+hsa:89780	hsa05205	Proteoglycans in cancer
+G13063 FGF2	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?G13063+hsa:2247>G13063 FGF2</a>	G13063+hsa:2247	hsa05205	Proteoglycans in cancer
+Estradiol-17beta	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00951+C00410+C07653+C01227+C00280+C00735+C00762>Estradiol-17beta</a>	C00951+C00410+C07653+C01227+C00280+C00735+C00762	hsa05215	Prostate cancer
+Retinoate	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00777+C15493>Retinoate</a>	C00777+C15493	hsa05222	Small cell lung cancer
+Retinoate	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00777+C15493>Retinoate</a>	C00777+C15493	hsa05223	Non-small cell lung cancer
