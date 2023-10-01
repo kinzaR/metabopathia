@@ -70,7 +70,6 @@ add_missing_metabolites <- function(metabo_vals, metabolites, default = NULL){
   }
   return(metabo_vals)
 }
-
 translate_metab_matrix <- function (metabo_vals, species, verbose = TRUE) 
 {
   
