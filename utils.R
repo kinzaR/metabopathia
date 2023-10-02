@@ -46,13 +46,16 @@ add_metabolite_to_mgi <- function(mgi, verbose = FALSE, basal.value = 0.5){
   newmgi$species <- mgi$species
   newmgi$all.genes <- mgi$all.genes
   newmgi$all.metabolite <- all_needed_metabolites(mgi$pathigraphs)
+  newmgi$pathigraphs <- metabo_graphs(mgi$pathigraphs)
+  newmgi$all.labelids <- mgi$all.labelids
+  
   genes.vals.05 <- matrix(basal.value, ncol = 2, nrow = length(newmgi$all.genes), 
                           dimnames = list(newmgi$all.genes, c("1", "2")))
   metabolites.vals.05 <- matrix(basal.value, ncol = 2, nrow = length(newmgi$all.metabolite), 
                           dimnames = list(newmgi$all.metabolite, c("1", "2")))
   meta.05 <- NULL
-  meta.05$pathigraphs <- mgi$pathigraphs
-  meta.05$all.labelids <- mgi$all.labelids
+  meta.05$pathigraphs <- newmgi$pathigraphs
+  meta.05$all.labelids <- newmgi$all.labelids
   source("metabopathia.R")
   results.05 <- metabopathia(genes.vals.05, metabolites.vals.05, meta.05, test = FALSE, 
                          verbose = FALSE)
@@ -62,12 +65,13 @@ add_metabolite_to_mgi <- function(mgi, verbose = FALSE, basal.value = 0.5){
   newmgi$path.norm <- assay(results.dec.05, "paths")[, 1]
   newmgi$eff.norm <- assay(results.05, "paths")[, 1]
   
-  newmgi$path.norm  <- mgi$path.norm ## to change? -> yes
-  newmgi$eff.norm  <- mgi$eff.norm ## to change? -> yes
+  #check here if there is any changes?
+  # newmgi$path.norm  <- mgi$path.norm ## to change? -> yes
+  # newmgi$eff.norm  <- mgi$eff.norm ## to change? -> yes
   
   
-  newmgi$pathigraphs <- metabo_graphs(mgi$pathigraphs) #<------ whichone goes first!!!
-  newmgi$all.labelids <- mgi$all.labelids
+  
+  
   newmgi$group.by <- mgi$group.by
   return(newmgi)
 }
@@ -82,7 +86,7 @@ add_missing_metabolites <- function(metabo_vals, metabolites, default = NULL){
     rownames(fakemat) <- missing_metabolites
     colnames(fakemat) <- colnames(metabo_vals)
     metabo_vals <- rbind(metabo_vals, fakemat)
-    message("Added missing genes: ", length(missing_metabolites), 
+    message("Added missing metabolites: ", length(missing_metabolites), 
             " (", round(length(missing_metabolites)/nrow(metabo_vals) * 
                           100, digits = 2), "%)")
   }

@@ -1,4 +1,19 @@
-metaginfo <- metabo_pathways
+metaginfo <- meta.05
+genes_vals <- genes.vals.05
+metabo_vals <- metabolites.vals.05
+#fixed
+uni.terms = FALSE
+GO.terms = FALSE
+custom.terms = NA
+sel_assay = 1
+decompose = FALSE
+maxnum = 100
+verbose = TRUE
+tol = 1e-06
+test = FALSE
+
+source("utils.R")
+source("nodes_values_from_all.R")
 metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE, GO.terms = FALSE, 
           custom.terms = NA, sel_assay = 1, decompose = FALSE, maxnum = 100, 
           verbose = TRUE, tol = 1e-06, test = TRUE) {
@@ -13,39 +28,50 @@ metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE,
   }
   if (test == TRUE) {
     if (is.null(genes_vals)) 
-      stop("Missing input matrix")
+      stop("Missing input genes matrix")
+    if (is.null(metabo_vals)) 
+      stop("Missing input metabolites matrix")
     if (is.null(metaginfo)) 
       stop("Missing pathways object")
+    if(ncol(genes_vals) != ncol(metabo_vals)){
+      stop("Input genes matrix and meatbolites matrix has different column length")
+    }
     hipathia:::test_matrix(genes_vals)
+    hipathia:::test_matrix(metabo_vals)
     hipathia:::test_pathways_object(metaginfo)
     hipathia:::test_tolerance(tol)
   }
   pathigraphs <- metaginfo$pathigraphs
   genes_vals <- hipathia:::add_missing_genes(genes_vals, genes = metaginfo$all.genes)
-  genes_vals <- add_missing_metabolites(metabo_vals, metabolites = metaginfo$all.metabolite)
+  metabo_vals <- add_missing_metabolites(metabo_vals, metabolites = metaginfo$all.metabolite)
   results <- list()
   if (verbose == TRUE) 
     cat("Computing pathways...\n")
+  
+  # pathigraph <- pathigraphs$hsa04010
   results$by.path <- lapply(pathigraphs, function(pathigraph) {
     res <- list()
-    suppressWarnings(res$nodes.vals <- nodes_values_from_genes(genes_vals, 
-                                                               pathigraph$graph))
+    # suppressWarnings(res$nodes.vals <- hipathia:::nodes_values_from_genes(genes_vals, 
+    #                                                            pathigraph$graph)) # here I have to change: metabolite vals are 1 instead of 0.5 !
+    suppressWarnings(res$nodes.vals <- nodes_values_from_all(genes_vals, metabo_vals,
+                                                               pathigraph$graph)) # if not found metab ID is now 1 , exceptions ready to detect drugs!
     if (decompose == FALSE) {
-      respaths <- all_path_values(res$nodes.vals, pathigraph$effector.subgraphs, 
+      respaths <- hipathia:::all_path_values(res$nodes.vals, pathigraph$effector.subgraphs, 
                                   maxnum = maxnum, tol = tol)
     }
     else {
-      respaths <- all_path_values(res$nodes.vals, pathigraph$subgraphs, 
+      respaths <- hipathia:::all_path_values(res$nodes.vals, pathigraph$subgraphs, 
                                   maxnum = maxnum, tol = tol)
     }
     res$path.vals <- respaths[[1]]
     res$convergence <- respaths[[2]]
     return(res)
   })
+  ## I am here !
   nodes <- do.call("rbind", lapply(results$by.path, function(x) x$nodes.vals))
   nodes_rd <- DataFrame(metaginfo$all.labelids[rownames(nodes), 
-  ], node.name = get_node_names(metaginfo, rownames(nodes)), 
-  node.type = get_node_type(metaginfo)$type, node.var = apply(nodes, 
+  ], node.name = hipathia:::get_node_names(metaginfo, rownames(nodes)), 
+  node.type = hipathia:::get_node_type(metaginfo)$type, node.var = apply(nodes, 
                                                               1, var))
   nodes_se <- SummarizedExperiment(list(nodes = nodes), rowData = nodes_rd, 
                                    colData = coldata)
