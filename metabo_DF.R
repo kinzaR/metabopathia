@@ -260,7 +260,7 @@ genes_vals <- normalize_data(exp, by_quantiles = FALSE,
                              by_gene = FALSE, percentil = FALSE)
 metabo_vals <- normalize_data(as.matrix(metabo_data), by_quantiles = FALSE, 
                              by_gene = FALSE, percentil = FALSE)
-metdata <- metabopathia(exp, metabo_data, metabo_pathways, uni.terms = TRUE, GO.terms = TRUE,
+metdata <- metabopathia(genes_vals, metabo_vals, metabo_pathways, uni.terms = TRUE, GO.terms = TRUE,
                    decompose = FALSE, verbose=TRUE)
 
 status("50")
