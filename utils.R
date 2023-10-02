@@ -70,8 +70,6 @@ add_metabolite_to_mgi <- function(mgi, verbose = FALSE, basal.value = 0.5){
   # newmgi$eff.norm  <- mgi$eff.norm ## to change? -> yes
   
   
-  
-  
   newmgi$group.by <- mgi$group.by
   return(newmgi)
 }

@@ -67,7 +67,6 @@ metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE,
     res$convergence <- respaths[[2]]
     return(res)
   })
-  ## I am here !
   nodes <- do.call("rbind", lapply(results$by.path, function(x) x$nodes.vals))
   nodes_rd <- DataFrame(metaginfo$all.labelids[rownames(nodes), 
   ], node.name = hipathia:::get_node_names(metaginfo, rownames(nodes)), 
@@ -76,28 +75,30 @@ metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE,
   nodes_se <- SummarizedExperiment(list(nodes = nodes), rowData = nodes_rd, 
                                    colData = coldata)
   paths <- do.call("rbind", lapply(results$by.path, function(x) x$path.vals))
-  paths_rd <- DataFrame(path.ID = rownames(paths), path.name = get_path_names(metaginfo, 
-                                                                              rownames(paths)), path.nodes = get_path_nodes(metaginfo, 
+  paths_rd <- DataFrame(path.ID = rownames(paths), path.name = hipathia::get_path_names(metaginfo, 
+                                                                              rownames(paths)), path.nodes = hipathia:::get_path_nodes(metaginfo, 
                                                                                                                             rownames(paths), decompose = decompose), decomposed = decompose)
   paths_se <- SummarizedExperiment(list(paths = paths), rowData = paths_rd, 
                                    colData = coldata)
   se_list <- list(nodes = nodes_se, paths = paths_se)
+  
+  ## This has to be checked again
   if (uni.terms == TRUE) {
     if (verbose == TRUE) 
       cat("\nComputing Uniprot terms...\n")
-    unis_se <- quantify_funs(paths_se, metaginfo, "uniprot")
+    unis_se <- hipathia:::quantify_funs(paths_se, metaginfo, "uniprot")
     se_list$uni.terms <- unis_se
   }
   if (GO.terms == TRUE) {
     if (verbose == TRUE) 
       cat("\nComputing GO terms...\n")
-    gos_se <- quantify_funs(paths_se, metaginfo, "GO")
+    gos_se <- hipathia:::quantify_funs(paths_se, metaginfo, "GO")
     se_list$GO.terms <- gos_se
   }
   if (!is.na(custom.terms)) {
     if (verbose == TRUE) 
       cat("\nComputing custom terms...\n")
-    custom_se <- quantify_funs(paths_se, metaginfo, dbannot)
+    custom_se <- hipathia:::quantify_funs(paths_se, metaginfo, dbannot)
     se_list$custom.terms <- custom_se
   }
   resmae <- MultiAssayExperiment(se_list)
