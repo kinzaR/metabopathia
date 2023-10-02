@@ -69,7 +69,9 @@ library(hipathia, warn.conflicts = F)
 codebase <- dirname(rstudioapi::getActiveDocumentContext()$path)
 setwd(codebase)
 species <- "hsa"
-pathways_list <- c("hsa04071")
+# here I will load only easy pathways 
+source("filter_path.R")
+pathways_list <- get_easy_pathways(hipathia::load_pathways(species))
 exp_file <- "data_examples/brca_fake_integration/exp_toy_brca_data_fake.tsv"
 design_file <- "data_examples/brca_fake_integration/metabo_brca_design.tsv"
 met_file <-"data_examples/brca_fake_integration/metabo_brca_data.tsv"
