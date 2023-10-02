@@ -65,11 +65,9 @@ add_metabolite_to_mgi <- function(mgi, verbose = FALSE, basal.value = 0.5){
   newmgi$path.norm <- assay(results.dec.05, "paths")[, 1]
   newmgi$eff.norm <- assay(results.05, "paths")[, 1]
   
-  #check here if there is any changes?
+  #check here if there is any changes? Yes, specially in pathways that has metabolites
   # newmgi$path.norm  <- mgi$path.norm ## to change? -> yes
   # newmgi$eff.norm  <- mgi$eff.norm ## to change? -> yes
-  
-  
   newmgi$group.by <- mgi$group.by
   return(newmgi)
 }
