@@ -41,14 +41,32 @@ metabo_graphs <-function(pathigraphs){
   }
   return(newpathigraphs)
 }
-add_metabolite_to_mgi <- function(mgi, verbose = FALSE){
+add_metabolite_to_mgi <- function(mgi, verbose = FALSE, basal.value = 0.5){
   newmgi <- list()
   newmgi$species <- mgi$species
   newmgi$all.genes <- mgi$all.genes
   newmgi$all.metabolite <- all_needed_metabolites(mgi$pathigraphs)
-  newmgi$path.norm  <- mgi$path.norm ## to change?
-  newmgi$eff.norm  <- mgi$eff.norm ## to change?
-  newmgi$pathigraphs <- metabo_graphs(mgi$pathigraphs)
+  genes.vals.05 <- matrix(basal.value, ncol = 2, nrow = length(newmgi$all.genes), 
+                          dimnames = list(newmgi$all.genes, c("1", "2")))
+  metabolites.vals.05 <- matrix(basal.value, ncol = 2, nrow = length(newmgi$all.metabolite), 
+                          dimnames = list(newmgi$all.metabolite, c("1", "2")))
+  meta.05 <- NULL
+  meta.05$pathigraphs <- mgi$pathigraphs
+  meta.05$all.labelids <- mgi$all.labelids
+  source("metabopathia.R")
+  results.05 <- metabopathia(genes.vals.05, metabolites.vals.05, meta.05, test = FALSE, 
+                         verbose = FALSE)
+  results.dec.05 <- metabopathia(genes.vals.05, metabolites.vals.05, meta.05, decompose = TRUE, 
+                             test = FALSE, verbose = FALSE)
+  
+  newmgi$path.norm <- assay(results.dec.05, "paths")[, 1]
+  newmgi$eff.norm <- assay(results.05, "paths")[, 1]
+  
+  newmgi$path.norm  <- mgi$path.norm ## to change? -> yes
+  newmgi$eff.norm  <- mgi$eff.norm ## to change? -> yes
+  
+  
+  newmgi$pathigraphs <- metabo_graphs(mgi$pathigraphs) #<------ whichone goes first!!!
   newmgi$all.labelids <- mgi$all.labelids
   newmgi$group.by <- mgi$group.by
   return(newmgi)
