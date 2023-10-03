@@ -260,10 +260,28 @@ genes_vals <- normalize_data(exp, by_quantiles = FALSE,
                              by_gene = FALSE, percentil = FALSE)
 metabo_vals <- normalize_data(as.matrix(metabo_data), by_quantiles = FALSE, 
                              by_gene = FALSE, percentil = FALSE)
+# colnames(genes_vals) <- paste0("AA", colnames(genes_vals))
+# colnames(metabo_vals) <- paste0("AA", colnames(metabo_vals))
 metdata <- metabopathia(genes_vals, metabo_vals, metabo_pathways, uni.terms = TRUE, GO.terms = TRUE,
                    decompose = FALSE, verbose=TRUE)
 
 status("50")
+
+# rowData(metdata[["paths"]])
+# this is directl from Doku
+# Perform comparisons
+DAdata <- DAcomp(metdata, "cols", cond1, cond2)
+des$sample <-  paste0("AA",des$sample)
+DAdata <- DAcomp(metdata,des, "TUMOR - NORMAL", path.method = "limma",
+                 fun.method = "limma")
+# Summary of UP & DOWN nodes, paths and functions
+DAoverview(DAdata)
+# Summary of path alteration by pathway
+DAsummary(DAdata)
+# Top 10 altered features per class (nodes, paths, functions)
+DAtop(DAdata)
+# Pathway visualization
+DApathway("hsa04010", pathways, DAdata)
 
 ## DIFFERENTIAL EXPRESSION
 

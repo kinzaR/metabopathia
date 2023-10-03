@@ -38,7 +38,7 @@ metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE,
     }
     hipathia:::test_matrix(genes_vals)
     hipathia:::test_matrix(metabo_vals)
-    hipathia:::test_pathways_object(metaginfo)
+    test_metabo_pathways_object(metaginfo)
     hipathia:::test_tolerance(tol)
   }
   pathigraphs <- metaginfo$pathigraphs
