@@ -8,6 +8,7 @@
 # p <- hipathia::load_pathways(species = species)
 # pgs <- p$pathigraphs
 library("stringr")
+library("igraph")
 get_easy_pathways<- function(p){
   pgs <- p$pathigraphs
   easy_paths<-c()

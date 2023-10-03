@@ -1,17 +1,3 @@
-metaginfo <- meta.05
-genes_vals <- genes.vals.05
-metabo_vals <- metabolites.vals.05
-#fixed
-uni.terms = FALSE
-GO.terms = FALSE
-custom.terms = NA
-sel_assay = 1
-decompose = FALSE
-maxnum = 100
-verbose = TRUE
-tol = 1e-06
-test = FALSE
-
 source("utils.R")
 source("nodes_values_from_all.R")
 metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE, GO.terms = FALSE, 
