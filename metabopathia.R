@@ -1,5 +1,6 @@
 source("utils.R")
 source("nodes_values_from_all.R")
+library(hipathia)
 metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE, GO.terms = FALSE, 
           custom.terms = NA, sel_assay = 1, decompose = FALSE, maxnum = 100, 
           verbose = TRUE, tol = 1e-06, test = TRUE) {

@@ -1,4 +1,5 @@
 # ig <- pathigraph$graph
+library(hipathia)
 nodes_values_from_all <- function(genes_vals, metabo_vals, ig, summ = "per90"){
   genes_list <- V(ig)$genesList
   metabolites_list <- V(ig)$metaboID

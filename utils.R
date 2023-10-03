@@ -1,6 +1,6 @@
 library(igraph)
 library(stringr)
-
+library(hipathia)
 all_needed_metabolites <- function (pathigraphs)
 {
   metabolite <- unique(unlist(sapply(pathigraphs, function(x) {
