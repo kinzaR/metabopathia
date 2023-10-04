@@ -45,3 +45,71 @@ intersect(allmetabo,
 intersect(rownames(metab_data),
           allmetabo)
 View(metab_data[c("C00042", "C00186", "C00158"),])
+rownames(metab_data) %>% .[startsWith(., "C")] 
+######################## datos de suero
+metab_data_suero <- read.csv2("data_examples/Dystrophic_epidermolysis_bullosa/Suero_KEGGID-Conc_signif_final.csv") %>% 
+  .[!is.na(.$KEGG_ID),]
+rownames(metab_data_suero) <- metab_data_suero$KEGG_ID
+metab_data_suero <- metab_data_suero[,-c(1,2)]
+metabo_pathways <- readRDS("metabo_pathways_hsa_120.RDS")
+intersect(metabo_pathways$all.metabolite,
+          rownames(metab_data_suero))
+intersect(rownames(metab_data_suero), metabo_pathways$all.metabolite
+          )
+allmetabo <- c()
+library("stringr")
+for(cp in metabo_pathways$pathigraphs){
+  cat("\n *",cp$path.id, "\n")
+  graph_att <-do.call(what = cbind, args = vertex_attr(cp$graph)) %>% as.data.frame(.)
+  
+  detected_metabolites <- graph_att[graph_att$shape=="circle","tooltip"] %>% 
+    str_extract("(?<=href=http://www.kegg.jp/dbget-bin/www_bget\\?)[^>]+") %>% 
+    .[!is.na(.)]
+  detected_metabolites <- unique(detected_metabolites)
+  detected_metabolites <- unlist(strsplit(x = detected_metabolites, split = "\\+"))
+  if(any(rownames(metab_data_suero) %in% detected_metabolites)){
+    cat("These metabolite: ",intersect(rownames(metab_data_suero) , detected_metabolites),"\n were found in ",cp$path.id)
+  }
+  # for the moment I will not see the complexity between gene/metabolite in the same node 
+  # geneMetabo <- unlist(graph_att$genesList) %>% .[!is.na(.) & . != "/"] %>% .[is.na(as.numeric(.))]
+  # cat(unique(geneMetabo))
+  # if(length(geneMetabo)>0) detected_metabolites <- c(detected_metabolites, geneMetabo)
+  allmetabo <- c(allmetabo, detected_metabolites)
+}
+allmetabo <- unique(allmetabo)
+intersect(rownames(metab_data_suero), rownames(metab_data))
+intersect(metab_data_ampolla$KEGG, rownames(metab_data))
+##################### ampolla data
+metab_data_ampolla <- read.csv2("data_examples/Dystrophic_epidermolysis_bullosa/Ampolla_KEGGID-Conc_signif_final.csv") %>% 
+  .[!is.na(.$KEGG),]
+# rownames(metab_data_ampolla) <- metab_data_ampolla$KEGG
+metab_data_ampolla <- metab_data_ampolla[,-c(1)]
+intersect(metab_data_ampolla$KEGG, metabo_pathways$all.metabolite)
+intersect(intersect(rownames(metab_data_suero), rownames(metab_data)), metab_data_ampolla$KEGG)
+
+allmetabo <- c()
+library("stringr")
+for(cp in complex_pathways$pathigraphs){
+  cat("\n *",cp$path.id, "\n")
+  graph_att <-do.call(what = cbind, args = vertex_attr(cp$graph)) %>% as.data.frame(.)
+  
+  detected_metabolites <- graph_att[graph_att$shape=="circle","tooltip"] %>% 
+    str_extract("(?<=href=http://www.kegg.jp/dbget-bin/www_bget\\?)[^>]+") %>% 
+    .[!is.na(.)]
+  detected_metabolites <- unique(detected_metabolites)
+  detected_metabolites <- unlist(strsplit(x = detected_metabolites, split = "\\+"))
+  if(any(metab_data_ampolla$KEGG %in% detected_metabolites)){
+    cat("These metabolite: ",intersect(metab_data_ampolla$KEGG , detected_metabolites),"\n were found in ",cp$path.id)
+  }
+  # for the moment I will not see the complexity between gene/metabolite in the same node 
+  # geneMetabo <- unlist(graph_att$genesList) %>% .[!is.na(.) & . != "/"] %>% .[is.na(as.numeric(.))]
+  # cat(unique(geneMetabo))
+  # if(length(geneMetabo)>0) detected_metabolites <- c(detected_metabolites, geneMetabo)
+  allmetabo <- c(allmetabo, detected_metabolites)
+}
+allmetabo <- unique(allmetabo)
+
+
+### ampolla preprocessing 
+library(KEGGREST)
+keggFind()

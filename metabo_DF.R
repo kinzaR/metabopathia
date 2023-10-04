@@ -73,7 +73,7 @@ species <- "hsa"
 source("filter_path.R")
 pathways_list <- get_easy_pathways(hipathia::load_pathways(species))
 exp_file <- "data_examples/brca_fake_integration/exp_toy_brca_data_fake.tsv"
-design_file <- "data_examples/brca_fake_integration/metabo_brca_design.tsv"
+design_file <- "data_examples/"
 met_file <-"data_examples/brca_fake_integration/metabo_brca_data.tsv"
 cond1 <- "TUMOR"
 cond2 <- "NORMAL"
