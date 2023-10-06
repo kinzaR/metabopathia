@@ -100,12 +100,44 @@ write.table(x = metab_df, file = "metabolite_120_mgi.tsv", quote = F,sep = "\t",
 class(metab_df)
 
 # compare between ampollas raw formula
-metab_df$FORMULA %in% ampollas_raw$anot
-found<-c()
-for (met in metab_df$FORMULA) {
-  if(length(metab_df[grepl(met, ampollas_raw$anot),1])>0) {
-      found<- c(found,met)
-      cat("**",met," was found in ",ampollas_raw$anot,"\n")
-    }
-}
-found_matr<-matrix(found, ncol = 2)
+library(dplyr)
+ampollas_clean_formul<- ampollas_raw
+ampollas_clean_formul$anot[!grepl(";",ampollas_clean_formul$anot)] <- sub("^(.*?)_.*$","\\1",ampollas_raw$anot[!grepl(";",ampollas_raw$anot)])
+ampollas_clean_formul$anot[grepl("; ",ampollas_clean_formul$anot)] <- sapply(strsplit(ampollas_clean_formul$anot[grepl("; ",ampollas_clean_formul$anot)]," "),
+                                                                            function(xx) {
+                                                                              x <- sub(" $", "", xx)
+                                                                              formula <-grep("_M\\+H(;)?$", x, value = TRUE)
+                                                                              if(isEmpty(formula)) {
+                                                                                formula <-grep("_M\\+NH4(;)?$", x, value = TRUE)
+                                                                                if(isEmpty(formula)){
+                                                                                  formula <-grep("_M\\+Na(;)?$", x, value = TRUE)
+                                                                                }
+                                                                              }
+                                                                              if(!isEmpty(formula)) {
+                                                                                formula <- sub("^(.*?)_.*$","\\1",formula)
+                                                                                if(length(formula)==1) return(formula)
+                                                                                if(length(formula)!=1 && n_distinct(formula)){
+                                                                                  return(formula[1])
+                                                                                }else{
+                                                                                  cat("\n",formula," has differents formulas options, need a manual feedback!! \n")
+                                                                                }
+                                                                              }else{
+                                                                                cat("\n",x," has neither _M+H, _M+Na nor M-NH4+\nThe original formula was: \n")
+                                                                                print(ampollas_raw[ampollas_raw$anot==paste(xx, collapse = " "),c(1:8)])
+                                                                                return(NA)
+                                                                              }
+                                                                              }) %>%unlist()
+
+
+
+
+intersect(metab_df$FORMULA, ampollas_clean_formul$anot) %>%length()
+data_for_metabo<-ampollas_clean_formul[ampollas_clean_formul$anot %in%metab_df$FORMULA, ]
+
+length(unique(data_for_metabo$anot))
+amp_mes<-metab_df[metab_df$FORMULA%in%data_for_metabo$anot,1]
+p <- metabo_pathways$pathigraphs$hsa04923
+met_per_path<-lapply(metabo_pathways$pathigraphs, function(p){
+  commun <- intersect(V(p$graph)$metaboID , amp_mes)
+  return(c(all(V(p$graph)$metaboID %in% amp_mes),paste0(length(commun)/length(V(p$graph)$metaboID), "%"),commun))
+})
