@@ -1,19 +1,6 @@
-metaginfo <- meta.05
-genes_vals <- genes.vals.05
-metabo_vals <- metabolites.vals.05
-#fixed
-uni.terms = FALSE
-GO.terms = FALSE
-custom.terms = NA
-sel_assay = 1
-decompose = FALSE
-maxnum = 100
-verbose = TRUE
-tol = 1e-06
-test = FALSE
-
 source("utils.R")
 source("nodes_values_from_all.R")
+library(hipathia)
 metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE, GO.terms = FALSE, 
           custom.terms = NA, sel_assay = 1, decompose = FALSE, maxnum = 100, 
           verbose = TRUE, tol = 1e-06, test = TRUE) {
@@ -38,7 +25,7 @@ metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE,
     }
     hipathia:::test_matrix(genes_vals)
     hipathia:::test_matrix(metabo_vals)
-    hipathia:::test_pathways_object(metaginfo)
+    test_metabo_pathways_object(metaginfo)
     hipathia:::test_tolerance(tol)
   }
   pathigraphs <- metaginfo$pathigraphs

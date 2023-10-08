@@ -1,6 +1,6 @@
 library(igraph)
 library(stringr)
-
+library(hipathia)
 all_needed_metabolites <- function (pathigraphs)
 {
   metabolite <- unique(unlist(sapply(pathigraphs, function(x) {
@@ -123,4 +123,23 @@ translate_metab_matrix <- function (metabo_vals, species, verbose = TRUE)
   }
   attr(exp3, "translation") <- tt
   return(exp3)
+}
+
+test_metabo_pathways_object <- function (pathways) 
+{
+  hasall <- length(pathways) == 8 | length(pathways) == 9
+  if (length(pathways) == 8) {
+    byuser <- FALSE
+  }
+  else if (length(pathways) == 9) {
+    byuser <- pathways$by.user
+  }
+  else if(is.null(pathways$by.user)){
+    byuser <- FALSE
+  }
+  spec <- hipathia:::is_accepted_species(pathways$species) || byuser == 
+    TRUE
+  isigraph <- is(pathways$pathigraphs[[1]]$graph, "igraph")
+  if (!hasall == TRUE | !spec == TRUE | !isigraph == TRUE) 
+    stop("Pathways object not allowed")
 }
