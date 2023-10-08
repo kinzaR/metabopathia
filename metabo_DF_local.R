@@ -16,66 +16,75 @@ library(hipathia, warn.conflicts = F)
 
 ################################################################################
 # #### INPUT DATA (from web) ## START
-args <- commandArgs(trailingOnly = F, asValues = T,excludeEnvVars = F)
-codebase <- paste0(dirname(normalizePath(args[["file"]])),"/")
-
-# species
-species <- args[['species']]
-
-# Transcriptomics/protemoics: expression
-## custom exp file
-exp_file <- args[['exp_file']]
-
-# metabolomics
-met_file <- args[['met_file']]
-
-# param
-unadjusted <- args[["unadjusted"]] # do not adjust pvalue
-paired <- args[["paired"]] # do not adjust pvalue
-
-#design: here I have to think which scenario will we allow
-design_type <- args[['design_type']]
-design_file <- args[['design_file']]
-cond1 <- args[['cond1']]
-cond2 <- args[['cond2']]
-
-# method parameters
-pathways_list <- args[['pathways_list']]
-decompose <- args[['decompose']]
-difexp <- args[['difexp']]
-#difexp <- TRUE  overwritten / but removed now because has to be false in prediction test
-
-# functional analysis
-go <- args[['go']]
-uniprot <- args[['uniprot']]
-
-# output
-output_folder <- paste(args[['output_folder']], collapse=" ")
-
-verbose <- args[['verbose']]
-report <- args[['report']]
-#### INPUT DATA (from web) ## END
-# ################################################################################
-# ## EXAMPLE 1: brca_fake_integration
-# codebase <- dirname(rstudioapi::getActiveDocumentContext()$path)
-# setwd(codebase)
-# species <- "hsa"
-# # here I will load only easy pathways 
-# source("filter_path.R")
-# # pathways_list <- get_easy_pathways(hipathia::load_pathways(species))
-# pathways_list <- "hsa04720"
-# exp_file <- "data_examples/Dystrophic_epidermolysis_bullosa/counts_TMM_normalization.tsv"
-# design_file <- "data_examples/Dystrophic_epidermolysis_bullosa/integration_design.tsv"
-# met_file <-"data_examples/Dystrophic_epidermolysis_bullosa/metabolite_suero.tsv"
-# cond1 <- "visit1"
-# cond2 <- "control"
-# paired <- T # Same patients
-# decompose <- F
-# difexp <- T
-# go <- T
-# uniprot <- T
-# output_folder <- "test"
-# verbose <- T
+# args <- commandArgs(trailingOnly = F, asValues = T,excludeEnvVars = F)
+# codebase <- paste0(dirname(normalizePath(args[["file"]])),"/")
+# 
+# # species
+# species <- args[['species']]
+# 
+# # Genomics: gene variant List file (optional/if there is variants)
+# variant_file <- args[['variant_file']]
+# 
+# # Transcriptomics/protemoics: expression
+# ## custom exp file
+# custom <- args[["custom"]] # boolean
+# exp_file <- args[['exp_file']]
+# ## specific tissue from healthi Gtex
+# # this will be removed because I will launch it in parallel
+# # in this code I will use either custom or gtex tissue
+# # TissueList <- args[['TissueList']]
+# Tissue <- args[['tissue']]
+# 
+# # metabolomics
+# met_file <- args[['met_file']]
+# 
+# # param
+# unadjusted <- args[["unadjusted"]] # do not adjust pvalue
+# paired <- args[["paired"]] # do not adjust pvalue
+# 
+# #design: here I have to think which scenario will we allow
+# design_type <- args[['design_type']]
+# design_file <- args[['design_file']]
+# cond1 <- args[['cond1']]
+# cond2 <- args[['cond2']]
+# 
+# # method parameters
+# pathways_list <- args[['pathways_list']]
+# decompose <- args[['decompose']]
+# difexp <- args[['difexp']]
+# #difexp <- TRUE  overwritten / but removed now because has to be false in prediction test
+# 
+# # functional analysis
+# go <- args[['go']]
+# uniprot <- args[['uniprot']]
+# 
+# # output
+# output_folder <- paste(args[['output_folder']], collapse=" ")
+# 
+# verbose <- args[['verbose']]
+# report <- args[['report']]
+# #### INPUT DATA (from web) ## END
+################################################################################
+## EXAMPLE 1: brca_fake_integration
+codebase <- dirname(rstudioapi::getActiveDocumentContext()$path)
+setwd(codebase)
+species <- "hsa"
+# here I will load only easy pathways 
+source("filter_path.R")
+# pathways_list <- get_easy_pathways(hipathia::load_pathways(species))
+pathways_list <- "hsa04720"
+exp_file <- "data_examples/Dystrophic_epidermolysis_bullosa/counts_TMM_normalization.tsv"
+design_file <- "data_examples/Dystrophic_epidermolysis_bullosa/integration_design.tsv"
+met_file <-"data_examples/Dystrophic_epidermolysis_bullosa/metabolite_suero.tsv"
+cond1 <- "visit1"
+cond2 <- "control"
+paired <- T # Same patients
+decompose <- F
+difexp <- T
+go <- T
+uniprot <- T
+output_folder <- "test"
+verbose <- T
 
 ## EXAMPLE 2
 # codebase <- "."
@@ -206,11 +215,11 @@ metabo_data <- read.table(met_file,header=T,sep="\t",stringsAsFactors=F,row.name
 # load design
 des <- read.table(design_file,header=F,stringsAsFactors=F)
 #paired data has to be ordred # HERE I am assuming that they are ordered forthe fake example
-  #if(paired==F){
+#if(paired==F){
 colnames(des) <- c("sample",c("group","value")[(design_type == "continuous")+1])
-  #} else {
-  #  colnames(des) <- c("sample",c("group","value")[(design_type == "continuous")+1], "donor")
-  #}
+#} else {
+#  colnames(des) <- c("sample",c("group","value")[(design_type == "continuous")+1], "donor")
+#}
 rownames(des) <- des$sample
 # Filter only the cond1 and cond2
 if(design_type == "categorical"){
@@ -256,12 +265,12 @@ metabo_pathways <- add_metabolite_to_mgi(pathways)
 genes_vals <- normalize_data(as.matrix(exp), by_quantiles = FALSE, 
                              by_gene = FALSE, percentil = FALSE)
 metabo_vals <- normalize_data(as.matrix(metabo_data), by_quantiles = FALSE, 
-                             by_gene = FALSE, percentil = FALSE)
+                              by_gene = FALSE, percentil = FALSE)
 
 metabo_vals_backup<-metabo_vals
 metabo_vals[metabo_pathways$all.metabolite,]<-c(rep(0.001,6),rep(1,6))
 metdata <- metabopathia(genes_vals, metabo_vals, metabo_pathways, uni.terms = TRUE, GO.terms = TRUE,
-                   decompose = FALSE, verbose=TRUE)
+                        decompose = FALSE, verbose=TRUE)
 # here I have to compare with hipathia result without taking into account metabolites
 
 status("50")
