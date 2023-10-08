@@ -135,7 +135,9 @@ get_formula_from_data<-function(ampollas_raw){
 ampolla_formulas<-get_formula_from_data(ampollas_raw$anot)
 #suero
 suero_data <- read.csv("data_examples/Dystrophic_epidermolysis_bullosa/Carlos_leon_hilic_positivev2 (1) (2).csv")
+suero_data_neg <- read.csv("data_examples/Dystrophic_epidermolysis_bullosa/Carlos_leon_hilic_negativev2 (2).csv")
 suero_formulas<-get_formula_from_data(suero_data$anot)
+# suero_formulas<-get_formula_from_data(suero_data_neg$anot)
 
 ampollas_raw$anot<-ampolla_formulas
 suero_data$anot<-suero_formulas
@@ -155,17 +157,26 @@ sue_met<-metab_df[metab_df$FORMULA%in%data_for_metabosuero$anot,1] %>%unique()
 library(purrr)
 met_per_path_amp<-lapply(metabo_pathways$pathigraphs, function(p){
   commun <- intersect(V(p$graph)$metaboID , amp_met)
-  if(length(commun)>0)  return(c(all(V(p$graph)$metaboID %in% amp_met),length(commun)/length(V(p$graph)$metaboID),paste(commun,collapse = ",")))
+  if(length(commun)>0)  return(c(all(V(p$graph)$metaboID[!is.na(V(p$graph)$metaboID)] %in% amp_met),
+                                 100*length(commun)/length(V(p$graph)$metaboID[!is.na(V(p$graph)$metaboID)]),
+                                 paste(commun,collapse = ","),
+                                 paste(unique(V(p$graph)$metaboID[!is.na(V(p$graph)$metaboID)]),collapse = ",")))
 }) %>% purrr::compact(.)
 met_per_path_suer<-lapply(metabo_pathways$pathigraphs, function(p){
   commun <- intersect(V(p$graph)$metaboID , sue_met)
-  if(length(commun)>0)  return(c(all(V(p$graph)$metaboID %in% sue_met),length(commun)/length(V(p$graph)$metaboID),paste(commun,collapse = ",")))
+  if(length(commun)>0)  return(c(all(V(p$graph)$metaboID[!is.na(V(p$graph)$metaboID)]%in% sue_met),
+                                 100*length(commun)/length(V(p$graph)$metaboID[!is.na(V(p$graph)$metaboID)]),
+                                 paste(commun,collapse = ","),
+                                 paste(unique(V(p$graph)$metaboID[!is.na(V(p$graph)$metaboID)]),collapse = ",")))
 }) %>% purrr::compact(.)
 
 inter_ampolla_data <- do.call(rbind,met_per_path_amp)%>%as.data.frame()
 inter_suero_data <- do.call(rbind,met_per_path_suer)%>%as.data.frame()
-colnames(inter_ampolla_data)<- c("fully covered", "percentage of coverage %", "detected metabolites")
-colnames(inter_suero_data)<- c("fully covered", "percentage of coverage %", "detected metabolites")
+colnames(inter_ampolla_data)<- c("fully covered", "percentage of coverage %", "detected metabolites","metabolite in pathway")
+colnames(inter_suero_data)<- c("fully covered", "percentage of coverage %", "detected metabolites","metabolite in pathway")
 
 write.table(x = inter_ampolla_data, file = "data_examples/Dystrophic_epidermolysis_bullosa/intersection_Kegg_ampolla.tsv", quote = F, sep = "\t", row.names = T, col.names = T)
 write.table(x = inter_suero_data, file = "data_examples/Dystrophic_epidermolysis_bullosa/intersection_Kegg_suero.tsv", quote = F, sep = "\t", row.names = T, col.names = T)
+
+inter_suero_data[as.logical(inter_suero_data$`fully covered`),]
+inter_ampolla_data[as.logical(inter_ampolla_data$`fully covered`),]

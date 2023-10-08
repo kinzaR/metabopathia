@@ -110,6 +110,32 @@ for(cp in complex_pathways$pathigraphs){
 allmetabo <- unique(allmetabo)
 
 
-### ampolla preprocessing 
-library(KEGGREST)
-keggFind()
+exp_file <- "data_examples/Dystrophic_epidermolysis_bullosa/counts_TMM_normalization.txt"
+met_file <-"data_examples/Dystrophic_epidermolysis_bullosa/Suero_KEGGID-Conc_signif_final.csv"
+##read dta 
+exp <- read.table(exp_file,header=T,sep="\t",stringsAsFactors=F,row.names = 1,comment.char="",check.names=F)
+metabo_data<- read.csv2(met_file) %>% .[!is.na(.$KEGG_ID),-1]
+rownames(metabo_data) <- metabo_data$KEGG_ID
+metabo_data<- metabo_data[,-1] 
+rn<-rownames(metabo_data)
+metabo_data<-sapply(metabo_data, as.numeric)
+rownames(metabo_data)<-rn
+#fake_ to be removed
+rownames(metabo_data)[1] <- "C00025"
+# boxplot(metabo_data)
+metabo_data <- metabo_data[,c("Suero_C01_08", "Suero_C02","Suero_C03","Suero_C04","Suero_C05","Suero_C06","Suero_C07" ,
+                        "Suero_P1_V1", "Suero_P2_V1", "Suero_P3_V1","Suero_P4_V1","Suero_P5_V1","Suero_P6_V1","Suero_P7_V1")]
+colnames(metabo_data) <- sapply(colnames(metabo_data), function(x){
+  (unlist(strsplit(x, "_"))[2])
+})%>% unname()
+exp <- (exp[,c("M1.V1", "M2.V1", "M3.V1", "M4.V1", "M5.V1", "M6.V1", "M7.V1", "M8.V1", "C02", "C03", "C04","C06", "C07", "C08")])
+colnames(exp)[1:8]<- paste0("P",seq_along(1:8))
+colnames(exp)[colnames(exp)=="C08"] <- "C01"
+to_keep <-intersect(colnames(metabo_data),colnames(exp))
+to_keep<-to_keep[to_keep!="P5"]
+design_data <- data.frame(sample=to_keep, group=c(rep("control",6 ),rep("visit1",6 )))
+#out put
+design_file <- "data_examples/Dystrophic_epidermolysis_bullosa/integration_design.tsv"
+write.table(x = design_data, file = design_file, append = F, quote = F, sep = "\t", row.names = F, col.names = F)
+write.table(x = exp[,to_keep], file ="data_examples/Dystrophic_epidermolysis_bullosa/counts_TMM_normalization.tsv", append = F,quote = F, sep = "\t", row.names = T,col.names = T)
+write.table(x = metabo_data[,to_keep], file ="data_examples/Dystrophic_epidermolysis_bullosa/metabolite_suero.tsv", append = F,quote = F, sep = "\t", row.names = T,col.names = T)
