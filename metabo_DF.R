@@ -1,4 +1,17 @@
 cat("Welcome to MetaboPathia")
+# library(optparse)
+# option_list <- list(
+#   # make_option(c("-n", "--count_lines"), action="store_true", default=FALSE,
+#   #             help="helep...[default]"),
+#   # make_option(c("-f", "--factor"), type="integer", default=3,
+#   #             help="help.. [default %default]"),
+#   make_option(c("--cond1"), type="character", default= F,
+#               help="help.. [default]")
+# )
+# parser <- OptionParser(usage="%prog [options] file", option_list=option_list)
+# args <- parse_args(parser, positional_arguments = 1)
+# opt <- args$options
+# file <- args$args
 ##
 # MetaboPathia (drived from Hipathia method) is a method for the computation of signal transduction along signaling pathways
 # not only from transcriptomic data but also adding the layer of metabolomic data. 
@@ -12,11 +25,15 @@ cat("Welcome to MetaboPathia")
 # library(ggplot2)
 # library("e1071", warn.conflicts = F)
 # suppressPackageStartupMessages(library(R.utils, warn.conflicts = F))
-library(hipathia, warn.conflicts = F)
+suppressPackageStartupMessages(library(hipathia, warn.conflicts = F))
 
 ################################################################################
 # #### INPUT DATA (from web) ## START
-args <- commandArgs(trailingOnly = F, asValues = T,excludeEnvVars = F)
+args <- commandArgs(trailingOnly = T)
+cat("args: \n")
+print(args)
+cat("they have name?\n")
+print(names(args))
 codebase <- paste0(dirname(normalizePath(args[["file"]])),"/")
 
 # species
