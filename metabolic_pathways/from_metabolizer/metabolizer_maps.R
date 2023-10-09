@@ -7,15 +7,15 @@ metabolizer_metabolites<-lapply(hsa_module_data, function(m){
 }) %>% unlist %>% unname() %>% unique()
 
 suero<-read.csv2("../../data_examples/Dystrophic_epidermolysis_bullosa/Suero_KEGGID-Conc_signif_final.csv")
-intersect(suero$KEGG_ID, metabolizer_metabolites) %>% unique %>% length()
-length(unique(suero$KEGG_ID))
+intersect(suero$KEGG_ID, metabolizer_metabolites) %>% unique %>% length() # 19
+length(unique(suero$KEGG_ID))#25
 
 ampolla<-read.csv2("../../data_examples/Dystrophic_epidermolysis_bullosa/Ampolla_KEGGID-Conc_signif_final.csv")
-intersect(ampolla$KEGG, metabolizer_metabolites)  %>% unique %>% length()
-length(unique(ampolla$KEGG))
+intersect(ampolla$KEGG, metabolizer_metabolites)  %>% unique %>% length()#9
+length(unique(ampolla$KEGG))#19
 
 orina<-read.csv("../../data_examples/Dystrophic_epidermolysis_bullosa/Orina.csv", sep = "\t") %>% t() %>% as.data.frame()
 colnames(orina)<- orina[1,]
 orina <- orina[-c(1,2),]
-intersect(rownames(orina), metabolizer_metabolites)  %>% unique %>% length()
-length(rownames(orina))
+intersect(rownames(orina), metabolizer_metabolites)  %>% unique %>% length()#26
+length(unique(rownames(orina))) # 40-5 = 35
