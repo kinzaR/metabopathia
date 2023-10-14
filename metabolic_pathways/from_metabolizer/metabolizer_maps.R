@@ -19,3 +19,7 @@ colnames(orina)<- orina[1,]
 orina <- orina[-c(1,2),]
 intersect(rownames(orina), metabolizer_metabolites)  %>% unique %>% length()#26
 length(unique(rownames(orina))) # 40-5 = 35
+
+##
+load("moduleinfo.RData")
+View(moduleinfo)
