@@ -1,12 +1,11 @@
 rm(list=ls())
+# 
+# library(preprocessCore)
+# library(igraph)
+# library(limma)
+# library(R.utils,quietly=T,verbose=F,warn.conflicts=F)
+# library("gplots")
 
-library(preprocessCore)
-library(igraph)
-library(limma)
-library(R.utils,quietly=T,verbose=F,warn.conflicts=F)
-library("gplots")
-
-# # # Rscript moduleAPI.R --midas_home /KEGG_module/moduleWebApp/ --species hsa --exp_file /KEGG_module/moduleWebApp/exampledata/TCGA-KIRC.txt --design_file /KEGG_module/moduleWebApp/exampledata/TCGA-KIRC_design.txt --cond1 Tumor --cond2 Normal --output_folder /home/cankut/Desktop/cankut-test3/metabolicpaths/
 midas_home <-  "."
 species <- "hsa"
 exp_file <- "../../data_examples/Dystrophic_epidermolysis_bullosa/counts_TMM_normalization.tsv"
