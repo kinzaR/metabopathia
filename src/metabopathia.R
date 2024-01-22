@@ -1,6 +1,28 @@
-source("utils.R")
-source("nodes_values_from_all.R")
-library(hipathia)
+# This function is designed to calculate the activation level of each circuit (subpathway) within a pathway for each sample in the experiment. 
+# As inputs, in addition to the pathways object, it takes node values. 
+#   - For gene nodes, this involves the matrix of gene expression, 
+#   - and for metabolite nodes, it requires the metabolic concentration matrix. 
+# The output consists of the computed activation values for all loaded circuits.
+### Rules for signal computation
+# A protein passes the signal through the following factors:
+#   1-The protein must be present.
+#   2-Another protein must activate it.
+#   3-If it is an enzyme and the previous node is a metabolite, a threshold of concentration has to be reached.
+# This method computes signal transduction (alternative terminology for metabolic pathways needs to be proposed) based on these steps:
+#   1-Quantification of the presence of a particular gene as a normalized value between 0 and 1 (as a proxy for protein presence).
+#   2-Check if there is an enzyme that interacts with the metabolite captured in the proposed data.
+#   3-Compute the signal value passing through a node, taking into account:
+#     a. The level of expression of each gene inside the node.
+#     b. The metabolite concentration of each metabolite that interacts with this node.
+#     c. The intensity of the signal arriving at it, either activations or inhibitions.
+# The signal value of the circuit is the signal value through the last node of the circuit
+## Imputation approch:
+# The missing values for genes and metabolites which are needed by the method to compute the signal are added by the function,
+# assigning to each sample the median of the matrix. 
+# Please note: A high ratio of missingness may lead to unrepresentative results.
+source("src/utils.R")
+source("src/nodes_values_from_all.R")
+#The iterative algorithm that calculate the signal
 metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE, GO.terms = FALSE, 
           custom.terms = NA, sel_assay = 1, decompose = FALSE, maxnum = 100, 
           verbose = TRUE, tol = 1e-06, test = TRUE) {

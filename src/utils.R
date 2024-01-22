@@ -1,6 +1,6 @@
-library(igraph)
-library(stringr)
-library(hipathia)
+suppressPackageStartupMessages(library(igraph))
+suppressPackageStartupMessages(library(stringr))
+
 all_needed_metabolites <- function (pathigraphs)
 {
   metabolite <- unique(unlist(sapply(pathigraphs, function(x) {
@@ -142,4 +142,24 @@ test_metabo_pathways_object <- function (pathways)
   isigraph <- is(pathways$pathigraphs[[1]]$graph, "igraph")
   if (!hasall == TRUE | !spec == TRUE | !isigraph == TRUE) 
     stop("Pathways object not allowed")
+}
+
+# Get the script directory
+getScriptPath <- function(){
+  cmd.args <- commandArgs()
+  m <- regexpr("(?<=^--file=).+", cmd.args, perl=TRUE)
+  script.dir <- dirname(regmatches(cmd.args, m))
+  if(length(script.dir) == 0) stop("can't determine script dir: please call the script with Rscript")
+  if(length(script.dir) > 1) stop("can't determine script dir: more than one '--file' argument detected")
+  return(script.dir)
+}
+get_main_dir <- function(){
+  # Check if running in RStudio
+  is_rstudio <- Sys.getenv("RSTUDIO") == "1"
+  if (is_rstudio) {
+    codebase <- dirname(rstudioapi::getActiveDocumentContext()$path)
+  } else {
+    codebase <-  getScriptPath()
+  }
+  return(codebase)
 }
