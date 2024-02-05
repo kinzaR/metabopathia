@@ -1,5 +1,15 @@
 # ig <- pathigraph$graph
-library(hipathia)
+# Pathways are structured as graphs, consisting of interconnected nodes and edges. 
+# Certain nodes may encompass multiple genes, representing distinct isoforms of the protein or members within the same gene family, among other possibilities.
+# As each gene has its unique level of expression, the initial step involves summarizing this information into a score.
+# Which will characterizes the overall value of the node.
+# In the case of metabolite nodes, two methods are proposed to align the values of these nodes with the methodology:
+# - Binarization: Conversion of values into binary form.
+# - Metabolite/Protein Ratio of Activation Association: Establishing a ratio between metabolite and protein activation values.
+# Check if the library is loaded, if not, load it
+if (!require("hipathia", quietly = TRUE)) {
+  library("hipathia")
+}
 nodes_values_from_all <- function(genes_vals, metabo_vals, ig, summ = "per90"){
   genes_list <- V(ig)$genesList
   metabolites_list <- V(ig)$metaboID

@@ -1,6 +1,7 @@
 chrome-ext/
 node_modules/
 build*/
+tmp/
 bower_components/
 doc*
 metabopathia-web/

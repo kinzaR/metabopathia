@@ -56,7 +56,6 @@ add_metabolite_to_mgi <- function(mgi, verbose = FALSE, basal.value = 0.5){
   meta.05 <- NULL
   meta.05$pathigraphs <- newmgi$pathigraphs
   meta.05$all.labelids <- newmgi$all.labelids
-  source("metabopathia.R")
   results.05 <- metabopathia(genes.vals.05, metabolites.vals.05, meta.05, test = FALSE, 
                          verbose = FALSE)
   results.dec.05 <- metabopathia(genes.vals.05, metabolites.vals.05, meta.05, decompose = TRUE, 

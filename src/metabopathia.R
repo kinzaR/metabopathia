@@ -20,6 +20,25 @@
 # The missing values for genes and metabolites which are needed by the method to compute the signal are added by the function,
 # assigning to each sample the median of the matrix. 
 # Please note: A high ratio of missingness may lead to unrepresentative results.
+# Computation of Signal:
+# The intensity of the propagated signal is calculated using an iterative algorithm, starting from the first node(s) in a sub-pathway until reaching the last node. (the concept of a sub-pathway/circiut has to be introduced clearly before this!)
+# Biologically speaking, the first node represents the receptors within a cell, and the last nodes represent effector protein. 
+# In subsequent steps, we will annotate them with cellular functions and infer the functional activity of the studied condition within the cell.
+# The initial input signal arriving at the first node is set to 1, assuming that the signal reaching the receptors is at its maximum value.
+# As mentioned before, all values must be scaled between 0 and 1. Here, 0 signifies inactivity, and 1 denotes full activation. However, these values may not be meaningful until placed in a comparative context.
+# Then, for each node 'n' in the subpathway, the signal value will be the product of the normalized/scaled value of that node calculated previously, the set of arrived inhibition signal values, and activation signal values.
+## parameters:
+# decompose: indicates whether to use effector subpathways or decomposed subpathways.
+# Some comments :
+#   very good as you mention early intro for the sub pathway
+# clarification of node types -> more description as you mention is good idea. you mentioned that first node represents receptors within a cell and the last represent a TF , consider adding adescription to the other types that might be present their roles
+# Biological speaking:  why are we doing this? imagine its like playing detective in the cell, by crunching those numbers, we can unveil cellular mysteries and solve biological puzzles, and may beeven find out why your cells have been mis behaving- real applications of this computation in undersytanding rhe cellular functions or disease mechanism
+# scaling points : elaborate why values must be scaled between 0 and 1? what scales represet biologicaly  discuss how 0 signifying in activity and 1 full activation
+# you would say about the inhibition and activation. elabort how this can be determined? are those experimental data? predicted/calculated values or both? the idea how these signal influence a signal values
+# the iterative process : describe the iterative process in more details here... what are the steps in the propagating the signal from point x to point z ? any math equation govern the process
+# explain how the calculated signal values at each node are used for tits functional annotation ? what the downstream analysis?
+#   feedback loops, refer if the method consider that bcoz it can play a crucial role in signal stability and propagation
+# Clear confusing in cocept : effector protein vs TF
 source("src/utils.R")
 source("src/nodes_values_from_all.R")
 #The iterative algorithm that calculate the signal

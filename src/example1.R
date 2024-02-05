@@ -5,7 +5,7 @@ opt$met_file <-"data_examples/Dystrophic_epidermolysis_bullosa/metabolite_suero.
 opt$design_file <-"data_examples/Dystrophic_epidermolysis_bullosa/integration_design.tsv"
 opt$group1 <-"visit1"
 opt$group2 <-"control"
-opt$paired <-FALSE
+opt$paired <-TRUE
 opt$decompose <-FALSE
 opt$design_type <-"categorical"
 opt$adjust <-TRUE

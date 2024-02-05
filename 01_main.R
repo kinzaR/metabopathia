@@ -35,6 +35,8 @@ source("src/report.R")
 source("src/data_pre.R")
 source("src/utils.R")
 source("src/metabopathia.R")
+### Piplines ###
+source("src/compare_pipeline.R")
 
 # Define command-line options
 option_list <- list(
@@ -68,7 +70,7 @@ option_list <- list(
               help = "Boolean, whether to compute functional analysis with Gene Ontology terms."),
   make_option("--uni.terms", action = "store_true", default = FALSE,
               help = "Boolean, whether to compute functional analysis with Uniprot keywords."),
-  make_option("--custom.terms", type = "character", default = NULL,
+  make_option("--custom.terms", type = "character", default = NA,
               help = "Path to a file containing a data.frame with the custom annotation of the genes to the functions. First column are gene symbols, second column the functions."),
   make_option("--analysis", type = "character", default = "compare",
               help = "Type of analysis. Allowed values: 'compare', 'predictor_test', 'predictor_train', 'variant_interpreter', 'drug_repurposing'. Default is 'compare'.\n\n\
@@ -84,15 +86,16 @@ option_list <- list(
 opt <- parse_args(OptionParser(option_list = option_list))
 # be carefull this is a forced hardcoded contant to be removed !!!
 source("src/example1.R")
-# Extract values from options
-attach(opt) # some recomendations are to avoid the use of attach but still not convincing for me in this situation!
-if(verbose){
+if(opt$verbose){
   message("The recieved options are :")
   str(opt)
 }
 
 # Validate options
 validate_options(opt)
+
+# Extract values from options
+attach(opt) # some recomendations are to avoid the use of attach but still not convincing for me in this situation!
 
 # Set default values if not specified by the user
 if (is.null(opt$pathways_list)) { #if (!opt$pathways_list) { the other one is more acurate!
@@ -110,8 +113,9 @@ status(" 20", "Data preprocessed successfully", output_folder)
 ## Step 2: MGI preparation & filtering
 ### from data filter pathways_list ( think about filtering by metabolimocs type in order to avoid high prensentage of missingness)
 # ...
-### load pathways with pathway list:
+### load pathways with pathway list:  preprocessed KEGG pathway
 if(verbose) message("Loading pathways...") #I have to load from prepared MGI already ! time consuming 
+# Load the pre-processed pathway object
 pathways <- hipathia::load_pathways(species = spe, pathways_list = pathways_list)
 # modules <- 
 ## adaptation of the MGI: to be removed, because I have to load it already prepared
@@ -120,10 +124,18 @@ status(" 40", "Pathways loaded successfully", output_folder)
 
 ## Step 3: Signal propagation : Pathway activation computation
 if(verbose) message("Propagating signaling...")
-metdata <- metabopathia(genes_vals, metabo_vals, metabo_pathways, uni.terms = uni.terms, GO.terms = GO.terms,
+## Functiona annotation 
+if(!is.na(custom.terms)){
+  custom.terms <- read.table(custom.terms, sep = "\t", header = FALSE, stringsAsFactors = FALSE)
+}
+metdata <- metabopathia(genes_vals = data_set$genes_vals, metabo_vals = data_set$metabo_vals,
+                        metaginfo = metabo_pathways,
+                        uni.terms = uni.terms, GO.terms = GO.terms, custom.terms = custom.terms,
                         decompose = decompose, verbose=verbose)
-hdata <- hipathia(genes_vals = genes_vals,pathways, uni.terms = uni.terms, GO.terms = GO.terms,
-                        decompose = decompose, verbose=verbose)
+hdata <- hipathia(genes_vals = data_set$genes_vals,
+                  pathways,
+                  uni.terms = uni.terms, GO.terms = GO.terms, custom.terms = custom.terms,
+                  decompose = decompose, verbose=verbose)
 ### path vals
 ####metabopathia
 met_path_vals <- get_paths_data(metdata, matrix = T)
@@ -134,17 +146,71 @@ h_path_vals <- normalize_paths(h_path_vals, pathways)
 
 status(" 60", "Signal propagation computed successfully", output_folder)
 
-
-
 ## Step 4: Scenarios & pipelines :
 ## Step 4.1: Differential Activity Analysis
-if(analysis=="compare") compare_pipeline()
-# hipathia::DAcomp(hidata = , groups = , expdes = , g2 = , )
+# I have here to discuss why I have used the statiticakl test different for each!
+if(analysis=="compare"){
+  met_results <- compare_pipeline(metdata, groups=data_set$des$group, expdes=group1, g2 = group2,
+                                  path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
+                                  order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
+  hi_results <- compare_pipeline(hdata, groups=data_set$des$group, expdes=group1, g2 = group2,
+                                 path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
+                                 order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
+}
 ## (Upcoming Features)Step 4.2: Drug repurposing | MAchine learning | variante interpreter ....
-## Step 5: Functional analysis: hipathia::quantify_terms()
-## Step 6: Results
-### pathway viewer and other figures (interactivity!)
 
+################ Start : To be removed after testing the hipathia function with 3_terms
+# ## Step 5: Functional analysis: hipathia::quantify_terms()
+# uniprot_vals <- quantify_terms(results, pathways, dbannot = "uniprot") is hipathia:::quantify_funs() and it encapsulated inside hipathia/metabopathia function 
+################ End : To be removed after testing the hipathia function with 3_terms
 
+## Step 6: Results visualization
+
+# DAreport() to easily create a report
+# Save and serve all results to browser
+MTreport <- DAreport(met_results, metabo_pathways,conf.level = 0.1)
+visualize_report(MTreport)
+
+HIreport <- DAreport(hi_results, pathways)
+visualize_report(HIreport)
+
+# servr::daemon_stop()
+
+## visualization functions
+
+# Results overview: Summary of UP & DOWN nodes, paths and functions
+hipathia::DAoverview(DAdata = met_results) # Results overview
+hipathia::DAoverview(DAdata = hi_results) # Results overview
+# Results summary by pathway: summary of the number of paths altered in the n most altered pathways
+hipathia::DAsummary(DAdata = met_results, n = 10) # Top altered pathways
+hipathia::DAsummary(DAdata = hi_results, n = 10) # Top altered pathways
+
+# Top results per feature: Top 10 altered features per class (nodes, paths, functions)
+# I have to check if there is some altered or not before , othways it will give an error conf.level =0.5 to fore results (has to be removed offcorse)
+hipathia::DAtop(DAdata = met_results, n = 10, conf.level = 0.3) # top n differtially activated nodes, paths and functions, and plots a dot plot with that info.
+hipathia::DAtop(DAdata = hi_results, n = 10, conf.level = 0.3)
+
+### Pathway differential activation plot: pathway viewer and other figures (interactivity! visNetwork? we compatibility)
+hipathia::DApathway(name = "hsa04015", pathways = metabo_pathways, DAdata = met_results, ) # Pathway viewer plot 
+hipathia::DApathway(name = "hsa04015", pathways = pathways, DAdata = hi_results) # Pathway viewer plot 
+#   DApathway(metabo_pathways$pathigraphs$hsa04720$path.id, metabo_pathways, DAdata)
+# 100*(intersect(metabo_pathways$all.genes , rownames(genes_vals)) %>% length(.) ) / length(metabo_pathways$all.genes)
+
+## other version !
+# metabopathia
+colors_de_m <- node_color_per_de(results = metdata, metaginfo = metabo_pathways, 
+                               group = data_set$des$group, expdes = group1, g2 = group2)
+newComp_m <- as.data.frame(met_results$paths)
+rownames(newComp_m)<- newComp_m$ID
+hipathia::pathway_comparison_plot(comp = newComp_m , metaginfo = metabo_pathways, pathway = "hsa04015", 
+                                  node_colors = colors_de_m, conf = 0.5)
+
+# hipathia
+colors_de <- node_color_per_de(results = hdata, metaginfo = pathways, 
+                               group = data_set$des$group, expdes = group1, g2 = group2)
+newComp <- as.data.frame(hi_results$paths)
+rownames(newComp)<- newComp$ID
+hipathia::pathway_comparison_plot(comp = newComp , metaginfo = pathways, pathway = "hsa04015", 
+                                  node_colors = colors_de, conf = 0.5)
 
 

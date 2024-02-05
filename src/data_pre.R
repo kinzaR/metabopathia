@@ -10,7 +10,7 @@
 # Both data matrices (gene expression and metabolite concentration) have to be scaled between 0 and 1 before computing the subpaths activation values. 
 # The normalization has to be performed independently for each data type. 
 # In the actual analysis we have used the the percentil to compute the normalized value between 0 and 1, it was chosen in order to remove observed outliers in metabolomics data (heavy-tailed distributions of the metabolomics).
-# In order to use same technique for both data , normalization by percentil were used as sell for transcriptomic dataset.
+# In order to use same technique for both data , normalization by percentil were used as well for transcriptomic dataset.
 # by_gene vs by_metabolite ? by row: yes/no?
 data_pre <- function(exp_file, met_file, design_file, group1, group2, output_folder, design_type="categorical", analysis="compare", spe="hsa", verbose=FALSE){
   data_set <- list()
@@ -42,7 +42,7 @@ data_pre <- function(exp_file, met_file, design_file, group1, group2, output_fol
   }
   # Check for a sufficient number of samples
   if(ncol(exp) < 3 || ncol(metabo_data) < 3){
-    stop("ERROR: Not enough samples in the Expression matrix (at least 3 complete pairs); please check your input data ")
+    stop("ERROR: Not enough samples in the Expression/Concentration matrix (at least 3 complete pairs); please check your input data ")
   }
   # Check for consistent data intersection
   if(ncol(exp) != nrow(des) && ncol(metabo_data) != nrow(des)){

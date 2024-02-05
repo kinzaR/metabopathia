@@ -63,6 +63,11 @@ validate_options <- function(opt, verbose = FALSE) {
   # Validate design type
   validate_design_type(opt$design_type, allowed_design_types)
   
+  # Validate custom annotation file
+  if(!is.na(opt$custom.terms)){
+    validate_file("custom.terms", opt)
+  }
+  
   # Validate chosen analysis pipeline
   validate_analysis(opt$analysis, allowed_analysis, ready_analisis)
   

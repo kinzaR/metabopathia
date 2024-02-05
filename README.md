@@ -1,5 +1,5 @@
 # metabopathia
-## Abstract (is a quick astract to re-write )
+## Abstract (is a quick abstract to re-write )
 Metabopathia is a method for computation of signal transduction along signaling pathway and metabolic pathways from transcriptomic and metabolomic data. This method is based on the Canonical Circuit Activity Analysis method which is an iterative algorithm that compute the signal intensity passing through the nodes of a network. This network are composed by proteins and metabolites: signaling pathways and metabolic pathways maps.
 The method is taking into account the level of expression, the metabolic concentration (for genes and metabolites respectively) and the intensity of the signal arriving to each node. Unlike the enreachment-based methods, this method is able to deffer between signal that reduce or increase (activation or inhibition).It is providing an other approach of omics data integration for functional analysis allowing to compute the signal arriving to the effector nodes with are annotated by a function for each pathway (:S bad werritten). 
 In summary, Metabopathia presents a refined approach to unraveling the intricate interplay of gene expression and metabolite dynamics within cellular pathways.
