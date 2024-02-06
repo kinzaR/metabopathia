@@ -1,4 +1,0 @@
-0% : Analysis is started
-40% : Pathways loaded successfully
-  0% : Analysis is started
- 60% : Signal propagation computed successfully
