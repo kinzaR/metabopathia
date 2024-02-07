@@ -47,10 +47,7 @@ Follow these steps to launch the case study from the command line:
     ```
 3. **Run the case study**
     ```R
-    ./01_main.R -v -e data_examples/Dystrophic_epidermolysis_bullosa/counts_TMM_normalization.tsv \
-    -m data_examples/Dystrophic_epidermolysis_bullosa/metabolite_suero.tsv \
-    -d  data_examples/Dystrophic_epidermolysis_bullosa/integration_design.tsv \
-    --group1 visit1 --group2 control
+    ./01_main.R --example
     ```
 4. **Example Command**
 For help: 
