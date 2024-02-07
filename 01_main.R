@@ -80,12 +80,16 @@ option_list <- list(
                       Drug Repurposing 'drug_repurposing': drug repurposing."
   ),
   make_option("--output_folder", type = "character", default = "tmp",
-              help = "Output folder path. Default is 'tmp'.")
+              help = "Output folder path. Default is 'tmp'."),
+  make_option("--hipathia", action = "store_true", default = FALSE,
+              help="Enable calculation using HiPathia for result comparison between MetaboPathia and HiPathia."),
+  make_option("--example", action = "store_true", default = FALSE,
+              help = "Load variables from the example config file (src/example1.R).")
   )
 # Parse command-line arguments
 opt <- parse_args(OptionParser(option_list = option_list))
 # be carefull this is a forced hardcoded contant to be removed !!!
-source("src/example1.R")
+if(opt$example || is_rstudio) source("src/example1.R")
 if(opt$verbose){
   message("The recieved options are :")
   str(opt)
@@ -132,17 +136,22 @@ metdata <- metabopathia(genes_vals = data_set$genes_vals, metabo_vals = data_set
                         metaginfo = metabo_pathways,
                         uni.terms = uni.terms, GO.terms = GO.terms, custom.terms = custom.terms,
                         decompose = decompose, verbose=verbose)
-hdata <- hipathia(genes_vals = data_set$genes_vals,
+if(hipathia){
+  hdata <- hipathia(genes_vals = data_set$genes_vals,
                   pathways,
                   uni.terms = uni.terms, GO.terms = GO.terms, custom.terms = custom.terms,
                   decompose = decompose, verbose=verbose)
+}
+
 ### path vals
 ####metabopathia
 met_path_vals <- get_paths_data(metdata, matrix = T)
 met_path_vals <- normalize_paths(met_path_vals, metabo_pathways)
 ###hipathia
-h_path_vals <- get_paths_data(hdata, matrix = T)
-h_path_vals <- normalize_paths(h_path_vals, pathways)
+if(hipathia){
+  h_path_vals <- get_paths_data(hdata, matrix = T)
+  h_path_vals <- normalize_paths(h_path_vals, pathways)
+}
 
 status(" 60", "Signal propagation computed successfully", output_folder)
 
@@ -153,9 +162,12 @@ if(analysis=="compare"){
   met_results <- compare_pipeline(metdata, groups=data_set$des$group, expdes=group1, g2 = group2,
                                   path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
                                   order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
-  hi_results <- compare_pipeline(hdata, groups=data_set$des$group, expdes=group1, g2 = group2,
+  if(hipathia){
+    hi_results <- compare_pipeline(hdata, groups=data_set$des$group, expdes=group1, g2 = group2,
                                  path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
                                  order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
+  }
+  status(" 80", "Differential Activity Analysis completed successfully", output_folder)
 }
 ## (Upcoming Features)Step 4.2: Drug repurposing | MAchine learning | variante interpreter ....
 
@@ -166,51 +178,77 @@ if(analysis=="compare"){
 
 ## Step 6: Results visualization
 
-# DAreport() to easily create a report
-# Save and serve all results to browser
-MTreport <- DAreport(met_results, metabo_pathways,conf.level = 0.1)
-visualize_report(MTreport)
-
-HIreport <- DAreport(hi_results, pathways)
-visualize_report(HIreport)
-
-# servr::daemon_stop()
-
 ## visualization functions
-
 # Results overview: Summary of UP & DOWN nodes, paths and functions
-hipathia::DAoverview(DAdata = met_results) # Results overview
-hipathia::DAoverview(DAdata = hi_results) # Results overview
+hipathia::DAoverview(DAdata = met_results)
+ggplot2::ggsave(file.path(output_folder, "DAoverview_metabopathia.png")) # Results overview
+if(hipathia) {
+  hipathia::DAoverview(DAdata = hi_results) # Results overview
+  ggplot2::ggsave(file.path(output_folder, "DAoverview_hipathia.png")) 
+}
+
 # Results summary by pathway: summary of the number of paths altered in the n most altered pathways
 hipathia::DAsummary(DAdata = met_results, n = 10) # Top altered pathways
-hipathia::DAsummary(DAdata = hi_results, n = 10) # Top altered pathways
-
+ggplot2::ggsave(file.path(output_folder, "DAsummary_metabopathia.png"))
+if(hipathia) {
+  hipathia::DAsummary(DAdata = hi_results, n = 10) # Top altered pathways
+  ggplot2::ggsave(file.path(output_folder, "DAsummary_hipathia.png")) 
+}
 # Top results per feature: Top 10 altered features per class (nodes, paths, functions)
 # I have to check if there is some altered or not before , othways it will give an error conf.level =0.5 to fore results (has to be removed offcorse)
 hipathia::DAtop(DAdata = met_results, n = 10, conf.level = 0.3) # top n differtially activated nodes, paths and functions, and plots a dot plot with that info.
-hipathia::DAtop(DAdata = hi_results, n = 10, conf.level = 0.3)
+ggplot2::ggsave(file.path(output_folder, "DAtop_metabopathia.png")) # Results overview
+if(hipathia) {
+  hipathia::DAtop(DAdata = hi_results, n = 10, conf.level = 0.3)
+  ggplot2::ggsave(file.path(output_folder, "DAtop_hipathia.png")) 
+}
 
-### Pathway differential activation plot: pathway viewer and other figures (interactivity! visNetwork? we compatibility)
-hipathia::DApathway(name = "hsa04015", pathways = metabo_pathways, DAdata = met_results, ) # Pathway viewer plot 
-hipathia::DApathway(name = "hsa04015", pathways = pathways, DAdata = hi_results) # Pathway viewer plot 
-#   DApathway(metabo_pathways$pathigraphs$hsa04720$path.id, metabo_pathways, DAdata)
-# 100*(intersect(metabo_pathways$all.genes , rownames(genes_vals)) %>% length(.) ) / length(metabo_pathways$all.genes)
+# Save the entire workspace
+save.image(file = file.path(output_folder,"workspace.RData"))
+servr::daemon_stop() # kill & close
+# DAreport() to easily create a report
+# Save and serve all results to browser
+MTreport <- DAreport(met_results, metabo_pathways, path = output_folder, output_folder = "metabopathia_report", verbose = verbose)
+status("100", paste0("HTML report created successfully in the ",file.path(codebase,MTreport)), output_folder)
+message("Press Ctrl + C to stop serving the report...\n")
+serve_report(file.path(codebase,MTreport), port = servr::random_port(), browser = T, daemon = T)
+if(hipathia){
+  HIreport <- DAreport(hi_results, pathways, path = output_folder, output_folder = "hipathia4comp_report",verbose = verbose)
+  message("Press Ctrl + C to stop serving the report...\n")
+  serve_report(file.path(codebase,HIreport),port = servr::random_port(), browser = T, daemon = F)
+}
 
-## other version !
-# metabopathia
-colors_de_m <- node_color_per_de(results = metdata, metaginfo = metabo_pathways, 
-                               group = data_set$des$group, expdes = group1, g2 = group2)
-newComp_m <- as.data.frame(met_results$paths)
-rownames(newComp_m)<- newComp_m$ID
-hipathia::pathway_comparison_plot(comp = newComp_m , metaginfo = metabo_pathways, pathway = "hsa04015", 
-                                  node_colors = colors_de_m, conf = 0.5)
+# Pause and wait for user input
+if(!is_rstudio){
+  cat("Press Enter to finish...")
+  invisible(readLines("stdin", n=1))
+}
+servr::daemon_stop() # kill & close
 
-# hipathia
-colors_de <- node_color_per_de(results = hdata, metaginfo = pathways, 
-                               group = data_set$des$group, expdes = group1, g2 = group2)
-newComp <- as.data.frame(hi_results$paths)
-rownames(newComp)<- newComp$ID
-hipathia::pathway_comparison_plot(comp = newComp , metaginfo = pathways, pathway = "hsa04015", 
-                                  node_colors = colors_de, conf = 0.5)
+
+if(is_rstudio){
+  ### Pathway differential activation plot: pathway viewer and other figures (interactivity! visNetwork? we compatibility)
+  hipathia::DApathway(name = "hsa04015", pathways = metabo_pathways, DAdata = met_results) # Pathway viewer plot 
+  hipathia::DApathway(name = "hsa04015", pathways = pathways, DAdata = hi_results) # Pathway viewer plot 
+  # DApathway(metabo_pathways$pathigraphs$hsa04720$path.id, metabo_pathways, DAdata)
+  # 100*(intersect(metabo_pathways$all.genes , rownames(genes_vals)) %>% length(.) ) / length(metabo_pathways$all.genes)
+  ## other version !
+  # metabopathia
+  colors_de_m <- node_color_per_de(results = metdata, metaginfo = metabo_pathways, 
+                                 group = data_set$des$group, expdes = group1, g2 = group2)
+  newComp_m <- as.data.frame(met_results$paths)
+  rownames(newComp_m)<- newComp_m$ID
+  hipathia::pathway_comparison_plot(comp = newComp_m , metaginfo = metabo_pathways, pathway = "hsa04015", 
+                                    node_colors = colors_de_m, conf = 0.5)
+  
+  # hipathia
+  colors_de <- node_color_per_de(results = hdata, metaginfo = pathways, 
+                                 group = data_set$des$group, expdes = group1, g2 = group2)
+  newComp <- as.data.frame(hi_results$paths)
+  rownames(newComp)<- newComp$ID
+  hipathia::pathway_comparison_plot(comp = newComp , metaginfo = pathways, pathway = "hsa04015", 
+                                    node_colors = colors_de, conf = 0.5)
+}
+
 
 

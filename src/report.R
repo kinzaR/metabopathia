@@ -24,3 +24,26 @@ status <- function(value,descrip, output_folder) {
   write(c(value,descrip), file = status_file_path, append = T, ncolumns = 2, sep = "% : ")
   if(verbose) message("Status updated to ", value, "% : ", descrip)
 }
+
+is_port_in_use <- function(port) {
+  con <- tryCatch({
+    socketConnection(host = "127.0.0.1", port = port, server = FALSE)
+  }, error = function(e) {
+    return(NULL)
+  })
+  
+  if (!is.null(con)) {
+    close(con)
+    return(TRUE)
+  } else {
+    return(FALSE)
+  }
+}
+
+serve_report <-function (output_folder, port = 4000, browser= T, daemon = T) 
+{
+  servr::httd(paste0(output_folder, "/pathway-viewer"), port = port, 
+              browser = browser, daemon = daemon)
+  cat("Open a web browser and go to URL http://127.0.0.1:", 
+      port, "\n", sep = "")
+}
