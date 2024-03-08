@@ -1,0 +1,10 @@
+chrome-ext/
+node_modules/
+build*/
+tmp/
+.Rhistory
+bower_components/
+doc*
+metabopathia-web/
+
+./data_examples/GSE215221/GSE215221_process_data.txt.gz

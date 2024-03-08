@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+# metabopathia
+=======
+=======
+>>>>>>> a4d6f95aaa40a6c079269d28b146b85b133956a4
 # metabopathia
 ## Abstract (is a quick abstract to re-write )
 Metabopathia is a method for computation of signal transduction along signaling pathway and metabolic pathways from transcriptomic and metabolomic data. This method is based on the Canonical Circuit Activity Analysis method which is an iterative algorithm that compute the signal intensity passing through the nodes of a network. This network are composed by proteins and metabolites: signaling pathways and metabolic pathways maps.
@@ -60,3 +66,7 @@ For help:
    ```
 4. **Parameters**
 
+<<<<<<< HEAD
+>>>>>>> dev
+=======
+>>>>>>> a4d6f95aaa40a6c079269d28b146b85b133956a4

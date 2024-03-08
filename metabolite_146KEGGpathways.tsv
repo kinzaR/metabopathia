@@ -1,0 +1,616 @@
+label	nodeID	path.id	path.name	tooltip
+Leukotriene B4	C02165+C14776	hsa03320	PPAR signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02165+C14776>Leukotriene B4</a>
+C10AB fibrates	NA	hsa03320	PPAR signaling pathway	<a target=_blank href=http://www.genome.jp/kegg-bin/search_htext?htext=br08303&search_string=%22C10AB%20fibrates%22&option=-n>C10AB fibrates</a>
+S01BC Antiinflammatory agents, non-steroids	NA	hsa03320	PPAR signaling pathway	<a target=_blank href=http://www.genome.jp/kegg-bin/search_htext?htext=br08303&search_string=%22S01BC%20Antiinflammatory%20agents%2c%20non%2dsteroids%22&option=-n>S01BC Antiinflammatory agents, non-steroids</a>
+9-cis-Retinoic acid	C15493	hsa03320	PPAR signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C15493>9-cis-Retinoic acid</a>
+9-cis-Retinoic acid*	C15493	hsa03320	PPAR signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C15493>9-cis-Retinoic acid*</a>
+S01BC Antiinflammatory agents, non-steroids*	NA	hsa03320	PPAR signaling pathway	<a target=_blank href=http://www.genome.jp/kegg-bin/search_htext?htext=br08303&search_string=%22S01BC%20Antiinflammatory%20agents%2c%20non%2dsteroids%22&option=-n>S01BC Antiinflammatory agents, non-steroids*</a>
+9(S)-HODE	C14767+C14762	hsa03320	PPAR signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C14767+C14762>9(S)-HODE</a>
+9-cis-Retinoic acid**	C15493	hsa03320	PPAR signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C15493>9-cis-Retinoic acid**</a>
+A10BG Thiazolidinediones	NA	hsa03320	PPAR signaling pathway	<a target=_blank href=http://www.genome.jp/kegg-bin/search_htext?htext=br08303&search_string=%22A10BG%20Thiazolidinediones%22&option=-n>A10BG Thiazolidinediones</a>
+Lipopolysaccharide	C00338	hsa04010	MAPK signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00338>Lipopolysaccharide</a>
+Diacylglycerol	C00165	hsa04010	MAPK signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+3,5-Cyclic AMP	C00575	hsa04010	MAPK signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04014	Ras signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04014	Ras signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa04014	Ras signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Diacylglycerol*	C00165	hsa04014	Ras signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol*</a>
+3,5-Cyclic AMP	C00575	hsa04014	Ras signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04014	Ras signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+3,5-Cyclic AMP	C00575	hsa04015	Rap1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Diacylglycerol	C00165	hsa04015	Rap1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa04015	Rap1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Diacylglycerol*	C00165	hsa04015	Rap1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol*</a>
+Calcium cation*	C00076	hsa04015	Rap1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+Calcium cation	C00076	hsa04020	Calcium signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Sodium cation*	C01330	hsa04020	Calcium signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01330>Sodium cation*</a>
+Sodium cation	C01330	hsa04020	Calcium signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01330>Sodium cation</a>
+ATP	C00002	hsa04020	Calcium signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00002>ATP</a>
+NADH	C00004	hsa04020	Calcium signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00004>NADH</a>
+Nicotinic acid adenine dinucleotide phosphate	C13051	hsa04020	Calcium signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C13051>Nicotinic acid adenine dinucleotide phosphate</a>
+3,5-Cyclic AMP	C00575	hsa04020	Calcium signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Sphingosine 1-phosphate	C06124	hsa04020	Calcium signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C06124>Sphingosine 1-phosphate</a>
+Nitric oxide	C00533	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+3,5-Cyclic GMP	C00942	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00942>3,5-Cyclic GMP</a>
+Atrial natriuretic peptide	C16003	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16003>Atrial natriuretic peptide</a>
+Brain natriuretic peptide	C16004	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16004>Brain natriuretic peptide</a>
+C-Type natriuretic peptide	C16005	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16005>C-Type natriuretic peptide</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Nitric oxide*	C00533	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide*</a>
+Calcium cation	C00076	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Bradykinin	C00306	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00306>Bradykinin</a>
+Adenosine	C00212	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00212>Adenosine</a>
+Hydrogen peroxide	C00027	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00027>Hydrogen peroxide</a>
+GMP	C00144	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00144>GMP</a>
+3,5-Cyclic AMP	C00575	hsa04022	cGMP-PKG signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+3,5-Cyclic AMP	C00575	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Calcium cation	C00076	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Dopamine	C03758	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine</a>
+Prostaglandin I2	C01312	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01312>Prostaglandin I2</a>
+Serotonin	C00780	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00780>Serotonin</a>
+Acetylcholine	C01996	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01996>Acetylcholine</a>
+4-Aminobutanoate	C00334	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00334>4-Aminobutanoate</a>
+L-Adrenaline	C00788	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00788>L-Adrenaline</a>
+Adenosine	C00212	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00212>Adenosine</a>
+HCO3-	C00288	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00288>HCO3-</a>
+Calcium cation*	C00076	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+Endothelin-1	C16010+C16012+C16013	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16010+C16012+C16013>Endothelin-1</a>
+Neuropeptide Y	C15949	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C15949>Neuropeptide Y</a>
+Somatostatin-14	C16022+C16021	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16022+C16021>Somatostatin-14</a>
+(S)-Lactate	C00186	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00186>(S)-Lactate</a>
+L-Noradrenaline	C00547	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00547>L-Noradrenaline</a>
+Glucagon-like peptide 1	C16048	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16048>Glucagon-like peptide 1</a>
+Glucose-dependent insulinotropic peptide	C15906	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C15906>Glucose-dependent insulinotropic peptide</a>
+Pituitary adenylate cyclase-activating peptide-38	C16088+C16089	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16088+C16089>Pituitary adenylate cyclase-activating peptide-38</a>
+Thyroid stimulating hormone	C18182	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C18182>Thyroid stimulating hormone</a>
+Corticotropin	C02017	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02017>Corticotropin</a>
+Vasoactive intestinal peptide	C16119	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16119>Vasoactive intestinal peptide</a>
+Oleoylethanolamide	C20792	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C20792>Oleoylethanolamide</a>
+Atrial natriuretic peptide	C16003	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16003>Atrial natriuretic peptide</a>
+(R)-3-Hydroxybutanoate	C01089	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01089>(R)-3-Hydroxybutanoate</a>
+3-Hydroxyoctanoate	C20793	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C20793>3-Hydroxyoctanoate</a>
+Succinate	C00042	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00042>Succinate</a>
+Prostaglandin E2	C00584	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00584>Prostaglandin E2</a>
+Oxytocin	C00746	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00746>Oxytocin</a>
+Diacylglycerol	C00165	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Phosphatidate	C00416	hsa04024	cAMP signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00416>Phosphatidate</a>
+Diacylglycerol	C00165	hsa04062	Chemokine signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa04062	Chemokine signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04062	Chemokine signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04066	HIF-1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+O2.-	C00704	hsa04066	HIF-1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00704>O2.-</a>
+Calcium cation	C00076	hsa04066	HIF-1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Lipopolysaccharide	C00338	hsa04066	HIF-1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00338>Lipopolysaccharide</a>
+Nitric oxide	C00533	hsa04066	HIF-1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+Oxygen	C00007	hsa04066	HIF-1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00007>Oxygen</a>
+Fe2+	C14818	hsa04066	HIF-1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C14818>Fe2+</a>
+Ascorbate	C00072	hsa04066	HIF-1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00072>Ascorbate</a>
+2-Oxoglutarate	C00026	hsa04066	HIF-1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00026>2-Oxoglutarate</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04066	HIF-1 signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04068	FoxO signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+ADP	C00008	hsa04068	FoxO signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00008>ADP</a>
+AMP	C00020	hsa04068	FoxO signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00020>AMP</a>
+L-Glutamate	C00025	hsa04068	FoxO signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04071	Sphingolipid signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+N-Acylsphingosine	C00195	hsa04071	Sphingolipid signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00195>N-Acylsphingosine</a>
+Sphingosine 1-phosphate	C06124	hsa04071	Sphingolipid signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C06124>Sphingosine 1-phosphate</a>
+Peroxynitrite	C16845	hsa04071	Sphingolipid signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16845>Peroxynitrite</a>
+Diacylglycerol	C00165	hsa04071	Sphingolipid signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Phosphatidylinositol-3,4,5-trisphosphate*	C05981	hsa04071	Sphingolipid signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate*</a>
+Adenosine	C00212	hsa04071	Sphingolipid signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00212>Adenosine</a>
+Bradykinin	C00306	hsa04071	Sphingolipid signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00306>Bradykinin</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04071	Sphingolipid signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Nitric oxide	C00533	hsa04071	Sphingolipid signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+3,5-Cyclic AMP	C00575	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Phosphatidate	C00416	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00416>Phosphatidate</a>
+1-Phosphatidyl-D-myo-inositol 4,5-bisphosphate	C04637	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C04637>1-Phosphatidyl-D-myo-inositol 4,5-bisphosphate</a>
+Phosphatidylinositol-3,4,5-trisphosphate*	C05981	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate*</a>
+Thrombin	C00752	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00752>Thrombin</a>
+Angiotensin II	C02135	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02135>Angiotensin II</a>
+L-Glutamate	C00025	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+1-Acyl-sn-glycerol 3-phosphate	C00681	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00681>1-Acyl-sn-glycerol 3-phosphate</a>
+Prostaglandin F2alpha	C00639	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00639>Prostaglandin F2alpha</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Sphingosine 1-phosphate	C06124	hsa04072	Phospholipase D signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C06124>Sphingosine 1-phosphate</a>
+Progesterone	C00410	hsa04114	Oocyte meiosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00410>Progesterone</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04150	mTOR signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+AMP	C00020	hsa04150	mTOR signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00020>AMP</a>
+L-Leucine	C00123	hsa04150	mTOR signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00123>L-Leucine</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04151	PI3K-Akt signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+AMP	C00020	hsa04151	PI3K-Akt signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00020>AMP</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04152	AMPK signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+NAD+	C00003	hsa04152	AMPK signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00003>NAD+</a>
+Calcium cation	C00076	hsa04152	AMPK signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Malonyl-CoA	C00083	hsa04152	AMPK signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00083>Malonyl-CoA</a>
+beta-D-Fructose 2,6-bisphosphate	C00665	hsa04152	AMPK signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00665>beta-D-Fructose 2,6-bisphosphate</a>
+Malonyl-CoA*	C00083	hsa04152	AMPK signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00083>Malonyl-CoA*</a>
+Calcium cation	C00076	hsa04210	Apoptosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04210	Apoptosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04211	Longevity regulating pathway - mammal	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+3,5-Cyclic AMP	C00575	hsa04211	Longevity regulating pathway - mammal	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Resveratrol	C03582	hsa04211	Longevity regulating pathway - mammal	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03582>Resveratrol</a>
+Sirolimus	C07909	hsa04211	Longevity regulating pathway - mammal	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C07909>Sirolimus</a>
+Metformin	C07151	hsa04211	Longevity regulating pathway - mammal	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C07151>Metformin</a>
+NAD+	C00003	hsa04211	Longevity regulating pathway - mammal	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00003>NAD+</a>
+AMP	C00020	hsa04211	Longevity regulating pathway - mammal	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00020>AMP</a>
+Calcium cation	C00076	hsa04211	Longevity regulating pathway - mammal	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04213	Longevity regulating pathway - multiple species	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Phosphatidylinositol-3,4,5-trisphosphate*	C05981	hsa04213	Longevity regulating pathway - multiple species	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate*</a>
+Phosphatidylinositol-3,4,5-trisphosphate**	C05981	hsa04213	Longevity regulating pathway - multiple species	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate**</a>
+3,5-Cyclic AMP*	C00575	hsa04213	Longevity regulating pathway - multiple species	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP*</a>
+Hydroxyl radical	NA	hsa04218	Cellular senescence	<a target=_blank href=https://www.kegg.jp/dbget-bin/www_bget?C16844+C00027>Hydroxyl radical</a>
+Sirolimus	NA	hsa04218	Cellular senescence	<a target=_blank href=https://www.kegg.jp/dbget-bin/www_bget?C07909>Sirolimus</a>
+Calcium cation	NA	hsa04218	Cellular senescence	<a target=_blank href=https://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Phosphatidylinositol-3,4,5-trisphosphate	NA	hsa04218	Cellular senescence	<a target=_blank href=https://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+3,5-Cyclic AMP	C00575	hsa04261	Adrenergic signaling in cardiomyocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Calcium cation	C00076	hsa04261	Adrenergic signaling in cardiomyocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+L-Noradrenaline	C00547	hsa04261	Adrenergic signaling in cardiomyocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00547>L-Noradrenaline</a>
+L-Adrenaline	C00788	hsa04261	Adrenergic signaling in cardiomyocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00788>L-Adrenaline</a>
+Isoproterenol	C07056	hsa04261	Adrenergic signaling in cardiomyocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C07056>Isoproterenol</a>
+Diacylglycerol	C00165	hsa04261	Adrenergic signaling in cardiomyocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation*	C00076	hsa04261	Adrenergic signaling in cardiomyocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+L-Noradrenaline*	C00547	hsa04261	Adrenergic signaling in cardiomyocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00547>L-Noradrenaline*</a>
+L-Adrenaline*	C00788	hsa04261	Adrenergic signaling in cardiomyocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00788>L-Adrenaline*</a>
+Angiotensin II	C02135	hsa04261	Adrenergic signaling in cardiomyocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02135>Angiotensin II</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04261	Adrenergic signaling in cardiomyocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+20-HETE	C14748	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C14748>20-HETE</a>
+Nitric oxide	C00533	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+3,5-Cyclic AMP	C00575	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+3,5-Cyclic GMP	C00942	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00942>3,5-Cyclic GMP</a>
+Adenosine	C00212	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00212>Adenosine</a>
+Prostaglandin I2	C01312	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01312>Prostaglandin I2</a>
+Adrenomedullin	C16127	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16127>Adrenomedullin</a>
+Calcitonin gene-related peptide 1	C16125	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16125>Calcitonin gene-related peptide 1</a>
+Atrial natriuretic peptide	C16003	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16003>Atrial natriuretic peptide</a>
+Brain natriuretic peptide	C16004	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16004>Brain natriuretic peptide</a>
+C-Type natriuretic peptide	C16005	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16005>C-Type natriuretic peptide</a>
+Angiotensin II	C02135	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02135>Angiotensin II</a>
+L-Noradrenaline	C00547	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00547>L-Noradrenaline</a>
+Endothelin-1	C16010+C16012+C16013	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16010+C16012+C16013>Endothelin-1</a>
+Arg-vasopressin	C13662	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C13662>Arg-vasopressin</a>
+Arachidonate	C00219	hsa04270	Vascular smooth muscle contraction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00219>Arachidonate</a>
+3,5-Cyclic AMP	C00575	hsa04340	Hedgehog signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Calcium cation	C00076	hsa04360	Axon guidance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Calcium cation*	C00076	hsa04360	Axon guidance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+Calcium cation**	C00076	hsa04360	Axon guidance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation**</a>
+Calcium cation***	C00076	hsa04360	Axon guidance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation***</a>
+Hydrogen peroxide	C00027	hsa04380	Osteoclast differentiation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00027>Hydrogen peroxide</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04510	Focal adhesion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Serotonin	C00780	hsa04540	Gap junction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00780>Serotonin</a>
+1-Acyl-sn-glycerol 3-phosphate	C00681	hsa04540	Gap junction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00681>1-Acyl-sn-glycerol 3-phosphate</a>
+Nitric oxide	C00533	hsa04540	Gap junction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+L-Noradrenaline	C00547	hsa04540	Gap junction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00547>L-Noradrenaline</a>
+L-Glutamate	C00025	hsa04540	Gap junction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+Dopamine	C03758	hsa04540	Gap junction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine</a>
+Bradykinin	C00306	hsa04610	Complement and coagulation cascades	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00306>Bradykinin</a>
+Fibrin	C00290	hsa04610	Complement and coagulation cascades	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00290>Fibrin</a>
+3,5-Cyclic AMP	C00575	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Thrombin	C00752	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00752>Thrombin</a>
+ADP	C00008	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00008>ADP</a>
+Thromboxane A2	C02198	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02198>Thromboxane A2</a>
+Nitric oxide	C00533	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+3,5-Cyclic GMP	C00942	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00942>3,5-Cyclic GMP</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Prostaglandin I2	C01312	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01312>Prostaglandin I2</a>
+ATP	C00002	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00002>ATP</a>
+Arachidonate	C00219	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00219>Arachidonate</a>
+Prostaglandin H2	C00427	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00427>Prostaglandin H2</a>
+Prostaglandin G2	C05956	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05956>Prostaglandin G2</a>
+Thromboxane A2*	C02198	hsa04611	Platelet activation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02198>Thromboxane A2*</a>
+Cyclic GMP-AMP	C20640	hsa04623	Cytosolic DNA-sensing pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C20640>Cyclic GMP-AMP</a>
+Calcium cation	C00076	hsa04660	T cell receptor signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04660	T cell receptor signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Calcium cation	C00076	hsa04662	B cell receptor signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04662	B cell receptor signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Calcium cation	C00076	hsa04666	Fc gamma R-mediated phagocytosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Phosphatidate	C00416	hsa04666	Fc gamma R-mediated phagocytosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00416>Phosphatidate</a>
+Phosphatidylinositol-3,4,5-trisphosphate PLCG1	C05981+hsa:5335+hsa:5336	hsa04666	Fc gamma R-mediated phagocytosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981+hsa:5335+hsa:5336>Phosphatidylinositol-3,4,5-trisphosphate PLCG1</a>
+Sphingosine 1-phosphate	C06124	hsa04666	Fc gamma R-mediated phagocytosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C06124>Sphingosine 1-phosphate</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04666	Fc gamma R-mediated phagocytosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04666	Fc gamma R-mediated phagocytosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+1-Phosphatidyl-D-myo-inositol 4,5-bisphosphate GSN	C04637+hsa:2934+hsa:85477	hsa04666	Fc gamma R-mediated phagocytosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C04637+hsa:2934+hsa:85477>1-Phosphatidyl-D-myo-inositol 4,5-bisphosphate GSN</a>
+Calcium cation	C00076	hsa04710	Circadian rhythm	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+3,5-Cyclic AMP	C00575	hsa04710	Circadian rhythm	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Melatonin	C01598	hsa04713	Circadian entrainment	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01598>Melatonin</a>
+Pituitary adenylate cyclase-activating peptide-38	C16088+C16089	hsa04713	Circadian entrainment	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16088+C16089>Pituitary adenylate cyclase-activating peptide-38</a>
+L-Glutamate	C00025	hsa04713	Circadian entrainment	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+L-Glutamate	C00025	hsa04720	Long-term potentiation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04723	Retrograde endocannabinoid signaling	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04723	Retrograde endocannabinoid signaling	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa04723	Retrograde endocannabinoid signaling	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+2-Arachidonoylglycerol	C13856	hsa04723	Retrograde endocannabinoid signaling	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C13856>2-Arachidonoylglycerol</a>
+2-Arachidonoylglycerol*	C13856	hsa04723	Retrograde endocannabinoid signaling	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C13856>2-Arachidonoylglycerol*</a>
+L-Glutamate	C00025	hsa04723	Retrograde endocannabinoid signaling	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+Anandamide	C11695	hsa04723	Retrograde endocannabinoid signaling	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C11695>Anandamide</a>
+Anandamide*	C11695	hsa04723	Retrograde endocannabinoid signaling	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C11695>Anandamide*</a>
+3,5-Cyclic AMP	C00575	hsa04723	Retrograde endocannabinoid signaling	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+L-Glutamine	C00064	hsa04724	Glutamatergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00064>L-Glutamine</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04724	Glutamatergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04724	Glutamatergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa04724	Glutamatergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+3,5-Cyclic AMP	C00575	hsa04724	Glutamatergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+L-Glutamate	C00025	hsa04724	Glutamatergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+3,5-Cyclic AMP	C00575	hsa04725	Cholinergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04725	Cholinergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04725	Cholinergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa04725	Cholinergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Sodium cation	C01330+C00076	hsa04725	Cholinergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01330+C00076>Sodium cation</a>
+Acetylcholine	C01996	hsa04725	Cholinergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01996>Acetylcholine</a>
+3,5-Cyclic AMP	C00575	hsa04726	Serotonergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04726	Serotonergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04726	Serotonergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa04726	Serotonergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Serotonin	C00780	hsa04726	Serotonergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00780>Serotonin</a>
+D-myo-Inositol 1,4,5-trisphosphate*	C01245	hsa04726	Serotonergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate*</a>
+Calcium cation*	C00076	hsa04726	Serotonergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+Serotonin*	C00780	hsa04726	Serotonergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00780>Serotonin*</a>
+Diacylglycerol*	C00165	hsa04726	Serotonergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol*</a>
+D-myo-Inositol 1,4,5-trisphosphate**	C01245	hsa04726	Serotonergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate**</a>
+Calcium cation**	C00076	hsa04726	Serotonergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation**</a>
+4-Aminobutanoate	C00334	hsa04727	GABAergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00334>4-Aminobutanoate</a>
+3,5-Cyclic AMP	C00575	hsa04727	GABAergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+3,5-Cyclic AMP	C00575	hsa04728	Dopaminergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04728	Dopaminergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04728	Dopaminergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa04728	Dopaminergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Dopamine	C03758	hsa04728	Dopaminergic synapse	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine</a>
+Calcium cation	C00076	hsa04730	Long-term depression	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+L-Glutamate	C00025	hsa04730	Long-term depression	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+L-Glutamate*	C00025	hsa04730	Long-term depression	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate*</a>
+3,5-Cyclic AMP	C00575	hsa04740	Olfactory transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Calcium cation	C00076	hsa04740	Olfactory transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+3,5-Cyclic GMP	C00942	hsa04740	Olfactory transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00942>3,5-Cyclic GMP</a>
+3,5-Cyclic AMP*	C00575	hsa04740	Olfactory transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP*</a>
+3,5-Cyclic GMP*	C00942	hsa04740	Olfactory transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00942>3,5-Cyclic GMP*</a>
+Calcium cation*	C00076	hsa04740	Olfactory transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+Calcium cation**	C00076	hsa04740	Olfactory transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation**</a>
+Calcium cation	C00076	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Saccharin sodium anhydrous	C12284+D08836+C19378+C11045	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C12284+D08836+C19378+C11045>Saccharin sodium anhydrous</a>
+Sucrose	C00089+C00095+C00031+C00208	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00089+C00095+C00031+C00208>Sucrose</a>
+GMP	C00144	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00144>GMP</a>
+3,5-Cyclic AMP	C00575	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Hydrochloric acid	C01327	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01327>Hydrochloric acid</a>
+Acetylcholine	C01996	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01996>Acetylcholine</a>
+4-Aminobutanoate	C00334	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00334>4-Aminobutanoate</a>
+Serotonin	C00780	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00780>Serotonin</a>
+ATP	C00002	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00002>ATP</a>
+IMP	C00130	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00130>IMP</a>
+L-Glutamate	C00025	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+D-Phenylalanine	C02265+C00133+C00740	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02265+C00133+C00740>D-Phenylalanine</a>
+Citrate	C00158	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00158>Citrate</a>
+(S)-Malate	C00149	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00149>(S)-Malate</a>
+Calcium cation*	C00076	hsa04742	Taste transduction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+ATP	C00002	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00002>ATP</a>
+Bradykinin	C00306	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00306>Bradykinin</a>
+Serotonin	C00780	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00780>Serotonin</a>
+Histamine	C00388	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00388>Histamine</a>
+Prostaglandin E2	C00584	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00584>Prostaglandin E2</a>
+Diacylglycerol	C00165	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+3,5-Cyclic AMP	C00575	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Diacylglycerol*	C00165	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol*</a>
+H+	C00080	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00080>H+</a>
+Calcium cation	C00076	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Calcium cation*	C00076	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+5,6-EET	C14768+C14769	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C14768+C14769>5,6-EET</a>
+Lysophospholipid	C06254	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C06254>Lysophospholipid</a>
+Capsaicin	C06866	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C06866>Capsaicin</a>
+12(S)-HPETE	C05965+C05966+C04805+C04742+C02165	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05965+C05966+C04805+C04742+C02165>12(S)-HPETE</a>
+Resiniferatoxin	C09179	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C09179>Resiniferatoxin</a>
+N-Arachidonyl dopamine	C12271	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C12271>N-Arachidonyl dopamine</a>
+Anandamide	C11695	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C11695>Anandamide</a>
+Ethanol	C00469	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00469>Ethanol</a>
+Phorbol	C09155	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C09155>Phorbol</a>
+(-)-Menthol	C00400	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00400>(-)-Menthol</a>
+Icilin	C20171	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C20171>Icilin</a>
+1,8-Cineole	C09844	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C09844>1,8-Cineole</a>
+Cinnamaldehyde	C00903	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00903>Cinnamaldehyde</a>
+Allyl isothiocyanate	C19317	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C19317>Allyl isothiocyanate</a>
+Allicin	C07600	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C07600>Allicin</a>
+Icilin*	C20171	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C20171>Icilin*</a>
+(+)-Camphor	C00808+C00809	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00808+C00809>(+)-Camphor</a>
+2-Aminoethyl diphenylborinate	C20698	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C20698>2-Aminoethyl diphenylborinate</a>
+Arachidonate*	C00219+C12083	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00219+C12083>Arachidonate*</a>
+12(S)-HPETE*	C05965	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05965>12(S)-HPETE*</a>
+Diacylglycerol**	C00165	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol**</a>
+Arachidonate	C00219	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00219>Arachidonate</a>
+D-myo-Inositol 1,4,5-trisphosphate*	C01245	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate*</a>
+D-myo-Inositol 1,4,5-trisphosphate**	C01245	hsa04750	Inflammatory mediator regulation of TRP channels	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate**</a>
+3,5-Cyclic AMP	C00575	hsa04910	Insulin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04910	Insulin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Starch	C00369	hsa04910	Insulin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00369>Starch</a>
+D-Glucose	C00031	hsa04910	Insulin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00031>D-Glucose</a>
+3,5-Cyclic AMP	C00575	hsa04911	Insulin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Calcium cation	C00076	hsa04911	Insulin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+ATP	C00002	hsa04911	Insulin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00002>ATP</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04911	Insulin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04911	Insulin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Acetylcholine	C01996	hsa04911	Insulin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01996>Acetylcholine</a>
+Calcium cation*	C00076	hsa04911	Insulin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+Fatty acid	C00162	hsa04911	Insulin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00162>Fatty acid</a>
+Cholecystokinin-8	C16114	hsa04911	Insulin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16114>Cholecystokinin-8</a>
+Calcium cation**	C00076	hsa04911	Insulin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation**</a>
+3,5-Cyclic AMP	C00575	hsa04913	Ovarian steroidogenesis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+3,5-Cyclic AMP*	C00575	hsa04913	Ovarian steroidogenesis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP*</a>
+Progesterone	C00410	hsa04914	Progesterone-mediated oocyte maturation	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00410>Progesterone</a>
+3,5-Cyclic AMP	C00575	hsa04915	Estrogen signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Estradiol-17beta	C00951	hsa04915	Estrogen signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00951>Estradiol-17beta</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04915	Estrogen signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04915	Estrogen signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+3,5-Cyclic AMP*	C00575	hsa04915	Estrogen signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP*</a>
+Nitric oxide	C00533	hsa04915	Estrogen signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+Calcium cation	C00076	hsa04915	Estrogen signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Estradiol-17beta*	C00951	hsa04915	Estrogen signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00951>Estradiol-17beta*</a>
+4-Aminobutanoate	C00334	hsa04915	Estrogen signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00334>4-Aminobutanoate</a>
+beta-Endorphin	C02210	hsa04915	Estrogen signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02210>beta-Endorphin</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04917	Prolactin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Phosphatidylinositol-3,4,5-trisphosphate*	C05981	hsa04917	Prolactin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate*</a>
+Diacylglycerol	C00165	hsa04918	Thyroid hormone synthesis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04918	Thyroid hormone synthesis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+3,5-Cyclic AMP	C00575	hsa04918	Thyroid hormone synthesis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04919	Thyroid hormone signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Triiodothyronine	C02465	hsa04919	Thyroid hormone signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02465>Triiodothyronine</a>
+Thyroxine	C01829	hsa04919	Thyroid hormone signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01829>Thyroxine</a>
+3,5-Cyclic AMP	C00575	hsa04919	Thyroid hormone signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Calcium cation	C00076	hsa04919	Thyroid hormone signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Triiodothyronine*	C02465	hsa04919	Thyroid hormone signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02465>Triiodothyronine*</a>
+Diacylglycerol	C00165	hsa04919	Thyroid hormone signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04919	Thyroid hormone signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Fatty acid	C00162	hsa04920	Adipocytokine signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00162>Fatty acid</a>
+Long-chain fatty acid	C00638	hsa04920	Adipocytokine signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00638>Long-chain fatty acid</a>
+Diacylglycerol	C00165	hsa04920	Adipocytokine signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+9-cis-Retinoic acid	C15493	hsa04920	Adipocytokine signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C15493>9-cis-Retinoic acid</a>
+N-Acylsphingosine	C00195	hsa04920	Adipocytokine signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00195>N-Acylsphingosine</a>
+Calcium cation	C00076	hsa04921	Oxytocin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Diacylglycerol	C00165	hsa04921	Oxytocin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04921	Oxytocin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+3,5-Cyclic AMP	C00575	hsa04921	Oxytocin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Nitric oxide	C00533	hsa04921	Oxytocin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+Cyclic ADP-ribose	C13050	hsa04921	Oxytocin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C13050>Cyclic ADP-ribose</a>
+Atrial natriuretic peptide	C16003	hsa04921	Oxytocin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16003>Atrial natriuretic peptide</a>
+Arachidonate	C00219	hsa04921	Oxytocin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00219>Arachidonate</a>
+3,5-Cyclic GMP	C00942	hsa04921	Oxytocin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00942>3,5-Cyclic GMP</a>
+3,5-Cyclic GMP*	C00942	hsa04921	Oxytocin signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00942>3,5-Cyclic GMP*</a>
+3,5-Cyclic AMP	C00575	hsa04922	Glucagon signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04922	Glucagon signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Calcium cation	C00076	hsa04922	Glucagon signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+beta-D-Fructose 2,6-bisphosphate	C00665	hsa04922	Glucagon signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00665>beta-D-Fructose 2,6-bisphosphate</a>
+Malonyl-CoA	C00083	hsa04922	Glucagon signaling pathway	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00083>Malonyl-CoA</a>
+3,5-Cyclic AMP	C00575	hsa04923	Regulation of lipolysis in adipocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+L-Adrenaline	C00788	hsa04923	Regulation of lipolysis in adipocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00788>L-Adrenaline</a>
+L-Noradrenaline	C00547	hsa04923	Regulation of lipolysis in adipocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00547>L-Noradrenaline</a>
+3,5-Cyclic GMP	C00942	hsa04923	Regulation of lipolysis in adipocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00942>3,5-Cyclic GMP</a>
+Atrial natriuretic peptide	C16003	hsa04923	Regulation of lipolysis in adipocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16003>Atrial natriuretic peptide</a>
+3,5-Cyclic AMP*	C00575	hsa04923	Regulation of lipolysis in adipocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP*</a>
+Adenosine	C00212	hsa04923	Regulation of lipolysis in adipocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00212>Adenosine</a>
+Prostaglandin E2	C00584	hsa04923	Regulation of lipolysis in adipocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00584>Prostaglandin E2</a>
+Corticosterone	C02140	hsa04923	Regulation of lipolysis in adipocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02140>Corticosterone</a>
+Arachidonate	C00219	hsa04923	Regulation of lipolysis in adipocytes	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00219>Arachidonate</a>
+3,5-Cyclic AMP	C00575	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+L-Adrenaline	C00788	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00788>L-Adrenaline</a>
+L-Noradrenaline	C00547	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00547>L-Noradrenaline</a>
+3,5-Cyclic GMP	C00942	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00942>3,5-Cyclic GMP</a>
+Atrial natriuretic peptide	C16003	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16003>Atrial natriuretic peptide</a>
+Adenosine	C00212	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00212>Adenosine</a>
+Prostaglandin E2	C00584	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00584>Prostaglandin E2</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Calcium cation	C00076	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Calcium cation*	C00076	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+Nitric oxide	C00533	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+Endothelin-1	C16010+C16012+C16013	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16010+C16012+C16013>Endothelin-1</a>
+Angiotensin II	C02135	hsa04924	Renin secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02135>Angiotensin II</a>
+3,5-Cyclic GMP	C00942	hsa04925	Aldosterone synthesis and secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00942>3,5-Cyclic GMP</a>
+Calcium cation	C00076	hsa04925	Aldosterone synthesis and secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04925	Aldosterone synthesis and secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+3,5-Cyclic AMP	C00575	hsa04925	Aldosterone synthesis and secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Calcium cation*	C00076	hsa04925	Aldosterone synthesis and secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+Angiotensin II	C02135	hsa04925	Aldosterone synthesis and secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02135>Angiotensin II</a>
+(S,S)-Tartaric acid	C02107	hsa04925	Aldosterone synthesis and secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02107>(S,S)-Tartaric acid</a>
+Diacylglycerol	C00165	hsa04925	Aldosterone synthesis and secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Atrial natriuretic peptide	C16003	hsa04925	Aldosterone synthesis and secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16003>Atrial natriuretic peptide</a>
+Pyruvate	C00022	hsa04930	Type II diabetes mellitus	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00022>Pyruvate</a>
+Fatty acid	C00162	hsa04930	Type II diabetes mellitus	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00162>Fatty acid</a>
+D-Glucose*	C00031	hsa04930	Type II diabetes mellitus	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00031>D-Glucose*</a>
+D-Glucose	C00031	hsa04930	Type II diabetes mellitus	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00031>D-Glucose</a>
+ATP	C00002	hsa04930	Type II diabetes mellitus	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00002>ATP</a>
+Potassium cation	C00238	hsa04930	Type II diabetes mellitus	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00238>Potassium cation</a>
+N-Acylsphingosine	C00195	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00195>N-Acylsphingosine</a>
+Nitric oxide	C00533	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+Malonyl-CoA	C00083	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00083>Malonyl-CoA</a>
+Diacylglycerol	C00165	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+N-Acylsphingosine*	C00195	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00195>N-Acylsphingosine*</a>
+D-Glucose	C00031	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00031>D-Glucose</a>
+D-Fructose	C00095	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00095>D-Fructose</a>
+Malonyl-CoA*	C00083	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00083>Malonyl-CoA*</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Starch	C00369	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00369>Starch</a>
+D-Glucose*	C00031	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00031>D-Glucose*</a>
+Starch*	C00369	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00369>Starch*</a>
+Nitric oxide*	C00533	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide*</a>
+G00369	G00369	hsa04931	Insulin resistance	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?G00369>G00369</a>
+D-Glucose	C00031	hsa04932	Non-alcoholic fatty liver disease (NAFLD)	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00031>D-Glucose</a>
+Fatty acid	C00162	hsa04932	Non-alcoholic fatty liver disease (NAFLD)	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00162>Fatty acid</a>
+N-Acylsphingosine	C00195	hsa04933	AGE-RAGE signaling pathway in diabetic complications	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00195>N-Acylsphingosine</a>
+[Protein]-N(epsilon)-(carboxymethyl)lysine	C21011+C21012+C21013+C21014	hsa04933	AGE-RAGE signaling pathway in diabetic complications	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C21011+C21012+C21013+C21014>[Protein]-N(epsilon)-(carboxymethyl)lysine</a>
+[Protein]-N(epsilon)-(carboxymethyl)lysine*	C21011+C21012+C21013+C21014	hsa04933	AGE-RAGE signaling pathway in diabetic complications	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C21011+C21012+C21013+C21014>[Protein]-N(epsilon)-(carboxymethyl)lysine*</a>
+Diacylglycerol	C00165	hsa04933	AGE-RAGE signaling pathway in diabetic complications	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa04933	AGE-RAGE signaling pathway in diabetic complications	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Angiotensin II	C02135	hsa04933	AGE-RAGE signaling pathway in diabetic complications	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C02135>Angiotensin II</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04933	AGE-RAGE signaling pathway in diabetic complications	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Aldosterone	C01780	hsa04960	Aldosterone-regulated sodium reabsorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01780>Aldosterone</a>
+Cortisol	C00735	hsa04960	Aldosterone-regulated sodium reabsorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00735>Cortisol</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04960	Aldosterone-regulated sodium reabsorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Cortisone	C00762	hsa04960	Aldosterone-regulated sodium reabsorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00762>Cortisone</a>
+Parathyroid hormone	C16051	hsa04961	Endocrine and other factor-regulated calcium reabsorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16051>Parathyroid hormone</a>
+Calcium cation	C00076	hsa04961	Endocrine and other factor-regulated calcium reabsorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Diacylglycerol	C00165	hsa04961	Endocrine and other factor-regulated calcium reabsorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+3,5-Cyclic AMP	C00575	hsa04961	Endocrine and other factor-regulated calcium reabsorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+3,5-Cyclic AMP	C00575	hsa04962	Vasopressin-regulated water reabsorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+3,5-Cyclic AMP	C00575	hsa04970	Salivary secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04970	Salivary secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Calcium cation	C00076	hsa04970	Salivary secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Diacylglycerol	C00165	hsa04970	Salivary secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+L-Noradrenaline	C00547	hsa04970	Salivary secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00547>L-Noradrenaline</a>
+Acetylcholine	C01996	hsa04970	Salivary secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01996>Acetylcholine</a>
+3,5-Cyclic GMP	C00942	hsa04970	Salivary secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00942>3,5-Cyclic GMP</a>
+Cyclic ADP-ribose	C13050	hsa04970	Salivary secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C13050>Cyclic ADP-ribose</a>
+Nitric oxide	C00533	hsa04970	Salivary secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+Histamine	C00388	hsa04971	Gastric acid secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00388>Histamine</a>
+3,5-Cyclic AMP	C00575	hsa04971	Gastric acid secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04971	Gastric acid secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Calcium cation	C00076	hsa04971	Gastric acid secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Diacylglycerol	C00165	hsa04971	Gastric acid secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Acetylcholine	C01996	hsa04971	Gastric acid secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01996>Acetylcholine</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa04972	Pancreatic secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Calcium cation	C00076	hsa04972	Pancreatic secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Diacylglycerol	C00165	hsa04972	Pancreatic secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Cholecystokinin-8	C16114	hsa04972	Pancreatic secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16114>Cholecystokinin-8</a>
+Acetylcholine	C01996	hsa04972	Pancreatic secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01996>Acetylcholine</a>
+Secretin	C13523	hsa04972	Pancreatic secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C13523>Secretin</a>
+3,5-Cyclic AMP	C00575	hsa04972	Pancreatic secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Cyclic ADP-ribose	C13050	hsa04972	Pancreatic secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C13050>Cyclic ADP-ribose</a>
+Nicotinic acid adenine dinucleotide phosphate	C13051	hsa04972	Pancreatic secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C13051>Nicotinic acid adenine dinucleotide phosphate</a>
+Calcium cation*	C00076	hsa04972	Pancreatic secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+D-Fructose	C00095	hsa04973	Carbohydrate digestion and absorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00095>D-Fructose</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa04973	Carbohydrate digestion and absorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa04973	Carbohydrate digestion and absorption	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Secretin	C13523	hsa04976	Bile secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C13523>Secretin</a>
+3,5-Cyclic AMP	C00575	hsa04976	Bile secretion	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa05010	Alzheimer's disease	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Calcium cation	C00076	hsa05010	Alzheimer's disease	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Nitric oxide	C00533	hsa05010	Alzheimer's disease	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+Dopamine	C03758	hsa05012	Parkinson's disease	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine</a>
+3,5-Cyclic AMP	C00575	hsa05012	Parkinson's disease	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+3,5-Cyclic AMP*	C00575	hsa05012	Parkinson's disease	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP*</a>
+Adenosine	C00212	hsa05012	Parkinson's disease	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00212>Adenosine</a>
+L-Glutamate	C00025	hsa05014	Amyotrophic lateral sclerosis (ALS)	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+Hydroxyl radical	C16844	hsa05014	Amyotrophic lateral sclerosis (ALS)	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16844>Hydroxyl radical</a>
+Copper	C00070	hsa05014	Amyotrophic lateral sclerosis (ALS)	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00070>Copper</a>
+O2.-	C00704+C00027+C16845+C16844	hsa05014	Amyotrophic lateral sclerosis (ALS)	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00704+C00027+C16845+C16844>O2.-</a>
+Nitric oxide	C00533	hsa05014	Amyotrophic lateral sclerosis (ALS)	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+Hydrogen peroxide	C00027	hsa05014	Amyotrophic lateral sclerosis (ALS)	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00027>Hydrogen peroxide</a>
+H2O	C00001	hsa05014	Amyotrophic lateral sclerosis (ALS)	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00001>H2O</a>
+L-Glutamate	C00025	hsa05016	Huntington's disease	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa05016	Huntington's disease	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Calcium cation	C00076	hsa05016	Huntington's disease	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+3,5-Cyclic AMP	C00575	hsa05020	Prion diseases	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Dopamine	C03758	hsa05030	Cocaine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine</a>
+Dopamine*	C03758	hsa05030	Cocaine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine*</a>
+3,5-Cyclic AMP	C00575	hsa05030	Cocaine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+L-Glutamate	C00025	hsa05030	Cocaine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+L-Glutamate*	C00025	hsa05030	Cocaine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate*</a>
+3,5-Cyclic AMP*	C00575	hsa05030	Cocaine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP*</a>
+D00110	D00110	hsa05030	Cocaine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?D00110>D00110</a>
+Dopamine**	C03758	hsa05030	Cocaine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine**</a>
+3,5-Cyclic AMP**	C00575	hsa05030	Cocaine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP**</a>
+D07445	D07445	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?D07445>D07445</a>
+Dopamine	C03758	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine</a>
+Dopamine*	C03758	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine*</a>
+3,5-Cyclic AMP	C00575	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+L-Glutamate	C00025	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate</a>
+3,5-Cyclic AMP*	C00575	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP*</a>
+D07445*	D07445	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?D07445>D07445*</a>
+D07445**	D07445	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?D07445>D07445**</a>
+D07445***	D07445	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?D07445>D07445***</a>
+L-Glutamate*	C00025	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00025>L-Glutamate*</a>
+Dopamine**	C03758	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine**</a>
+D07445****	D07445	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?D07445>D07445****</a>
+D07445*****	D07445	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?D07445>D07445*****</a>
+Calcium cation CALML6	C00076+hsa:163688+hsa:51806+hsa:801+hsa:805+hsa:808+hsa:810	hsa05031	Amphetamine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076+hsa:163688+hsa:51806+hsa:801+hsa:805+hsa:808+hsa:810>Calcium cation CALML6</a>
+3,5-Cyclic AMP	C00575	hsa05032	Morphine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+4-Aminobutanoate	C00334	hsa05032	Morphine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00334>4-Aminobutanoate</a>
+4-Aminobutanoate*	C00334	hsa05032	Morphine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00334>4-Aminobutanoate*</a>
+D00842	D00842+D02271+D08233+D08234	hsa05032	Morphine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?D00842+D02271+D08233+D08234>D00842</a>
+Adenosine	C00212	hsa05032	Morphine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00212>Adenosine</a>
+D00842*	D00842+D02271+D08233+D08234	hsa05032	Morphine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?D00842+D02271+D08233+D08234>D00842*</a>
+3,5-Cyclic AMP**	C00575	hsa05032	Morphine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP**</a>
+4-Aminobutanoate**	C00334	hsa05032	Morphine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00334>4-Aminobutanoate**</a>
+Dopamine	C03758	hsa05032	Morphine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine</a>
+3,5-Cyclic AMP*	C00575	hsa05032	Morphine addiction	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP*</a>
+Dopamine	C03758	hsa05034	Alcoholism	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine</a>
+3,5-Cyclic AMP	C00575	hsa05034	Alcoholism	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Dopamine*	C03758	hsa05034	Alcoholism	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03758>Dopamine*</a>
+3,5-Cyclic AMP*	C00575	hsa05034	Alcoholism	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP*</a>
+Ethanol	C00469	hsa05034	Alcoholism	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00469>Ethanol</a>
+Adenosine	C00212	hsa05034	Alcoholism	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00212>Adenosine</a>
+Ethanol*	C00469	hsa05034	Alcoholism	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00469>Ethanol*</a>
+H+	C00080	hsa05110	Vibrio cholerae infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00080>H+</a>
+Cl-*	C00698	hsa05110	Vibrio cholerae infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00698>Cl-*</a>
+Potassium cation	C00238	hsa05110	Vibrio cholerae infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00238>Potassium cation</a>
+Potassium cation*	C00238	hsa05110	Vibrio cholerae infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00238>Potassium cation*</a>
+Sodium cation	C01330	hsa05110	Vibrio cholerae infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01330>Sodium cation</a>
+Cl-	C00698	hsa05110	Vibrio cholerae infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00698>Cl-</a>
+H+	C00080	hsa05120	Epithelial cell signaling in Helicobacter pylori infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00080>H+</a>
+1-Phosphatidyl-D-myo-inositol 4,5-bisphosphate	C04637	hsa05132	Salmonella infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C04637>1-Phosphatidyl-D-myo-inositol 4,5-bisphosphate</a>
+Lipopolysaccharide	C00338	hsa05132	Salmonella infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00338>Lipopolysaccharide</a>
+ATP	C00002	hsa05133	Pertussis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00002>ATP</a>
+3,5-Cyclic AMP	C00575	hsa05133	Pertussis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00575>3,5-Cyclic AMP</a>
+Potassium cation	C00238	hsa05133	Pertussis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00238>Potassium cation</a>
+Lipopolysaccharide	C00338	hsa05134	Legionellosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00338>Lipopolysaccharide</a>
+N-Acylsphingosine	C00195	hsa05140	Leishmaniasis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00195>N-Acylsphingosine</a>
+Nitric oxide	C00533	hsa05140	Leishmaniasis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00533>Nitric oxide</a>
+Prostaglandin E2	C00584	hsa05140	Leishmaniasis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00584>Prostaglandin E2</a>
+Bradykinin	C00306	hsa05142	Chagas disease (American trypanosomiasis)	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00306>Bradykinin</a>
+Lipoxin A4	C06314	hsa05145	Toxoplasmosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C06314>Lipoxin A4</a>
+FMLP	C11596	hsa05150	Staphylococcus aureus infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C11596>FMLP</a>
+Lipoteichoic acid	C20898	hsa05150	Staphylococcus aureus infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C20898>Lipoteichoic acid</a>
+1-Phosphatidyl-1D-myo-inositol 3-phosphate	C04549	hsa05152	Tuberculosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C04549>1-Phosphatidyl-1D-myo-inositol 3-phosphate</a>
+1-Phosphatidyl-D-myo-inositol	C01194	hsa05152	Tuberculosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01194>1-Phosphatidyl-D-myo-inositol</a>
+Lipopolysaccharide	C00338	hsa05152	Tuberculosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00338>Lipopolysaccharide</a>
+Calcium cation	C00076	hsa05152	Tuberculosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Calcitriol	C01673	hsa05152	Tuberculosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01673>Calcitriol</a>
+alpha,alpha-Trehalose 6,6-bismycolate	C04465+C19190	hsa05152	Tuberculosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C04465+C19190>alpha,alpha-Trehalose 6,6-bismycolate</a>
+Calcium cation*	C00076	hsa05152	Tuberculosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+Sphingosine 1-phosphate	C06124	hsa05152	Tuberculosis	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C06124>Sphingosine 1-phosphate</a>
+Hydrogen peroxide	C00027	hsa05160	Hepatitis C	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00027>Hydrogen peroxide</a>
+Hydrogen peroxide	C00027	hsa05164	Influenza A	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00027>Hydrogen peroxide</a>
+Accessory protein p30II	C18996	hsa05166	HTLV-I infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C18996>Accessory protein p30II</a>
+P13 protein	C18995	hsa05166	HTLV-I infection	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C18995>P13 protein</a>
+Estradiol-17beta	C00951+C00410+C07653+C01227+C00280+C00735+C00762	hsa05200	Pathways in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00951+C00410+C07653+C01227+C00280+C00735+C00762>Estradiol-17beta</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa05200	Pathways in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Diacylglycerol	C00165	hsa05200	Pathways in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Calcium cation	C00076	hsa05200	Pathways in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Fumarate	C00122	hsa05200	Pathways in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00122>Fumarate</a>
+Retinoate	C00777+C15493	hsa05200	Pathways in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00777+C15493>Retinoate</a>
+Testosterone	C00535	hsa05200	Pathways in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00535>Testosterone</a>
+Dihydrotestosterone	C03917	hsa05200	Pathways in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03917>Dihydrotestosterone</a>
+Cholesterol SHH	C00187+hsa:6469	hsa05200	Pathways in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00187+hsa:6469>Cholesterol SHH</a>
+Phosphatidate	C00416	hsa05200	Pathways in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00416>Phosphatidate</a>
+G10505 CD44	G10505+hsa:960	hsa05205	Proteoglycans in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?G10505+hsa:960>G10505 CD44</a>
+Heparan sulfate WNT16	C00925+hsa:51384+hsa:54361+hsa:7471+hsa:7472+hsa:7473+hsa:7474+hsa:7475+hsa:7476+hsa:7477+hsa:7478+hsa:7479+hsa:7480+hsa:7481+hsa:7482+hsa:7483+hsa:7484+hsa:80326+hsa:81029+hsa:89780	hsa05205	Proteoglycans in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00925+hsa:51384+hsa:54361+hsa:7471+hsa:7472+hsa:7473+hsa:7474+hsa:7475+hsa:7476+hsa:7477+hsa:7478+hsa:7479+hsa:7480+hsa:7481+hsa:7482+hsa:7483+hsa:7484+hsa:80326+hsa:81029+hsa:89780>Heparan sulfate WNT16</a>
+G13063 FGF2	G13063+hsa:2247	hsa05205	Proteoglycans in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?G13063+hsa:2247>G13063 FGF2</a>
+Fumarate	C00122	hsa05211	Renal cell carcinoma	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00122>Fumarate</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa05212	Pancreatic cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Phosphatidylinositol-3,4,5-trisphosphate*	C05981	hsa05212	Pancreatic cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate*</a>
+Phosphatidate	C00416	hsa05212	Pancreatic cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00416>Phosphatidate</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa05213	Endometrial cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Calcium cation	C00076	hsa05214	Glioma	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation</a>
+Diacylglycerol	C00165	hsa05214	Glioma	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa05214	Glioma	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Calcium cation*	C00076	hsa05214	Glioma	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00076>Calcium cation*</a>
+Diacylglycerol*	C00165	hsa05214	Glioma	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol*</a>
+D-myo-Inositol 1,4,5-trisphosphate	C01245	hsa05214	Glioma	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate</a>
+Phosphatidylinositol-3,4,5-trisphosphate*	C05981	hsa05214	Glioma	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate*</a>
+D-myo-Inositol 1,4,5-trisphosphate*	C01245	hsa05214	Glioma	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C01245>D-myo-Inositol 1,4,5-trisphosphate*</a>
+Estradiol-17beta	C00951+C00410+C07653+C01227+C00280+C00735+C00762	hsa05215	Prostate cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00951+C00410+C07653+C01227+C00280+C00735+C00762>Estradiol-17beta</a>
+Dihydrotestosterone	C03917	hsa05215	Prostate cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C03917>Dihydrotestosterone</a>
+Testosterone	C00535	hsa05215	Prostate cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00535>Testosterone</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa05215	Prostate cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+2-Amino-1-methyl-6-phenylimidazo[4,5-b]pyridine	C16038	hsa05215	Prostate cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C16038>2-Amino-1-methyl-6-phenylimidazo[4,5-b]pyridine</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa05218	Melanoma	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Retinoate	C00777+C15493	hsa05222	Small cell lung cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00777+C15493>Retinoate</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa05222	Small cell lung cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Retinoate	C00777+C15493	hsa05223	Non-small cell lung cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00777+C15493>Retinoate</a>
+Phosphatidylinositol-3,4,5-trisphosphate	C05981	hsa05231	Choline metabolism in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C05981>Phosphatidylinositol-3,4,5-trisphosphate</a>
+Phosphatidate	C00416	hsa05231	Choline metabolism in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00416>Phosphatidate</a>
+Diacylglycerol	C00165	hsa05231	Choline metabolism in cancer	<a target=_blank href=http://www.kegg.jp/dbget-bin/www_bget?C00165>Diacylglycerol</a>

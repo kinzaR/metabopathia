@@ -1,0 +1,228 @@
+---
+title: "IPD_genes"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(limma)
+library(edgeR)
+library(tidyverse)
+library(clusterProfiler)
+library(org.Hs.eg.db)
+library(RColorBrewer)
+library(ggsignif)
+```
+
+```{r}
+setwd("Z:/16-Our Papers/In Preparation/IPD_metabolism _ Alise/Figures/Figure1_RNA_mets/originals/RNA_seq")
+x <- read.delim("feature_counts_rnaseq_hg19.txt")
+column_to_rownames(x, "Gene")->x1
+colnames(x1)<-c("IPD_1", "IPD_2", "IPD_3", "CTRL_1", "CTRL_2","CTRL_3")
+x4 <- x1 [which(rowSums(x1) > 0), ] 
+```
+
+
+####################
+
+```{r}
+group <- factor(c("IPD","IPD","IPD","CTRL","CTRL","CTRL"))
+#condition <- factor(c("IPD","IPD","IPD","CTRL","CTRL","CTRL"))
+y <- DGEList(counts=x4,group=group)
+keep <- filterByExpr(y, group=group)
+design<-model.matrix(~group)
+
+y <- y[keep,,keep.lib.sizes=FALSE]
+y <- calcNormFactors(y)
+y <- estimateDisp(y,design)
+y$common.dispersion
+plotBCV(y)
+plotMDS(y,col=rep(1:2, each=3))
+
+
+```
+
+
+
+#DEG
+
+```{r}
+fit <- glmFit(y, design)
+lrt <- glmLRT(fit, coef=2)
+A<-topTags(lrt, n=11)
+B<-A$table
+```
+
+```{r}
+o <- order(lrt$table$PValue)
+length(which(lrt$table$PValue < 0.05))
+data <- cpm(y)[o[1:678],]
+```
+
+
+```{r}
+summary(decideTests(lrt,p.value =0.05, lfc=1))
+```
+
+```{r}
+plotMD(lrt)
+abline(h=c(-1, 1), col="blue")
+```
+```{r}
+volcanoData <- cbind(lrt$table$logFC, -log10(lrt$table$PValue))
+colnames(volcanoData) <- c("logFC", "negLogPval")
+DEGs <- lrt$table$PValue < 0.05 & abs(lrt$table$logFC) > 1
+point.col <- ifelse(DEGs, "red", "black")
+plot(volcanoData, pch = 16, col = point.col, cex = 0.5)
+
+```
+
+
+
+```{r}
+library(ComplexHeatmap)
+
+dataF<-t(data)
+dataF %>% as_tibble(dataF) %>%
+  mutate(Condition = case_when(str_detect(rownames(dataF), 'IPD') ~ 'IPD', str_detect(rownames(dataF), 'CTRL') ~ 'CTRL',
+                             TRUE ~ 'test'))  -> metdataT
+
+Z_Normalize<-function(x){return((x-mean(x))/(sd(x)))}
+
+NormalisedData_Zscore = t(apply(as.matrix(t(metdataT[,1:50])),1,Z_Normalize))
+
+
+ha = HeatmapAnnotation(
+  Condition =metdataT$Condition,
+  
+  col       =list(Condition = c("CTRL"="cadetblue", 
+                                "IPD"=  "sandybrown")
+                  
+  ),
+  show_annotation_name = T,
+  show_legend =  T,
+  annotation_name_side = "left",
+  annotation_name_gp = gpar(fontsize = 12),
+  annotation_name_offset = unit(0.3, "mm"))
+
+Heatmap(NormalisedData_Zscore, show_row_names = FALSE,  heatmap_legend_param = list(title = 'Z-score  of CPM', color_bar = "discrete"), show_row_dend=FALSE, column_names_gp = gpar(fontsize=16), column_names_rot = 45, top_annotation=ha, show_column_names = T)
+```
+```{r}
+signif <- subset(lrt$table, rownames(lrt$table) %in% rownames(data))
+down <- subset(signif,signif$logFC < 0)
+up <- subset(signif,signif$logFC > 0)
+```
+
+#Pathway analysis
+```{r}
+df<-down[order(-down$PValue),]
+ranked_genelst = df$PValue
+names(ranked_genelst) = rownames(df)
+                                 
+setwd('P:/PD_Diabetes/PhD/courses/Statistics_course_2020Sept')
+msigdb_go_pathways = read.gmt("c5.all.v6.2.symbols.gmt")
+msigdb_kegg_pathways = read.gmt("c2.cp.kegg.v6.2.symbols.gmt")
+
+gsea_go_zhang = GSEA(ranked_genelst, exponent = 1, minGSSize = 5,
+  maxGSSize = 500, pvalueCutoff = 1, pAdjustMethod = "BH", TERM2GENE = msigdb_go_pathways,
+  TERM2NAME = NA, verbose = TRUE, seed = FALSE, by = "fgsea")
+head(gsea_go_zhang, 15)
+
+gsea_kegg_zhang = GSEA(ranked_genelst, exponent = 1, minGSSize = 5,
+  maxGSSize = 500, pvalueCutoff = 1, pAdjustMethod = "BH", TERM2GENE = msigdb_kegg_pathways,
+  TERM2NAME = NA, verbose = TRUE, seed = FALSE, by = "fgsea")
+head(gsea_kegg_zhang, 10)
+```
+
+```{r}
+df<-up[order(-up$PValue),]
+ranked_genelst = df$PValue
+names(ranked_genelst) = rownames(df)
+                                 
+gsea_go_zhang = GSEA(ranked_genelst, exponent = 1,minGSSize = 5,
+  maxGSSize = 500, pvalueCutoff = 1, pAdjustMethod = "BH", TERM2GENE = msigdb_go_pathways,
+  TERM2NAME = NA, verbose = TRUE, seed = FALSE, by = "fgsea")
+head(gsea_go_zhang,10)
+
+gsea_kegg_zhang = GSEA(ranked_genelst, exponent = 1, minGSSize = 5,
+  maxGSSize = 500, pvalueCutoff = 1, pAdjustMethod = "BH", TERM2GENE = msigdb_kegg_pathways,
+  TERM2NAME = NA, verbose = TRUE, seed = FALSE, by = "fgsea")
+head(gsea_kegg_zhang,10)
+```
+
+
+```{r}
+df<-signif[order(-signif$PValue),]
+ranked_genelst = df$PValue
+names(ranked_genelst) = rownames(df)
+                                 
+setwd('P:/PD_Diabetes/PhD/courses/Statistics_course_2020Sept')
+msigdb_go_pathways = read.gmt("c5.all.v6.2.symbols.gmt")
+
+gsea_go_zhang = GSEA(ranked_genelst, exponent = 1, minGSSize = 6,
+  maxGSSize = 500, pvalueCutoff = 1, pAdjustMethod = "BH", TERM2GENE = msigdb_go_pathways,
+  TERM2NAME = NA, verbose = TRUE, seed = FALSE, by = "fgsea")
+head(gsea_go_zhang, n=20)
+table<-as.data.frame(head(gsea_go_zhang, n=50))
+```
+
+
+```{r}
+table <- subset(table, table$pvalue < 0.05)
+
+table %>%
+  arrange(desc(table$pvalue))->tableGO
+
+```
+
+```{r}
+tableGO2<- tableGO %>% mutate(log10Pvalue = -log10(tableGO$pvalue)) 
+```
+
+```{r}
+#library(viridis)
+ggplot(tableGO2 , aes(x=reorder(ID, -log10Pvalue), y=log10Pvalue)) + 
+  #geom_text(aes(label=V6)) +
+  geom_bar(stat = "identity",width = 0.5)+
+  coord_flip() + labs(x = "", y = "-log10 Pvalue") +
+  theme_classic()+
+  #scale_fill_viridis(discrete=FALSE, option = "viridis") +
+      theme(axis.text.y = element_text(size=10), axis.text.x=element_text(size=12))
+```
+```{r}
+expr<-y$counts
+
+expr2<-subset(expr, rownames(expr) %in% "PDHA1")                
+                
+#INS1 and INS2 are not present, also IGF1 is not present
+
+expr2<-as.data.frame(expr2)
+
+expr3<-t(expr2)
+expr3 %>% as_tibble(expr3) %>%
+  mutate(Condition = case_when(str_detect(rownames(expr3), 'IPD') ~ 'IPD',
+                               str_detect(rownames(expr3), 'CTRL') ~ 'CTRL',
+                             TRUE ~ 'test'))  -> metdataEXPR
+
+metdataEXPR$Condition<-factor(metdataEXPR$Condition, levels = c("CTRL","IPD"))
+ggplot(metdataEXPR, aes(x=Condition, y=PDHA1))+
+    geom_boxplot(aes(fill=Condition), width=0.7)+
+    scale_fill_manual(values=c('steelblue3','bisque1'))+ 
+    geom_jitter(position=position_jitter(0.2))+
+    #scale_color_manual(values = c("SteelBlue","DarkGreen")) +
+   geom_signif(comparisons = list(c("CTRL", "IPD")), test='wilcox.test',#margin_top = 0.5,
+                  vjust=0, size=0.3, textsize=4, map_signif_level=c("***"=0.001, "**"=0.01, "*"=0.05), y_position = 1550 ) +
+  #facet_grid(~Round)+
+  theme_bw()+
+  labs(title="PDHA1", y = "RNA expression")+
+  theme(plot.title=element_text(size=26, face="bold", hjust=0.5),
+          axis.title.x=element_blank(), axis.title.y=element_text(size=24),axis.text.y=element_text(size=20),axis.text.x = element_blank(),legend.text = element_text(size = 20), legend.title = element_text(size = 20))->a
+print(a)
+```
+
+
+
