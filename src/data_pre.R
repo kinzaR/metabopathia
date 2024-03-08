@@ -83,6 +83,7 @@ data_pre <- function(exp_file, met_file, design_file, group1, group2, output_fol
           xlab = "Metabolites", ylab = "Concentration", col = "red")
   # Close the PNG device
   dev.off()
+  par(mfrow = c(1, 1))
   # If all is okay
   data_set$genes_vals <- genes_vals
   data_set$metabo_vals <- metabo_vals

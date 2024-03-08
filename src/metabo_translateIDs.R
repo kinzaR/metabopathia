@@ -49,3 +49,13 @@ View(as_data_frame(vertex_attr(p$pathigraphs$hsa04390$graph)))
 kegg_ids_pathNodes2<-unname(kegg_ids_pathNodes) %>% unlist(.)
 
 hipathia::DApathway("hsa04724", p)
+##### 
+# Define the metabolite name
+metabolite_name <- "C18_(N-Octadecane)"
+
+# Use keggGet to retrieve information
+result <- KEGGREST::keggConv("glycan", metabolite_names)
+res <- KEGGREST::keggConv(target = "compound", source = "ncbi-gi")
+
+
+

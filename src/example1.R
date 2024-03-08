@@ -16,10 +16,19 @@ opt$analysis <-"compare"
 opt$output_folder <- "tmp"
 
 
+# ################# example GSE207088
+# opt$exp_file <-"data_examples/GSE207088/toBeUsed/RNA_hNESCs_TPM.tsv"
+# opt$exp_file <-"data_examples/GSE207088/toBeUsed/RNA_hNESCs_TMM.tsv"
+# opt$met_file <-"data_examples/GSE207088/toBeUsed/polar_metab_normalized_annotated.tsv"
+# opt$design_file <-"data_examples/GSE207088/toBeUsed/design.tsv"
+# opt$group1 <-"IPD"
+# opt$group2 <-"CTRL"
+# opt$paired <-FALSE# 
 ################# example GSE207088
-opt$exp_file <-"data_examples/GSE207088/toBeUsed/RNA_hNESCs_TPM.tsv"
-opt$met_file <-"data_examples/GSE207088/toBeUsed/polar_metab_normalized_annotated.tsv"
-opt$design_file <-"data_examples/GSE207088/toBeUsed/design.tsv"
-opt$group1 <-"IPD"
-opt$group2 <-"CTRL"
-opt$paired <-TRUE
+opt$exp_file <-"data_examples/metabolizer_as_DS/brca_example1_40_exp.txt"
+opt$met_file <-"data_examples/metabolizer_as_DS/inferedmetabolic_data.tsv"
+opt$design_file <-"data_examples/metabolizer_as_DS/brca_example1_40_design.txt"
+opt$group1 <-"Tumor"
+opt$group2 <-"Normal"
+opt$paired <-FALSE
+opt$analysis <-"ORA"

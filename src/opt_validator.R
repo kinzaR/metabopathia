@@ -6,8 +6,8 @@ allowed_species <- c("hsa", "mmu", "rno")
 required_files <- c("exp_file", "met_file", "design_file")
 required_options <- c("group1", "group2")
 allowed_design_types <- c("categorical", "continuous")
-allowed_analysis <- c("compare", "predictor_test", "predictor_train", "variant_interpreter", "drug_repurposing")
-ready_analisis <- c("compare")
+allowed_analysis <- c("overlay", "compare", "predictor_test", "predictor_train", "variant_interpreter", "drug_repurposing")
+ready_analisis <- c("overlay", "compare")
 # to be tested in the future:
 ## pathways_list from available pathways
 ## custom.terms if it is checked as a file
