@@ -55,6 +55,7 @@ data_pre <- function(exp_file, met_file, design_file, group1, group2, output_fol
   }
   
   ### Translate names to EntrezGene
+  # devtools::install_version("dbplyr", version = "2.3.4")
   trans_exp <- hipathia::translate_data(as.matrix(exp), species = spe, verbose = verbose)
   # Assume metabolite names are KEGG IDs
   

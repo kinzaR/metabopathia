@@ -31,4 +31,5 @@ opt$design_file <-"data_examples/metabolizer_as_DS/brca_example1_40_design.txt"
 opt$group1 <-"Tumor"
 opt$group2 <-"Normal"
 opt$paired <-FALSE
-opt$analysis <-"ORA"
+opt$hipathia <- TRUE
+opt$analysis <-"overlay"
