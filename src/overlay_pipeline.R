@@ -16,17 +16,128 @@
 # - `adjust`: A boolean value indicating whether the p.values should be adjusted by the p.adjust() function using the FDR method (TRUE by default).
 # - `conf.level`: Indicates the confidence level if `adjust` is set to TRUE.
 
-compare_pipeline <- function(metdata, groups, expdes, g2 = NULL,
+compare_pipeline_overlaying <- function(metdata, metabo_vals, groups, expdes, g2 = NULL,
                              path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
                              order = FALSE, paired = FALSE, adjust = TRUE, conf.level = 0.05, sel_assay = 1){
   # rowData(metdata[["paths"]])
   # this is directl from Doku
   # Perform comparisons
   # metdata groups has a cols colData instead of group : colData(metdata[["nodes"]]) : DataFrame with 12 rows and 1 column: cols
-  DAdata <- hipathia::DAcomp(hidata = metdata, groups = groups , expdes = expdes, g2 = g2,
+  # $shape =="circle"
+  metabo_vals_annotated <- from_KeggID_2_NodeIDs(metabo_vals, pathways) # has to return same matrix but duplicating node if needed with node id used in the pathways
+  assay(metdata[["nodes"]]) %>% as.data.frame() %>% 
+    filter(row.names(.) %in% rownames(metabo_vals_annotated) )# and all the row is 1
+  
+  DAdata <- DAcomp_metab(hidata = metdata, groups = groups , expdes = expdes, g2 = g2,
                              path.method = path.method, node.method = node.method, fun.method = fun.method,order = order,
                              paired = paired, adjust = adjust, conf.level = conf.level, sel_assay = sel_assay)
   return(DAdata)
 }
+## this is the modified function of DAreport
+DAreport_overlay <- function(met_results, pathways, path = output_folder, output_folder = "metabopathia_report", 
+                             verbose = verbose, adjust = adjust, conf.level = conf.level){
+  # nodes
+  node_comp <- met_results$nodes %>% tibble::column_to_rownames("ID")
+  # Some metabolite form complex with gene; thos it FDRpvalue id less or igual 1
+  # Here ignoring those node and I will  take only node that are with type compound and FDRvalue = 1
+  colors_de <- hipathia:::node_color(node_comp, pathways, conf = conf.level, adjust = adjust)
+  # paths
+  comp <- met_results$paths %>% select(ID:FDRp.value) %>% tibble::column_to_rownames("ID")
+  path <- create_report(comp, pathways, node_colors = colors_de, 
+                        output_folder = output_folder, path = path, verbose = verbose)
+  return(path)
+}
+
+## MAybe I have to send it from the begining
+DAcomp_metab<- function(hidata, groups, expdes, g2 = NULL, path.method = "wilcoxon", 
+          node.method = "limma", fun.method = "wilcoxon", order = FALSE, 
+          paired = FALSE, adjust = TRUE, conf.level = 0.05, sel_assay = 1) 
+{
+  if (is.null(g2) & (any(c(path.method, node.method) == "wilcoxon") | 
+                     (any(c("uni.terms", "GO.terms", "custom.terms") %in% 
+                          names(hidata)) & fun.method == "wilcoxon"))) 
+    stop("Wilcoxon comparison method needs two groups to compare,\n         introduced in arguments expdes and g2 (ex. expdes = 'case', g2 =\n         'control'). Please provide both arguments or change comparison method\n         to 'limma'.")
+  if (node.method == "wilcoxon") {
+    node.comp <- do_wilcoxon(data = hidata[["nodes"]], group = groups, 
+                             g1 = expdes, g2 = g2, paired = paired, adjust = adjust, 
+                             sel_assay = sel_assay, order = order)
+  }
+  else if (node.method == "limma") {
+    node.comp <- do_limma(data = hidata[["nodes"]], groups = groups, 
+                          expdes = expdes, g2 = g2, sel_assay = sel_assay, 
+                          order = order)
+  }
+  node.comp <- tibble(ID = rowData(hidata[["nodes"]])$name, 
+                      name = rowData(hidata[["nodes"]])$node.name, label = rowData(hidata[["nodes"]])$label, 
+                      node.comp, type = rowData(hidata[["nodes"]])$node.type)
+  if (path.method == "wilcoxon") {
+    path.comp <- do_wilcoxon(data = hidata[["paths"]], group = groups, 
+                             g1 = expdes, g2 = g2, paired = paired, adjust = adjust, 
+                             sel_assay = sel_assay, order = order)
+  }
+  else if (path.method == "limma") {
+    path.comp <- do_limma(data = hidata[["paths"]], groups = groups, 
+                          expdes = expdes, g2 = g2, sel_assay = sel_assay, 
+                          order = order)
+  }
+  mesdf <- get_measured_nodes(hidata)[rownames(path.comp), 
+  ]
+  alt <- get_altered_nodes(hidata, node.comp, conf.level)[rownames(path.comp), 
+  ]
+  path.comp <- tibble(ID = rowData(hidata[["paths"]])$path.ID, 
+                      name = rowData(hidata[["paths"]])$path.name, path.comp, 
+                      N.nodes = mesdf$num.nodes, N.gene.nodes = mesdf$num.gene.nodes, 
+                      N.measured.nodes = mesdf$num.measured.nodes, ratio.measured.gene.nodes = mesdf$ratio.measured.gene.nodes, 
+                      nodes = rowData(hidata[["paths"]])$path.nodes, N.DA.nodes = alt$N.DA.nodes, 
+                      DA.nodes = alt$DA.nodes)
+  DAdata <- list(nodes = node.comp, paths = path.comp)
+  if ("uni.terms" %in% names(hidata)) {
+    if (fun.method == "wilcoxon") {
+      uni.comp <- do_wilcoxon(data = hidata[["uni.terms"]], 
+                              group = groups, g1 = expdes, g2 = g2, paired = paired, 
+                              adjust = adjust, sel_assay = sel_assay, order = order)
+    }
+    else if (fun.method == "limma") {
+      uni.comp <- do_limma(data = hidata[["uni.terms"]], 
+                           groups = groups, expdes = expdes, g2 = g2, sel_assay = sel_assay, 
+                           order = order)
+    }
+    uni.comp <- tibble(ID = rownames(assay(hidata[["uni.terms"]])), 
+                       name = rownames(assay(hidata[["uni.terms"]])), uni.comp)
+    DAdata$uni.terms <- uni.comp
+  }
+  if ("GO.terms" %in% names(hidata)) {
+    if (fun.method == "wilcoxon") {
+      GO.comp <- do_wilcoxon(data = hidata[["GO.terms"]], 
+                             group = groups, g1 = expdes, g2 = g2, paired = paired, 
+                             adjust = adjust, sel_assay = sel_assay, order = order)
+    }
+    else if (fun.method == "limma") {
+      GO.comp <- do_limma(data = hidata[["GO.terms"]], 
+                          groups = groups, expdes = expdes, g2 = g2, sel_assay = sel_assay, 
+                          order = order)
+    }
+    GO.comp <- tibble(ID = rownames(rowData(hidata[["GO.terms"]])), 
+                      GO.comp)
+    DAdata$GO.terms <- GO.comp
+  }
+  if ("custom.terms" %in% names(hidata)) {
+    if (fun.method == "wilcoxon") {
+      custom.comp <- do_wilcoxon(data = hidata[["custom.terms"]], 
+                                 group = groups, g1 = expdes, g2 = g2, paired = paired, 
+                                 adjust = adjust, sel_assay = sel_assay, order = order)
+    }
+    else if (fun.method == "limma") {
+      custom.comp <- do_limma(data = hidata[["custom.terms"]], 
+                              groups = groups, expdes = expdes, g2 = g2, sel_assay = sel_assay, 
+                              order = order)
+    }
+    custom.comp <- tibble(ID = rownames(rowData(hidata[["custom.terms"]])), 
+                          custom.comp)
+    DAdata$custom.terms <- custom.comp
+  }
+  return(DAdata)
+}
+
 
 

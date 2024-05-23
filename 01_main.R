@@ -8,6 +8,8 @@
 # Load necessary libraries
 suppressPackageStartupMessages(library(optparse))
 suppressPackageStartupMessages(library(hipathia))
+suppressPackageStartupMessages(library(dplyr))
+
 # Get the script directory
 getScriptPath <- function(){
   cmd.args <- commandArgs()
@@ -173,19 +175,22 @@ if(hipathia | analysis=="overlay"){
 
 status(" 60", "Signal propagation computed successfully", output_folder)
 
-## Step 4: Scenarios & pipelines :
+## Step 4: Scenarios & pipelines : 
+# Here : maybe switch will be cleaner
 ## Step 4.0: Differential metabolic overlay
 if(analysis=="overlay"){
-  # ## this will calculate only hipathia and add the colors of metabolites
-  met_results <- overlay_pipeline(metdata, groups=data_set$des$group, expdes=group1, g2 = group2,
-                                  path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
-                                  order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
-  
-  if(hipathia){
-    hi_results <- compare_pipeline(hdata, groups=data_set$des$group, expdes=group1, g2 = group2,
+  # 23 may : will caluculate normal comparaison then in the visualization metabolite will join the party
+  # # ## this will calculate only hipathia and add the colors of metabolites
+  # met_results <- overlay_pipeline(metdata, groups=data_set$des$group, expdes=group1, g2 = group2,
+  #                                 path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
+  #                                 order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
+  # 
+  # if(hipathia){
+  # met_results <- hi_results <- compare_pipeline_overlaying(hdata, metabo_vals = data_set$metabo_vals, groups=data_set$des$group, expdes=group1, g2 = group2,
+  met_results <- hi_results <- compare_pipeline(hdata, groups=data_set$des$group, expdes=group1, g2 = group2,
                                    path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
                                    order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
-  }
+  # }
   status(" 80", "metabolomics overlay with a Differential Activity Analysis completed successfully", output_folder)
 
 }
@@ -230,6 +235,8 @@ if(hipathia) {
   hipathia::DAsummary(DAdata = hi_results, n = 10) # Top altered pathways
   ggplot2::ggsave(file.path(output_folder, "DAsummary_hipathia.png")) 
 }
+##NOTE: if overlay maybe an Enrichment analysis will be relevant here !
+
 # Top results per feature: Top 10 altered features per class (nodes, paths, functions)
 # I have to check if there is some altered or not before , othways it will give an error conf.level =0.5 to fore results (has to be removed offcorse)
 # hipathia::DAtop(DAdata = met_results, n = 10, conf.level = 05) # top n differtially activated nodes, paths and functions, and plots a dot plot with that info.
@@ -244,8 +251,12 @@ save.image(file = file.path(output_folder,"workspace.RData"))
 servr::daemon_stop() # kill & close
 # DAreport() to easily create a report
 # Save and serve all results to browser
-
-MTreport <- DAreport(met_results, metabo_pathways, path = output_folder, output_folder = "metabopathia_report", verbose = verbose, adjust = adjust, conf.level = conf.level)
+## Overlay: The report here is different
+if(analysis=="overlay"){
+  MTreport <- DAreport_overlay(met_results, pathways, path = output_folder, output_folder = "metabopathia_report", verbose = verbose, adjust = adjust, conf.level = conf.level)
+}else{
+  MTreport <- DAreport(met_results, metabo_pathways, path = output_folder, output_folder = "metabopathia_report", verbose = verbose, adjust = adjust, conf.level = conf.level)
+}
 status("100", paste0("HTML report created successfully in the ",file.path(codebase,MTreport)), output_folder)
 message("Press Ctrl + C to stop serving the report...\n")
 serve_report(file.path(codebase,MTreport), port = servr::random_port(), browser = T, daemon = T)
