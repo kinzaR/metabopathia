@@ -187,10 +187,17 @@ if(analysis=="overlay"){
   # 
   # if(hipathia){
   # met_results <- hi_results <- compare_pipeline_overlaying(hdata, metabo_vals = data_set$metabo_vals, groups=data_set$des$group, expdes=group1, g2 = group2,
-  met_results <- hi_results <- compare_pipeline(hdata, groups=data_set$des$group, expdes=group1, g2 = group2,
+  #Here met_resultre are not same as hipathia_results
+  met_results <- compare_pipeline_overlaying(hdata,metabo_vals=data_set$metabo_vals, groups=data_set$des$group, expdes=group1, g2 = group2,
                                    path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
                                    order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
   # }
+  if(hipathia){
+    hi_results <- hipathia::DAcomp(hidata = hdata, groups = data_set$des$group , expdes = group1, g2 = group2,
+                                   path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
+                               order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
+    
+  }
   status(" 80", "metabolomics overlay with a Differential Activity Analysis completed successfully", output_folder)
 
 }

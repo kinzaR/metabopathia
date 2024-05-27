@@ -24,11 +24,28 @@ compare_pipeline_overlaying <- function(metdata, metabo_vals, groups, expdes, g2
   # Perform comparisons
   # metdata groups has a cols colData instead of group : colData(metdata[["nodes"]]) : DataFrame with 12 rows and 1 column: cols
   # $shape =="circle"
-  metabo_vals_annotated <- from_KeggID_2_NodeIDs(metabo_vals, pathways) # has to return same matrix but duplicating node if needed with node id used in the pathways
-  assay(metdata[["nodes"]]) %>% as.data.frame() %>% 
-    filter(row.names(.) %in% rownames(metabo_vals_annotated) )# and all the row is 1
+  # metabo_vals_annotated <- from_KeggID_2_NodeIDs(metabo_vals, pathways) # has to return same matrix but duplicating node if needed with node id used in the pathways
+  KeggID_2_NodeIDs <-do.call(rbind,lapply(pathways$pathigraphs,function(ig){
+    ig <- ig$graph
+    nodeID <- V(ig)$name
+    KeggID <- str_extract(V(ig)$tooltip, "(?<=href=http://www.kegg.jp/dbget-bin/www_bget\\?)[^>]+")
+    return(tibble(nodeID=nodeID,KeggID=KeggID))
+    }
+  )) %>% filter(!is.na(KeggID)) 
+  # %>% filter(KeggID %in% rownames(metabo_vals))
   
-  DAdata <- DAcomp_metab(hidata = metdata, groups = groups , expdes = expdes, g2 = g2,
+  metabo_vals_annotated <- metabo_vals %>% as.data.frame() %>% mutate(KeggID = rownames(.)) %>%  left_join(KeggID_2_NodeIDs) %>% 
+      filter(!is.na(nodeID))
+  rownames(metabo_vals_annotated)<-metabo_vals_annotated$nodeID
+  metabo_vals_annotated<- metabo_vals_annotated %>% select(-nodeID,-KeggID)
+  if(!all(colnames(assay(metdata[["nodes"]])) %in%colnames(metabo_vals_annotated))){
+    stop("not all samples of exp matrix are in metabolomics data!")
+  }
+  assay(metdata[["nodes"]], withDimnames = F) <- assay(metdata[["nodes"]]) %>% as.data.frame() %>%
+    filter(!row.names(.) %in% rownames(metabo_vals_annotated)) %>% # and all the row is 1
+    bind_rows(metabo_vals_annotated) %>% as.matrix()
+
+  DAdata <- DAcomp(hidata = metdata, groups = groups , expdes = expdes, g2 = g2,
                              path.method = path.method, node.method = node.method, fun.method = fun.method,order = order,
                              paired = paired, adjust = adjust, conf.level = conf.level, sel_assay = sel_assay)
   return(DAdata)
