@@ -259,16 +259,15 @@ servr::daemon_stop() # kill & close
 # DAreport() to easily create a report
 # Save and serve all results to browser
 ## Overlay: The report here is different
-if(analysis=="overlay"){
-  MTreport <- DAreport_overlay(met_results, pathways, path = output_folder, output_folder = "metabopathia_report", verbose = verbose, adjust = adjust, conf.level = conf.level)
-}else{
-  MTreport <- DAreport(met_results, metabo_pathways, path = output_folder, output_folder = "metabopathia_report", verbose = verbose, adjust = adjust, conf.level = conf.level)
-}
+if(analysis=="overlay") metabo_pathways <- pathways
+
+MTreport <- DAreport(met_results, metabo_pathways, path = output_folder, output_folder = "metabopathia_report", verbose = verbose, adjust = adjust, conf.level = conf.level)
+
 status("100", paste0("HTML report created successfully in the ",file.path(codebase,MTreport)), output_folder)
 message("Press Ctrl + C to stop serving the report...\n")
 serve_report(file.path(codebase,MTreport), port = servr::random_port(), browser = T, daemon = T)
 if(hipathia){
-  HIreport <- DAreport(hi_results, pathways, path = output_folder, output_folder = "hipathia4comp_report",verbose = verbose)
+  HIreport <- DAreport(hi_results, pathways, path = output_folder, output_folder = "hipathia4comp_report",verbose = verbose, adjust = adjust, conf.level = conf.level)
   message("Press Ctrl + C to stop serving the report...\n")
   serve_report(file.path(codebase,HIreport),port = servr::random_port(), browser = T, daemon = F)
 }
