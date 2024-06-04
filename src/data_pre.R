@@ -12,14 +12,16 @@
 # In the actual analysis we have used the the percentil to compute the normalized value between 0 and 1, it was chosen in order to remove observed outliers in metabolomics data (heavy-tailed distributions of the metabolomics).
 # In order to use same technique for both data , normalization by percentil were used as well for transcriptomic dataset.
 # by_gene vs by_metabolite ? by row: yes/no?
-data_pre <- function(exp_file, met_file, design_file, group1, group2, output_folder, design_type="categorical", analysis="compare", spe="hsa", verbose=FALSE){
+data_pre <- function(exp_file, met_file=NULL, design_file, group1, group2, output_folder, design_type="categorical", analysis="compare", spe="hsa", verbose=FALSE){
   data_set <- list()
-  
+  print(exists("met_file"))
+  browser()
   ### Load data from files
   # Load expression
   exp <- read.table(exp_file, header = TRUE, sep = "\t", stringsAsFactors = FALSE, row.names = 1, comment.char = "", check.names = FALSE)
   # Load metabolite concentrations
-  metabo_data <- read.table(met_file, header = TRUE, sep = "\t", stringsAsFactors = FALSE, row.names = 1, comment.char = "", check.names = FALSE)
+  if(!is.na(met_file))
+    metabo_data <- read.table(met_file, header = TRUE, sep = "\t", stringsAsFactors = FALSE, row.names = 1, comment.char = "", check.names = FALSE)
   # Load design
   des <- read.table(design_file, header = FALSE, stringsAsFactors = FALSE)
   colnames(des) <- c("sample", c("group", "value")[(design_type == "continuous") + 1])
@@ -32,7 +34,7 @@ data_pre <- function(exp_file, met_file, design_file, group1, group2, output_fol
   
   # Subset expression and metabolite data based on the filtered design
   exp <- exp[, des$sample]
-  metabo_data <- metabo_data[, des$sample]
+  if(!is.na(met_file)) metabo_data <- metabo_data[, des$sample]
   #metabo_data <- metabo_data %>% dplyr::select(des$sample) %>%
   #  dplyr::relocate(des$sample)
   

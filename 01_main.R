@@ -47,6 +47,11 @@ option_list <- list(
               help = "Path to the expression file."),
   make_option(c("-m", "--met_file"), type = "character", default = NULL,
               help = "Path to the metabolomics concentration file."),
+  make_option(c("-t", "--met_type"), type = "character", default = "inferred",
+              help = "Allowed values: 
+              inferred: Infer production of metabolites from Metabolizer (doi: 10.1038/s41540-019-0087-2).
+              perturbations: Study perturbance in metabolite concentration.
+              concentration_matrix: Using metabolomics concentration matrix."),
   make_option(c("-d", "--design_file"), type = "character", default = NULL,
               help = "Path to the design file."),
   make_option("--group1", type = "character", default = NULL,
@@ -98,6 +103,7 @@ if(opt$verbose){
   message("The recieved options are :")
   str(opt)
 }
+if(opt$met_type == "inferred") source("src/local_metabolizer.R")
 ### Piplines ###
 #NOTE: Check if changing this to a concatination string is less expensive and easier! 
 # source(paste0("src/",opt$analysis,"_pipeline.R")) # after all integrations!
@@ -122,7 +128,7 @@ status("  0", "Analysis is started", output_folder)
 ## Step 1: Data pre-processing
 if(verbose) message("Loading data...") 
 #dbplyr V=2.3.4 because leatest has a bug
-data_set <- data_pre(exp_file, met_file, design_file, group1, group2, output_folder, design_type, analysis, spe, verbose) # analysis here is not used!
+data_set <- data_pre(exp_file, met_file = ifelse(exists("met_file"), met_file, NA), design_file, group1, group2, output_folder, design_type, analysis, spe, verbose) # analysis here is not used!
 status(" 20", "Data preprocessed successfully", output_folder)
 
 ## Step 2: MGI preparation & filtering

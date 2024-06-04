@@ -26,10 +26,11 @@ opt$output_folder <- "tmp"
 # opt$paired <-FALSE# 
 ################# example GSE207088
 opt$exp_file <-"data_examples/metabolizer_as_DS/brca_example1_40_exp.txt"
-opt$met_file <-"data_examples/metabolizer_as_DS/inferedmetabolic_data.tsv"
+# opt$met_file <-"data_examples/metabolizer_as_DS/inferedmetabolic_data.tsv"
 opt$design_file <-"data_examples/metabolizer_as_DS/brca_example1_40_design.txt"
 opt$group1 <-"Tumor"
 opt$group2 <-"Normal"
 opt$paired <-FALSE
 opt$hipathia <- TRUE
-opt$analysis <-"overlay"
+# opt$analysis <-"overlay"
+opt$analysis <-"compare"

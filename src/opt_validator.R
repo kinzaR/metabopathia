@@ -3,7 +3,11 @@
 ############### Config ###############
 # Define constants
 allowed_species <- c("hsa", "mmu", "rno")
-required_files <- c("exp_file", "met_file", "design_file")
+required_files_if <- tibble(
+  file_path = c("met_file"),
+  required = c(opt$met_type == "concentration_matrix" )
+)
+required_files <- c("exp_file", "design_file", required_files_if %>% filter(required == T) %>% select(file_path) %>% pull)
 required_options <- c("group1", "group2")
 allowed_design_types <- c("categorical", "continuous")
 allowed_analysis <- c("overlay", "ORA", "compare", "predictor_test", "predictor_train", "variant_interpreter", "drug_repurposing")
