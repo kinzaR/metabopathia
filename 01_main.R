@@ -128,7 +128,7 @@ status("  0", "Analysis is started", output_folder)
 ## Step 1: Data pre-processing
 if(verbose) message("Loading data...") 
 #dbplyr V=2.3.4 because leatest has a bug
-data_set <- data_pre(exp_file, met_file = ifelse(exists("met_file"), met_file, NA), design_file, group1, group2, output_folder, design_type, analysis, spe, verbose) # analysis here is not used!
+data_set <- data_pre(exp_file, met_file = ifelse(exists("met_file"), met_file, NA), met_type, design_file, group1, group2, output_folder, design_type, analysis, spe, verbose) # analysis here is not used!
 status(" 20", "Data preprocessed successfully", output_folder)
 
 ## Step 2: MGI preparation & filtering
@@ -148,7 +148,28 @@ if(analysis!="overlay") { # new mgi metabo will not be needed for overlay!
 }
 
 status(" 40", "Pathways loaded successfully", output_folder)
-
+## Here I have to do met_vals
+if(is.null(data_set$metabo_vals)){
+  if(exists("metabo_pathways")){
+    all_metabolites <- metabo_pathways$all.metabolite
+  }else{
+      if(exists("pathways")){
+        all_metabolites <- all_needed_metabolites(pathways$pathigraphs)
+      }else{
+        stop("Pathway meta-graph info was not loaded successfully!")
+      }
+  }
+  # HERE: be carfll with cond1 and 2 because the reference for metabolizer maybe is not the same as hipathia !
+  data_set$metabo_vals <- switch (met_type,
+                                  "inferred" = {
+                                    source("src/local_metabolizer.R")
+                                    infer_met_from_metabolizer(data_set, all_sig_metabolites=all_metabolites, species=spe, output_folder, verbose)},
+                                  "perturbations" = {
+                                    source("src/get_perturbed_met_vals.R")
+                                    get_perturbed_met_vals(data_set$metabo_vals, data_set$des, group1, all_metabolites, verbose)
+                                    }
+  )
+}
 ## Step 3: Signal propagation : Pathway activation computation
 if(verbose) message("Propagating signaling...")
 ## Functiona annotation 
@@ -156,10 +177,11 @@ if(!is.na(custom.terms)){
   custom.terms <- read.table(custom.terms, sep = "\t", header = FALSE, stringsAsFactors = FALSE)
 }
 if(analysis!="overlay")
-  metdata <- metabopathia(genes_vals = data_set$genes_vals, metabo_vals = data_set$metabo_vals,
-                        metaginfo = metabo_pathways,
-                        uni.terms = uni.terms, GO.terms = GO.terms, custom.terms = custom.terms,
-                        decompose = decompose, verbose=verbose)
+  ## Here I have to add data_set$metabo_vals
+  metdata <- metabopathia(genes_vals = data_set$genes_vals, metabo_vals = as.matrix(data_set$metabo_vals),
+                          metaginfo = metabo_pathways,
+                          uni.terms = uni.terms, GO.terms = GO.terms, custom.terms = custom.terms,
+                          decompose = decompose, verbose=verbose)
 if(hipathia | analysis=="overlay"){
   hdata <- hipathia(genes_vals = data_set$genes_vals,
                   pathways,

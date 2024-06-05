@@ -750,8 +750,9 @@ node_vals<-function(graphobject,KEGG_met_path_node,rxn_vals_mat,default_value){
         return(calc_comp)    
       })
       
-      
-      if(class(node_comp)=="list"){
+      # HERE: Kinza change this class assesment !
+      # if(class(node_comp)=="list"){
+      if(is.list(node_comp)){
         node_comp <- node_comp[sapply(node_comp,function(x) !is.null(x))]
         node_comp  <- do.call("rbind",node_comp)
       }else{ node_comp <- t(node_comp) }
@@ -763,7 +764,10 @@ node_vals<-function(graphobject,KEGG_met_path_node,rxn_vals_mat,default_value){
       if(length(isoenzymes_rxn)>0){
         isoenzymes_rxn <- isoenzymes_rxn[isoenzymes_rxn %in% rownames(rxn_vals_mat)]
         node_iso <- rxn_vals_mat[which(rownames(rxn_vals_mat) %in% isoenzymes_rxn),]
-        if(class(node_iso)=="numeric") { node_iso <- t(as.matrix(node_iso)) }
+        # HERE: Kinza change class assesment :
+        # if(class(node_iso)=="numeric") { node_iso <- t(as.matrix(node_iso))}
+        if(any(class(node_iso)=="numeric")) { node_iso <- t(as.matrix(node_iso)) }
+        # if(isNumeric(node_iso)) { node_iso <- t(as.matrix(node_iso)) }
         if(nrow(node_iso)==0){ node_iso<-NULL }
       }else{node_iso<-NULL}
       
@@ -787,10 +791,11 @@ node_vals<-function(graphobject,KEGG_met_path_node,rxn_vals_mat,default_value){
     }
     return(calculated_node_val) 
   } )
-  
-  if(class(y1)=="matrix"){
+  # HERE : Kinza change this text to be compatible with the new versio of R
+  # if(class(y1)=="matrix"){
+  if(is.matrix(y1)){
     node.vals<-t(y1)
-  }else if(class(y1)=="list"){ 
+  }else if(class(y1)=="list"){  # HERE . is list instead?
     node.vals<-do.call(what="rbind",y1)
   }else{ node.vals<-mat.or.vec(nr = length(y1) ,nc = ncol(rxn_vals_mat))
          colnames(node.vals) <- colnames(rxn_vals_mat)
@@ -2426,11 +2431,7 @@ path.value<-function( nodes.vals, subgraph, ininodes, endnode, method="pond", ma
   return(list(node.signal[endnode,], endnode.signal.dif,nodes.vals))
 }
 
-
-
-
 compute.node.signal2<-function(actnode, node.val, node.signal, subgraph, method="pond", response.tol = 0){
-  
   incis <- incident(subgraph, actnode, mode="in")
   
   if(length(incis)==0){
@@ -2471,9 +2472,10 @@ compute.node.signal2<-function(actnode, node.val, node.signal, subgraph, method=
     else {
       stop("Unknown propagation rule")
     }
-    
     # If signal too low, signal do not propagate
-    if(sum(nas) == 0 && signal < response.tol)
+    # HERE: kinza changed this to force same dimentiality for the doble &&
+    # if(sum(nas) == 0 && signal < response.tol)
+    if(sum(nas) == 0 && any(signal < response.tol))
       signal <- rep(0,length(node.val))
     
   }
