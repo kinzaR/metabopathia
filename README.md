@@ -59,4 +59,94 @@ For help:
    Rscript 01_main.R -h 
    ```
 4. **Parameters**
+    ```bash
+    $ ./01_main.R --help
+    Usage: ./01_main.R [options]
 
+
+    Options:
+        -s SPE, --spe=SPE
+            Species variable. Allowed choices: 'hsa', 'mmu', 'rno'. (default: hsa)
+
+        -v, --verbose
+            Enable verbose mode.
+
+        -e EXP_FILE, --exp_file=EXP_FILE
+            Path to the expression file.
+
+        -m MET_FILE, --met_file=MET_FILE
+            Path to the metabolomics concentration file.
+
+        -t MET_TYPE, --met_type=MET_TYPE
+            Allowed values: 
+                  inferred: Infer production of metabolites from Metabolizer (doi: 10.1038/s41540-019-0087-2).
+                  perturbations: Study perturbance in metabolite concentration.
+                  concentration_matrix: Using metabolomics concentration matrix.
+
+        -d DESIGN_FILE, --design_file=DESIGN_FILE
+            Path to the design file.
+
+        --group1=GROUP1
+            Label of the first group.
+
+        --group2=GROUP2
+            Label of the second group to be compared (Reference condition).
+
+        -p PATHWAYS_LIST, --pathways_list=PATHWAYS_LIST
+            Vector of the IDs of the pathways to load. By default, all available pathways are loaded. Example: '04014,04015'.
+
+        --paired
+            Boolean, whether the samples to be compared are paired. If TRUE, function wilcoxsign_test from package coin is used. If FALSE, function wilcox.test from package stats is used.
+
+        --decompose
+            Boolean, whether to compute the values for the decomposed subpathways. By default, effector subpathways are computed.
+
+        --design_type=DESIGN_TYPE
+            Type of design. Allowed values: 'categorical' or 'continuous'. Default is 'categorical'.
+
+        --adjust
+            Boolean, whether to adjust the p.value with Benjamini-Hochberg FDR method. Default is TRUE.
+
+        --conf.level=CONF.LEVEL
+            Level of significance. By default 0.05.
+
+        --difexp
+            Boolean, whether to perform differential expression analysis.
+
+        --GO.terms
+            Boolean, whether to compute functional analysis with Gene Ontology terms.
+
+        --uni.terms
+            Boolean, whether to compute functional analysis with Uniprot keywords.
+
+        --custom.terms=CUSTOM.TERMS
+            Path to a file containing a data.frame with the custom annotation of the genes to the functions. First column are gene symbols, second column the functions.
+
+        --analysis=ANALYSIS
+            Type of analysis. Allowed values:'overlay','ORA', 'compare', 'predictor_test', 'predictor_train', 'variant_interpreter', 'drug_repurposing'. Default is 'compare'.
+
+
+                          Differential Signaling 'compare': Provides an estimation of significant cell signaling activity changes across different conditions.
+
+                          Predictor 'predictor': Allows you to train a prediction-test and test it with different data.
+
+                          Variant Functional Interpretation 'variant_interpreter': Provides an estimation of the potential impact of genomic variation on cell signaling and cell functionality.
+
+                          Drug Repurposing 'drug_repurposing': drug repurposing.
+
+        --output_folder=OUTPUT_FOLDER
+            Output folder path. Default is 'tmp'.
+
+        --hipathia
+            Enable calculation using HiPathia for result comparison between MetaboPathia and HiPathia.
+
+        --example
+            Load variables from the example config file (src/example1.R).
+
+        --ready_mgi
+            Load ready mgi pre-processed.
+
+        -h, --help
+            Show this help message and exit
+
+    ```

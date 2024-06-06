@@ -8,6 +8,7 @@
 # Load necessary libraries
 suppressPackageStartupMessages(library(optparse))
 suppressPackageStartupMessages(library(hipathia))
+suppressPackageStartupMessages(library(dplyr))
 
 # Get the script directory
 getScriptPath <- function(){
@@ -35,8 +36,6 @@ source("src/report.R")
 source("src/data_pre.R")
 source("src/utils.R")
 source("src/metabopathia.R")
-### Piplines ###
-source("src/compare_pipeline.R")
 
 # Define command-line options
 option_list <- list(
@@ -48,6 +47,11 @@ option_list <- list(
               help = "Path to the expression file."),
   make_option(c("-m", "--met_file"), type = "character", default = NULL,
               help = "Path to the metabolomics concentration file."),
+  make_option(c("-t", "--met_type"), type = "character", default = "inferred",
+              help = "Allowed values: 
+              inferred: Infer production of metabolites from Metabolizer (doi: 10.1038/s41540-019-0087-2).
+              perturbations: Study perturbance in metabolite concentration.
+              concentration_matrix: Using metabolomics concentration matrix."),
   make_option(c("-d", "--design_file"), type = "character", default = NULL,
               help = "Path to the design file."),
   make_option("--group1", type = "character", default = NULL,
@@ -74,8 +78,8 @@ option_list <- list(
               help = "Boolean, whether to compute functional analysis with Uniprot keywords."),
   make_option("--custom.terms", type = "character", default = NA,
               help = "Path to a file containing a data.frame with the custom annotation of the genes to the functions. First column are gene symbols, second column the functions."),
-  make_option("--analysis", type = "character", default = "compare",
-              help = "Type of analysis. Allowed values:'ORA', 'compare', 'predictor_test', 'predictor_train', 'variant_interpreter', 'drug_repurposing'. Default is 'compare'.\n\n\
+  make_option("--analysis", type = "character", default = "overlay",
+              help = "Type of analysis. Allowed values:'overlay','ORA', 'compare', 'predictor_test', 'predictor_train', 'variant_interpreter', 'drug_repurposing'. Default is 'compare'.\n\n\
                       Differential Signaling 'compare': Provides an estimation of significant cell signaling activity changes across different conditions.\n\
                       Predictor 'predictor': Allows you to train a prediction-test and test it with different data.\n\
                       Variant Functional Interpretation 'variant_interpreter': Provides an estimation of the potential impact of genomic variation on cell signaling and cell functionality.\n\
@@ -92,12 +96,21 @@ option_list <- list(
   )
 # Parse command-line arguments
 opt <- parse_args(OptionParser(option_list = option_list))
-# be carefull this is a forced hardcoded contant to be removed !!!
+
+# be carefull this is a forced hardcoded working-example to be removed !!!
 if(opt$example || is_rstudio) source("src/example1.R")
 if(opt$verbose){
   message("The recieved options are :")
   str(opt)
 }
+if(opt$met_type == "inferred") source("src/local_metabolizer.R")
+### Piplines ###
+#NOTE: Check if changing this to a concatination string is less expensive and easier! 
+# source(paste0("src/",opt$analysis,"_pipeline.R")) # after all integrations!
+switch (opt$analysis,
+        "overlay" = source("src/overlay_pipeline.R"),
+        "compare" = source("src/compare_pipeline.R") #NOTE: also  needed for hipathia =T
+)
 # Validate options
 validate_options(opt)
 
@@ -113,8 +126,9 @@ output_folder <- create_output_folder(output_folder, verbose = verbose)
 status("  0", "Analysis is started", output_folder)
 ###### Workflow #####
 ## Step 1: Data pre-processing
-if(verbose) message("Loading data...")
-data_set <- data_pre(exp_file, met_file, design_file, group1, group2, output_folder, design_type, analysis, spe, verbose)
+if(verbose) message("Loading data...") 
+#dbplyr V=2.3.4 because leatest has a bug
+data_set <- data_pre(exp_file, met_file = ifelse(exists("met_file"), met_file, NA), met_type, design_file, group1, group2, output_folder, design_type, analysis, spe, verbose) # analysis here is not used!
 status(" 20", "Data preprocessed successfully", output_folder)
 
 ## Step 2: MGI preparation & filtering
@@ -123,83 +137,97 @@ status(" 20", "Data preprocessed successfully", output_folder)
 ### load pathways with pathway list:  preprocessed KEGG pathway
 if(verbose) message("Loading pathways...") #I have to load from prepared MGI already ! time consuming 
 # Load the pre-processed pathway object
-if(!ready_mgi | hipathia | analysis=="ORA") 
+if(!ready_mgi | hipathia | analysis=="overlay")
   pathways <- hipathia::load_pathways(species = spe, pathways_list = pathways_list)
 # modules <- 
 ## adaptation of the MGI: to be removed, because I have to load it already prepared
-if(ready_mgi & analysis!="ORA") {
-  metabo_pathways <-readRDS("pathways/metabo_mgi_v1.0.0.RDS")
-}else  metabo_pathways <-add_metabolite_to_mgi(pathways)
-status(" 40", "Pathways loaded successfully", output_folder)
+if(analysis!="overlay") { # new mgi metabo will not be needed for overlay!
+  if(ready_mgi) {
+    metabo_pathways <-readRDS("pathways/metabo_mgi_v1.0.0.RDS")
+  }else metabo_pathways <-add_metabolite_to_mgi(pathways)
+}
 
+status(" 40", "Pathways loaded successfully", output_folder)
+## Here I have to do met_vals
+if(is.null(data_set$metabo_vals)){
+  if(exists("metabo_pathways")){
+    all_metabolites <- metabo_pathways$all.metabolite
+  }else{
+      if(exists("pathways")){
+        all_metabolites <- all_needed_metabolites(pathways$pathigraphs)
+      }else{
+        stop("Pathway meta-graph info was not loaded successfully!")
+      }
+  }
+  # HERE: be carfll with cond1 and 2 because the reference for metabolizer maybe is not the same as hipathia !
+  data_set$metabo_vals <- switch (met_type,
+                                  "inferred" = {
+                                    source("src/local_metabolizer.R")
+                                    infer_met_from_metabolizer(data_set, all_sig_metabolites=all_metabolites, species=spe, output_folder, verbose)},
+                                  "perturbations" = {
+                                    source("src/get_perturbed_met_vals.R")
+                                    get_perturbed_met_vals(data_set$metabo_vals, data_set$des, group1, all_metabolites, verbose)
+                                    }
+  )
+}
 ## Step 3: Signal propagation : Pathway activation computation
 if(verbose) message("Propagating signaling...")
 ## Functiona annotation 
 if(!is.na(custom.terms)){
   custom.terms <- read.table(custom.terms, sep = "\t", header = FALSE, stringsAsFactors = FALSE)
 }
-if(analysis!="ORA")
-  metdata <- metabopathia(genes_vals = data_set$genes_vals, metabo_vals = data_set$metabo_vals,
-                        metaginfo = metabo_pathways,
-                        uni.terms = uni.terms, GO.terms = GO.terms, custom.terms = custom.terms,
-                        decompose = decompose, verbose=verbose)
-if(hipathia | analysis=="ORA"){
+if(analysis!="overlay")
+  ## Here I have to add data_set$metabo_vals
+  metdata <- metabopathia(genes_vals = data_set$genes_vals, metabo_vals = as.matrix(data_set$metabo_vals),
+                          metaginfo = metabo_pathways,
+                          uni.terms = uni.terms, GO.terms = GO.terms, custom.terms = custom.terms,
+                          decompose = decompose, verbose=verbose)
+if(hipathia | analysis=="overlay"){
   hdata <- hipathia(genes_vals = data_set$genes_vals,
                   pathways,
                   uni.terms = uni.terms, GO.terms = GO.terms, custom.terms = custom.terms,
                   decompose = decompose, verbose=verbose)
 }
 
-### path vals
+### path vals extraction
 ####metabopathia
-if(analysis!="ORA"){
+if(analysis!="overlay"){
   met_path_vals <- get_paths_data(metdata, matrix = T)
   met_path_vals <- normalize_paths(met_path_vals, metabo_pathways)
 }
 ###hipathia
-if(hipathia | analysis=="ORA"){
+if(hipathia | analysis=="overlay"){
   h_path_vals <- get_paths_data(hdata, matrix = T)
   h_path_vals <- normalize_paths(h_path_vals, pathways)
 }
 
 status(" 60", "Signal propagation computed successfully", output_folder)
 
-## Step 4: Scenarios & pipelines :
-## Step 4.0: Differential metabolic ORA
-if(analysis=="ORA"){
-  # ## this will calculate only hipathia and add the colors of metabolites
-  #   hi_results <- compare_pipeline(hdata, groups=data_set$des$group, expdes = group1, g2 = group2,
-  #                                  path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
-  #                                  order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
-  #   library(data.table)
-  #   row_meta<-cbind(Ctrl,iPD) %>% as.matrix()
-row_meta_limma<-hipathia:::do_limma(row_meta, groups = data_set$des$group,expdes = group1, g2 = group2)
-des<-fread("data_examples/metabolizer_as_DS/brca_example1_40_design.txt", header = F) %>% column_to_rownames("V1")
-row_meta_limma<-hipathia:::do_limma(as.matrix(metData_from_metabolizer_new), groups = des[colnames(metData_from_metabolizer_new),],expdes = "Normal", g2 = "Tumor")
-  #   row_meta_wilc<- hipathia::do_wilcoxon(row_meta, group = data_set$des$group,g1 = group1, g2 = group2, paired = paired, order = T)
-  #   metabo_limma<-hipathia:::do_limma(data_set$metabo_vals, groups = data_set$des$group,expdes = group1, g2 = group2)
-  #   gene_limma<-hipathia:::do_limma(data_set$genes_vals, groups = data_set$des$group,expdes = group1, g2 = group2)
-  #   # rog_metb<-as.matrix(fread("data_examples/GSE207088/polar_metab.tsv"),  rownames=1)
-  #   library(edgeR)
-  #   library(optparse)
-  #   load("tmp/metabopathia_report10/workspace.RData")
-  #   attach(opt)
-  #   rna <- read.delim("data_examples/GSE207088/GSE207088_feature_counts_rnaseq_hg19.txt")
-  #   column_to_rownames(x, "Gene")
-  #   require(clusterProfiler)
-  #   y <- estimateDisp(data_set$genes_vals)
-  #   y <- estimateCommonDisp(data_set$genes_vals)
-  #   y <- estimateTagwiseDisp(y)
-  #   et <- exactTest(y)
-  #   topTags(et)
-  #   rog_metb<-as.matrix(fread("data_examples/GSE207088/non_polar.csv"),  rownames=1)
-  #   colnames(rog_metb)<- data_set$des$sample
-  #   metabo_cox_org<-hipathia:::do_wilcoxon(rog_metb, group = data_set$des$group,g1 =  group1, g2 = group2, paired = T, order = T)
-  #   head(metabo_cox_org)
-  #   metabo_limma_org <- hipathia:::do_limma(rog_metb, groups = data_set$des$group,expdes =  group1, g2 = group2, order = T)
-  #   head(metabo_limma_org)
+## Step 4: Scenarios & pipelines : 
+# Here : maybe switch will be cleaner
+## Step 4.0: Differential metabolic overlay
+if(analysis=="overlay"){
+  # 23 may : will caluculate normal comparaison then in the visualization metabolite will join the party
+  # # ## this will calculate only hipathia and add the colors of metabolites
+  # met_results <- overlay_pipeline(metdata, groups=data_set$des$group, expdes=group1, g2 = group2,
+  #                                 path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
+  #                                 order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
+  # 
+  # if(hipathia){
+  # met_results <- hi_results <- compare_pipeline_overlaying(hdata, metabo_vals = data_set$metabo_vals, groups=data_set$des$group, expdes=group1, g2 = group2,
+  #Here met_resultre are not same as hipathia_results
+  met_results <- compare_pipeline_overlaying(hdata,metabo_vals=data_set$metabo_vals, groups=data_set$des$group, expdes=group1, g2 = group2,
+                                   path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
+                                   order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
   # }
-  # status(" 80", "Differential Activity Analysis completed successfully", output_folder)
+  if(hipathia){
+    hi_results <- hipathia::DAcomp(hidata = hdata, groups = data_set$des$group , expdes = group1, g2 = group2,
+                                   path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
+                               order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
+    
+  }
+  status(" 80", "metabolomics overlay with a Differential Activity Analysis completed successfully", output_folder)
+
 }
 ## Step 4.1: Differential Activity Analysis
 # I have here to discuss why I have used the statiticakl test different for each!
@@ -242,6 +270,8 @@ if(hipathia) {
   hipathia::DAsummary(DAdata = hi_results, n = 10) # Top altered pathways
   ggplot2::ggsave(file.path(output_folder, "DAsummary_hipathia.png")) 
 }
+##NOTE: if overlay maybe an Enrichment analysis will be relevant here !
+
 # Top results per feature: Top 10 altered features per class (nodes, paths, functions)
 # I have to check if there is some altered or not before , othways it will give an error conf.level =0.5 to fore results (has to be removed offcorse)
 # hipathia::DAtop(DAdata = met_results, n = 10, conf.level = 05) # top n differtially activated nodes, paths and functions, and plots a dot plot with that info.
@@ -256,13 +286,16 @@ save.image(file = file.path(output_folder,"workspace.RData"))
 servr::daemon_stop() # kill & close
 # DAreport() to easily create a report
 # Save and serve all results to browser
+## Overlay: The report here is different
+if(analysis=="overlay") metabo_pathways <- pathways
 
 MTreport <- DAreport(met_results, metabo_pathways, path = output_folder, output_folder = "metabopathia_report", verbose = verbose, adjust = adjust, conf.level = conf.level)
+
 status("100", paste0("HTML report created successfully in the ",file.path(codebase,MTreport)), output_folder)
 message("Press Ctrl + C to stop serving the report...\n")
 serve_report(file.path(codebase,MTreport), port = servr::random_port(), browser = T, daemon = T)
 if(hipathia){
-  HIreport <- DAreport(hi_results, pathways, path = output_folder, output_folder = "hipathia4comp_report",verbose = verbose)
+  HIreport <- DAreport(hi_results, pathways, path = output_folder, output_folder = "hipathia4comp_report",verbose = verbose, adjust = adjust, conf.level = conf.level)
   message("Press Ctrl + C to stop serving the report...\n")
   serve_report(file.path(codebase,HIreport),port = servr::random_port(), browser = T, daemon = F)
 }

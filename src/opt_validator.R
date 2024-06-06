@@ -3,10 +3,10 @@
 ############### Config ###############
 # Define constants
 allowed_species <- c("hsa", "mmu", "rno")
-required_files <- c("exp_file", "met_file", "design_file")
+required_files <- c("exp_file", "design_file")
 required_options <- c("group1", "group2")
 allowed_design_types <- c("categorical", "continuous")
-allowed_analysis <- c("overlay", "compare", "predictor_test", "predictor_train", "variant_interpreter", "drug_repurposing")
+allowed_analysis <- c("overlay", "ORA", "compare", "predictor_test", "predictor_train", "variant_interpreter", "drug_repurposing")
 ready_analisis <- c("overlay", "compare")
 # to be tested in the future:
 ## pathways_list from available pathways
@@ -57,6 +57,12 @@ validate_options <- function(opt, verbose = FALSE) {
   # Validate species
   validate_species(opt$spe, allowed_species)
   # Check if the required files exist and are non-empty
+  required_files_if <- tibble(
+    file_path = c("met_file"),
+    required = c(opt$met_type == "concentration_matrix" )
+  )
+  #update the req files vector
+  required_files <- c(required_files, required_files_if %>% filter(required == T) %>% select(file_path) %>% pull)
   for (file_name in required_files) {
     validate_file(file_name, opt)
   }
