@@ -1,0 +1,14 @@
+here's quite a good tutorial here
+
+Essentially you just run the notebook on the remote in no browser mode.
+
+jupyter notebook --no-browser --port=8080
+
+Then setup an ssh tunnel from the local machine:
+
+ssh -L 8080:localhost:8080 <REMOTE_USER>@<REMOTE_HOST>
+
+Then in your local browser go to: http://localhost:8080/
+EDIT:
+
+Running on a specific port is not necessary. The --no-browser tag is.

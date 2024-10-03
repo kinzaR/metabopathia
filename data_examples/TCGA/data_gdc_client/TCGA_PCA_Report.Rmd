@@ -1,0 +1,182 @@
+---
+title: "TCGA RNA-seq Data Analysis Report"
+author: "Kinza Rian"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+  pdf_document:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+# Introduction
+
+This report presents a Principal Component Analysis (PCA) and quality control analysis for RNA-seq data from 12 different cancer types obtained from The Cancer Genome Atlas (TCGA) data portal (https://tcga-data.nci.nih.gov/tcga/) in which RNA-seq counts for healthy control samples were available in addition to the cancer samples: 
+- Bladder Urothelial Carcinoma (BLCA) [https://doi.org/10.1038/nature12965, https://doi.org/10.1016/j.cell.2017.09.007],
+- Breast invasive carcinoma (BRCA) [https://doi.org/10.1038/nature11412, https://doi.org/10.1016/j.cell.2015.09.033],
+- Colorectal Adenocarcinoma (COAD) [https://doi.org/10.1038/nature11252],
+- Head and Neck squamous cell carcinoma (HNSC) [https://doi.org/10.1038/nature14129],
+- (Kidney) Clear Cell Renal Cell Carcinoma (KIRC) [https://doi.org/10.1038/nature12222], 
+- (Kidney) Papillary Renal Cell Carcinomaa (KIRP) [10.1056/NEJMoa1505917],
+- Liver hepatocellular carcinoma (LIHC) [https://doi.org/10.1016/j.cell.2017.05.046],
+- Lung adenocarcinoma (LUAD) [https://doi.org/10.1038/nature13385, https://doi.org/10.1038/ng.3564],
+- Lung squamous cell carcinoma (LUSC) [https://doi.org/10.1038/nature11404, https://doi.org/10.1038/ng.3564],
+- Prostate adenocarcinoma (PRAD) [https://doi.org/10.1016/j.cell.2015.10.025],
+- Thyroid carcinoma (THCA) [https://doi.org/10.1016/j.cell.2014.09.050],
+- Uterine Corpus Endometrioid Carcinoma (UCEC) [https://doi.org/10.1038/nature12113]
+
+# Loading Libraries
+
+```{r load-libraries}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+if (!require("SummarizedExperiment"))
+  BiocManager::install("SummarizedExperiment")
+if (!require("SEtools"))
+  BiocManager::install("SEtools")
+if (!require("edgeR"))
+  BiocManager::install("edgeR") # renv::install("bioc::edgeR") # for conda env!
+
+if (!require("EDASeq"))
+  BiocManager::install("EDASeq")
+
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(SummarizedExperiment))
+suppressPackageStartupMessages(library(SEtools))
+# suppressPackageStartupMessages(library(EDASeq))
+suppressPackageStartupMessages(library(edgeR))
+suppressPackageStartupMessages(library(ggplot2))
+```
+
+# Source utils file and functions
+```{r source-files}
+source("utils.R")
+```
+# Data Preparation
+
+## Define Cancer Types and Paths
+
+```{r define-cancers}
+cancer_list <- c("BLCA","BRCA","COAD","HNSC","KIRC","KIRP","LIHC","LUAD","LUSC","PRAD","THCA","UCEC")
+cancer_list_id <- paste("TCGA", cancer_list, sep = "-")
+my_dir <- "processed_data/"
+```
+
+## Load previously merged SE Data
+
+```{r load-data}
+merged_data <- readRDS(file.path(my_dir,"counts_merged.rds"))
+```
+
+# Quality Control and Normalization
+
+## Filter Lowly Expressed Genes (skipped):
+
+This step is skipped because the mechanistic modeling method requires all data, unlike differential expression analysis pipelines. If low expressed genes were removed, the method would impute them with 0.5 (or another value), which would not reflect reality, as these genes are low expressed in reality.
+
+## Row Data
+
+```{r row-data}
+# Colors for sample types:
+colors <- data.frame("id" = merged_data$barcode,
+                     "cancer"= merged_data$project_id,
+                     "type" = merged_data$sample_type) %>% 
+mutate(color= case_when(type == "Solid Tissue Normal" ~ "#009E73", 
+                        type == "Primary Solid Tumor" | type == "Primary Tumor" ~ "#E69F00",
+                        type == "Recurrent Solid Tumor" | type == "Recurrent Tumor" ~ "#D55E00",
+                        type == "Primary Blood Derived Cancer" ~ "#56B4E9",
+                        type == "Recurrent Blood Derived Cancer" ~ "#0072B2",
+                        type == "Metastatic" ~ "#CC79A7"))
+rownames(colors)<- colnames(merged_data)
+blocks<- do.call(rbind,lapply(merged_data$barcode, function(bc){
+  center <- strsplit(bc,"-")[[1]][7]
+  plate <-  strsplit(bc,"-")[[1]][6]
+  tss <-  strsplit(bc,"-")[[1]][2]
+  return(c(center, plate, tss))
+  })) %>% as.data.frame(stringsAsFactors = T)
+colnames(blocks) <- c("center", "plate", "tss") 
+rownames(blocks)<- merged_data$barcode
+blocks$cancer <- factor (merged_data$project_id)
+blocks$group <-factor (merged_data$sample_type)
+# other colors 
+ # by cancer 
+cols_cancer<-setNames(rainbow(length(levels(blocks$cancer))),levels(blocks$cancer))
+colors <- colors %>%  mutate(by_cancer = cols_cancer[cancer])
+# by center 
+cols_center<-setNames(rainbow(length(levels(blocks$center))),levels(blocks$center))
+colors <- colors %>%  mutate(by_center = cols_center[strsplit(id,"-")[[1]][7]])
+# by plate
+cols_plate<-setNames(rainbow(length(levels(blocks$plate))),levels(blocks$plate))
+colors <- colors %>% rowwise()%>% mutate(by_plate = cols_plate[strsplit(id,"-")[[1]][6]])
+# by tss
+cols_tss<-setNames(rainbow(length(levels(blocks$tss))),levels(blocks$tss))
+colors <- colors %>%  mutate(by_tss = cols_tss[strsplit(id,"-")[[1]][2]])
+# by TumorVsNormal
+colors <- colors %>% mutate(tumorVsNormal = case_when(type == "Solid Tissue Normal" ~ "#0000FF" ,
+                                            .default = "#FF0000"))
+```
+
+## Normalize Data
+
+```{r normalize-data}
+my_DGEList <- DGEList(counts=assay(merged_data), group = blocks$group)
+dge <- calcNormFactors(my_DGEList)
+logCPM <- cpm(dge, log=TRUE)
+```
+
+# PCA Analysis
+
+## Perform PCA
+
+```{r pca-analysis}
+pca <- prcomp(t(logCPM), scale = TRUE)
+pca_data <- as.data.frame(pca$x)
+pca_data$cancer <- blocks[rownames(pca_data), "cancer"]
+```
+
+## Plot PCA
+
+```{r pca-plot}
+p1 <- ggplot(pca_data, aes(x = PC1, y = PC2, color = cancer)) +
+  geom_point(alpha = 0.7) +
+  labs(title = "PCA of TCGA RNA-seq Data",
+       x = "Principal Component 1",
+       y = "Principal Component 2") +
+  theme_minimal()
+print(p1)
+```
+
+# Batch Effect Analysis
+
+## Boxplot of logCPM values
+
+```{r batch-effect}
+boxplot(logCPM, las = 2, col = colors$by_cancer,
+        main = "Boxplot of logCPM values by Cancer Type", xlab = "Samples", ylab = "logCPM")
+```
+
+# Save PCA Plot
+
+```{r save-plot, echo=FALSE}
+ggsave("PCA_TCGA_RNAseq.png", plot = p1)
+```
+
+# Conclusion
+
+This report provides a comprehensive overview of the RNA-seq data for 12 different cancer types from TCGA, including quality control, normalization, and PCA analysis to detect potential batch effects.
+```
+
+### Instructions to Knit the RMD File
+
+1. Save the above content into a file named `TCGA_PCA_Report.Rmd`.
+2. Open the file in RStudio.
+3. Click on the `Knit` button in RStudio.
+4. Choose to knit the document to HTML or PDF as desired.
+
+Make sure to adjust the `my_cache_dir` path to the location of your local data directory. This RMD file will generate an HTML or PDF report with all the analysis steps, visualizations, and descriptions included.
