@@ -1,8 +1,14 @@
 # metabopathia
-## Abstract (is a quick abstract to re-write )
-Metabopathia is a method for computation of signal transduction along signaling pathway and metabolic pathways from transcriptomic and metabolomic data. This method is based on the Canonical Circuit Activity Analysis method which is an iterative algorithm that compute the signal intensity passing through the nodes of a network. This network are composed by proteins and metabolites: signaling pathways and metabolic pathways maps.
-The method is taking into account the level of expression, the metabolic concentration (for genes and metabolites respectively) and the intensity of the signal arriving to each node. Unlike the enreachment-based methods, this method is able to deffer between signal that reduce or increase (activation or inhibition).It is providing an other approach of omics data integration for functional analysis allowing to compute the signal arriving to the effector nodes with are annotated by a function for each pathway (:S bad werritten). 
-In summary, Metabopathia presents a refined approach to unraveling the intricate interplay of gene expression and metabolite dynamics within cellular pathways.
+## Background
+
+**Metabopathia** is a computational method designed to model signal transduction through cellular pathways by integrating transcriptomic and metabolomic data. It builds on the Canonical Circuit Activity Analysis, an iterative algorithm that computes signal intensity through networks composed of nodes representing proteins, metabolites, and cellular functions or phenotypes. These networks include both signaling and metabolic pathways, currently utilizing maps from databases like KEGG, with plans to incorporate additional resources such as SIGNOR. Tools like [signor2Hipathia](https://github.com/kinzaR/signor2Hipathia) are used to integrate these networks for enhanced mechanistic modeling.
+
+## Introduction
+
+Metabopathia provides a novel approach to multi-omics data integration, distinguishing it from enrichment-based methods by accurately differentiating between activation and inhibition of pathways. It takes into account expression levels and metabolic activity (for genes and metabolites, respectively), calculating signal intensities as they propagate through the network to effector nodes, which are annotated with specific pathway functions. This approach allows researchers to explore the functional impact of gene expression and metabolite dynamics in a more mechanistically grounded manner.
+
+This repository contains the full implementation of Metabopathia, along with an example study using breast cancer data from The Cancer Genome Atlas (TCGA). The method is currently in development as a web server, accessible [here](http://hipathia.babelomics.org/metabopathia_dev/).
+
 
 ## Setting up the Environment
 
