@@ -1,4 +1,6 @@
 #!/usr/bin/env /opt/R/4.3.1/bin/Rscript
+###!/usr/bin/env /opt/R/4.1.2/bin/Rscript <- testing under this version for web-compatibility issues !
+#*!/usr/bin/env /opt/R/4.3.1/bin/Rscript
 ### !/usr/bin/env Rscript
 # Main Script for metabopathia project: 01_main.R
 # Author: Kinza Rian
@@ -183,6 +185,7 @@ if(analysis!="overlay")
                           uni.terms = uni.terms, GO.terms = GO.terms, custom.terms = custom.terms,
                           decompose = decompose, verbose=verbose)
 if(hipathia | analysis=="overlay"){
+  # This has to be adapted to the web version 4.1.2
   hdata <- hipathia(genes_vals = data_set$genes_vals,
                   pathways,
                   uni.terms = uni.terms, GO.terms = GO.terms, custom.terms = custom.terms,
