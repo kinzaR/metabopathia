@@ -162,3 +162,28 @@ get_main_dir <- function(){
   }
   return(codebase)
 }
+# These are functions in the new version of hipathia that are not avail for old version ! that why I add here manually 
+local_get_node_type <- function(metaginfo){
+  types <- c("compound", "gene")
+  names(types) <- c("circle", "rectangle")
+  df <- lapply(metaginfo$pathigraphs, function(pg) {
+    d <- data.frame(name = V(pg$graph)$name, label = V(pg$graph)$label, 
+                    type = types[V(pg$graph)$shape])
+    d <- d[!grepl("_func", d$name), ]
+  })
+  alltypes <- do.call(rbind, df)
+  return(alltypes)
+}
+
+local_get_path_nodes <- function (metaginfo, path.names, decompose){
+  pathnodes <- sapply(path.names, function(name) {
+    pathway <- unlist(strsplit(name, "-"))[2]
+    if (decompose == TRUE) {
+      nodes <- V(metaginfo$pathigraphs[[pathway]]$subgraphs[[name]])$name
+    }
+    else {
+      nodes <- V(metaginfo$pathigraphs[[pathway]]$effector.subgraphs[[name]])$name
+    }
+    allnodes <- paste(nodes, collapse = ", ")
+  })
+}

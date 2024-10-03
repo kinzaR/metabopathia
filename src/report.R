@@ -12,7 +12,7 @@ create_output_folder <- function(output_folder, verbose=FALSE){
   if (!file.exists(output_folder)){
     # If the output folder doesn't exist, create it
     dir.create(output_folder, showWarnings = T,recursive = T)
-    if(verbose) message("Output folder created:", file.path(getwd(), output_folder))
+    if(verbose) message("Output folder created:", file.path(getwd(), output_folder))# maybe remove the getwd()
   }else if(verbose) warning(paste("The specified output folder '", output_folder, "' already exists. Results may be overwritten.", sep = ""))
   return(output_folder)
 }
