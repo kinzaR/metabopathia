@@ -24,6 +24,11 @@ opt$output_folder <- "tmp"
 # opt$group1 <-"IPD"
 # opt$group2 <-"CTRL"
 # opt$paired <-FALSE# 
+################# example for the web 
+# opt$exp_file <-"data_examples/BRCA_ER/brca_data_example_ERposneg.tsv"
+# opt$design_file <-"data_examples/BRCA_ER/brca_designmatrix_ERposneg.tsv"
+# opt$group1 <-"Negative"
+# opt$group2 <-"Positive"
 ################# example GSE207088
 opt$exp_file <-"data_examples/metabolizer_as_DS/brca_example1_40_exp.txt"
 # opt$met_file <-"data_examples/metabolizer_as_DS/inferedmetabolic_data.tsv"

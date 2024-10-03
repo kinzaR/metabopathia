@@ -29,9 +29,9 @@ data_pre <- function(exp_file, met_file=NULL,met_type, design_file, group1, grou
   if(design_type == "categorical"){
     des <- des %>% dplyr::filter(group %in% c(group1, group2))
   }
-  
+  des <- des %>% filter(sample %in% colnames(exp))
   # Subset expression and metabolite data based on the filtered design
-  exp <- exp[, des$sample]
+  exp <- exp %>% select(des$sample)
   if(met_type == "concentration_matrix") metabo_data <- metabo_data[, des$sample]
   #metabo_data <- metabo_data %>% dplyr::select(des$sample) %>%
   #  dplyr::relocate(des$sample)
@@ -68,7 +68,7 @@ data_pre <- function(exp_file, met_file=NULL,met_type, design_file, group1, grou
   
   ### Distribution of received data
   # Save the combined plot to a PNG file
-  png(file.path(output_folder, "data_distribution.png"))
+  png(file.path(output_folder, "data_distribution.png"), type="cairo")
   # Set up the layout for the plots
   par(mfrow = c(2, 2))
   boxplot(trans_exp, las = 2, main = "Expression (Before Normalization)",

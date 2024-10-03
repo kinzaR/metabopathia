@@ -8,3 +8,5 @@ doc*
 metabopathia-web/
 
 data_examples/GSE215221/GSE215221_process_data.txt.gz
+data_examples/TCGA/rse_gene_tcga.rds
+
