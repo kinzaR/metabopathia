@@ -1,10 +1,52 @@
 # metabopathia
-## Abstract (is a quick abstract to re-write )
-Metabopathia is a method for computation of signal transduction along signaling pathway and metabolic pathways from transcriptomic and metabolomic data. This method is based on the Canonical Circuit Activity Analysis method which is an iterative algorithm that compute the signal intensity passing through the nodes of a network. This network are composed by proteins and metabolites: signaling pathways and metabolic pathways maps.
-The method is taking into account the level of expression, the metabolic concentration (for genes and metabolites respectively) and the intensity of the signal arriving to each node. Unlike the enreachment-based methods, this method is able to deffer between signal that reduce or increase (activation or inhibition).It is providing an other approach of omics data integration for functional analysis allowing to compute the signal arriving to the effector nodes with are annotated by a function for each pathway (:S bad werritten). 
-In summary, Metabopathia presents a refined approach to unraveling the intricate interplay of gene expression and metabolite dynamics within cellular pathways.
 
-## Setting up the Environment
+**Metabopathia** is a computational method designed to model signal transduction through cellular pathways by integrating transcriptomic and metabolic data. It builds on the Canonical Circuit Activity Analysis ([CCAA](https://pubmed.ncbi.nlm.nih.gov/28042959/)), an iterative algorithm that computes signal intensities through networks composed of nodes representing proteins, metabolites, and cellular functions or phenotypes. These networks include both signaling and metabolic pathways, currently utilizing pathway maps from databases like KEGG.
+## Table of Contents  
+- [Key Concepts](#KeyConcepts)    
+- [Metabopathia approach](#MetabopathiaAproach)
+- [Quick start](#QuickStart)
+    - [Setting up the environment](#SettingUptheEnvironment)
+    - [Getting started](#GettingStarted)
+    - [Breast cancer case study](#BRCACaseStudy)
+        - [Overview](#Overview)
+        - [Data preprocessing story: From TCGA repository to Metabopathia input dataset](#preprocessing)
+        - [Results and discussion](#ResultsDiscussion) 
+- [Future enhancements](#FutureEnhancements)
+
+  
+<a name="KeyConcepts"/>
+
+### Key Concepts
+
+- **Biological Network**: A representation of biological entities (such as genes, proteins, and metabolites) and their interactions within a living system. These networks capture how molecules interact to carry out cellular functions.
+
+- **Pathways**: A sequence of molecular events or interactions that lead to a specific cellular outcome. Pathways can involve signaling cascades (signaling pathways) or metabolic processes (metabolic pathways), describing how cells respond to signals or perform biochemical reactions.
+
+- **Nodes in Biological Pathways**: In a biological network, nodes represent molecular entities, such as genes, proteins, or metabolites. Each node is a key player in the pathway, contributing to the overall biological process or signal transduction.
+
+- **Interactions in Biological Pathways**: The connections between nodes, known as edges, represent molecular interactions, such as activation, inhibition, or binding events. These interactions define how signals or molecular changes propagate through the network, leading to functional outcomes.
+- diagrams maps pathway network : Here I have to be clear about different terminology 
+
+
+<a name="MetabopathiaAproach"/>    
+
+## Metabopathia aproach
+
+The aim of Metabopathia is to offer a novel approach to multi-omics data integration for pathway activity analysis. It reduces the complexity of entire pathways by breaking them down into sub-pathways or circuits (segments that have only one final node, known as the effector). The activity of each individual node is then calculated depending on the type of molecular component involved in signal transduction. These components include proteins and metabolites, with gene expression levels and metabolite activity used as proxies for protein presence and metabolite concentration, respectively. Unlike enrichment-based methods, this algorithm distinguishes between activation and inhibition interactions when inferring signal propagation towards the effector. The final nodes, or effectors, are annotated with their corresponding cellular functions.
+
+To summarize, the algorithm calculates signal intensities as they propagate through the network to effector nodes—the final protein nodes in each sub-pathway or circuit—annotated with specific cellular functions and phenotypic outcomes.
+
+This mechanistic approach enables researchers to better understand the functional impact of gene expression and metabolite dynamics in biological systems, providing a more detailed and accurate representation of cellular signaling and metabolic interactions.
+
+This repository contains the full implementation of Metabopathia, along with an example study using breast cancer data from The Cancer Genome Atlas (TCGA). Metabopathia is currently under development as a web server, accessible [here](http://hipathia.babelomics.org/metabopathia_dev/).
+
+<a name="QuickStart"/>  
+
+## Quick Start
+
+<a name="SettingUptheEnvironment"/>  
+
+### Setting up the Environment
 
 Before running the code, follow these steps to set up the environment:
 
@@ -25,15 +67,10 @@ Before running the code, follow these steps to set up the environment:
     source("00_prep_env.R")
     ```
 
-## Case Study 1:
-
-### Overview
-Description od the case study and its objectives....
-
-### Proposed Dataset
-Mention details about the dataset you recommend for the case study...
+<a name="GettingStarted"/>  
 
 ### Getting Started
+
 Follow these steps to launch the case study from the command line:
 
 1. **Clone the Repository:**
@@ -150,3 +187,53 @@ For help:
             Show this help message and exit
 
     ```
+
+<a name="BRCACaseStudy"/>   
+
+## Breast cancer case study
+
+<a name="Overview"/>   
+
+### Overview
+
+Description od the case study and its objectives....
+
+<a name="Dataset"/>   
+
+### Dataset 
+
+<a name="preprocessing"/>   
+
+### preprocessing story: From TCGA repository to Metabopathia input data
+
+Mention details about the dataset you recommend for the case study...
+
+
+<a name="ResultsDiscussion"/>   
+
+### Results and discussion
+
+
+
+<a name="FutureEnhancements"/>   
+
+## Future enhancements
+
+Several features are planned to expand and refine Metabopathia:
+
+### Extensibility Enhancements
+
+**Integration of Additional Biological Databases:** Future versions will incorporate resources such as SIGNOR to extend the biological knowledge from several databases. Tools like [signor2Hipathia](https://github.com/kinzaR/signor2Hipathia) will enable the integration of these networks to enrich our mechanistic modeling results. This will help avoid bias towards a single database, and the diversity of resources will improve the quality of the results. *Additionally, the stability of results must be ensured across different databases.*
+
+### Interoperability and Versatility
+  The widely used graphical standard, [Systems Biology Graphical Notation (SBGN)](https://sbgn.github.io/), divides the graphical languages for representing cellular processes, interactions, and biological networks into three families:
+  - Process Descriptions (PD),
+  - Entity Relationships (ER),
+  - Activity Flows (AF).  
+  Metabopathia, the extended version of [Hipathia](https://doi.org/10.18632/oncotarget.14107), currently accepts only Activity Flow diagrams, while others utilize PD and ER maps. These two formats are not straightforward to integrate with our mechanistic activity modeling approaches: [Hipathia](10.1016/j.csbj.2021.05.022), [Cov-Hipathia](10.1186/s13040-021-00234-1), and Metabopathia. Since PD maps are often large, detailed, and complex, there is a need for simplified illustrations. Adding a module to Metabopathia that parses these maps into AF networks will enhance interoperability with approaches that use other network notations and scenarios where biological knowledge is represented in PD and ER notation languages. This module will take advantage of [CaSQ](https://casq.readthedocs.io/en/stable/_modules/casq/celldesigner2qual.html), a tool that converts Process Description networks to SBML-qual with strict semantics. Then, these simplified interaction format will be easy to adapt to the Metabopathia tool.  
+  A proof of concept using CaSQ to ensure interoperability was cited in our previous community work. Below is a schema of the use of Hipathia within [an ecosystem developed by the COVID-19 Disease Map community](https://doi.org/10.15252/msb.202110387), ensuring interoperability between all tools in the Disease Map community's work.
+
+[http://www.embopress.org/cms/10.15252/msb.202110387/asset/d583d912-f6bb-4c4f-a38c-a5edc9fdac03/assets/graphic/msb202110387-fig-0001-m.png](http://www.embopress.org/cms/10.15252/msb.202110387/asset/d583d912-f6bb-4c4f-a38c-a5edc9fdac03/assets/graphic/msb202110387-fig-0001-m.png)
+
+### Amplified Accuracy Through Omics Synergy
+Ongoing efforts aim to refine the method’s ability to handle raw metabolic concentrations, improving the interaction modeling between metabolites and proteins. This enhancement will balance the complexity of molecular mechanisms with computational simplicity to reflect biological reality more accurately.
