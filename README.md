@@ -14,8 +14,8 @@
 - [Future enhancements](#FutureEnhancements)
 
   
-<a name="KeyConcepts"/>
-
+<a name="KeyConcepts"> </a>   
+    
 ### Key Concepts
 
 - **Biological Network**: A representation of biological entities (such as genes, proteins, and metabolites) and their interactions within a living system. These networks capture how molecules interact to carry out cellular functions.
@@ -28,7 +28,7 @@
 - diagrams maps pathway network : Here I have to be clear about different terminology 
 
 
-<a name="MetabopathiaAproach"/>    
+<a name="MetabopathiaAproach"> </a>      
 
 ## Metabopathia aproach
 
@@ -40,11 +40,11 @@ This mechanistic approach enables researchers to better understand the functiona
 
 This repository contains the full implementation of Metabopathia, along with an example study using breast cancer data from The Cancer Genome Atlas (TCGA). Metabopathia is currently under development as a web server, accessible [here](http://hipathia.babelomics.org/metabopathia_dev/).
 
-<a name="QuickStart"/>  
+<a name="QuickStart"> </a>       
 
 ## Quick Start
 
-<a name="SettingUptheEnvironment"/>  
+<a name="SettingUptheEnvironment"> </a>        
 
 ### Setting up the Environment
 
@@ -67,7 +67,7 @@ Before running the code, follow these steps to set up the environment:
     source("00_prep_env.R")
     ```
 
-<a name="GettingStarted"/>  
+<a name="GettingStarted"> </a>       
 
 ### Getting Started
 
@@ -188,41 +188,41 @@ For help:
 
     ```
 
-<a name="BRCACaseStudy"/>   
+<a name="BRCACaseStudy"> </a>       
 
 ## Breast cancer case study
 
-<a name="Overview"/>   
+<a name="Overview"> </a>         
 
 ### Overview
 
 Description od the case study and its objectives....
 
-<a name="Dataset"/>   
+<a name="Dataset"> </a>         
 
 ### Dataset 
 
-<a name="preprocessing"/>   
+<a name="preprocessing"> </a>      
 
 ### preprocessing story: From TCGA repository to Metabopathia input data
 
 Mention details about the dataset you recommend for the case study...
 
 
-<a name="ResultsDiscussion"/>   
+<a name="ResultsDiscussion"> </a>         
 
 ### Results and discussion
 
 
 
-<a name="FutureEnhancements"/>   
+<a name="FutureEnhancements"> </a>         
 
 ## Future enhancements
 
 Several features are planned to expand and refine Metabopathia:
-
+### Amplified Accuracy Through Omics Synergy
+Ongoing efforts aim to refine the method’s ability to handle raw metabolic concentrations, improving the interaction modeling between metabolites and proteins. This enhancement will balance the complexity of molecular mechanisms with computational simplicity to reflect biological reality more accurately.
 ### Extensibility Enhancements
-
 **Integration of Additional Biological Databases:** Future versions will incorporate resources such as SIGNOR to extend the biological knowledge from several databases. Tools like [signor2Hipathia](https://github.com/kinzaR/signor2Hipathia) will enable the integration of these networks to enrich our mechanistic modeling results. This will help avoid bias towards a single database, and the diversity of resources will improve the quality of the results. *Additionally, the stability of results must be ensured across different databases.*
 
 ### Interoperability and Versatility
@@ -233,7 +233,8 @@ Several features are planned to expand and refine Metabopathia:
   Metabopathia, the extended version of [Hipathia](https://doi.org/10.18632/oncotarget.14107), currently accepts only Activity Flow diagrams, while others utilize PD and ER maps. These two formats are not straightforward to integrate with our mechanistic activity modeling approaches: [Hipathia](10.1016/j.csbj.2021.05.022), [Cov-Hipathia](10.1186/s13040-021-00234-1), and Metabopathia. Since PD maps are often large, detailed, and complex, there is a need for simplified illustrations. Adding a module to Metabopathia that parses these maps into AF networks will enhance interoperability with approaches that use other network notations and scenarios where biological knowledge is represented in PD and ER notation languages. This module will take advantage of [CaSQ](https://casq.readthedocs.io/en/stable/_modules/casq/celldesigner2qual.html), a tool that converts Process Description networks to SBML-qual with strict semantics. Then, these simplified interaction format will be easy to adapt to the Metabopathia tool.  
   A proof of concept using CaSQ to ensure interoperability was cited in our previous community work. Below is a schema of the use of Hipathia within [an ecosystem developed by the COVID-19 Disease Map community](https://doi.org/10.15252/msb.202110387), ensuring interoperability between all tools in the Disease Map community's work.
 
-[http://www.embopress.org/cms/10.15252/msb.202110387/asset/d583d912-f6bb-4c4f-a38c-a5edc9fdac03/assets/graphic/msb202110387-fig-0001-m.png](http://www.embopress.org/cms/10.15252/msb.202110387/asset/d583d912-f6bb-4c4f-a38c-a5edc9fdac03/assets/graphic/msb202110387-fig-0001-m.png)
 
-### Amplified Accuracy Through Omics Synergy
-Ongoing efforts aim to refine the method’s ability to handle raw metabolic concentrations, improving the interaction modeling between metabolites and proteins. This enhancement will balance the complexity of molecular mechanisms with computational simplicity to reflect biological reality more accurately.
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/f81d0b4e-5d57-45ee-9228-a9d69efd8521" alt="https://www.embopress.org/cms/10.15252/msb.202110387/asset/d583d912-f6bb-4c4f-a38c-a5edc9fdac03/assets/graphic/msb202110387-fig-0001-m.png"/><em>Figure 1. Ecosystem of the COVID‐19 Disease Map Community (https://doi.org/10.15252/msb.202110387) </em>
+</p>
+
