@@ -250,28 +250,66 @@ For help:
     ```
 
       
-
-## <a name="BRCACaseStudy"> </a> Breast cancer case study
+<a name="BRCACaseStudy"> </a>        
+## Breast cancer case study
 
 <a name="Overview"> </a>         
 
 ### Overview
 
-Description od the case study and its objectives....
+[TODO: Description od the case study and its objectives....]
 
 <a name="Dataset"> </a>         
 
 ### Dataset 
+For this case study, we are using breast cancer RNA-seq data from The Cancer Genome Atlas (TCGA). This dataset provides comprehensive genomic profiles of breast cancer. The original dataset had **1231 samples** and **60660 genes** (retrieved on June 27, 2024) (See Table 1). The raw data can be downloaded from the [TCGA data portal](https://portal.gdc.cancer.gov/) in the form of count matrices. (See [link](http://hipathia.babelomics.org/metabopathia_dev/reports/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.html#3) for data acquisition commands and scripts)    
+
+**Table 1:** Summary table;Number of samples and  participants per tissue types in the breast cancer dataset.
+| Sample Types         | Number of Samples | Number of Participants |
+|----------------------|------------------|-----------------------|
+| Metastatic           | 7                | 7                     |
+| Primary Tumor        | 1111             | 1095                  |
+| Solid Tissue Normal   | 113              | 113                   |
+| **Total**            | **1231**         | **1215**              |
 
 <a name="preprocessing"> </a>      
 
-### preprocessing story: From TCGA repository to Metabopathia input data
+### Preprocessing Story: From TCGA Repository to Metabopathia Input Data
 
-Mention details about the dataset you recommend for the case study...
+The preprocessing pipeline for this case study follows a series of steps aimed to prepare TCGA RNA-seq data for our downstream analysis with Metabopathia:
+
+1. **Quality assessment via PCA and Hierarchical Clustering**: Principal Component Analysis ([PCA](https://doi.org/10.1038/s43586-022-00184-w)) and Hierarchical Clustering ([HC](10.21037/atm.2017.02.05)) are conducted to evaluate the quality of the dataset and detect any outliers or batch effects. This ensures that only clear and consistent RNA-seq data capturing the biological effect of interest (Tumor samples Vs Controls) are kept for further analysis.
+
+2. **Low Count Removal**: In this analysis, filtering out lowly expressed genes has been adapted to our pathway activity analysis approach. Unlike differential expression analysis pipelines, which commonly remove lowly expressed genes, our mechanistic modeling approach requires the retention of all available data. Excluding these genes would lead to artificial imputation of missing values (e.g., using 0.5), which would not accurately represent the biological reality of low expression. By retaining lowly expressed genes, we ensure that the model reflects true biological conditions.     
+   For this dataset , we identified a total of 28502 genes considered lowly expressed across all cancers using `filterByExpr` [fuction](https://rdrr.io/bioc/edgeR/man/filterByExpr.html) of [EdgeR package]( 10.1093/bioinformatics/btp616). 294 genes of them belong to our integrated pathways (See [supplimentary table](supplementary_files/brca_caseStudy/brca_hipathia_null_genes_v1.tsv)).    
+   Finally, we **filtered out 28,208 of the 60,660 genes** that were considered lowly expressed between the two groups.        
+4. **Gene Expression Normalization**: The data were normalized using the trimmed mean of M-values (TMM) method, which adjusts for differences in library sizes across samples. This normalization step is critical for ensuring accurate comparisons between gene expression levels across different samples.
+
+5. **Log Transformation and Outlier Management**: After normalization, the data are log-transformed to stabilize variance. Additionally, truncation is applied at the 99th percentile to manage extreme values and minimize the impact of outliers on the analysis.
+
+6. **Batch Effect Correction**: To address potential batch effects, the ComBat method is applied. This statistical approach helps to remove unwanted variability introduced by non-biological factors, ensuring that the final data input into Metabopathia accurately reflects the underlying biological signals.
+
+7. **Final Quality Assessment**: A final quality assessment is performed using both PCA and hierarchical clustering to confirm that the data are clean and suitable for analysis.
+<p float="center">
+  <img src="https://github.com/user-attachments/assets/dbcd0ebe-0a83-40eb-bc59-1b20c522d29d" width="49%" />
+  <img src="https://github.com/user-attachments/assets/af5f5fd9-bae0-4b08-9f31-801c5e8754ef" width="48%" />
+</p>
+
+These preprocessing steps generate a clean and normalized dataset ready for pathway activity analysis with Metabopathia.    
+
+**For more information and reproducibility, check these links:**
+- This folder on GitHub: [data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1](data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1) contains all generated figures and the Jupyter notebook exported as:
+     -  [markdown](ata_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.md),
+     -  [HTML](data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.html),
+     -  [notebook](data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.ipynb).
+
+- Additionally, it is available externally here:
+    - Jupyter Colab: [TCGA-BRCA RNA-seq Data Analysis Report](https://colab.research.google.com/github/kinzaR/metabopathia/blob/dev/data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.ipynb).
+    - Published on the web through this link: [Metabopathia reports: TCGA-BRCA RNA-seq Data preprocessing](http://hipathia.babelomics.org/metabopathia_dev/reports/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.html).
+
+
 
 ### Pathways
-
-
 #### Signaling Pathways
 A table containing detailed information about selected signaling pathways, including columns such as `path_id`, `name`, `class`, `description`, `compounds`, `shortName`, `numberOfNodes`, `numberOfMetabolites`, `annotatedMetabolite`, and `metaboliteList`, can be found [here](supplementary_files/pathways_information.tsv).
 
