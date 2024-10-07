@@ -260,38 +260,133 @@ Description od the case study and its objectives....
 
 Mention details about the dataset you recommend for the case study...
 
+### Pathways
+
+
+#### Signaling Pathways
+A table containing detailed information about selected signaling pathways, including columns such as `path_id`, `name`, `class`, `description`, `compounds`, `shortName`, `numberOfNodes`, `numberOfMetabolites`, `annotatedMetabolite`, and `metaboliteList`, can be found [here](supplementary_files/pathways_information.tsv).
+
+#### Metabolic Modules
+The analysis includes 96 metabolic modules derived from 48 pathways. Below is the number of pathways and modules per KEGG classes:
+
+| Class                                                | Number of Pathways | Number of Modules |
+|------------------------------------------------------|--------------------|-------------------|
+| Metabolism; Amino acid metabolism                    | 9                  | 20                |
+| Metabolism; Carbohydrate metabolism                  | 9                  | 18                |
+| Metabolism; Glycan biosynthesis and metabolism       | 9                  | 20                |
+| Metabolism; Lipid metabolism                         | 10                 | 26                |
+| Metabolism; Metabolism of cofactors and vitamins     | 3                  | 3                 |
+| Metabolism; Metabolism of other amino acids          | 1                  | 1                 |
+| Metabolism; Metabolism of terpenoids and polyketides | 1                  | 2                 |
+| Metabolism; Nucleotide metabolism                    | 2                  | 7                 |
+| NA                                                   | 4                  | 20                |
+| **Total**                                            | **48**             | **117**           |
+
+Twenty modules are part of more than one class; for example, M00741_C00091 belongs to both the Amino Acid Metabolism and Carbohydrate Metabolism pathway families. The parsed pathways are based on the 2016 KEGG version, and an update is recommended. More information, including columns such as `module`, `path_id`, `path_name`, `class`, `description`, and `compounds`; [see supp table](supplementary_files/module_paths_extended_info.tsv).
+
+
 ### Metabolite Inference
 
 A total of **15 metabolites** were inferred using the `infer_met_from_metabolizer()` function from the Metabolizer package. The identified metabolites are `C00002, C00022, C00026, C00042, C00122, C00130, C00195, C00334, C00410, C00762, C00788, C01598, C01673, C01780, C02465`.
 According to [MetaboAnalyst 5.0 platform ](https://www.metaboanalyst.ca/Secure/process/NameMapView.xhtml)  [\[Ref\]](https://doi.org/10.1093/nar/gkp356), the annotation of these inferred metabolites across HMDB, SMILES, and PubChem databases is:
 
-| Query   |                Match                | HMDB         | PubChem | KEGG    | SMILES                                                                                                        |
-|---------|-------------------------------------|--------------|--------|---------|----------------------------------------------------------------------------------------------------------------|
-| C00002  | Adenosine triphosphate             | HMDB0000538  | 5957   | C00002  | NC1=NC=NC2=C1N=CN2[C@@H]1O[C@H](COP(O)(=O)OP(O)(=O)OP(O)(O)=O)[C@@H](O)[C@H]1O                               |
-| C00022  | Pyruvic acid                       | HMDB0000243  | 1060   | C00022  | CC(=O)C(O)=O                                                                                               |
-| C00026  | Oxoglutaric acid                   | HMDB0000208  | 51     | C00026  | OC(=O)CCC(=O)C(O)=O                                                                                       |
-| C00042  | Succinic acid                      | HMDB0000254  | 1110   | C00042  | OC(=O)CCC(O)=O                                                                                             |
-| C00122  | Fumaric acid                       | HMDB0000134  | 444972 | C00122  | OC(=O)\\C=C\\C(O)=O                                                                                        |
-| C00130  | Inosinic acid                      | HMDB0000175  | 8582   | C00130  | O[C@@H]1[C@@H](COP(O)(O)=O)O[C@H]([C@@H]1O)N1C=NC2=C1N=CNC2=O                                             |
-| C00195  | Cer(d18:1/12:0)                    | HMDB0004947  | 5283562| C00195  | [H][C@@](CO)(NC(=O)CCCCCCCCCCC)[C@H](O)\\C=C\\CCCCCCCCCCCCC                                               |
-| C00334  | gamma-Aminobutyric acid            | HMDB0000112  | 119    | C00334  | NCCCC(O)=O                                                                                                  |
-| C00410  | Progesterone                       | HMDB0001830  | 5994   | C00410  | [H][C@@]12CC[C@H](C(C)=O)[C@@]1(C)CC[C@@]1([H])[C@@]2([H])CCC2=CC(=O)CC[C@]12C                           |
-| C00762  | Cortisone                          | HMDB0002802  | 222786 | C00762  | [H][C@@]12CC[C@](O)(C(=O)CO)[C@@]1(C)CC(=O)[C@@]1([H])[C@@]2([H])CCC2=CC(=O)CC[C@]12C                   |
-| C00788  | Epinephrine                        | HMDB0000068  | 5816   | C00788  | CNC[C@H](O)C1=CC(O)=C(O)C=C1                                                                                |
-| C01598  | Melatonin                          | HMDB0001389  | 896    | C01598  | COC1=CC2=C(NC=C2CCNC(C)=O)C=C1                                                                             |
-| C01673  | Calcitriol                         | HMDB0001903  | 5280453| C01673  | C[C@H](CCCC(C)(C)O)[C@@]1([H])CC[C@@]2([H])\\C(CCC[C@]12C)=C\\C=C1\\C[C@@H](O)C[C@H](O)C1=C              |
-| C01780  | Aldosterone                        | HMDB0000037  | 5839   | C01780  | [H][C@@]12CC[C@H](C(=O)CO)[C@]1(C[C@H](O)[C@@]1([H])[C@@]2([H])CCC2=CC(=O)CC[C@]12C)C=O                    |
-| C02465  | Liothyronine                       | HMDB0000265  | 5920   | C02465  | N[C@@H](CC1=CC(I)=C(OC2=CC(I)=C(O)C=C2)C(I)=C1)C(O)=O                                                   |
+| Query   |                Match               | HMDB         | PubChem| KEGG    | SMILES                                                                                                          |
+|---------|------------------------------------|--------------|--------|---------|-----------------------------------------------------------------------------------------------------------------|
+| C00002  | Adenosine triphosphate             | HMDB0000538  | 5957   | C00002  | NC1=NC=NC2=C1N=CN2[C@@H]1O[C@H](COP(O)(=O)OP(O)(=O)OP(O)(O)=O)[C@@H](O)[C@H]1O                                  |
+| C00022  | Pyruvic acid                       | HMDB0000243  | 1060   | C00022  | CC(=O)C(O)=O                                                                                                    |
+| C00026  | Oxoglutaric acid                   | HMDB0000208  | 51     | C00026  | OC(=O)CCC(=O)C(O)=O                                                                                             |
+| C00042  | Succinic acid                      | HMDB0000254  | 1110   | C00042  | OC(=O)CCC(O)=O                                                                                                  |
+| C00122  | Fumaric acid                       | HMDB0000134  | 444972 | C00122  | OC(=O)\\C=C\\C(O)=O                                                                                             |
+| C00130  | Inosinic acid                      | HMDB0000175  | 8582   | C00130  | O[C@@H]1[C@@H](COP(O)(O)=O)O[C@H]([C@@H]1O)N1C=NC2=C1N=CNC2=O                                                   |
+| C00195  | Cer(d18:1/12:0)                    | HMDB0004947  | 5283562| C00195  | [H][C@@](CO)(NC(=O)CCCCCCCCCCC)[C@H](O)\\C=C\\CCCCCCCCCCCCC                                                     |
+| C00334  | gamma-Aminobutyric acid            | HMDB0000112  | 119    | C00334  | NCCCC(O)=O                                                                                                      |
+| C00410  | Progesterone                       | HMDB0001830  | 5994   | C00410  | [H][C@@]12CC[C@H](C(C)=O)[C@@]1(C)CC[C@@]1([H])[C@@]2([H])CCC2=CC(=O)CC[C@]12C                                  |
+| C00762  | Cortisone                          | HMDB0002802  | 222786 | C00762  | [H][C@@]12CC[C@](O)(C(=O)CO)[C@@]1(C)CC(=O)[C@@]1([H])[C@@]2([H])CCC2=CC(=O)CC[C@]12C                           |
+| C00788  | Epinephrine                        | HMDB0000068  | 5816   | C00788  | CNC[C@H](O)C1=CC(O)=C(O)C=C1                                                                                    |
+| C01598  | Melatonin                          | HMDB0001389  | 896    | C01598  | COC1=CC2=C(NC=C2CCNC(C)=O)C=C1                                                                                  |
+| C01673  | Calcitriol                         | HMDB0001903  | 5280453| C01673  | C[C@H](CCCC(C)(C)O)[C@@]1([H])CC[C@@]2([H])\\C(CCC[C@]12C)=C\\C=C1\\C[C@@H](O)C[C@H](O)C1=C                     |
+| C01780  | Aldosterone                        | HMDB0000037  | 5839   | C01780  | [H][C@@]12CC[C@H](C(=O)CO)[C@]1(C[C@H](O)[C@@]1([H])[C@@]2([H])CCC2=CC(=O)CC[C@]12C)C=O                         |
+| C02465  | Liothyronine                       | HMDB0000265  | 5920   | C02465  | N[C@@H](CC1=CC(I)=C(OC2=CC(I)=C(O)C=C2)C(I)=C1)C(O)=O                                                           |
 
 [Here you will find the downloaded CSV from the MetaboAnalyst platform](https://github.com/kinzaR/metabopathia/blob/dev/supplementary_files/brca_caseStudy/inferred_metabolite_brca_metabolizer_v2.csv).
 The boxplot below illustrates the distribution of inferred metabolic activity using the Metabolizer for genes that belong to signaling pathways. The inferred activity was based on metabolic pathways and utilized RNA-seq data as proxies for enzyme presence. For more information about the method, please refer to [this article](https://www.nature.com/articles/s41540-019-0087-2).
 
-
 ![Boxplot of inferred metabolite (15) - Tumor Vs Normal](https://github.com/kinzaR/metabopathia/blob/dev/supplementary_files/brca_caseStudy/inferred_act_metabolites.svg)
 
-<a name="ResultsDiscussion"> </a>         
+### Signal propagation
 
-### Results and discussion
+
+#### metabopathia() Function
+
+The `metabopathia()` function is designed to calculate the activation level of each circuit (subpathway) within a pathway for each sample in the experiment. It requires two primary inputs: the pathways object and node values. 
+
+- For gene nodes, this includes a matrix of gene expression.
+- For metabolite nodes, it requires the metabolic concentration matrix. 
+
+The output consists of the computed activation values for all loaded circuits.
+
+#### Rules for Signal Computation
+
+Signal transduction is governed by several critical factors:
+
+1. The protein must be present.
+2. Another protein must activate it.
+3. If the node is an enzyme and the previous node is a metabolite, a threshold concentration must be reached.
+
+This function computes signal transduction based on the following steps:
+
+1. **Quantification**: The presence of a specific gene is quantified as a normalized value between 0 and 1, serving as a proxy for protein presence.
+2. **Enzyme Interaction**: The function checks for enzymes that interact with the metabolite present in the data.
+3. **Signal Computation**: The signal value passing through a node is computed by considering:
+   - The level of expression of each gene within the node.
+   - The concentration of each metabolite that interacts with this node.
+   - The intensity of the signal arriving at the node, whether through activations or inhibitions.
+
+The final signal value of the circuit is determined by the signal value at the last node of the circuit.
+
+#### Imputation Approach (Have to organize my idea here)
+
+In order to calculate the propagated signal for 146 pathways from KEGG, an imputation step was performed to account for missing genes and metabolites. 
+The function addresses missing values for genes and metabolites essential for signal computation by imputing these values. Each sample is assigned the median of the respective matrix. However, it is important to note that a high ratio of missingness may lead to unrepresentative results.
+In this case study, 222 missing genes were added (1.12%), and 151 missing metabolites were added (90.96%). While the percentage of missing genes is relatively low, the high percentage of missing metabolites underscores a significant gap. This highlights the need for more comprehensive metabolic pathway data to infer the production of additional metabolites.
+
+
+#### Computation of Signal
+
+The intensity of the propagated signal is calculated using an iterative algorithm, starting from the first node(s) in a subpathway until the last node is reached. 
+
+Biologically, the first node represents receptors within a cell, while the last nodes represent effector proteins. In subsequent analyses, these nodes will be annotated with cellular functions to infer the functional activity of the studied condition within the cell.
+
+The initial input signal arriving at the first node is set to 1, indicating that the signal reaching the receptors is at its maximum value. All values are scaled between 0 and 1, where 0 signifies inactivity and 1 denotes full activation. These scaled values provide a meaningful comparative context for assessing signal activity.
+
+For each node 'n' in the subpathway, the signal value is calculated as the product of the normalized/scaled value of that node, the set of incoming inhibition signal values, and activation signal values.
+
+#### Parameters
+
+- **decompose**: Indicates whether to use effector subpathways or decomposed subpathways.
+
+#### Additional Considerations
+
+- **Clarification of Node Types**: It is essential to clearly describe the roles of different node types, including receptors, effector proteins, and transcription factors (TFs).
+  
+- **Biological Relevance**: Understanding the rationale behind this computation is crucial. This process can be likened to "playing detective" within the cell; by analyzing the data, we can uncover cellular mechanisms and address issues like cellular dysfunction.
+
+- **Scaling Justification**: The necessity of scaling values between 0 and 1 should be elaborated. These scales represent biological activity, with 0 indicating inactivity and 1 indicating full activation.
+
+- **Determination of Activation and Inhibition**: The methodology must clarify whether the activation and inhibition values are derived from experimental data, predicted values, or a combination of both. Understanding how these signals influence the overall signal values is critical.
+
+- **Iterative Process Description**: The iterative nature of the signal propagation should be described in more detail. Outline the steps involved in propagating the signal from one point to another and any mathematical equations that govern this process.
+
+- **Functional Annotation of Signal Values**: Explain how the calculated signal values at each node are utilized for functional annotation, including the downstream analyses that follow.
+
+- **Feedback Loops**: Discuss whether the method considers feedback loops, as they can significantly influence signal stability and propagation.
+
+### I have to have acleaaaaar distinctions Between Effector Proteins and Transcription Factors
+
+A clear distinction should be made between effector proteins and transcription factors. Effector proteins act to execute the cellular response to signals, while transcription factors regulate gene expression in response to various stimuli. It is essential to clarify these roles for improved understanding in the context of metabolic pathways and signal transduction.
+
+    
+### <a name="ResultsDiscussion"> </a> Results and discussion
 
 
 
