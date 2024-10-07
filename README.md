@@ -284,7 +284,10 @@ According to [MetaboAnalyst 5.0 platform ](https://www.metaboanalyst.ca/Secure/p
 | C02465  | Liothyronine                       | HMDB0000265  | 5920   | C02465  | N[C@@H](CC1=CC(I)=C(OC2=CC(I)=C(O)C=C2)C(I)=C1)C(O)=O                                                   |
 
 [Here you will find the downloaded CSV from the MetaboAnalyst platform](https://github.com/kinzaR/metabopathia/blob/dev/supplementary_files/brca_caseStudy/inferred_metabolite_brca_metabolizer_v2.csv).
+The boxplot below illustrates the distribution of inferred metabolic activity using the Metabolizer for genes that belong to signaling pathways. The inferred activity was based on metabolic pathways and utilized RNA-seq data as proxies for enzyme presence. For more information about the method, please refer to [this article](https://www.nature.com/articles/s41540-019-0087-2).
 
+
+![Boxplot of inferred metabolite (15) - Tumor Vs Normal](https://github.com/kinzaR/metabopathia/blob/dev/supplementary_files/brca_caseStudy/inferred_act_metabolites.svg)
 
 <a name="ResultsDiscussion"> </a>         
 
