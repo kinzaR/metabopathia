@@ -43,8 +43,18 @@ if (!requireNamespace("optparse", quietly = TRUE)) {
   install.packages("optparse")
 }
 
+# Install R.utils package
+if (!requireNamespace("R.utils", quietly = TRUE)) {
+  install.packages("R.utils")
+}
+
+# Install gplots package
+if (!requireNamespace("gplots", quietly = TRUE)) {
+  install.packages("gplots")
+}
+
 # Check if all packages are installed successfully
-if(all(c("BiocManager", "hipathia", "igraph", "SummarizedExperiment", "Matrix", "preprocessCore", "KEGGREST", "optparse") %in% .packages())) {
+if(all(c("BiocManager", "hipathia", "igraph", "SummarizedExperiment", "Matrix", "preprocessCore", "KEGGREST", "optparse","R.utils","gplots") %in% .packages())) {
   cat("All required dependencies and packages have been successfully installed.\n")
 } else {
   stop("Installation failed for one or more packages. Please check the error messages and try installing the packages manually.")

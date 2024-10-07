@@ -8,6 +8,7 @@
 # Usage: Rscript 01_main.R --species hsa or dirretly ./01_main.R --species hsa
 
 # Load necessary libraries
+message("You are using :",R.version.string)
 suppressPackageStartupMessages(library(optparse))
 suppressPackageStartupMessages(library(hipathia))
 suppressPackageStartupMessages(library(dplyr))

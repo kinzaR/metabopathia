@@ -14,8 +14,15 @@ opt$GO.terms <-FALSE
 opt$uni.terms <-FALSE
 opt$analysis <-"compare"
 opt$output_folder <- "tmp"
-
-
+###########################BRCA Case study ################################
+unzip("data_examples/TCGA/processed_data/brca_109NX109T_paired.zip", exdir = "data_examples/TCGA/processed_data/")
+opt$exp_file <-"data_examples/TCGA/processed_data/brca_109NX109T_paired/BRCA_109Nx109T_paired_normalized_trun99_combat_data_v2.tsv"
+opt$design_file <-"data_examples/TCGA/processed_data/brca_109NX109T_paired/BRCA_109Nx109T_paired_des_v2.tsv"
+opt$group1 <-"Tumor"
+opt$group2 <-"Normal"
+opt$paired <- TRUE
+opt$hipathia <- TRUE
+################################Draft######################################
 # ################# example GSE207088
 # opt$exp_file <-"data_examples/GSE207088/toBeUsed/RNA_hNESCs_TPM.tsv"
 # opt$exp_file <-"data_examples/GSE207088/toBeUsed/RNA_hNESCs_TMM.tsv"
@@ -30,12 +37,13 @@ opt$output_folder <- "tmp"
 # opt$group1 <-"Negative"
 # opt$group2 <-"Positive"
 ################# example GSE207088
-opt$exp_file <-"data_examples/metabolizer_as_DS/brca_example1_40_exp.txt"
-# opt$met_file <-"data_examples/metabolizer_as_DS/inferedmetabolic_data.tsv"
-opt$design_file <-"data_examples/metabolizer_as_DS/brca_example1_40_design.txt"
-opt$group1 <-"Tumor"
-opt$group2 <-"Normal"
-opt$paired <-FALSE
-opt$hipathia <- TRUE
-# opt$analysis <-"overlay"
-opt$analysis <-"compare"
+# opt$exp_file <-"data_examples/metabolizer_as_DS/brca_example1_40_exp.txt"
+# # opt$met_file <-"data_examples/metabolizer_as_DS/inferedmetabolic_data.tsv"
+# opt$design_file <-"data_examples/metabolizer_as_DS/brca_example1_40_design.txt"
+# opt$group1 <-"Tumor"
+# opt$group2 <-"Normal"
+# opt$paired <-FALSE
+# opt$hipathia <- TRUE
+# # opt$analysis <-"overlay"
+# opt$analysis <-"compare"
+
