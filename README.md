@@ -50,26 +50,76 @@ This repository contains the full implementation of Metabopathia, along with an 
 
 Before running the code, follow these steps to set up the environment:
 
-1. Install R version 4.3.1 on your system (or a newer version).
+1. **Install R version** 4.3.1 on your system (or a newer version).
 
-2.  **Optional for Linux users: If you have multiple R versions installed on your machine, open a terminal and set the `RSTUDIO_WHICH_R` environment variable to specify the R version for RStudio. Use the following command:**
+2.  **[Optional for Linux users]**:
+   If you have multiple R versions installed on your machine, open a terminal and set the `RSTUDIO_WHICH_R` environment variable to specify the R version for RStudio. Use the following command:
 
     ```bash
     export RSTUDIO_WHICH_R=/opt/R/4.3.1/bin/R
     ```
+3. **Install required Dependencies**:
+The required dependencies are:  ```"BiocManager", "hipathia", "igraph", "SummarizedExperiment", "Matrix", "preprocessCore", "KEGGREST", "optparse"```. You can either install these manually or clone the repository and run the `00_prep_env.R` script to install all the required dependencies and packages.
+      
+4. **R Session Information**: For reproducibility and troubleshooting, here is the R session information used in this project:
 
-    This ensures that RStudio uses the correct R version when launching.
+```R
+R version 4.3.1 (2023-06-16)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 20.04.6 LTS
 
+Matrix products: default
+BLAS:   /opt/R/4.3.1/lib/R/lib/libRblas.so 
+LAPACK: /opt/R/4.3.1/lib/R/lib/libRlapack.so;  LAPACK version 3.11.0
 
-3. Execute the `00_prep_env.R` file to install the required dependencies and packages. Use the following command in your R environment:
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C               LC_TIME=es_ES.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=es_ES.UTF-8    LC_MESSAGES=en_US.UTF-8    LC_PAPER=es_ES.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C             LC_MEASUREMENT=es_ES.UTF-8 LC_IDENTIFICATION=C       
 
-    ```R
-    source("00_prep_env.R")
-    ```
+time zone: Europe/Madrid
+tzcode source: system (glibc)
 
-<a name="GettingStarted"> </a>       
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
 
-### Getting Started
+loaded via a namespace (and not attached):
+  [1] tidyselect_1.2.1              dplyr_1.1.4                   blob_1.2.4                   
+  [4] filelock_1.0.3                Biostrings_2.68.1             bitops_1.0-7                 
+  [7] fastmap_1.1.1                 RCurl_1.98-1.14               BiocFileCache_2.8.0          
+ [10] promises_1.3.0                digest_0.6.35                 mime_0.12                    
+ [13] lifecycle_1.0.4               KEGGREST_1.40.1               interactiveDisplayBase_1.38.0
+ [16] RSQLite_2.3.6                 magrittr_2.0.3                compiler_4.3.1               
+ [19] rlang_1.1.3                   tools_4.3.1                   igraph_2.0.3                 
+ [22] utf8_1.2.4                    yaml_2.3.8                    ggsignif_0.6.4               
+ [25] S4Arrays_1.0.6                htmlwidgets_1.6.4             bit_4.0.5                    
+ [28] curl_5.2.1                    DelayedArray_0.26.7           plyr_1.8.9                   
+ [31] abind_1.4-5                   purrr_1.0.2                   BiocGenerics_0.46.0          
+ [34] grid_4.3.1                    stats4_4.3.1                  preprocessCore_1.62.1        
+ [37] fansi_1.0.6                   ggpubr_0.6.0                  xtable_1.8-4                 
+ [40] colorspace_2.1-0              ggplot2_3.5.1                 scales_1.3.0                 
+ [43] MultiAssayExperiment_1.26.0   SummarizedExperiment_1.30.2   cli_3.6.2                    
+ [46] crayon_1.5.2                  generics_0.1.3                rstudioapi_0.16.0            
+ [49] reshape2_1.4.4                httr_1.4.7                    visNetwork_2.1.2             
+ [52] DBI_1.2.2                     cachem_1.0.8                  stringr_1.5.1                
+ [55] zlibbioc_1.46.0               AnnotationDbi_1.62.2          BiocManager_1.30.23          
+ [58] XVector_0.40.0                matrixStats_1.3.0             vctrs_0.6.5                  
+ [61] Matrix_1.6-5                  carData_3.0-5                 jsonlite_1.8.8               
+ [64] car_3.1-2                     IRanges_2.34.1                S4Vectors_0.38.2             
+ [67] rstatix_0.7.2                 bit64_4.0.5                   hipathia_3.0.2               
+ [70] tidyr_1.3.1                   servr_0.30                    glue_1.7.0                   
+ [73] stringi_1.8.3                 gtable_0.3.5                  BiocVersion_3.17.1           
+ [76] later_1.3.2                   GenomeInfoDb_1.36.4           GenomicRanges_1.52.1         
+ [79] munsell_0.5.1                 tibble_3.2.1                  pillar_1.9.0                 
+ [82] rappdirs_0.3.3                htmltools_0.5.8.1             GenomeInfoDbData_1.2.10      
+ [85] R6_2.5.1                      dbplyr_2.3.4                  shiny_1.8.1.1                
+ [88] Biobase_2.60.0                lattice_0.22-6                MetBrewer_0.2.0              
+ [91] AnnotationHub_3.8.0           backports_1.4.1               png_0.1-8                    
+ [94] broom_1.0.5                   memoise_2.0.1                 httpuv_1.6.15                
+ [97] Rcpp_1.0.12                   xfun_0.43                     MatrixGenerics_1.12.3        
+[100] pkgconfig_2.0.3
+```
+### <a name="GettingStarted"> </a> Getting Started
 
 Follow these steps to launch the case study from the command line:
 
@@ -79,14 +129,16 @@ Follow these steps to launch the case study from the command line:
    cd metabopathia 
    ```
 2. **Install dependencies:**
+   Execute the `00_prep_env.R` file to install the required dependencies and packages. Use the following command in your R environment:
     ```R
     source("00_prep_env.R")
     ```
-3. **Run the case study**
+   This ensures that RStudio uses the correct R version when launching.
+4. **Run the case study**
     ```R
     ./01_main.R --example
     ```
-4. **Example Command**
+5. **Example Command**
 For help: 
    ```bash
    ./01_main.R -h 
