@@ -314,8 +314,76 @@ The boxplot below illustrates the distribution of inferred metabolic activity us
 ![Boxplot of inferred metabolite (15) - Tumor Vs Normal](https://github.com/kinzaR/metabopathia/blob/dev/supplementary_files/brca_caseStudy/inferred_act_metabolites.svg)
 
 ### Signal propagation
-#### missing nodes
-In order to calculate the propagated signal for 146 pathways from KEGG, an imputation step was performed to account for missing genes and metabolites. In this case study, 222 missing genes were added (1.12%), and 151 missing metabolites were added (90.96%). While the percentage of missing genes is relatively low, the high percentage of missing metabolites underscores a significant gap. This highlights the need for more comprehensive metabolic pathway data to infer the production of additional metabolites.
+
+
+#### metabopathia() Function
+
+The `metabopathia()` function is designed to calculate the activation level of each circuit (subpathway) within a pathway for each sample in the experiment. It requires two primary inputs: the pathways object and node values. 
+
+- For gene nodes, this includes a matrix of gene expression.
+- For metabolite nodes, it requires the metabolic concentration matrix. 
+
+The output consists of the computed activation values for all loaded circuits.
+
+#### Rules for Signal Computation
+
+Signal transduction is governed by several critical factors:
+
+1. The protein must be present.
+2. Another protein must activate it.
+3. If the node is an enzyme and the previous node is a metabolite, a threshold concentration must be reached.
+
+This function computes signal transduction based on the following steps:
+
+1. **Quantification**: The presence of a specific gene is quantified as a normalized value between 0 and 1, serving as a proxy for protein presence.
+2. **Enzyme Interaction**: The function checks for enzymes that interact with the metabolite present in the data.
+3. **Signal Computation**: The signal value passing through a node is computed by considering:
+   - The level of expression of each gene within the node.
+   - The concentration of each metabolite that interacts with this node.
+   - The intensity of the signal arriving at the node, whether through activations or inhibitions.
+
+The final signal value of the circuit is determined by the signal value at the last node of the circuit.
+
+#### Imputation Approach (Have to organize my idea here)
+
+In order to calculate the propagated signal for 146 pathways from KEGG, an imputation step was performed to account for missing genes and metabolites. 
+The function addresses missing values for genes and metabolites essential for signal computation by imputing these values. Each sample is assigned the median of the respective matrix. However, it is important to note that a high ratio of missingness may lead to unrepresentative results.
+In this case study, 222 missing genes were added (1.12%), and 151 missing metabolites were added (90.96%). While the percentage of missing genes is relatively low, the high percentage of missing metabolites underscores a significant gap. This highlights the need for more comprehensive metabolic pathway data to infer the production of additional metabolites.
+
+
+#### Computation of Signal
+
+The intensity of the propagated signal is calculated using an iterative algorithm, starting from the first node(s) in a subpathway until the last node is reached. 
+
+Biologically, the first node represents receptors within a cell, while the last nodes represent effector proteins. In subsequent analyses, these nodes will be annotated with cellular functions to infer the functional activity of the studied condition within the cell.
+
+The initial input signal arriving at the first node is set to 1, indicating that the signal reaching the receptors is at its maximum value. All values are scaled between 0 and 1, where 0 signifies inactivity and 1 denotes full activation. These scaled values provide a meaningful comparative context for assessing signal activity.
+
+For each node 'n' in the subpathway, the signal value is calculated as the product of the normalized/scaled value of that node, the set of incoming inhibition signal values, and activation signal values.
+
+#### Parameters
+
+- **decompose**: Indicates whether to use effector subpathways or decomposed subpathways.
+
+#### Additional Considerations
+
+- **Clarification of Node Types**: It is essential to clearly describe the roles of different node types, including receptors, effector proteins, and transcription factors (TFs).
+  
+- **Biological Relevance**: Understanding the rationale behind this computation is crucial. This process can be likened to "playing detective" within the cell; by analyzing the data, we can uncover cellular mechanisms and address issues like cellular dysfunction.
+
+- **Scaling Justification**: The necessity of scaling values between 0 and 1 should be elaborated. These scales represent biological activity, with 0 indicating inactivity and 1 indicating full activation.
+
+- **Determination of Activation and Inhibition**: The methodology must clarify whether the activation and inhibition values are derived from experimental data, predicted values, or a combination of both. Understanding how these signals influence the overall signal values is critical.
+
+- **Iterative Process Description**: The iterative nature of the signal propagation should be described in more detail. Outline the steps involved in propagating the signal from one point to another and any mathematical equations that govern this process.
+
+- **Functional Annotation of Signal Values**: Explain how the calculated signal values at each node are utilized for functional annotation, including the downstream analyses that follow.
+
+- **Feedback Loops**: Discuss whether the method considers feedback loops, as they can significantly influence signal stability and propagation.
+
+### I have to have acleaaaaar distinctions Between Effector Proteins and Transcription Factors
+
+A clear distinction should be made between effector proteins and transcription factors. Effector proteins act to execute the cellular response to signals, while transcription factors regulate gene expression in response to various stimuli. It is essential to clarify these roles for improved understanding in the context of metabolic pathways and signal transduction.
 
     
 ### <a name="ResultsDiscussion"> </a> Results and discussion
