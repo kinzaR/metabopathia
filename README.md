@@ -295,7 +295,7 @@ The preprocessing pipeline for this case study follows a series of steps aimed t
   <img src="https://github.com/user-attachments/assets/af5f5fd9-bae0-4b08-9f31-801c5e8754ef" width="48%" />
 </p>
 
-These preprocessing steps generate a clean and normalized dataset ready for pathway activity analysis with Metabopathia.    
+These preprocessing steps generate a clean and normalized dataset -**218 samples**- (109 from each group) ready for pathway activity analysis with Metabopathia.    
 
 **For more information and reproducibility, check these links:**
 - This folder on GitHub: [data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1](data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1) contains all generated figures and the Jupyter notebook exported as:
