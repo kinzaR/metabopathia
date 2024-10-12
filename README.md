@@ -255,9 +255,9 @@ For help:
 
 <a name="Overview"> </a>         
 
-### Overview
-
-[TODO: Description od the case study and its objectives....]
+### Overview        
+The diagram below provides an overview of the workflow used in the breast cancer case study, detailing each key step in the analysis process:
+![workflow_BRCA_metabopathia drawio](https://github.com/user-attachments/assets/21037ce5-5baa-4026-a159-0f48dfb8cc4e)        
 
 <a name="Dataset"> </a>         
 
