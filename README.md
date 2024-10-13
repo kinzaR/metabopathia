@@ -328,8 +328,9 @@ The gene expression matrix must use Entrez IDs as row names, and the `hipathia::
 #### Pathway Decomposition    
 ##### Sub-pathways or Circuits
 Pathways are often multifunctional, composed of different subpathways that can trigger very different or even opposite cell behaviors depending on the specific signal propagation. Assessing the activity of whole pathways limits our understanding of cellular functions, whereas focusing on subpathways, such as receptor(s)-to-effector circuits, allows for a more accurate description of cell activities and their relationship to specific phenotypic outcomes.([doi: 10.1093/bib/bby040](https://doi.org/10.1093/bib/bby040)).
->Note: The terms "sub-pathway" and "circuit" are used interchangeably.    
-We use the `hipathia::load_pathways` function to import the preselected pathways, setting the `species` parameter to `"hsa"` (Homo sapiens). A custom list of 146 signaling pathway IDs is provided, and this function returns a meta-graph-info R object containing both full pathways and a list of sub-pathways for each. You can find all the 1876 circuits per pathway in this table: [circuitsOf146_pathway.tsv](supplementary_files/circuitsOf146_pathway.tsv). Additionally, the figure below shows the number of circuits per pathway:
+>Note: The terms "sub-pathway" and "circuit" are used interchangeably.
+  
+We use the `hipathia::load_pathways` function to import the preselected pathways, setting the `species` parameter to `"hsa"` (Homo sapiens). A custom list of 146 signaling pathway IDs is provided, and this function returns a meta-graph-info R object containing both full pathways and a list of sub-pathways for each. You can find all the 1876 circuits per pathway in this table: [circuits of 146 pathways](supplementary_files/circuitsOf146_pathway.tsv). Additionally, the figure below shows the number of circuits per pathway:
 
 ![circuits_per_pathways_barplot](supplementary_files/circuits_per_pathways_barplot.svg)
 
