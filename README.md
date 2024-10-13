@@ -11,11 +11,8 @@
     - [Overview](#Overview)
     - Input data:
         - [Data preprocessing story: From TCGA repository to Metabopathia input dataset](#preprocessing)
-        - Selected Signaling and metabolic pathways
-        - Modeling approach
-            - Data Scaling and Normalization
-            - Pathway Decomposition
-            - Pathway Simulation and Activity Scoring
+        - [Selected Signaling and metabolic pathways](#pathways)
+        - [Modeling approach](#Modeling)
     - [Results and discussion](#ResultsDiscussion) 
 - [Future enhancements](#FutureEnhancements)
 
@@ -313,6 +310,8 @@ These preprocessing steps generate a clean and normalized dataset -**218 samples
 - Additionally, it is available externally here:
     - Jupyter Colab: [TCGA-BRCA RNA-seq Data Analysis Report](https://colab.research.google.com/github/kinzaR/metabopathia/blob/dev/data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.ipynb).
     - Published on the web through this link: [Metabopathia reports: TCGA-BRCA RNA-seq Data preprocessing](http://hipathia.babelomics.org/metabopathia_dev/reports/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.html).
+
+<a name="pathways"> </a>   
 
 #### Selected Pathways
 ##### Signaling Pathways    
