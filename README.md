@@ -401,83 +401,46 @@ The boxplot below illustrates the distribution of inferred metabolic activity us
 
 These inferred scores were used as proxies for metabolic activity in signaling pathways.
 
-### Pathway Simulation and Activity Scoring    
-Pathway activity is calculated using the `metabopathia()` function. This model simulates metabolic production then feed the  the signaling cascades with this layer of data across different conditions.
-Results are generated as pathway activation scores, which are then visualized or further analyzed to explore differences between conditions (e.g., cancer vs. normal samples).
+##### Imputation for Missing Molecules
+To calculate the propagated signal for the 146 KEGG pathways, an imputation step was necessary to account for missing genes and metabolites that participate in the signal propagation but whose values could not be inferred in the previous step.         
+For each sample, missing values for essential genes and metabolites were imputed by assigning the median value from the respective data matrix. However, it's important to note that a high ratio of missing data may lead to unrepresentative results.
+In this case study, 222 missing genes were imputed (1.12% of the total), and 151 missing metabolites were imputed (90.96% of the total). While the missing gene ratio is relatively low, the high percentage of missing metabolites highlights a significant gap. This underscores the need for more comprehensive metabolic pathway data to improve the inference of metabolite production.
 
-#### metabopathia() Function
+#### Pathway Simulation and Activity Scoring    
+The `metabopathia()` function simulates signaling cascades and infers sub-pathway activities based on two key components:
 
-The `metabopathia()` function is designed to calculate the activation level of each circuit (subpathway) within a pathway for each sample in the experiment. It requires two primary inputs: the pathways object and node values. 
+1. **Node Scores:** These scores represent the activity levels of individual proteins or metabolites within each node, calculated in the previous steps.
+2. **Sub-pathway Topology:** This includes the relationships between nodes, such as activations and inhibitions, which govern the flow of the signal.
 
-- For gene nodes, this includes a matrix of gene expression.
-- For metabolite nodes, it requires the metabolic concentration matrix. 
+By integrating these two layers of information across different conditions, the function generates sub-pathway activation scores. These scores can then be visualized or further analyzed to explore differences between experimental conditions, such as breast cancer versus normal tissue.
 
-The output consists of the computed activation values for all loaded circuits.
+##### Rules for Signal Computation
+The signal transduction process in Metabopathia follows several key rules:
 
-#### Rules for Signal Computation
+1. A protein must be present for the signal to propagate.
+2. The signal must be activated by another protein upstream in the pathway.
 
-Signal transduction is governed by several critical factors:
+##### Signal Computation Process
+The signal computation follows these steps:
+- The node value of each node used as input.
+- The intensity of the signal arriving at each node is determined by both activation and inhibition interactions from other nodes in the sub-pathway.
+- The propagated signal is calculated iteratively, starting from the first nodes (representing receptors) and moving through the pathway to the last node (representing effector proteins).
 
-1. The protein must be present.
-2. Another protein must activate it.
-3. If the node is an enzyme and the previous node is a metabolite, a threshold concentration must be reached.
+The initial input signal at the first node is set to 1, representing maximum signal input at the receptors. As the signal moves through the pathway, it is scaled between 0 and 1, where 0 indicates no activity and 1 indicates full activation. 
 
-This function computes signal transduction based on the following steps:
+For each node `n`, the signal value is computed as the product of:
+- The normalized or scaled value of that node (from gene expression or metabolite activity),
+- The incoming signal values from activation nodes, and 
+- The modulation from inhibition nodes.
 
-1. **Quantification**: The presence of a specific gene is quantified as a normalized value between 0 and 1, serving as a proxy for protein presence.
-2. **Enzyme Interaction**: The function checks for enzymes that interact with the metabolite present in the data.
-3. **Signal Computation**: The signal value passing through a node is computed by considering:
-   - The level of expression of each gene within the node.
-   - The concentration of each metabolite that interacts with this node.
-   - The intensity of the signal arriving at the node, whether through activations or inhibitions.
+![image](https://github.com/user-attachments/assets/f1cb7994-ab75-4c1e-8315-131e9e88d7a2)
 
-The final signal value of the circuit is determined by the signal value at the last node of the circuit.
-
-#### Imputation Approach (Have to organize my idea here)
-
-In order to calculate the propagated signal for 146 pathways from KEGG, an imputation step was performed to account for missing genes and metabolites. 
-The function addresses missing values for genes and metabolites essential for signal computation by imputing these values. Each sample is assigned the median of the respective matrix. However, it is important to note that a high ratio of missingness may lead to unrepresentative results.
-In this case study, 222 missing genes were added (1.12%), and 151 missing metabolites were added (90.96%). While the percentage of missing genes is relatively low, the high percentage of missing metabolites underscores a significant gap. This highlights the need for more comprehensive metabolic pathway data to infer the production of additional metabolites.
+The final signal value for the entire circuit is determined by the signal at the last node in the pathway. These computed values allow for meaningful comparisons of signal activity between different conditions.
 
 
-#### Computation of Signal
-
-The intensity of the propagated signal is calculated using an iterative algorithm, starting from the first node(s) in a subpathway until the last node is reached. 
-
-Biologically, the first node represents receptors within a cell, while the last nodes represent effector proteins. In subsequent analyses, these nodes will be annotated with cellular functions to infer the functional activity of the studied condition within the cell.
-
-The initial input signal arriving at the first node is set to 1, indicating that the signal reaching the receptors is at its maximum value. All values are scaled between 0 and 1, where 0 signifies inactivity and 1 denotes full activation. These scaled values provide a meaningful comparative context for assessing signal activity.
-
-For each node 'n' in the subpathway, the signal value is calculated as the product of the normalized/scaled value of that node, the set of incoming inhibition signal values, and activation signal values.
-
-#### Parameters
-
-- **decompose**: Indicates whether to use effector subpathways or decomposed subpathways.
-
-#### Additional Considerations
-
-- **Clarification of Node Types**: It is essential to clearly describe the roles of different node types, including receptors, effector proteins, and transcription factors (TFs).
-  
-- **Biological Relevance**: Understanding the rationale behind this computation is crucial. This process can be likened to "playing detective" within the cell; by analyzing the data, we can uncover cellular mechanisms and address issues like cellular dysfunction.
-
-- **Scaling Justification**: The necessity of scaling values between 0 and 1 should be elaborated. These scales represent biological activity, with 0 indicating inactivity and 1 indicating full activation.
-
-- **Determination of Activation and Inhibition**: The methodology must clarify whether the activation and inhibition values are derived from experimental data, predicted values, or a combination of both. Understanding how these signals influence the overall signal values is critical.
-
-- **Iterative Process Description**: The iterative nature of the signal propagation should be described in more detail. Outline the steps involved in propagating the signal from one point to another and any mathematical equations that govern this process.
-
-- **Functional Annotation of Signal Values**: Explain how the calculated signal values at each node are utilized for functional annotation, including the downstream analyses that follow.
-
-- **Feedback Loops**: Discuss whether the method considers feedback loops, as they can significantly influence signal stability and propagation.
-
-### I have to have acleaaaaar distinctions Between Effector Proteins and Transcription Factors
-
-A clear distinction should be made between effector proteins and transcription factors. Effector proteins act to execute the cellular response to signals, while transcription factors regulate gene expression in response to various stimuli. It is essential to clarify these roles for improved understanding in the context of metabolic pathways and signal transduction.
-
-    
 ### <a name="ResultsDiscussion"> </a> Results and discussion
 Pathway activity scores are saved in the results/ directory. You can visualize the results using our integrated plotting functions.
-<iframe src='http://hipathia.babelomics.org/pathway-viewer-test'>
+
     
 
 <a name="FutureEnhancements"> </a>         
