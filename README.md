@@ -16,7 +16,7 @@
   
 <a name="KeyConcepts"> </a>   
     
-### Key Concepts
+## Key Concepts
 
 - **Biological Network**: A representation of biological entities (such as genes, proteins, and metabolites) and their interactions within a living system. These networks capture how molecules interact to carry out cellular functions.
 
@@ -261,7 +261,8 @@ The diagram below provides an overview of the workflow used in the breast cancer
 
 <a name="Dataset"> </a>         
 
-### The used dataset 
+### Input data
+#### RNA-seq data
 For this case study, we are using breast cancer RNA-seq data from The Cancer Genome Atlas (TCGA). This dataset provides comprehensive genomic profiles of breast cancer. The original dataset had **1231 samples** and **60660 genes** (retrieved on June 27, 2024) (See Table 1). The raw data can be downloaded from the [TCGA data portal](https://portal.gdc.cancer.gov/) in the form of count matrices. (See [link](http://hipathia.babelomics.org/metabopathia_dev/reports/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.html#3) for data acquisition commands and scripts)    
 
 **Table 1:** Summary table;Number of samples and  participants per tissue types in the breast cancer dataset.
@@ -274,7 +275,7 @@ For this case study, we are using breast cancer RNA-seq data from The Cancer Gen
 
 <a name="preprocessing"> </a>      
 
-### Preprocessing Story: From TCGA Repository to Metabopathia Input Data
+##### Preprocessing Story: From TCGA Repository to Metabopathia Input Data
 
 The preprocessing pipeline for this case study follows a series of steps aimed to prepare TCGA RNA-seq data for our downstream analysis with Metabopathia:
 
@@ -307,16 +308,38 @@ These preprocessing steps generate a clean and normalized dataset -**218 samples
     - Jupyter Colab: [TCGA-BRCA RNA-seq Data Analysis Report](https://colab.research.google.com/github/kinzaR/metabopathia/blob/dev/data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.ipynb).
     - Published on the web through this link: [Metabopathia reports: TCGA-BRCA RNA-seq Data preprocessing](http://hipathia.babelomics.org/metabopathia_dev/reports/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.html).
 
-### Selected pathways
-#### Signaling Pathways    
-For the mechanistic modeling performed with Metabopathia, a total of 146 KEGG signaling pathways were selected. These pathways were imported from the Hipathia R package using the `hipathia::load_pathways` function, with the species parameter set to `"hsa"` (Homo sapiens). A custom list of pathway IDs corresponding to the 146 signaling pathways was provided.    
-Before applying Metabopathia, an adaptation step was necessary. This was achieved through the `add_metabolite_to_mgi` function, which adds metabolite information to the signaling pathways. This step ensures that the Metabopathia method can correctly identify these metabolites and integrate them into the estimation of the propagated signaling cascades.    
-Detailed information about the selected signaling pathways, including columns such as `path_id`, `name`, `class`, `description`, `compounds`, `shortName`, `numberOfNodes`, `numberOfMetabolites`, `annotatedMetabolite`, and `metaboliteList`, can be found in the following table: [pathways_information.tsv](supplementary_files/pathways_information.tsv).
+#### Selected Pathways
+##### Signaling Pathways    
+For the mechanistic modeling carried out with Metabopathia, a total of 146 KEGG signaling pathways were selected ([See table](supplementary_files/pathways_information.tsv)). These pathways were represented as activity flow maps. Each pathway was parsed into two files: a Simple Interaction File (SIF) for interactions between nodes, and an Attribute File (ATT) containing attributes for each node, such as labels, gene lists, and layout information. These files were then encapsulated into a meta-graph-info R object using the `mgi_from_sif()` function from the HiPathia R package.
 
-#### Metabolic Modules    
-Metabopathia integrates metabolic activity inference using the Metabolizer approach, which links gene expression changes to metabolic activity. Metabolizer builds mechanistic models of metabolism by analyzing pathway modules that represent key metabolic processes. It leverages gene expression data to estimate the activity of metabolic modules, each of which results in a specific metabolite.
+The interactions from KEGG were categorized into activation and inhibition interactions, while unknown interactions were removed. Phenotypes from KEGG were not retrieved, and a functional annotation step was performed using Gene Ontology and UniProt keywords (previously done and explained in [Rian, Kinza et al. (2021)](https://doi.org/10.1016/j.csbj.2021.05.022)).
 
-These inferred metabolic activities will be used as proxies for metabolite activities in the signaling pathways. In this analysis, 96 metabolic modules derived from 48 KEGG pathways were included. Below is a summary of pathways and modules by KEGG classes:
+##### Metabolic pathways
+A total of 48 metabolic pathways were downloaded from the KEGG PATHWAY database in KGML format ([See table](supplementary_files/module_paths_extended_info.tsv)). Each KEGG module consists of reaction nodes (representing one or more isoenzymes or enzymatic complexes) connected by edges that describe the sequence of reactions transforming simple metabolites into complex ones, or vice-versa. This process was previously explained and done by Çubuk et al. (2019) ([Çubuk et al., 2019](https://doi.org/10.1038/s41540-019-0087-2)).  
+
+<a name="Modeling"> </a>         
+
+### Modeling Platform
+#### Data Scaling and Normalization
+Metabopathia requires a preprocessed gene expression matrix, assuming the data has been normalized to correct for sequencing biases, including batch effects. The tool does not handle missing data, but for the BRCA dataset used in this analysis, no NA values were present.
+
+The gene expression matrix must use Entrez IDs as row names, and the `hipathia::translate_data()` function was used to convert Ensembl IDs. Before calculating subpathway activation values, the expression data were scaled between 0 and 1. Additionally, percentile normalization was applied to the transcriptomic dataset to ensure consistent data input.
+
+#### Pathway Decomposition    
+##### Sub-pathways or Circuits
+Pathways are often multifunctional, composed of different subpathways that can trigger very different or even opposite cell behaviors depending on the specific signal propagation. Assessing the activity of whole pathways limits our understanding of cellular functions, whereas focusing on subpathways, such as receptor(s)-to-effector circuits, allows for a more accurate description of cell activities and their relationship to specific phenotypic outcomes.([doi: 10.1093/bib/bby040](https://doi.org/10.1093/bib/bby040)).
+>Note: The terms "sub-pathway" and "circuit" are used interchangeably.    
+We use the `hipathia::load_pathways` function to import the preselected pathways, setting the `species` parameter to `"hsa"` (Homo sapiens). A custom list of 146 signaling pathway IDs is provided, and this function returns a meta-graph-info R object containing both full pathways and a list of sub-pathways for each. You can find all the 1876 circuits per pathway in this table: [circuitsOf146_pathway.tsv](supplementary_files/circuitsOf146_pathway.tsv). Additionally, the figure below shows the number of circuits per pathway:
+
+![circuits_per_pathways_barplot](supplementary_files/circuits_per_pathways_barplot.svg)
+
+###### Metabolite Annotation within Pathways
+Before applying Metabopathia, an adaptation step is required to integrate metabolite information. This is achieved using the `add_metabolite_to_mgi` function, which enriches the signaling pathways by adding metabolites ids to the meta-graph-info R object. This ensures that Metabopathia accurately identifies metabolites and includes them in the estimation of propagated signaling cascades.    
+You can find detailed information about the selected signaling pathways, including columns such as `path_id`, `name`, `class`, `description`, `compounds`, `shortName`, `numberOfNodes`, `numberOfMetabolites`, `annotatedMetabolite`, and `metaboliteList` in this table: [pathways_information.tsv](supplementary_files/pathways_information.tsv).
+
+##### Metabolic modules
+Metabolic modules provide a simplified yet comprehensive view of key metabolic activities by grouping essential biochemical reactions involved in metabolite production. Unlike entire pathways, modules focus on specific reaction chains, ensuring a more targeted analysis of metabolic transformations.
+In this analysis, 96 metabolic modules derived from 48 KEGG pathways were included. Below is a summary of pathways and modules by KEGG classes:
 
 | Class                                                | Number of Pathways | Number of Modules |
 |------------------------------------------------------|--------------------|-------------------|
@@ -331,9 +354,16 @@ These inferred metabolic activities will be used as proxies for metabolite activ
 | NA                                                   | 4                  | 20                |
 | **Total**                                            | **48**             | **117**           |
 
-Twenty modules belong to multiple KEGG classes, for example M00741_C00091 belong to both Amino Acid and Carbohydrate Metabolism classes. These pathways are based on the 2016 KEGG version, and updating the pathways is recommended for future analyses. For more detailed information, including columns such as module, path_id, path_name, class, description, and compounds, refer to the [see supp table](supplementary_files/module_paths_extended_info.tsv).    
+Twenty modules belong to multiple KEGG classes, for example M00741_C00091 belong to both Amino Acid and Carbohydrate Metabolism classes. These pathways are based on the 2016 KEGG version, and updating the pathways is recommended for future analyses. For more detailed information, including columns such as module, path_id, path_name, class, description, and compounds, refer to the [see supp table](supplementary_files/module_paths_extended_info.tsv). 
+#### Node value
+##### Gene node scoring
+###### Protein families
+###### Complexes
+##### Metabolite Inference    
+--> draft[[[Metabopathia integrates metabolic activity inference using the Metabolizer approach, which links gene expression changes to metabolic activity. Metabolizer builds mechanistic models of metabolism by analyzing pathway modules that represent key metabolic processes. It leverages gene expression data to estimate the activity of metabolic modules, each of which results in a specific metabolite.
 
-### Metabolite Inference    
+These inferred metabolic activities will be used as proxies for metabolite activities in the signaling pathways. ]]]
+
 A total of **15 metabolites** were inferred using the `infer_met_from_metabolizer()` function from the Metabolizer package. The identified metabolites are `C00002, C00022, C00026, C00042, C00122, C00130, C00195, C00334, C00410, C00762, C00788, C01598, C01673, C01780, C02465`.
 According to [MetaboAnalyst 5.0 platform ](https://www.metaboanalyst.ca/Secure/process/NameMapView.xhtml)  [\[Ref\]](https://doi.org/10.1093/nar/gkp356), the annotation of these inferred metabolites across HMDB, SMILES, and PubChem databases is:
 
