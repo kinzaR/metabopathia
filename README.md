@@ -12,7 +12,7 @@
     - Input data:
         - [Data preprocessing story: From TCGA repository to Metabopathia input dataset](#preprocessing)
         - [Selected Signaling and metabolic pathways](#pathways)
-        - [Modeling approach](#Modeling)
+    - [Modeling approach](#Modeling)
     - [Results and discussion](#ResultsDiscussion) 
 - [Future enhancements](#FutureEnhancements)
 
