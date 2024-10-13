@@ -356,15 +356,23 @@ In this analysis, 96 metabolic modules derived from 48 KEGG pathways were includ
 | **Total**                                            | **48**             | **117**           |
 
 Twenty modules belong to multiple KEGG classes, for example M00741_C00091 belong to both Amino Acid and Carbohydrate Metabolism classes. These pathways are based on the 2016 KEGG version, and updating the pathways is recommended for future analyses. For more detailed information, including columns such as module, path_id, path_name, class, description, and compounds, refer to the [see supp table](supplementary_files/module_paths_extended_info.tsv). 
-#### Node value
-##### Gene node scoring
-###### Protein families
-###### Complexes
-##### Metabolite Inference    
---> draft[[[Metabopathia integrates metabolic activity inference using the Metabolizer approach, which links gene expression changes to metabolic activity. Metabolizer builds mechanistic models of metabolism by analyzing pathway modules that represent key metabolic processes. It leverages gene expression data to estimate the activity of metabolic modules, each of which results in a specific metabolite.
 
-These inferred metabolic activities will be used as proxies for metabolite activities in the signaling pathways. ]]]
+#### Node Scoring       
+Each node in a pathway represents a molecular component, which can either be a protein or a metabolite. Nodes are classified into the following types:
 
+- **Protein Family Nodes:** These nodes contain one or more proteins, representing different isoforms of the same protein or members of a gene family.
+- **Complex Nodes:** These nodes consist of multiple proteins that form a molecular complex, requiring the interaction of several proteins to function together.
+- **Metabolite Nodes:** Also called compounds, these nodes represent small molecules such as amino acids, lipids, nucleic acids, carbohydrates, and vitamins.
+
+Since gene expression is used as a proxy for protein presence, and inferred metabolite activity serves as a proxy for metabolite concentration, Metabopathia computes a summarized score for each node, representing its overall value within the sub-pathway:    
+- **Protein Families:**  
+  In protein family nodes, the activity is driven by a single protein from the family. The node value is calculated as the 90th percentile of the expression values of the proteins in that family.      
+- **Complexes:**  
+  In complex nodes, multiple proteins are required for activity. The node value is determined by the lowest expression value (the limiting component) among the proteins forming the complex; this minimum expression is taken as the node value for this type.    
+- **Metabolites:**
+For metabolite nodes, Metabopathia integrates inferred metabolic activity using the Metabolizer approach. This method builds mechanistic models that link gene expression to metabolic activities within metabolic modules, estimating the production of specific metabolites. 
+
+##### Metabolite Inference 
 A total of **15 metabolites** were inferred using the `infer_met_from_metabolizer()` function from the Metabolizer package. The identified metabolites are `C00002, C00022, C00026, C00042, C00122, C00130, C00195, C00334, C00410, C00762, C00788, C01598, C01673, C01780, C02465`.
 According to [MetaboAnalyst 5.0 platform ](https://www.metaboanalyst.ca/Secure/process/NameMapView.xhtml)  [\[Ref\]](https://doi.org/10.1093/nar/gkp356), the annotation of these inferred metabolites across HMDB, SMILES, and PubChem databases is:
 
@@ -390,6 +398,8 @@ According to [MetaboAnalyst 5.0 platform ](https://www.metaboanalyst.ca/Secure/p
 The boxplot below illustrates the distribution of inferred metabolic activity using the Metabolizer for genes that belong to signaling pathways. The inferred activity was based on metabolic pathways and utilized RNA-seq data as proxies for enzyme presence. For more information about the method, please refer to [this article](https://www.nature.com/articles/s41540-019-0087-2).
 
 ![Boxplot of inferred metabolite (15) - Tumor Vs Normal](https://github.com/kinzaR/metabopathia/blob/dev/supplementary_files/brca_caseStudy/inferred_act_metabolites.svg)
+
+These inferred scores were used as proxies for metabolic activity in signaling pathways.
 
 ### Pathway Simulation and Activity Scoring    
 Pathway activity is calculated using the `metabopathia()` function. This model simulates metabolic production then feed the  the signaling cascades with this layer of data across different conditions.
