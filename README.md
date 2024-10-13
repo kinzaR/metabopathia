@@ -7,10 +7,16 @@
 - [Quick start](#QuickStart)
     - [Setting up the environment](#SettingUptheEnvironment)
     - [Getting started](#GettingStarted)
-    - [Breast cancer case study](#BRCACaseStudy)
-        - [Overview](#Overview)
+- [Breast cancer case study](#BRCACaseStudy)
+    - [Overview](#Overview)
+    - Input data:
         - [Data preprocessing story: From TCGA repository to Metabopathia input dataset](#preprocessing)
-        - [Results and discussion](#ResultsDiscussion) 
+        - Selected Signaling and metabolic pathways
+        - Modeling approach
+            - Data Scaling and Normalization
+            - Pathway Decomposition
+            - Pathway Simulation and Activity Scoring
+    - [Results and discussion](#ResultsDiscussion) 
 - [Future enhancements](#FutureEnhancements)
 
   
