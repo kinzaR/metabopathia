@@ -77,3 +77,39 @@ summary_tibble <-module_paths_extended_info %>%
 module_paths_extended_info %>%  select(c(module, class)) %>% unique %>%
   group_by(module) %>% summarise(number_of_classes = n_distinct(class)) %>% arrange(desc(number_of_classes)) %>%
   filter(number_of_classes>=2)
+############# sub-pathways
+circuits <- do.call(what = rbind, lapply( pathways$pathigraphs, function(p){
+  tibble(path_id = p$path.id,
+         numberOfCircuits = length(p$effector.subgraphs),
+         circuit_id = names(p$effector.subgraphs)) %>%
+    rowwise() %>% 
+    mutate(circuit_name = hipathia::get_path_names(metaginfo = pathways,  circuit_id) )
+}))
+write.table(x = circuits, file = "supplementary_files/circuitsOf146_pathway.tsv", 
+            append = F, quote = F, sep = "\t", row.names = F, col.names = T)
+
+
+# Load ggplot2
+library(ggplot2)
+
+# Example data
+data <- circuits %>% select(c(path_id,numberOfCircuits)) %>% unique %>% rowwise() %>% mutate(pathway = pathways$pathigraphs[[path_id]]$path.name)
+
+# Load ggplot2
+library(ggplot2)
+
+# Create a ggplot with adjustments for readability
+ggplot(data, aes(x = numberOfCircuits, y = reorder(pathway, numberOfCircuits))) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(x = "Number of Circuits", y = "Pathways", title = "Number of Circuits per Pathway") +
+  theme_minimal() +
+  theme(
+    axis.text.y = element_text(size = 4),  # Reduce the font size for y-axis text
+    plot.margin = margin(1, 1, 1, 3, "cm"),  # Increase left margin for better readability
+    axis.title.y = element_text(size = 5),  # Y-axis label size adjustment
+    axis.title.x = element_text(size = 10)   # X-axis label size adjustment
+  ) +
+  coord_fixed(ratio = 1.5)  # Adjusting the aspect ratio
+#"supplementary_files/circuits_per_pathways_barplot.png"
+
+
