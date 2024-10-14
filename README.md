@@ -409,7 +409,7 @@ These inferred scores were used as proxies for metabolic activity in signaling p
 ##### Imputation for Missing Molecules
 To calculate the propagated signal for the 146 KEGG pathways, an imputation step was necessary to account for missing genes and metabolites that participate in the signal propagation but whose values could not be inferred in the previous step.         
 For each sample, missing values for essential genes and metabolites were imputed by assigning the median value from the respective data matrix. However, it's important to note that a high ratio of missing data may lead to unrepresentative results.
-In this case study, 222 missing genes were imputed (1.12% of the total), and 151 missing metabolites were imputed (90.96% of the total). While the missing gene ratio is relatively low, the high percentage of missing metabolites highlights a significant gap. This underscores the need for more comprehensive metabolic pathway data to improve the inference of metabolite production.
+In this case study, 222 missing genes were imputed (1.12% of the total), and 163 missing metabolites were imputed (91.06% of the total). While the missing gene ratio is relatively low, the high percentage of missing metabolites highlights a significant gap. This underscores the need for more comprehensive metabolic pathway data to improve the inference of metabolite production.
 
 #### Pathway Simulation and Activity Scoring    
 The `metabopathia()` function simulates signaling cascades and infers sub-pathway activities based on two key components:
