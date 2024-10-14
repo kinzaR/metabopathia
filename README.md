@@ -378,8 +378,8 @@ Since gene expression is used as a proxy for protein presence, and inferred meta
 For metabolite nodes, Metabopathia integrates inferred metabolic activity using the Metabolizer approach. This method builds mechanistic models that link gene expression to metabolic activities within metabolic modules, estimating the production of specific metabolites. 
 
 ##### Metabolite Inference 
-A total of **15 metabolites** were inferred using the `infer_met_from_metabolizer()` function from the Metabolizer package. The identified metabolites are `C00002, C00022, C00026, C00042, C00122, C00130, C00195, C00334, C00410, C00762, C00788, C01598, C01673, C01780, C02465`.
-According to [MetaboAnalyst 5.0 platform ](https://www.metaboanalyst.ca/Secure/process/NameMapView.xhtml)  [\[Ref\]](https://doi.org/10.1093/nar/gkp356), the annotation of these inferred metabolites across HMDB, SMILES, and PubChem databases is:
+A total of **16 metabolites** were inferred using the `infer_met_from_metabolizer()` function from the Metabolizer package. The identified metabolites are `C00002, C00022, C00026, C00042, C00122, C00130, C00195, C00334, C00410, C00762, C00788, C01598, C01673, C01780, C02465` and C00187.
+According to [MetaboAnalyst 5.0 platform ](https://www.metaboanalyst.ca)  [\[Ref\]](https://doi.org/10.1093/nar/gkp356), the annotation of these inferred metabolites across HMDB, SMILES, and PubChem databases is:
 
 | Query   |                Match               | HMDB         | PubChem| KEGG    | SMILES                                                                                                          |
 |---------|------------------------------------|--------------|--------|---------|-----------------------------------------------------------------------------------------------------------------|
@@ -398,6 +398,9 @@ According to [MetaboAnalyst 5.0 platform ](https://www.metaboanalyst.ca/Secure/p
 | C01673  | Calcitriol                         | HMDB0001903  | 5280453| C01673  | C[C@H](CCCC(C)(C)O)[C@@]1([H])CC[C@@]2([H])\\C(CCC[C@]12C)=C\\C=C1\\C[C@@H](O)C[C@H](O)C1=C                     |
 | C01780  | Aldosterone                        | HMDB0000037  | 5839   | C01780  | [H][C@@]12CC[C@H](C(=O)CO)[C@]1(C[C@H](O)[C@@]1([H])[C@@]2([H])CCC2=CC(=O)CC[C@]12C)C=O                         |
 | C02465  | Liothyronine                       | HMDB0000265  | 5920   | C02465  | N[C@@H](CC1=CC(I)=C(OC2=CC(I)=C(O)C=C2)C(I)=C1)C(O)=O                                                           |
+| C00187  | Cholesterol                        | HMDB0000067  | 5997   | C00187  | [H][C@@]1(CC[C@@]2([H])[C@]3([H])CC=C4C[C@@H](O)CC[C@]4(C)[C@@]3([H])CC[C@]12C)[C@H](C)CCCC(C)C                 |
+
+
 
 [Here you will find the downloaded CSV from the MetaboAnalyst platform](https://github.com/kinzaR/metabopathia/blob/dev/supplementary_files/brca_caseStudy/inferred_metabolite_brca_metabolizer_v2.csv).
 The boxplot below illustrates the distribution of inferred metabolic activity using the Metabolizer for genes that belong to signaling pathways. The inferred activity was based on metabolic pathways and utilized RNA-seq data as proxies for enzyme presence. For more information about the method, please refer to [this article](https://www.nature.com/articles/s41540-019-0087-2).
