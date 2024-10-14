@@ -14,3 +14,4 @@
 "C01673","Calcitriol","HMDB0001903","5280453","C01673","C[C@H](CCCC(C)(C)O)[C@@]1([H])CC[C@@]2([H])\C(CCC[C@]12C)=C\C=C1\C[C@@H](O)C[C@H](O)C1=C","1"
 "C01780","Aldosterone","HMDB0000037","5839","C01780","[H][C@@]12CC[C@H](C(=O)CO)[C@]1(C[C@H](O)[C@@]1([H])[C@@]2([H])CCC2=CC(=O)CC[C@]12C)C=O","1"
 "C02465","Liothyronine","HMDB0000265","5920","C02465","N[C@@H](CC1=CC(I)=C(OC2=CC(I)=C(O)C=C2)C(I)=C1)C(O)=O","1"
+"C00187","Cholesterol","HMDB0000067","5997","C00187","[H][C@@]1(CC[C@@]2([H])[C@]3([H])CC=C4C[C@@H](O)CC[C@]4(C)[C@@]3([H])CC[C@]12C)[C@H](C)CCCC(C)C","1"
