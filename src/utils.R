@@ -7,7 +7,7 @@ all_needed_metabolites <- function (pathigraphs)
     tooltip<-V(x$graph)$tooltip[which(V(x$graph)$shape == 
                                       "circle")]
     # Extract the kegg id
-    str_extract(tooltip, "(?<=href=http://www.kegg.jp/dbget-bin/www_bget\\?)[^>]+")
+    str_extract(tooltip, "(?<=href=https?://www.kegg.jp/dbget-bin/www_bget\\?)[^>]+")
   })))
   return(metabolite[!is.na(metabolite)])
 }
