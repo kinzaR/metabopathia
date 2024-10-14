@@ -328,7 +328,7 @@ A total of 48 metabolic pathways were downloaded from the KEGG PATHWAY database 
 #### Data Scaling and Normalization
 Metabopathia requires a preprocessed gene expression matrix, assuming the data has been normalized to correct for sequencing biases, including batch effects. The tool does not handle missing data, but for the BRCA dataset used in this analysis, no NA values were present.
 
-The gene expression matrix must use Entrez IDs as row names, and the `hipathia::translate_data()` function was used to convert Ensembl IDs. Before calculating subpathway activation values, the expression data were scaled between 0 and 1. Additionally, percentile normalization was applied to the transcriptomic dataset to ensure consistent data input.
+The gene expression matrix must use Entrez IDs as row names, and the `hipathia::translate_data()` function was used to convert Ensembl IDs. Before calculating subpathway activation values, the expression data were scaled between 0 and 1.    
 
 #### Pathway Decomposition    
 ##### Sub-pathways or Circuits
