@@ -445,7 +445,6 @@ For each node `n`, the signal value is computed as the product of:
 
 The final signal value for the entire circuit is determined by the signal at the last node in the pathway. These computed values allow for meaningful comparisons of signal activity between different conditions.
 
-## RE-check results from metabopathia() vs hipathia(): both node vals and path vals
 
 ### <a name="ResultsDiscussion"> </a> Results and discussion
 Pathway activity scores are saved in the results/ directory. You can visualize the results using our integrated plotting functions.
