@@ -161,4 +161,4 @@ clinical_data <- clinical_data %>%
     ) + 
     facet_wrap(~ menopausal_status) +  # Facet by menopausal status
     theme_minimal()
-  
+write.table(x = clinical_data %>% select(-menopausal_status), file = "supplementary_files/brca_caseStudy/clinical_info.tsv", append = F, quote = F, sep = "\t", row.names = F, col.names = T)
