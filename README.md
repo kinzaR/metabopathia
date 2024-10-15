@@ -455,6 +455,8 @@ The differential analysis provides a summary of pathway-level changes, highlight
 
 For this analysis, the `compare_pipeline()` function in Metabopathia was used to perform the differential activity analysis (based on the `hipathia::DAcomp`). It compares sub-pathway activity values, calculated earlier, between the two groups of samples: breast cancer tissues versus normal tissues. The analysis applied the Wilcoxon test for sub-pathway activation comparisons and `limma` for node-level comparisons, both suited for paired data. Additionally, p-values were adjusted using the False Discovery Rate (FDR) correction method by Benjamini & Hochberg (1995), with the confidence level set at 0.05. These statistical methods assess activity differences between the two groups, identifying significant variations in up- or down-regulated features.
 
+![](supplementary_files/brca_caseStudy/results/ADsummary.svg)    
+![](supplementary_files/brca_caseStudy/results/DAoverview.svg)    
 ### <a name="ResultsDiscussion"> </a> Results and discussion
 Pathway activity scores are saved in the results/ directory. You can visualize the results using our integrated plotting functions.
    
