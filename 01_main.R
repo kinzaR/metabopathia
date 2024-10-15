@@ -146,8 +146,9 @@ if(!ready_mgi | hipathia | analysis=="overlay")
 ## adaptation of the MGI: to be removed, because I have to load it already prepared
 if(analysis!="overlay") { # new mgi metabo will not be needed for overlay!
   if(ready_mgi) {
-    metabo_pathways <-readRDS("pathways/metabo_mgi_v1.0.0.RDS")
-  }else metabo_pathways <-add_metabolite_to_mgi(pathways)
+     #metabo_pathways <-readRDS("pathways/metabo_mgi_v1.0.0.RDS")# this had bug
+    metabo_pathways <-readRDS("pathways/metabo_mgi_v1.1.0.RDS")
+  }else metabo_pathways <-add_metabolite_to_mgi(pathways, verbose = verbose, basal.met.value = 1) #saveRDS(object = metabo_pathways , file = "pathways/metabo_mgi_v1.1.0.RDS")
 }
 
 status(" 40", "Pathways loaded successfully", output_folder)
@@ -198,11 +199,13 @@ if(hipathia | analysis=="overlay"){
 if(analysis!="overlay"){
   met_path_vals <- get_paths_data(metdata, matrix = T)
   met_path_vals <- normalize_paths(met_path_vals, metabo_pathways)
+  met_node_vals <- hipathia::get_nodes_data(metdata, matrix = T) %>% as.data.frame()
 }
 ###hipathia
 if(hipathia | analysis=="overlay"){
   h_path_vals <- get_paths_data(hdata, matrix = T)
   h_path_vals <- normalize_paths(h_path_vals, pathways)
+  h_node_vals <- hipathia::get_nodes_data(hdata, matrix = T) %>% as.data.frame()
 }
 
 status(" 60", "Signal propagation computed successfully", output_folder)
@@ -255,7 +258,7 @@ if(analysis=="compare"){
 ################ End : To be removed after testing the hipathia function with 3_terms
 
 # Save the entire workspace
-save.image(file = file.path(output_folder,"workspace.RData"))
+save.image(file = file.path(output_folder,"workspace.RData")) #load("tmp/metabopathia_report16/workspace.RData")
 ## Step 6: Results visualization
 
 ## visualization functions

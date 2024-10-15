@@ -28,33 +28,29 @@ add_param_metaboID <- function(ig){
   return(ig)
 }
 add_param_metaboID_subgraphs <- function(subgraphs){
-  # subgraphs <-pathigraphs[[pathway]]$subgraphs
-  # for (sg in names(subgraphs)){
-  #   subgraphs[[sg]] <-add_param_metaboID(subgraphs[[sg]])
-  # }
   subgraphs<-lapply(subgraphs, add_param_metaboID)
   return(subgraphs)
 }
 
 metabo_graphs <-function(pathigraphs){
-  newpathigraphs <- list()
-  sapply(names(pathigraphs), function(pathway){
+  return(lapply(pathigraphs, function(pathigraph){
     cat("|")
-    newpathigraphs[[pathway]]$graph <- add_param_metaboID(pathigraphs[[pathway]]$graph)
-    newpathigraphs[[pathway]]$subgraphs <- add_param_metaboID_subgraphs(pathigraphs[[pathway]]$subgraphs)
-    newpathigraphs[[pathway]]$subgraphs.mean.length <- pathigraphs[[pathway]]$subgraphs.mean.length
-    newpathigraphs[[pathway]]$effector.subgraphs <- add_param_metaboID_subgraphs(pathigraphs[[pathway]]$effector.subgraphs)
-    newpathigraphs[[pathway]]$path.name <- pathigraphs[[pathway]]$path.name
-    newpathigraphs[[pathway]]$path.id <- pathigraphs[[pathway]]$path.id
-    newpathigraphs[[pathway]]$label.id <- pathigraphs[[pathway]]$label.id
-    newpathigraphs[[pathway]]$subgraphs_funs <- add_param_metaboID_subgraphs(pathigraphs[[pathway]]$subgraphs_funs)
-    newpathigraphs[[pathway]]$effector.subgraphs_funs <- add_param_metaboID_subgraphs(pathigraphs[[pathway]]$effector.subgraphs_funs)
-    newpathigraphs[[pathway]]$rl <- pathigraphs[[pathway]]$rl
-    newpathigraphs[[pathway]]$fixed <- pathigraphs[[pathway]]$fixed
-  })
-  return(newpathigraphs)
+    newpathigraph <- list()
+    newpathigraph$graph <- add_param_metaboID(pathigraph$graph)
+    newpathigraph$subgraphs <- add_param_metaboID_subgraphs(pathigraph$subgraphs)
+    newpathigraph$subgraphs.mean.length <- pathigraph$subgraphs.mean.length
+    newpathigraph$effector.subgraphs <- add_param_metaboID_subgraphs(pathigraph$effector.subgraphs)
+    newpathigraph$path.name <- pathigraph$path.name
+    newpathigraph$path.id <- pathigraph$path.id
+    newpathigraph$label.id <- pathigraph$label.id
+    newpathigraph$subgraphs_funs <- add_param_metaboID_subgraphs(pathigraph$subgraphs_funs)
+    newpathigraph$effector.subgraphs_funs <- add_param_metaboID_subgraphs(pathigraph$effector.subgraphs_funs)
+    newpathigraph$rl <- pathigraph$rl
+    newpathigraph$fixed <- pathigraph$fixed
+    newpathigraph
+  }))
 }
-add_metabolite_to_mgi <- function(mgi, verbose = FALSE, basal.value = 0.5){
+add_metabolite_to_mgi <- function(mgi, verbose = FALSE, basal.value = 0.5, basal.met.value = 1){
   newmgi <- list()
   newmgi$species <- mgi$species
   newmgi$all.genes <- mgi$all.genes
@@ -67,16 +63,17 @@ add_metabolite_to_mgi <- function(mgi, verbose = FALSE, basal.value = 0.5){
   
   genes.vals.05 <- matrix(basal.value, ncol = 2, nrow = length(newmgi$all.genes), 
                           dimnames = list(newmgi$all.genes, c("1", "2")))
-  metabolites.vals.05 <- matrix(basal.value, ncol = 2, nrow = length(newmgi$all.metabolite), 
+  metabolites.vals.05 <- matrix(basal.met.value, ncol = 2, nrow = length(newmgi$all.metabolite), 
                           dimnames = list(newmgi$all.metabolite, c("1", "2")))
   meta.05 <- NULL
   meta.05$pathigraphs <- newmgi$pathigraphs
   meta.05$all.labelids <- newmgi$all.labelids
-  results.05 <- metabopathia(genes.vals.05, metabolites.vals.05, meta.05, test = FALSE, 
+  results.05 <- metabopathia(genes.vals.05, metabolites.vals.05, metaginfo = meta.05, test = FALSE, 
                          verbose = FALSE)
+  if(verbose) message("results.05 done!")
   results.dec.05 <- metabopathia(genes.vals.05, metabolites.vals.05, meta.05, decompose = TRUE, 
                              test = FALSE, verbose = FALSE)
-  
+  if(verbose) message("results.dec.05 done!")
   newmgi$path.norm <- assay(results.dec.05, "paths")[, 1]
   newmgi$eff.norm <- assay(results.05, "paths")[, 1]
   
