@@ -3,6 +3,7 @@
 ######################################### Boxplot of inferred metabolite (15) - Tumor Vs Normal ######################################### 
 ## plot metabo_vals.tsv
 library(reshape2)
+write.table(x = data_set$metabo_vals, file = "supplementary_files/brca_caseStudy/metabo_vals.tsv", append = F, quote = F, sep =  "\t", col.names = T, row.names = T)
 activity_matrix <- read.csv( file = "supplementary_files/brca_caseStudy/metabo_vals.tsv", sep = "\t")
 metabo_annotation <- read.csv(file = "supplementary_files/brca_caseStudy/inferred_metabolite_brca_metabolizer_v2.csv")
 activity_matrix$met <- rownames(activity_matrix)
@@ -22,12 +23,12 @@ activity_df<- activity_df %>% group_by(group)
 ggplot(activity_df ,
        aes(x = group, y = infActivity, fill = group)) +
   geom_boxplot(outlier.shape = NA) +  # No outliers displayed in the plot
-  labs(title = "Boxplot of inferred metabolite (15) - Tumor Vs Normal",
+  labs(title = "Boxplot of inferred metabolite (16) - Tumor Vs Normal",
        x = "Sample Group",
        y = "Inferred activity") +
   theme_minimal() +
   scale_fill_brewer(palette = "Dark2") + 
-  facet_wrap(~ metabolite, nrow = 3)  # Separate plots for each gene
+  facet_wrap(~ metabolite, nrow = 4)  # Separate plots for each gene
 #######################################################################################################################################
 # Difirentia activity motabolites 
 ######################################################################################################################################
@@ -111,5 +112,24 @@ ggplot(data, aes(x = numberOfCircuits, y = reorder(pathway, numberOfCircuits))) 
   ) +
   coord_fixed(ratio = 1.5)  # Adjusting the aspect ratio
 #"supplementary_files/circuits_per_pathways_barplot.png"
+####################################################################
+######draft for diff node vals 
+bol <- met_node_vals == h_node_vals
+diff_node_values<-which(rowSums(bol) !=218)
+diff_nodes <- met_node_vals[diff_node_values,] %>% rownames()
 
-
+all_atts_xl <- do.call(what = rbind, lapply(metabo_pathways$pathigraphs, function(g){
+  igraph::as_data_frame(x = g$graph,"vertices") %>%  
+    select(c(name, shape, label, genesList, metaboID, tooltip))
+}))
+all_atts <- all_atts_xl %>%  select(c(name, shape, label, genesList, metaboID))
+metabo_atts <- all_atts %>% filter(shape =="circle")
+all_atts_xl %>% 
+  filter(name %in% (metabo_atts %>% filter(is.na(metaboID )) %>% .$name)) %>% # these are without metaboID
+  View
+diff_nodes_att <- all_atts %>% filter(name %in% diff_nodes)
+################# save tables 
+write.table(x = met_results$nodes , file = "supplementary_files/brca_caseStudy/results/met_results_nodes.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
+write.table(x = met_results$paths , file = "supplementary_files/brca_caseStudy/results/met_results_paths.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
+write.table(x = hi_results$nodes , file = "supplementary_files/brca_caseStudy/results/hi_results_nodes.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
+write.table(x = hi_results$paths , file = "supplementary_files/brca_caseStudy/results/hi_results_paths.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
