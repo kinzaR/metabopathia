@@ -45,12 +45,10 @@ source("src/nodes_values_from_all.R")
 metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE, GO.terms = FALSE, 
           custom.terms = NA, sel_assay = 1, decompose = FALSE, maxnum = 100, 
           verbose = TRUE, tol = 1e-06, test = TRUE) {
-
   if (is(genes_vals, "SummarizedExperiment")) {
     coldata <- colData(genes_vals)
     genes_vals <- assay(genes_vals, sel_assay)
-  }
-  else {
+  }else {
     cols <- colnames(genes_vals)
     coldata <- data.frame(cols = cols, stringsAsFactors = FALSE)
   }
@@ -71,7 +69,9 @@ metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE,
   }
   pathigraphs <- metaginfo$pathigraphs
   genes_vals <- hipathia:::add_missing_genes(genes_vals, genes = metaginfo$all.genes)
-  metabo_vals <- add_missing_metabolites(metabo_vals, metabolites = metaginfo$all.metabolite)
+  metabo_vals <- add_missing_metabolites(metabo_vals, 
+                                         metabolites = metaginfo$all.metabolite,
+                                         default = 1)
   results <- list()
   if (verbose == TRUE) 
     cat("Computing pathways...\n")

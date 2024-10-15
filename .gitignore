@@ -9,3 +9,5 @@ metabopathia-web/
 
 data_examples/GSE215221/GSE215221_process_data.txt.gz
 data_examples/TCGA/rse_gene_tcga.rds
+data_examples/TCGA/processed_data/brca_109NX109T_paired/BRCA_109Nx109T_paired_normalized_trun99_combat_data_v2.tsv
+data_examples/TCGA/processed_data/brca_109NX109T_paired/BRCA_109Nx109T_paired_metadata_v2.tsv
