@@ -13,6 +13,7 @@
         - [Data preprocessing story: From TCGA repository to Metabopathia input dataset](#preprocessing)
         - [Selected Signaling and metabolic pathways](#pathways)
     - [Modeling approach](#Modeling)
+    - [Differential Activity Analysis](#DAA)
     - [Results and discussion](#ResultsDiscussion) 
 - [Future enhancements](#FutureEnhancements)
 
@@ -448,7 +449,8 @@ For each node `n`, the signal value is computed as the product of:
 
 The final signal value for the entire circuit is determined by the signal at the last node in the pathway. These computed values allow for meaningful comparisons of signal activity between different conditions. It is important to note that these signal activity values are context-dependent and lack inherent meaning without comparison between two conditions.
 
-#### Differential Activity Analysis
+<a name="DAA"> </a>          
+### Differential Activity Analysis
 The differential analysis provides a summary of pathway-level changes, highlighting the number of significantly upregulated or downregulated sub-pathways between groups. This statistical approach offers robust and biologically relevant insights into the differential activity of signaling pathways.
 
 For this analysis, the `compare_pipeline()` function in Metabopathia was used to perform the differential activity analysis (based on the `hipathia::DAcomp`). It compares sub-pathway activity values, calculated earlier, between the two groups of samples: breast cancer tissues versus normal tissues. The analysis applied the Wilcoxon test for sub-pathway activation comparisons and `limma` for node-level comparisons, both suited for paired data. Additionally, p-values were adjusted using the False Discovery Rate (FDR) correction method by Benjamini & Hochberg (1995), with the confidence level set at 0.05. These statistical methods assess activity differences between the two groups, identifying significant variations in up- or down-regulated features.
