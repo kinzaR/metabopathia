@@ -133,3 +133,38 @@ write.table(x = met_results$nodes , file = "supplementary_files/brca_caseStudy/r
 write.table(x = met_results$paths , file = "supplementary_files/brca_caseStudy/results/met_results_paths.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
 write.table(x = hi_results$nodes , file = "supplementary_files/brca_caseStudy/results/hi_results_nodes.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
 write.table(x = hi_results$paths , file = "supplementary_files/brca_caseStudy/results/hi_results_paths.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
+
+all <- met_results$paths %>% left_join(hi_results$path, by = "ID", suffix = c("_met","_hi"))  %>% select(-c(name_hi, N.nodes_hi, N.gene.nodes_hi,N.measured.nodes_hi)) %>% arrange(FDRp.value_met)
+write.table(x = all , file = "supplementary_files/brca_caseStudy/results/merged_results_paths.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
+
+write.table(x = all %>% filter(FDRp.value_met != FDRp.value_hi) ,
+            file = "supplementary_files/brca_caseStudy/results/merged_results_paths_diff_FDRvals.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
+################## clinical data
+clinical_data <- read.csv("/home/krian/Downloads/clinical.tsv", sep = "\t")
+case_ids <- data_set$des %>% rowwise() %>% mutate(case_id= strsplit(sample, "-") %>% .[[1]] %>% .[1:3] %>% paste(collapse = "-")) %>% .$case_id
+clinical_data <- clinical_data %>% filter(case_submitter_id %in% case_ids) %>% select(c(case_submitter_id,age_at_index,gender)) %>% unique()
+clinical_data %>% dim()
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+
+# Define menopause threshold (e.g., 50 years)
+menopause_threshold <- 50
+
+# Add a column to classify menopausal status
+clinical_data <- clinical_data %>%
+  mutate(menopausal_status = ifelse(gender =="female" ,ifelse(age_at_index >= menopause_threshold, "2-post-menopausal", "1-pre-menopausal"), NA))
+  # Create the ggplot graph
+  ggplot(clinical_data %>% filter(gender == "female") %>% arrange(age_at_index) %>%
+           mutate(age_group = cut(as.numeric(age_at_index), breaks = seq(0, 100, by = 5), right = FALSE)), 
+         aes(y = age_group, fill = menopausal_status)) +
+    geom_bar(position = "dodge") +  # geom_bar is appropriate for counting frequencies
+    labs(
+      title = "Frequency of ages by menopausal status (in 5-year bins)",
+      x = "Frequency",
+      y = "Age group (5-year bins)",
+      fill = "Menopausal status"
+    ) + 
+    facet_wrap(~ menopausal_status) +  # Facet by menopausal status
+    theme_minimal()
+write.table(x = clinical_data %>% select(-menopausal_status), file = "supplementary_files/brca_caseStudy/clinical_info.tsv", append = F, quote = F, sep = "\t", row.names = F, col.names = T)

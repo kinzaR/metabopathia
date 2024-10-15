@@ -13,6 +13,7 @@
         - [Data preprocessing story: From TCGA repository to Metabopathia input dataset](#preprocessing)
         - [Selected Signaling and metabolic pathways](#pathways)
     - [Modeling approach](#Modeling)
+    - [Differential Activity Analysis](#DAA)
     - [Results and discussion](#ResultsDiscussion) 
 - [Future enhancements](#FutureEnhancements)
 
@@ -299,7 +300,10 @@ The preprocessing pipeline for this case study follows a series of steps aimed t
   <img src="https://github.com/user-attachments/assets/af5f5fd9-bae0-4b08-9f31-801c5e8754ef" width="48%" />
 </p>
 
-These preprocessing steps generate a clean and normalized dataset -**218 samples**- (109 from each group) ready for pathway activity analysis with Metabopathia.    
+These preprocessing steps generate a clean and normalized dataset of **218 samples** (109 from each group) ready for pathway activity analysis with Metabopathia.   
+The data consists of female cases, except for one male who is 58 years old. The remaining individuals have ages distributed as shown in the figure below, with colors indicating females under 50 years and those over 50 years.
+
+![Age distribution of cases](supplementary_files/brca_caseStudy/cases_ages.svg)
 
 **For more information and reproducibility, check these links:**
 - This folder on GitHub: [data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1](data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1) contains all generated figures and the Jupyter notebook exported as:
@@ -443,13 +447,19 @@ For each node `n`, the signal value is computed as the product of:
 
 ![image](https://github.com/user-attachments/assets/f1cb7994-ab75-4c1e-8315-131e9e88d7a2)
 
-The final signal value for the entire circuit is determined by the signal at the last node in the pathway. These computed values allow for meaningful comparisons of signal activity between different conditions.
+The final signal value for the entire circuit is determined by the signal at the last node in the pathway. These computed values allow for meaningful comparisons of signal activity between different conditions. It is important to note that these signal activity values are context-dependent and lack inherent meaning without comparison between two conditions.
 
+<a name="DAA"> </a>          
+### Differential Activity Analysis
+The differential analysis provides a summary of pathway-level changes, highlighting the number of significantly upregulated or downregulated sub-pathways between groups. This statistical approach offers robust and biologically relevant insights into the differential activity of signaling pathways.
 
+For this analysis, the `compare_pipeline()` function in Metabopathia was used to perform the differential activity analysis (based on the `hipathia::DAcomp`). It compares sub-pathway activity values, calculated earlier, between the two groups of samples: breast cancer tissues versus normal tissues. The analysis applied the Wilcoxon test for sub-pathway activation comparisons and `limma` for node-level comparisons, both suited for paired data. Additionally, p-values were adjusted using the False Discovery Rate (FDR) correction method by Benjamini & Hochberg (1995), with the confidence level set at 0.05. These statistical methods assess activity differences between the two groups, identifying significant variations in up- or down-regulated features.
+
+![](supplementary_files/brca_caseStudy/results/ADsummary.svg)    
+![](supplementary_files/brca_caseStudy/results/DAoverview.svg)    
 ### <a name="ResultsDiscussion"> </a> Results and discussion
 Pathway activity scores are saved in the results/ directory. You can visualize the results using our integrated plotting functions.
-
-    
+   
 
 <a name="FutureEnhancements"> </a>         
 
