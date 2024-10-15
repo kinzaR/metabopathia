@@ -76,11 +76,15 @@ data_pre <- function(exp_file, met_file=NULL,met_type, design_file, group1, grou
   if(met_type == "concentration_matrix")
     boxplot(metabo_data, las = 2, main = "Metabolites (Before Normalization)",
             xlab = "Metabolites", ylab = "Concentration", col = "lightcoral")
-  # Metabolite data with outliers
-  genes_vals <- normalize_data(as.matrix(trans_exp), percentil = TRUE)
-  if(met_type == "concentration_matrix")
-    metabo_vals <- normalize_data(as.matrix(metabo_data), percentil = TRUE)
   
+  if(met_type == "concentration_matrix"){
+    # Metabolite data with outliers
+    genes_vals <- normalize_data(as.matrix(trans_exp), percentil = TRUE)
+    metabo_vals <- normalize_data(as.matrix(metabo_data), percentil = TRUE)
+  }else{
+    genes_vals <- normalize_data(as.matrix(trans_exp), by_quantiles = FALSE, 
+                   by_gene = FALSE, percentil = FALSE)
+  }
   boxplot(genes_vals, las = 2, main = "Expression (After Normalization)",
           xlab = "Genes", ylab = "Expression", col = "blue")
   if(met_type == "concentration_matrix")
