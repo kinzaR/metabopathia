@@ -136,6 +136,9 @@ write.table(x = hi_results$paths , file = "supplementary_files/brca_caseStudy/re
 
 all <- met_results$paths %>% left_join(hi_results$path, by = "ID", suffix = c("_met","_hi"))  %>% select(-c(name_hi, N.nodes_hi, N.gene.nodes_hi,N.measured.nodes_hi)) %>% arrange(FDRp.value_met)
 write.table(x = all , file = "supplementary_files/brca_caseStudy/results/merged_results_paths.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
+
+write.table(x = all %>% filter(FDRp.value_met != FDRp.value_hi) ,
+            file = "supplementary_files/brca_caseStudy/results/merged_results_paths_diff_FDRvals.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
 ################## clinical data
 clinical_data <- read.csv("/home/krian/Downloads/clinical.tsv", sep = "\t")
 case_ids <- data_set$des %>% rowwise() %>% mutate(case_id= strsplit(sample, "-") %>% .[[1]] %>% .[1:3] %>% paste(collapse = "-")) %>% .$case_id
