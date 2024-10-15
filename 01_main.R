@@ -240,8 +240,7 @@ if(analysis=="overlay"){
 # I have here to discuss why I have used the statiticakl test different for each!
 if(analysis=="compare"){
   met_results <- compare_pipeline(metdata, groups=data_set$des$group, expdes=group1, g2 = group2,
-                                  # path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
-                                  path.method = "limma", node.method = "limma", fun.method = "limma",
+                                  path.method = "wilcoxon", node.method = "limma", fun.method = "wilcoxon",
                                   order = FALSE, paired = paired, adjust = adjust, conf.level = 0.05, sel_assay = 1)
   if(hipathia){
     hi_results <- compare_pipeline(hdata, groups=data_set$des$group, expdes=group1, g2 = group2,
