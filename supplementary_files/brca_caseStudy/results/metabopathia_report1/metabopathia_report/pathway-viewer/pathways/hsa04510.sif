@@ -1,0 +1,205 @@
+N-hsa04510-7	activation.up	N-hsa04510-64
+N-hsa04510-7	activation.down	N-hsa04510-64
+N-hsa04510-7	activation	N-hsa04510-64
+N-hsa04510-7	activation.up	N-hsa04510-65
+N-hsa04510-7	activation.down	N-hsa04510-65
+N-hsa04510-7	activation	N-hsa04510-65
+N-hsa04510-7	activation.up	N-hsa04510-20 69
+N-hsa04510-8	activation.up	N-hsa04510-18 29
+N-hsa04510-8	activation.down	N-hsa04510-18 29
+N-hsa04510-10	activation.up	N-hsa04510-11
+N-hsa04510-10	activation.down	N-hsa04510-11
+N-hsa04510-11	activation.up	N-hsa04510-20 69
+N-hsa04510-12	activation.up	N-hsa04510-20 69
+N-hsa04510-13	inhibition.up	N-hsa04510-11
+N-hsa04510-13	inhibition.down	N-hsa04510-11
+N-hsa04510-14	activation.up	N-hsa04510-11
+N-hsa04510-14	activation.down	N-hsa04510-11
+N-hsa04510-14	inhibition.up	N-hsa04510-13
+N-hsa04510-14	inhibition.down	N-hsa04510-13
+N-hsa04510-21	inhibition.up	N-hsa04510-27
+N-hsa04510-21	inhibition.down	N-hsa04510-27
+N-hsa04510-21	inhibition	N-hsa04510-27
+N-hsa04510-21	inhibition.up	N-hsa04510-8
+N-hsa04510-21	inhibition.down	N-hsa04510-8
+N-hsa04510-22	activation.up	N-hsa04510-18 29
+N-hsa04510-22	activation.down	N-hsa04510-18 29
+N-hsa04510-25	activation.up	N-hsa04510-19 29
+N-hsa04510-25	activation.down	N-hsa04510-19 29
+N-hsa04510-25	activation.up	N-hsa04510-20 69
+N-hsa04510-27	activation.up	N-hsa04510-22
+N-hsa04510-27	activation.down	N-hsa04510-22
+N-hsa04510-27	activation.up	N-hsa04510-32
+N-hsa04510-27	activation.down	N-hsa04510-32
+N-hsa04510-27	activation.up	N-hsa04510-35
+N-hsa04510-27	activation.down	N-hsa04510-35
+N-hsa04510-27	activation.up	N-hsa04510-57
+N-hsa04510-27	activation.down	N-hsa04510-57
+N-hsa04510-27	activation	N-hsa04510-57
+N-hsa04510-27	activation.up	N-hsa04510-56
+N-hsa04510-27	activation.down	N-hsa04510-56
+N-hsa04510-27	activation	N-hsa04510-56
+N-hsa04510-27	activation.up	N-hsa04510-53
+N-hsa04510-27	activation.down	N-hsa04510-53
+N-hsa04510-27	activation	N-hsa04510-53
+N-hsa04510-27	activation.up	N-hsa04510-17 4 5 29
+N-hsa04510-27	activation.down	N-hsa04510-17 4 5 29
+N-hsa04510-27	activation.up	N-hsa04510-18 29
+N-hsa04510-27	activation.down	N-hsa04510-18 29
+N-hsa04510-27	activation.up	N-hsa04510-19 29
+N-hsa04510-27	activation.down	N-hsa04510-19 29
+N-hsa04510-30	inhibition.up	N-hsa04510-34
+N-hsa04510-30	inhibition.down	N-hsa04510-34
+N-hsa04510-32	activation.up	N-hsa04510-30
+N-hsa04510-32	activation.down	N-hsa04510-30
+N-hsa04510-33	activation.up	N-hsa04510-56
+N-hsa04510-33	activation.down	N-hsa04510-56
+N-hsa04510-33	activation	N-hsa04510-56
+N-hsa04510-34	activation.up	N-hsa04510-12
+N-hsa04510-34	activation.down	N-hsa04510-12
+N-hsa04510-34	activation.up	N-hsa04510-14
+N-hsa04510-34	activation.down	N-hsa04510-14
+N-hsa04510-34	activation.up	N-hsa04510-25
+N-hsa04510-34	activation.down	N-hsa04510-25
+N-hsa04510-35	activation.up	N-hsa04510-34
+N-hsa04510-35	activation.down	N-hsa04510-34
+N-hsa04510-36	activation.up	N-hsa04510-17 4 5 29
+N-hsa04510-36	activation.down	N-hsa04510-17 4 5 29
+N-hsa04510-51	activation.up	N-hsa04510-22
+N-hsa04510-51	activation.down	N-hsa04510-22
+N-hsa04510-52	activation.up	N-hsa04510-51
+N-hsa04510-52	activation.down	N-hsa04510-51
+N-hsa04510-52	activation	N-hsa04510-51
+N-hsa04510-53	activation.up	N-hsa04510-52
+N-hsa04510-53	activation.down	N-hsa04510-52
+N-hsa04510-53	activation	N-hsa04510-52
+N-hsa04510-54	activation.up	N-hsa04510-27
+N-hsa04510-54	activation.down	N-hsa04510-27
+N-hsa04510-54	activation	N-hsa04510-27
+N-hsa04510-54	activation.up	N-hsa04510-22
+N-hsa04510-54	activation.down	N-hsa04510-22
+N-hsa04510-54	activation.up	N-hsa04510-56
+N-hsa04510-54	activation.down	N-hsa04510-56
+N-hsa04510-54	activation	N-hsa04510-56
+N-hsa04510-55	activation.up	N-hsa04510-54
+N-hsa04510-55	activation.down	N-hsa04510-54
+N-hsa04510-55	activation	N-hsa04510-54
+N-hsa04510-56	activation.up	N-hsa04510-53
+N-hsa04510-56	activation.down	N-hsa04510-53
+N-hsa04510-56	activation	N-hsa04510-53
+N-hsa04510-57	activation.up	N-hsa04510-58
+N-hsa04510-57	activation.down	N-hsa04510-58
+N-hsa04510-57	activation	N-hsa04510-58
+N-hsa04510-58	activation.up	N-hsa04510-61
+N-hsa04510-58	activation.down	N-hsa04510-61
+N-hsa04510-58	activation	N-hsa04510-61
+N-hsa04510-58	activation.up	N-hsa04510-17 4 5 29
+N-hsa04510-58	activation.down	N-hsa04510-17 4 5 29
+N-hsa04510-58	activation.up	N-hsa04510-18 29
+N-hsa04510-58	activation.down	N-hsa04510-18 29
+N-hsa04510-58	activation.up	N-hsa04510-19 29
+N-hsa04510-58	activation.down	N-hsa04510-19 29
+N-hsa04510-61	activation.up	N-hsa04510-65
+N-hsa04510-61	activation.down	N-hsa04510-65
+N-hsa04510-61	activation	N-hsa04510-65
+N-hsa04510-64	inhibition.up	N-hsa04510-10
+N-hsa04510-64	inhibition.down	N-hsa04510-10
+N-hsa04510-65	activation.up	N-hsa04510-64
+N-hsa04510-65	activation.down	N-hsa04510-64
+N-hsa04510-65	activation	N-hsa04510-64
+N-hsa04510-65	activation.up	N-hsa04510-20 69
+N-hsa04510-66	activation.up	N-hsa04510-65
+N-hsa04510-66	activation.down	N-hsa04510-65
+N-hsa04510-66	activation	N-hsa04510-65
+N-hsa04510-4 37	activation.up	N-hsa04510-32
+N-hsa04510-4 37	activation.down	N-hsa04510-32
+N-hsa04510-4 37	activation.up	N-hsa04510-27
+N-hsa04510-4 37	activation.down	N-hsa04510-27
+N-hsa04510-4 37	activation	N-hsa04510-27
+N-hsa04510-4 37	activation.up	N-hsa04510-33
+N-hsa04510-4 37	activation.down	N-hsa04510-33
+N-hsa04510-4 37	activation	N-hsa04510-33
+N-hsa04510-4 31	activation.up	N-hsa04510-32
+N-hsa04510-4 31	activation.down	N-hsa04510-32
+N-hsa04510-4 31	activation.up	N-hsa04510-27
+N-hsa04510-4 31	activation.down	N-hsa04510-27
+N-hsa04510-4 31	activation	N-hsa04510-27
+N-hsa04510-17 4 5 29	activation.up	N-hsa04510-20 69
+N-hsa04510-18 29	activation.up	N-hsa04510-20 69
+N-hsa04510-19 29	activation.up	N-hsa04510-20 69
+N-hsa04510-22	activation.up	N-hsa04510-8
+N-hsa04510-22	activation.down	N-hsa04510-8
+N-hsa04510-7	activation.down	N-hsa04510-24 69
+N-hsa04510-11	activation.down	N-hsa04510-24 69
+N-hsa04510-12	activation.down	N-hsa04510-24 69
+N-hsa04510-25	activation.down	N-hsa04510-24 69
+N-hsa04510-65	activation.down	N-hsa04510-24 69
+N-hsa04510-17 4 5 29	activation.down	N-hsa04510-24 69
+N-hsa04510-18 29	activation.down	N-hsa04510-24 69
+N-hsa04510-19 29	activation.down	N-hsa04510-24 69
+N-hsa04510-8	activation.up	N-hsa04510-16
+N-hsa04510-8	activation.up	N-hsa04510-15
+N-hsa04510-8	activation.up	N-hsa04510-17 18
+N-hsa04510-15	inhibition.up	N-hsa04510-68
+N-hsa04510-16	activation.up	N-hsa04510-15
+N-hsa04510-45	activation.up	N-hsa04510-47
+N-hsa04510-46	activation.up	N-hsa04510-45
+N-hsa04510-48	activation.up	N-hsa04510-46
+N-hsa04510-48	activation	N-hsa04510-46
+N-hsa04510-49	activation.up	N-hsa04510-48
+N-hsa04510-49	activation.down	N-hsa04510-48
+N-hsa04510-49	activation	N-hsa04510-48
+N-hsa04510-50	activation.up	N-hsa04510-48
+N-hsa04510-50	activation.down	N-hsa04510-48
+N-hsa04510-50	activation	N-hsa04510-48
+N-hsa04510-51	activation.up	N-hsa04510-50
+N-hsa04510-51	activation.down	N-hsa04510-50
+N-hsa04510-51	activation	N-hsa04510-50
+N-hsa04510-58	activation.up	N-hsa04510-59
+N-hsa04510-58	activation.down	N-hsa04510-59
+N-hsa04510-58	activation	N-hsa04510-59
+N-hsa04510-59	activation.up	N-hsa04510-60
+N-hsa04510-59	activation.down	N-hsa04510-60
+N-hsa04510-59	activation	N-hsa04510-60
+N-hsa04510-60	activation.up	N-hsa04510-62
+N-hsa04510-60	activation.up	N-hsa04510-49
+N-hsa04510-60	activation.down	N-hsa04510-49
+N-hsa04510-60	activation	N-hsa04510-49
+N-hsa04510-62	activation.up	N-hsa04510-63
+N-hsa04510-63	activation.up	N-hsa04510-47
+N-hsa04510-64	activation.up	N-hsa04510-50
+N-hsa04510-64	activation.down	N-hsa04510-50
+N-hsa04510-64	activation	N-hsa04510-50
+N-hsa04510-64	activation.up	N-hsa04510-48
+N-hsa04510-64	activation.down	N-hsa04510-48
+N-hsa04510-64	activation	N-hsa04510-48
+N-hsa04510-65	activation.up	N-hsa04510-62
+N-hsa04510-67	activation.up	N-hsa04510-47
+N-hsa04510-68	inhibition.up	N-hsa04510-67
+N-hsa04510-17 18	activation.up	N-hsa04510-15
+N-hsa04510-18 29	activation.up	N-hsa04510-15
+N-hsa04510-45	activation.up	N-hsa04510-42
+N-hsa04510-46	activation	N-hsa04510-44
+N-hsa04510-48	inhibition.down	N-hsa04510-43
+N-hsa04510-50	inhibition.down	N-hsa04510-43
+N-hsa04510-25	activation.up	N-hsa04510-19 23
+N-hsa04510-27	activation.up	N-hsa04510-28
+N-hsa04510-27	activation	N-hsa04510-28
+N-hsa04510-28	inhibition.up	N-hsa04510-19 23
+N-hsa04510-28	inhibition	N-hsa04510-23 4 5
+N-hsa04510-36	activation	N-hsa04510-23 4 5
+N-hsa04510-25	activation.up	N-hsa04510-19 26
+N-hsa04510-36	activation	N-hsa04510-6 4 5
+N-hsa04510-36	activation.up	N-hsa04510-20 4 5
+N-hsa04510-36	activation	N-hsa04510-26 4 5
+N-hsa04510-24 69	activation	N-hsa04510-24 69_func
+N-hsa04510-19 26	activation	N-hsa04510-19 26_func
+N-hsa04510-19 23	activation	N-hsa04510-19 23_func
+N-hsa04510-23 4 5	activation	N-hsa04510-23 4 5_func
+N-hsa04510-6 4 5	activation	N-hsa04510-6 4 5_func
+N-hsa04510-20 4 5	activation	N-hsa04510-20 4 5_func
+N-hsa04510-26 4 5	activation	N-hsa04510-26 4 5_func
+N-hsa04510-47	activation	N-hsa04510-47_func
+N-hsa04510-42	activation	N-hsa04510-42_func
+N-hsa04510-44	activation	N-hsa04510-44_func
+N-hsa04510-43	activation	N-hsa04510-43_func

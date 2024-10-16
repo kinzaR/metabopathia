@@ -1,0 +1,48 @@
+N-hsa05014-6	inhibition.up	N-hsa05014-16
+N-hsa05014-7	activation.up	N-hsa05014-20
+N-hsa05014-14	activation.up	N-hsa05014-7
+N-hsa05014-15	activation.up	N-hsa05014-7
+N-hsa05014-16	activation.up	N-hsa05014-7
+N-hsa05014-17	activation.up	N-hsa05014-7
+N-hsa05014-19	activation.up	N-hsa05014-20
+N-hsa05014-20	activation.up	N-hsa05014-13
+N-hsa05014-6	activation.down	N-hsa05014-59
+N-hsa05014-6	activation	N-hsa05014-59
+N-hsa05014-6	activation.down	N-hsa05014-54
+N-hsa05014-59	inhibition.down	N-hsa05014-54
+N-hsa05014-59	inhibition	N-hsa05014-2
+N-hsa05014-6	inhibition.up	N-hsa05014-5
+N-hsa05014-6	inhibition.up	N-hsa05014-51
+N-hsa05014-1	inhibition.down	N-hsa05014-31 34
+N-hsa05014-8	activation.down	N-hsa05014-4
+N-hsa05014-10	activation.down	N-hsa05014-24
+N-hsa05014-24	activation.down	N-hsa05014-25
+N-hsa05014-25	activation.down	N-hsa05014-26
+N-hsa05014-26	activation.down	N-hsa05014-27
+N-hsa05014-26	activation.down	N-hsa05014-28
+N-hsa05014-27	activation.down	N-hsa05014-29
+N-hsa05014-28	activation.down	N-hsa05014-29
+N-hsa05014-29	activation.down	N-hsa05014-31 34
+N-hsa05014-35	activation.down	N-hsa05014-46
+N-hsa05014-36	activation.down	N-hsa05014-47
+N-hsa05014-39	activation.down	N-hsa05014-43
+N-hsa05014-47	inhibition.down	N-hsa05014-31 34
+N-hsa05014-48	activation.down	N-hsa05014-35
+N-hsa05014-4	activation.down	N-hsa05014-39
+N-hsa05014-46	activation.down	N-hsa05014-1
+N-hsa05014-43	activation.down	N-hsa05014-35
+N-hsa05014-29	activation.down	N-hsa05014-32 34
+N-hsa05014-47	inhibition.down	N-hsa05014-32 34
+N-hsa05014-29	activation.down	N-hsa05014-33 34
+N-hsa05014-47	inhibition.down	N-hsa05014-33 34
+N-hsa05014-37	activation.down	N-hsa05014-49
+N-hsa05014-38	activation.down	N-hsa05014-49
+N-hsa05014-50 52	activation.up	N-hsa05014-53
+N-hsa05014-31 34	activation	N-hsa05014-31 34_func
+N-hsa05014-5	activation	N-hsa05014-5_func
+N-hsa05014-51	activation	N-hsa05014-51_func
+N-hsa05014-13	activation	N-hsa05014-13_func
+N-hsa05014-32 34	activation	N-hsa05014-32 34_func
+N-hsa05014-33 34	activation	N-hsa05014-33 34_func
+N-hsa05014-2	activation	N-hsa05014-2_func
+N-hsa05014-53	activation	N-hsa05014-53_func

@@ -1,0 +1,29 @@
+N-hsa05020-23	activation.down	N-hsa05020-24
+N-hsa05020-32	activation.down	N-hsa05020-26
+N-hsa05020-36	activation.down	N-hsa05020-55
+N-hsa05020-55	activation.down	N-hsa05020-56
+N-hsa05020-56	activation.down	N-hsa05020-57
+N-hsa05020-57	activation.down	N-hsa05020-58
+N-hsa05020-58	activation.down	N-hsa05020-59
+N-hsa05020-36	activation.down	N-hsa05020-62
+N-hsa05020-6 7	activation.down	N-hsa05020-25 8
+N-hsa05020-33 9	activation.down	N-hsa05020-10 34
+N-hsa05020-45	activation.up	N-hsa05020-47
+N-hsa05020-47	activation.up	N-hsa05020-46
+N-hsa05020-42 43	activation.up	N-hsa05020-45
+N-hsa05020-42 44	activation.up	N-hsa05020-45
+N-hsa05020-42 43	activation.down	N-hsa05020-52
+N-hsa05020-42 44	activation.down	N-hsa05020-52
+N-hsa05020-42 43	activation	N-hsa05020-48
+N-hsa05020-42 44	activation	N-hsa05020-48
+N-hsa05020-42 43	inhibition.up	N-hsa05020-49
+N-hsa05020-42 44	inhibition.up	N-hsa05020-49
+N-hsa05020-24	activation	N-hsa05020-24_func
+N-hsa05020-26	activation	N-hsa05020-26_func
+N-hsa05020-62	activation	N-hsa05020-62_func
+N-hsa05020-46	activation	N-hsa05020-46_func
+N-hsa05020-59	activation	N-hsa05020-59_func
+N-hsa05020-25 8	activation	N-hsa05020-25 8_func
+N-hsa05020-10 34	activation	N-hsa05020-10 34_func
+N-hsa05020-52	activation	N-hsa05020-52_func
+N-hsa05020-49	activation	N-hsa05020-49_func

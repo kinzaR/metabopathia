@@ -1,0 +1,10 @@
+N-hsa04962-3	activation.down	N-hsa04962-8
+N-hsa04962-4	activation.down	N-hsa04962-5
+N-hsa04962-5	activation.down	N-hsa04962-6
+N-hsa04962-6	activation.down	N-hsa04962-7
+N-hsa04962-7	activation.down	N-hsa04962-3
+N-hsa04962-8	activation.down	N-hsa04962-9
+N-hsa04962-8	activation.down	N-hsa04962-10
+N-hsa04962-9	activation.down	N-hsa04962-10
+N-hsa04962-8	activation.down	N-hsa04962-22
+N-hsa04962-10	activation	N-hsa04962-10_func

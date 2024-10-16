@@ -1,0 +1,47 @@
+N-hsa05220-2	activation.up	N-hsa05220-12 13
+N-hsa05220-14	activation.up	N-hsa05220-12 13
+N-hsa05220-5	activation.down	N-hsa05220-18
+N-hsa05220-18	activation.down	N-hsa05220-3
+N-hsa05220-5	activation.up	N-hsa05220-30
+N-hsa05220-5	activation	N-hsa05220-30
+N-hsa05220-5	activation.up	N-hsa05220-31
+N-hsa05220-29	activation.up	N-hsa05220-53
+N-hsa05220-30	activation.up	N-hsa05220-29
+N-hsa05220-51	activation.up	N-hsa05220-50
+N-hsa05220-52	activation.up	N-hsa05220-51
+N-hsa05220-53	activation.up	N-hsa05220-52
+N-hsa05220-31	activation.up	N-hsa05220-29
+N-hsa05220-5	activation	N-hsa05220-33 34 35
+N-hsa05220-23	inhibition	N-hsa05220-6
+N-hsa05220-30	activation	N-hsa05220-32
+N-hsa05220-32	activation	N-hsa05220-46
+N-hsa05220-45	activation	N-hsa05220-23
+N-hsa05220-46	activation	N-hsa05220-45
+N-hsa05220-33 34 35	activation	N-hsa05220-46
+N-hsa05220-20	activation	N-hsa05220-21
+N-hsa05220-24	activation	N-hsa05220-21
+N-hsa05220-45	activation	N-hsa05220-24
+N-hsa05220-26	inhibition	N-hsa05220-25
+N-hsa05220-45	inhibition	N-hsa05220-26
+N-hsa05220-45	inhibition	N-hsa05220-22
+N-hsa05220-32	activation	N-hsa05220-4
+N-hsa05220-5	activation.down	N-hsa05220-15
+N-hsa05220-11	activation.up	N-hsa05220-16 17
+N-hsa05220-16 17	activation.up	N-hsa05220-19 41
+N-hsa05220-27	activation.up	N-hsa05220-37
+N-hsa05220-28	inhibition.up	N-hsa05220-42 43
+N-hsa05220-37	inhibition.up	N-hsa05220-38
+N-hsa05220-38	activation.up	N-hsa05220-28
+N-hsa05220-39	activation.up	N-hsa05220-40
+N-hsa05220-47	activation.up	N-hsa05220-42 43
+N-hsa05220-42 43	activation.up	N-hsa05220-40
+N-hsa05220-12 13	activation	N-hsa05220-12 13_func
+N-hsa05220-15	activation	N-hsa05220-15_func
+N-hsa05220-3	activation	N-hsa05220-3_func
+N-hsa05220-21	activation	N-hsa05220-21_func
+N-hsa05220-6	activation	N-hsa05220-6_func
+N-hsa05220-25	activation	N-hsa05220-25_func
+N-hsa05220-40	activation	N-hsa05220-40_func
+N-hsa05220-22	activation	N-hsa05220-22_func
+N-hsa05220-50	activation	N-hsa05220-50_func
+N-hsa05220-19 41	activation	N-hsa05220-19 41_func

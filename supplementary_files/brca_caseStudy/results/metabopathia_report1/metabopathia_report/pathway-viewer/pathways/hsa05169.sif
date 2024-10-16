@@ -1,0 +1,62 @@
+N-hsa05169-15	activation.down	N-hsa05169-32
+N-hsa05169-15	activation.down	N-hsa05169-29
+N-hsa05169-15	activation.down	N-hsa05169-30
+N-hsa05169-15	activation.down	N-hsa05169-31
+N-hsa05169-26	activation.up	N-hsa05169-11
+N-hsa05169-41	inhibition.down	N-hsa05169-42 43
+N-hsa05169-44	inhibition.down	N-hsa05169-45
+N-hsa05169-42 43	inhibition.down	N-hsa05169-45
+N-hsa05169-48	activation.up	N-hsa05169-49
+N-hsa05169-49	activation.up	N-hsa05169-117
+N-hsa05169-49	activation.up	N-hsa05169-118
+N-hsa05169-51	activation.up	N-hsa05169-57
+N-hsa05169-53	activation.up	N-hsa05169-57
+N-hsa05169-57	activation.up	N-hsa05169-58
+N-hsa05169-58	activation.up	N-hsa05169-64
+N-hsa05169-51	activation.up	N-hsa05169-54 55 59
+N-hsa05169-56	activation.up	N-hsa05169-60
+N-hsa05169-61	activation.up	N-hsa05169-62
+N-hsa05169-61	activation.down	N-hsa05169-62
+N-hsa05169-62	activation.up	N-hsa05169-63 74
+N-hsa05169-62	activation.down	N-hsa05169-63 74
+N-hsa05169-54 55 59	activation.up	N-hsa05169-56
+N-hsa05169-63 74	activation.up	N-hsa05169-54 55 59
+N-hsa05169-53	activation.down	N-hsa05169-81
+N-hsa05169-81	activation.down	N-hsa05169-82
+N-hsa05169-82	inhibition.down	N-hsa05169-83
+N-hsa05169-86	activation.down	N-hsa05169-89
+N-hsa05169-88	activation.down	N-hsa05169-86
+N-hsa05169-88	activation	N-hsa05169-86
+N-hsa05169-89	activation.down	N-hsa05169-81
+N-hsa05169-94	inhibition.down	N-hsa05169-86
+N-hsa05169-94	inhibition	N-hsa05169-86
+N-hsa05169-75	activation.down	N-hsa05169-77
+N-hsa05169-76	activation.down	N-hsa05169-78
+N-hsa05169-77	activation.down	N-hsa05169-79
+N-hsa05169-78	activation.down	N-hsa05169-79
+N-hsa05169-63 74	activation.down	N-hsa05169-75
+N-hsa05169-63 74	activation.down	N-hsa05169-76
+N-hsa05169-86	activation	N-hsa05169-87
+N-hsa05169-86	activation	N-hsa05169-93
+N-hsa05169-87	activation	N-hsa05169-93
+N-hsa05169-99	activation.up	N-hsa05169-100
+N-hsa05169-100	activation.up	N-hsa05169-102
+N-hsa05169-102	activation.up	N-hsa05169-103
+N-hsa05169-99	activation.up	N-hsa05169-101
+N-hsa05169-101	activation.up	N-hsa05169-104
+N-hsa05169-123 124	activation	N-hsa05169-125
+N-hsa05169-32	activation	N-hsa05169-32_func
+N-hsa05169-30	activation	N-hsa05169-30_func
+N-hsa05169-31	activation	N-hsa05169-31_func
+N-hsa05169-11	activation	N-hsa05169-11_func
+N-hsa05169-45	activation	N-hsa05169-45_func
+N-hsa05169-117	activation	N-hsa05169-117_func
+N-hsa05169-118	activation	N-hsa05169-118_func
+N-hsa05169-60	activation	N-hsa05169-60_func
+N-hsa05169-64	activation	N-hsa05169-64_func
+N-hsa05169-79	activation	N-hsa05169-79_func
+N-hsa05169-83	activation	N-hsa05169-83_func
+N-hsa05169-93	activation	N-hsa05169-93_func
+N-hsa05169-104	activation	N-hsa05169-104_func
+N-hsa05169-103	activation	N-hsa05169-103_func
+N-hsa05169-125	activation	N-hsa05169-125_func

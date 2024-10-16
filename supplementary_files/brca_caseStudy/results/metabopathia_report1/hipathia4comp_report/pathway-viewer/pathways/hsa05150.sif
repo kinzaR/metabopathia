@@ -1,0 +1,26 @@
+N-hsa05150-15	activation.up	N-hsa05150-69
+N-hsa05150-15	activation.up	N-hsa05150-14
+N-hsa05150-2	activation.up	N-hsa05150-4
+N-hsa05150-4	activation.up	N-hsa05150-13
+N-hsa05150-17	inhibition.up	N-hsa05150-2
+N-hsa05150-17	inhibition.up	N-hsa05150-32
+N-hsa05150-32	activation.up	N-hsa05150-5 6 7
+N-hsa05150-33	inhibition.up	N-hsa05150-2
+N-hsa05150-5 6 7	activation.up	N-hsa05150-8 9
+N-hsa05150-8 9	activation.up	N-hsa05150-2
+N-hsa05150-10 11	activation.up	N-hsa05150-8 9
+N-hsa05150-2	activation.up	N-hsa05150-48
+N-hsa05150-17	inhibition.up	N-hsa05150-1 2 3
+N-hsa05150-33	inhibition.up	N-hsa05150-1 2 3
+N-hsa05150-47	inhibition.up	N-hsa05150-1 2 3
+N-hsa05150-8 9	activation.up	N-hsa05150-1 2 3
+N-hsa05150-32	activation.up	N-hsa05150-40
+N-hsa05150-31	activation	N-hsa05150-35
+N-hsa05150-64	activation	N-hsa05150-65
+N-hsa05150-65	activation	N-hsa05150-66
+N-hsa05150-48	activation	N-hsa05150-48_func
+N-hsa05150-13	activation	N-hsa05150-13_func
+N-hsa05150-69	activation	N-hsa05150-69_func
+N-hsa05150-14	activation	N-hsa05150-14_func
+N-hsa05150-1 2 3	activation	N-hsa05150-1 2 3_func
+N-hsa05150-40	activation	N-hsa05150-40_func

@@ -1,0 +1,53 @@
+N-hsa04630-2	activation.down	N-hsa04630-35
+N-hsa04630-3	activation.down	N-hsa04630-2
+N-hsa04630-6	inhibition.up	N-hsa04630-11
+N-hsa04630-6	inhibition.down	N-hsa04630-11
+N-hsa04630-8	inhibition.up	N-hsa04630-15 22
+N-hsa04630-8	inhibition.down	N-hsa04630-15 22
+N-hsa04630-9	activation.up	N-hsa04630-10 40 41
+N-hsa04630-9	activation.down	N-hsa04630-10 40 41
+N-hsa04630-11	activation.up	N-hsa04630-10 40 41
+N-hsa04630-11	activation.down	N-hsa04630-10 40 41
+N-hsa04630-12	inhibition.up	N-hsa04630-10 40 41
+N-hsa04630-12	inhibition.down	N-hsa04630-10 40 41
+N-hsa04630-13	inhibition.up	N-hsa04630-15 22
+N-hsa04630-13	inhibition.down	N-hsa04630-15 22
+N-hsa04630-14	activation.up	N-hsa04630-15 22
+N-hsa04630-14	activation.down	N-hsa04630-15 22
+N-hsa04630-19	inhibition.up	N-hsa04630-10 40 41
+N-hsa04630-19	inhibition.down	N-hsa04630-10 40 41
+N-hsa04630-23	inhibition.up	N-hsa04630-10 40 41
+N-hsa04630-23	inhibition.down	N-hsa04630-10 40 41
+N-hsa04630-37	inhibition.up	N-hsa04630-15 22
+N-hsa04630-37	inhibition.down	N-hsa04630-15 22
+N-hsa04630-38	activation.up	N-hsa04630-15 22
+N-hsa04630-38	activation.down	N-hsa04630-15 22
+N-hsa04630-39	activation.up	N-hsa04630-15 22
+N-hsa04630-39	activation.down	N-hsa04630-15 22
+N-hsa04630-10 40 41	activation.up	N-hsa04630-6
+N-hsa04630-10 40 41	activation.down	N-hsa04630-6
+N-hsa04630-10 40 41	activation.up	N-hsa04630-8
+N-hsa04630-10 40 41	activation.down	N-hsa04630-8
+N-hsa04630-15 22	activation.up	N-hsa04630-11
+N-hsa04630-15 22	activation.down	N-hsa04630-11
+N-hsa04630-15 22	activation.down	N-hsa04630-3
+N-hsa04630-4	activation.down	N-hsa04630-32
+N-hsa04630-32	activation.down	N-hsa04630-33
+N-hsa04630-29 5	activation.down	N-hsa04630-4
+N-hsa04630-15 22	activation.down	N-hsa04630-29 5
+N-hsa04630-10 40 41	activation.up	N-hsa04630-7
+N-hsa04630-10 40 41	activation.up	N-hsa04630-31
+N-hsa04630-10 40 41	activation.up	N-hsa04630-1
+N-hsa04630-10 40 41	activation.up	N-hsa04630-30
+N-hsa04630-10 40 41	activation.up	N-hsa04630-34
+N-hsa04630-10 40 41	activation.down	N-hsa04630-36
+N-hsa04630-10 40 41	activation.up	N-hsa04630-24
+N-hsa04630-10 40 41	activation.up	N-hsa04630-27
+N-hsa04630-10 40 41	activation.up	N-hsa04630-28
+N-hsa04630-7	activation	N-hsa04630-7_func
+N-hsa04630-31	activation	N-hsa04630-31_func
+N-hsa04630-1	activation	N-hsa04630-1_func
+N-hsa04630-30	activation	N-hsa04630-30_func
+N-hsa04630-24	activation	N-hsa04630-24_func
+N-hsa04630-27	activation	N-hsa04630-27_func
+N-hsa04630-28	activation	N-hsa04630-28_func

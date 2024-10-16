@@ -1,0 +1,54 @@
+N-hsa05162-10	activation.up	N-hsa05162-11
+N-hsa05162-11	activation.up	N-hsa05162-12
+N-hsa05162-12	activation.up	N-hsa05162-13
+N-hsa05162-16	activation.up	N-hsa05162-22
+N-hsa05162-21	activation.up	N-hsa05162-22
+N-hsa05162-22	activation.up	N-hsa05162-13
+N-hsa05162-76	activation.up	N-hsa05162-13
+N-hsa05162-15	activation.up	N-hsa05162-17
+N-hsa05162-17	activation.up	N-hsa05162-18
+N-hsa05162-18	activation.up	N-hsa05162-83
+N-hsa05162-19	activation.up	N-hsa05162-20
+N-hsa05162-22	activation.up	N-hsa05162-20
+N-hsa05162-83	activation.up	N-hsa05162-107 108
+N-hsa05162-84	inhibition.up	N-hsa05162-83
+N-hsa05162-107 108	activation.up	N-hsa05162-19
+N-hsa05162-22	activation.up	N-hsa05162-109 110
+N-hsa05162-109 110	activation.up	N-hsa05162-23
+N-hsa05162-30	activation.up	N-hsa05162-25 26
+N-hsa05162-25 26	activation.up	N-hsa05162-27 28
+N-hsa05162-25 26	activation.up	N-hsa05162-27 70
+N-hsa05162-30	activation	N-hsa05162-25 70
+N-hsa05162-31	activation	N-hsa05162-32 33
+N-hsa05162-32 33	activation	N-hsa05162-28 34
+N-hsa05162-46	activation	N-hsa05162-45 57
+N-hsa05162-47	activation	N-hsa05162-50
+N-hsa05162-48	activation	N-hsa05162-50
+N-hsa05162-50	activation	N-hsa05162-51
+N-hsa05162-51	inhibition	N-hsa05162-105
+N-hsa05162-71	inhibition	N-hsa05162-50
+N-hsa05162-45 57	activation	N-hsa05162-50
+N-hsa05162-45 57	activation	N-hsa05162-58
+N-hsa05162-73	activation.up	N-hsa05162-74
+N-hsa05162-79	activation	N-hsa05162-78
+N-hsa05162-80	activation	N-hsa05162-81
+N-hsa05162-86	inhibition.down	N-hsa05162-62
+N-hsa05162-92	inhibition.up	N-hsa05162-93
+N-hsa05162-99	inhibition.down	N-hsa05162-101
+N-hsa05162-39 43	activation	N-hsa05162-44
+N-hsa05162-41 42	activation	N-hsa05162-39 43
+N-hsa05162-13	activation	N-hsa05162-13_func
+N-hsa05162-20	activation	N-hsa05162-20_func
+N-hsa05162-25 70	activation	N-hsa05162-25 70_func
+N-hsa05162-105	activation	N-hsa05162-105_func
+N-hsa05162-74	activation	N-hsa05162-74_func
+N-hsa05162-78	activation	N-hsa05162-78_func
+N-hsa05162-81	activation	N-hsa05162-81_func
+N-hsa05162-93	activation	N-hsa05162-93_func
+N-hsa05162-101	activation	N-hsa05162-101_func
+N-hsa05162-23	activation	N-hsa05162-23_func
+N-hsa05162-27 28	activation	N-hsa05162-27 28_func
+N-hsa05162-27 70	activation	N-hsa05162-27 70_func
+N-hsa05162-28 34	activation	N-hsa05162-28 34_func
+N-hsa05162-44	activation	N-hsa05162-44_func
+N-hsa05162-58	activation	N-hsa05162-58_func

@@ -1,0 +1,20 @@
+N-hsa04727-2	activation.up	N-hsa04727-15
+N-hsa04727-9	activation.up	N-hsa04727-2
+N-hsa04727-15	activation.up	N-hsa04727-26
+N-hsa04727-15	inhibition.up	N-hsa04727-47
+N-hsa04727-15	inhibition.up	N-hsa04727-8
+N-hsa04727-9	activation.up	N-hsa04727-19
+N-hsa04727-19	activation.up	N-hsa04727-31
+N-hsa04727-31	inhibition.up	N-hsa04727-34
+N-hsa04727-34	activation.up	N-hsa04727-36
+N-hsa04727-36	activation.up	N-hsa04727-35
+N-hsa04727-31	inhibition.up	N-hsa04727-13
+N-hsa04727-9	activation.down	N-hsa04727-49
+N-hsa04727-9	activation.down	N-hsa04727-17 37
+N-hsa04727-49	activation	N-hsa04727-49_func
+N-hsa04727-17 37	activation	N-hsa04727-17 37_func
+N-hsa04727-26	activation	N-hsa04727-26_func
+N-hsa04727-47	activation	N-hsa04727-47_func
+N-hsa04727-8	activation	N-hsa04727-8_func
+N-hsa04727-13	activation	N-hsa04727-13_func
+N-hsa04727-35	activation	N-hsa04727-35_func

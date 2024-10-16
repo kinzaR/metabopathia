@@ -1,0 +1,14 @@
+N-hsa05217-8	inhibition.down	N-hsa05217-10
+N-hsa05217-7	activation.down	N-hsa05217-14
+N-hsa05217-13	inhibition.down	N-hsa05217-21
+N-hsa05217-14	activation.down	N-hsa05217-13
+N-hsa05217-16	activation.down	N-hsa05217-7
+N-hsa05217-20	activation.down	N-hsa05217-22
+N-hsa05217-21	inhibition.down	N-hsa05217-20
+N-hsa05217-16	activation.down	N-hsa05217-5
+N-hsa05217-16	activation.down	N-hsa05217-19
+N-hsa05217-16	activation.down	N-hsa05217-3
+N-hsa05217-16	activation.down	N-hsa05217-4
+N-hsa05217-5	activation	N-hsa05217-5_func
+N-hsa05217-3	activation	N-hsa05217-3_func
+N-hsa05217-22	activation	N-hsa05217-22_func

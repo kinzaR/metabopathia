@@ -1,0 +1,21 @@
+id	status	color	pvalue	adj.pvalue	shape	P-hsa05219-27	P-hsa05219-19	P-hsa05219-21	P-hsa05219-12	P-hsa05219-10
+N-hsa05219-2_activation_N-hsa05219-34	DOWN	darkgrey	0.19412051904223	0.229181934375848	directed	1	0	0	0	0
+N-hsa05219-16_activation_N-hsa05219-35	DOWN	darkgrey	0.19412051904223	0.229181934375848	directed	1	0	0	0	0
+N-hsa05219-17_activation_N-hsa05219-32	DOWN	darkgrey	0.19412051904223	0.229181934375848	directed	1	0	0	0	0
+N-hsa05219-22_activation_N-hsa05219-35	DOWN	darkgrey	0.19412051904223	0.229181934375848	directed	1	0	0	0	0
+N-hsa05219-32_activation_N-hsa05219-27	DOWN	darkgrey	0.19412051904223	0.229181934375848	directed	1	0	0	0	0
+N-hsa05219-33_activation_N-hsa05219-32	DOWN	darkgrey	0.19412051904223	0.229181934375848	directed	1	0	0	0	0
+N-hsa05219-34_activation_N-hsa05219-33	DOWN	darkgrey	0.19412051904223	0.229181934375848	directed	1	0	0	0	0
+N-hsa05219-35_activation_N-hsa05219-34	DOWN	darkgrey	0.19412051904223	0.229181934375848	directed	1	0	0	0	0
+N-hsa05219-13_activation.down_N-hsa05219-18	DOWN	#1f78b4	3.3061558259149e-12	1.11754023953448e-11	directed	0	1	0	0	0
+N-hsa05219-18_inhibition.down_N-hsa05219-19	DOWN	#1f78b4	3.3061558259149e-12	1.11754023953448e-11	inhibited	0	1	0	0	0
+N-hsa05219-14_activation.up_N-hsa05219-23 25	UP	#e31a1c	7.37188088351104e-14	3.24639637029735e-13	directed	0	0	1	0	0
+N-hsa05219-20_activation.up_N-hsa05219-21	UP	#e31a1c	7.37188088351104e-14	3.24639637029735e-13	directed	0	0	1	0	0
+N-hsa05219-28_activation.up_N-hsa05219-23 25	UP	#e31a1c	7.37188088351104e-14	3.24639637029735e-13	directed	0	0	1	0	0
+N-hsa05219-23 25_activation.up_N-hsa05219-21	UP	#e31a1c	7.37188088351104e-14	3.24639637029735e-13	directed	0	0	1	0	0
+N-hsa05219-29_activation.down_N-hsa05219-12	DOWN	#1f78b4	0.0151329806837818	0.0207677189193671	directed	0	0	0	1	0
+N-hsa05219-29_activation.down_N-hsa05219-10	DOWN	#1f78b4	4.86657109653716e-14	2.2105780574101e-13	directed	0	0	0	0	1
+N-hsa05219-19_activation_N-hsa05219-19_func	DOWN	darkgrey	N-hsa05219-19_activation_N-hsa05219-19_func	DOWN	directed	0	1	0	0	0
+N-hsa05219-21_activation_N-hsa05219-21_func	DOWN	darkgrey	N-hsa05219-21_activation_N-hsa05219-21_func	DOWN	directed	0	0	1	0	0
+N-hsa05219-12_activation_N-hsa05219-12_func	DOWN	darkgrey	N-hsa05219-12_activation_N-hsa05219-12_func	DOWN	directed	0	0	0	1	0
+N-hsa05219-27_activation_N-hsa05219-27_func	DOWN	darkgrey	N-hsa05219-27_activation_N-hsa05219-27_func	DOWN	directed	1	0	0	0	0

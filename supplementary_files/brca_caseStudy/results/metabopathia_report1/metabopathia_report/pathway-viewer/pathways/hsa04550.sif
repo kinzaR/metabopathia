@@ -1,0 +1,62 @@
+N-hsa04550-1	activation.down	N-hsa04550-5
+N-hsa04550-1	activation	N-hsa04550-5
+N-hsa04550-4	inhibition.down	N-hsa04550-8
+N-hsa04550-4	inhibition	N-hsa04550-8
+N-hsa04550-5	activation.down	N-hsa04550-4
+N-hsa04550-5	activation	N-hsa04550-4
+N-hsa04550-7	inhibition.down	N-hsa04550-100
+N-hsa04550-8	inhibition.down	N-hsa04550-7
+N-hsa04550-100	inhibition.down	N-hsa04550-101
+N-hsa04550-8	inhibition	N-hsa04550-2 3 7
+N-hsa04550-2 3 7	activation	N-hsa04550-9
+N-hsa04550-11	activation.down	N-hsa04550-12
+N-hsa04550-12	activation.down	N-hsa04550-13
+N-hsa04550-13	activation.down	N-hsa04550-14
+N-hsa04550-14	activation.down	N-hsa04550-66
+N-hsa04550-12	activation.down	N-hsa04550-16
+N-hsa04550-16	activation.down	N-hsa04550-17
+N-hsa04550-20	activation	N-hsa04550-21
+N-hsa04550-21	activation	N-hsa04550-22
+N-hsa04550-106	activation	N-hsa04550-21
+N-hsa04550-23	activation.up	N-hsa04550-24
+N-hsa04550-23	activation.down	N-hsa04550-24
+N-hsa04550-24	activation.down	N-hsa04550-68 105
+N-hsa04550-68 105	activation.down	N-hsa04550-69
+N-hsa04550-24	inhibition.up	N-hsa04550-25
+N-hsa04550-24	inhibition.up	N-hsa04550-60
+N-hsa04550-29	activation.down	N-hsa04550-30
+N-hsa04550-30	activation.down	N-hsa04550-53 64
+N-hsa04550-31	activation.down	N-hsa04550-32
+N-hsa04550-32	activation.down	N-hsa04550-33
+N-hsa04550-33	activation.down	N-hsa04550-34
+N-hsa04550-37	activation.down	N-hsa04550-38
+N-hsa04550-38	activation.down	N-hsa04550-31
+N-hsa04550-35	activation.down	N-hsa04550-36
+N-hsa04550-38	activation.down	N-hsa04550-35
+N-hsa04550-40	activation.down	N-hsa04550-41
+N-hsa04550-41	activation.down	N-hsa04550-35
+N-hsa04550-39	activation.down	N-hsa04550-61
+N-hsa04550-61	activation.down	N-hsa04550-62 63
+N-hsa04550-107	activation.down	N-hsa04550-61
+N-hsa04550-42	activation.down	N-hsa04550-46
+N-hsa04550-42	activation	N-hsa04550-46
+N-hsa04550-45	inhibition.down	N-hsa04550-48
+N-hsa04550-45	inhibition	N-hsa04550-48
+N-hsa04550-46	activation.down	N-hsa04550-45
+N-hsa04550-46	activation	N-hsa04550-45
+N-hsa04550-48	inhibition	N-hsa04550-47
+N-hsa04550-48	inhibition.down	N-hsa04550-67
+N-hsa04550-66	activation	N-hsa04550-66_func
+N-hsa04550-17	activation	N-hsa04550-17_func
+N-hsa04550-22	activation	N-hsa04550-22_func
+N-hsa04550-25	activation	N-hsa04550-25_func
+N-hsa04550-60	activation	N-hsa04550-60_func
+N-hsa04550-53 64	activation	N-hsa04550-53 64_func
+N-hsa04550-34	activation	N-hsa04550-34_func
+N-hsa04550-36	activation	N-hsa04550-36_func
+N-hsa04550-47	activation	N-hsa04550-47_func
+N-hsa04550-67	activation	N-hsa04550-67_func
+N-hsa04550-62 63	activation	N-hsa04550-62 63_func
+N-hsa04550-101	activation	N-hsa04550-101_func
+N-hsa04550-9	activation	N-hsa04550-9_func
+N-hsa04550-69	activation	N-hsa04550-69_func
