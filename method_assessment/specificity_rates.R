@@ -179,12 +179,12 @@ if(is.null(data_set$metabo_vals)){
 ################################################################################
 # for senario in ("i", "ii", "iii") 
 # specificity_rates <- lapply(c("i", "ii", "iii") , function(senario){
-specificity_rates <- lapply(setNames(c("i"),c("i")) , function(senario){
+specificity_rates <- lapply(setNames(c("i"), paste0("senario_",c("i"))) , function(senario){
   # lapply(c(20, 50, 70, 100) , function(N){
-  lapply(setNames(c(20), c(20)) , function(N){
+  lapply(setNames(c(20, 50), paste0("N", c(20, 50))) , function(N){
     # here iterations c(1:100)
     # lapply(setNames(c(1:100), c(1:100)), function(it){
-    lapply(setNames(c(1:2), c(1:2)), function(it){
+    lapply(setNames(c(1:2), paste0("it",c(1:2))), function(it){
       if(verbose) message("***Senario:",senario," **N: ",N," *it:",it)
       new_data_set <- get_N_data_perSenario(data_set, N=N, senario=senario) # genes scales per N samples
       ## Step 3: Signal propagation : Pathway activation computation
@@ -263,7 +263,8 @@ specificity_rates <- lapply(setNames(c("i"),c("i")) , function(senario){
       if(hipathia) {
         hi_results$DAsummary <- hipathia::DAsummary(DAdata = hi_results, n = 10) # Top altered pathways
       }
-      return(met_results)
+      return(list(metabopathia = met_results,
+                  hipathia = hi_results))
     })
   })
 })
