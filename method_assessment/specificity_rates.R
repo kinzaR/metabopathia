@@ -181,10 +181,10 @@ if(is.null(data_set$metabo_vals)){
 # specificity_rates <- lapply(c("i", "ii", "iii") , function(senario){
 specificity_rates <- lapply(setNames(c("i"), paste0("senario_",c("i"))) , function(senario){
   # lapply(c(20, 50, 70, 100) , function(N){
-  lapply(setNames(c(20, 50), paste0("N", c(20, 50))) , function(N){
+  lapply(setNames(c(20, 50, 70, 100), paste0("N", c(20, 50, 70, 100))) , function(N){
     # here iterations c(1:100)
     # lapply(setNames(c(1:100), c(1:100)), function(it){
-    lapply(setNames(c(1:2), paste0("it",c(1:2))), function(it){
+    lapply(setNames(c(1:100), paste0("it",c(1:100))), function(it){
       if(verbose) message("***Senario:",senario," **N: ",N," *it:",it)
       new_data_set <- get_N_data_perSenario(data_set, N=N, senario=senario) # genes scales per N samples
       ## Step 3: Signal propagation : Pathway activation computation

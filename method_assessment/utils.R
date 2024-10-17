@@ -72,7 +72,7 @@ get_N_data_perSenario <- function(data_set, N, senario="i"){
     }
 }
 ########################################### DAsummary ###########################################
-DAsummary <- function (DAdata, conf.level = 0.05, adjust = TRUE) 
+DAoverview_plotless <- function (DAdata, conf.level = 0.05, adjust = TRUE) 
 {
   summ <- lapply(names(DAdata), function(feat) {
     data <- DAdata[[feat]]
