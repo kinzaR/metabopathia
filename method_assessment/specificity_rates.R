@@ -7,6 +7,8 @@ message("You are using :",R.version.string)
 suppressPackageStartupMessages(library(optparse))
 suppressPackageStartupMessages(library(hipathia))
 suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(compiler))
+
 
 # Get the script directory
 getScriptPath <- function(){

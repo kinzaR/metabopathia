@@ -1,6 +1,7 @@
 library(dplyr)
 ########################################### LOAD DATA ###########################################
 load_data <- function(exp_file, met_file=NULL,met_type, design_file, group1, group2, output_folder, design_type="categorical", analysis="compare", spe="hsa", verbose=FALSE){
+    #TODO: remove output_folder from here ! no need
   data_set <- list()
   ### Load data from files
   # Load expression
@@ -64,12 +65,49 @@ load_data <- function(exp_file, met_file=NULL,met_type, design_file, group1, gro
 }
 ########################################### get_N_data_perSenario ###########################################
 get_N_data_perSenario <- function(data_set, N, senario="i"){
-  if(senario=="i") {
     data_set <- get_N_data(data_set, N)
-    data_set$genes_vals <- hipathia::normalize_data(as.matrix(data_set$genes_vals), by_quantiles = FALSE, 
+    if(senario=="i") {
+        # Scenario i: N samples from original data with identical groups
+        data_set$genes_vals <- hipathia::normalize_data(as.matrix(data_set$genes_vals), by_quantiles = FALSE, 
                                  by_gene = FALSE, percentil = FALSE)
-    return(data_set)
     }
+    if(senario=="ii") {
+        # Scenario ii- genes: Simulate gene expression from empirical distribution
+        data_set$genes_vals <- apply(data_set$genes_vals, 1, function(gene_values) {
+          rnorm(N, mean = mean(gene_values), sd = sd(gene_values))
+        }) %>% t()
+        colnames(data_set$genes_vals) <- data_set$des$sample
+        # Values need to be between 0 and 1
+        data_set$genes_vals <- hipathia::normalize_data(as.matrix(data_set$genes_vals), by_quantiles = FALSE, by_gene = FALSE, percentil = FALSE)
+        # Scenario ii - metabolites: Simulate Metabolites activities from empirical distribution
+    	data_set$metabo_vals <- t(apply(data_set$metabo_vals, 1, function(metabolite_vals) {
+    	  # Step 1: Simulate new values using rnorm
+    	  simulated_vals <- rnorm(N, mean = mean(metabolite_vals), sd = sd(metabolite_vals))
+    	  # Step 2: Perform min-max scaling
+            if(max(simulated_vals) > min(simulated_vals)){
+        	  scaled_vals <- (simulated_vals - min(simulated_vals)) / (max(simulated_vals) - min(simulated_vals))  # Scale to 0-1
+        	  return(scaled_vals * (max(metabolite_vals) - min(metabolite_vals)) + min(metabolite_vals))  # Scale to original min-max range
+            }else return(simulated_vals)
+    	}))
+    	# Assign column names
+    	colnames(data_set$metabo_vals) <- data_set$des$sample
+    }
+    if(senario=="iii") {
+        # Scenario iii: Simulate from beta distribution with mean 0.5 and sd ~0.05
+        data_set$genes_vals <- apply(data_set$genes_vals, 1, function(gene_values) {
+          rnorm(N, mean = 0.5, sd = 0.05)
+        }) %>% t()
+        colnames(data_set$genes_vals) <- data_set$des$sample
+        # Values need to be between 0 and 1
+        data_set$genes_vals <- hipathia::normalize_data(as.matrix(data_set$genes_vals), by_quantiles = FALSE, by_gene = FALSE, percentil = FALSE)
+        # Metabolite
+        data_set$metabo_vals <- apply(data_set$metabo_vals, 1, function(metabolite_vals) {
+          rnorm(N, mean = 0.5, sd = 0.05)
+        }) %>% t()
+        colnames(data_set$metabo_vals) <- data_set$des$sample         
+    }
+
+    return(data_set)
 }
 ########################################### DAsummary ###########################################
 DAoverview_plotless <- function (DAdata, conf.level = 0.05, adjust = TRUE) 
@@ -92,6 +130,7 @@ DAoverview_plotless <- function (DAdata, conf.level = 0.05, adjust = TRUE)
   summ <- tibble(do.call(rbind, summ))
   return(summ)
 }
+
 ########################################### Scenario i ###########################################
 # Scenario i 
 # Example usage:
