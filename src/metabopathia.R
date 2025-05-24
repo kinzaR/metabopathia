@@ -103,7 +103,7 @@ metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE,
   nodes_se <- SummarizedExperiment(list(nodes = nodes), rowData = nodes_rd, 
                                    colData = coldata)
   paths <- do.call("rbind", lapply(results$by.path, function(x) x$path.vals))
-  paths_rd <- DataFrame(row.names =rownames(paths), path.ID = rownames(paths), path.name = hipathia::get_path_names(metaginfo, 
+  paths_rd <- DataFrame( path.ID = rownames(paths), path.name = hipathia::get_path_names(metaginfo, 
                                                                               #rownames(paths)), path.nodes = hipathia:::get_path_nodes(metaginfo, rownames(paths), decompose = decompose), decomposed = decompose)
                                                                               rownames(paths)), path.nodes = local_get_path_nodes(metaginfo, rownames(paths), decompose = decompose), decomposed = decompose)
   paths_se <- SummarizedExperiment(list(paths = paths), rowData = paths_rd, 
