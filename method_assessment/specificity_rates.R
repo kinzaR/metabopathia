@@ -268,3 +268,4 @@ specificity_rates <- lapply(setNames(c("i"), paste0("senario_",c("i"))) , functi
     })
   })
 })
+save.image(file = file.path(output_folder,"workspace_all.RData"))
