@@ -96,14 +96,14 @@ metabopathia <- function (genes_vals, metabo_vals, metaginfo, uni.terms = FALSE,
     return(res)
   })
   nodes <- do.call("rbind", lapply(results$by.path, function(x) x$nodes.vals))
-  nodes_rd <- DataFrame(metaginfo$all.labelids[rownames(nodes), 
+  nodes_rd <- DataFrame(row.names = rownames(nodes),metaginfo$all.labelids[rownames(nodes), 
   ], node.name = hipathia:::get_node_names(metaginfo, rownames(nodes)), 
   # node.type = hipathia:::get_node_type(metaginfo)$type, node.var = apply(nodes, 1, var))
   node.type = local_get_node_type(metaginfo)$type, node.var = apply(nodes, 1, var))
   nodes_se <- SummarizedExperiment(list(nodes = nodes), rowData = nodes_rd, 
                                    colData = coldata)
   paths <- do.call("rbind", lapply(results$by.path, function(x) x$path.vals))
-  paths_rd <- DataFrame(path.ID = rownames(paths), path.name = hipathia::get_path_names(metaginfo, 
+  paths_rd <- DataFrame(row.names =rownames(paths), path.ID = rownames(paths), path.name = hipathia::get_path_names(metaginfo, 
                                                                               #rownames(paths)), path.nodes = hipathia:::get_path_nodes(metaginfo, rownames(paths), decompose = decompose), decomposed = decompose)
                                                                               rownames(paths)), path.nodes = local_get_path_nodes(metaginfo, rownames(paths), decompose = decompose), decomposed = decompose)
   paths_se <- SummarizedExperiment(list(paths = paths), rowData = paths_rd, 
