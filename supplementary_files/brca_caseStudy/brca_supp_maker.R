@@ -145,9 +145,9 @@ all <-read.csv(file = "supplementary_files/brca_caseStudy/results/merged_results
 desQ <- function(x,y){
   return((x<0.05 & y>=0.05) | (x>=0.05 & y<0.05))
 }
-all %>% select(c(1:6, 14:17)) %>% 
-  filter(UP.DOWN_met != UP.DOWN_hi | desQ(FDRp.value_met, FDRp.value_hi)) %>%
-  View
+write.table(x = all %>% select(c(1:6, 14:17)) %>% 
+  filter(UP.DOWN_met != UP.DOWN_hi | desQ(FDRp.value_met, FDRp.value_hi)) ,
+  file = "supplementary_files/brca_caseStudy/results/merged_results_paths_diff_FDRvals.tsv", append = F,quote = F, sep = "\t", row.names = F, col.names = T)
 
 ################## clinical data
 clinical_data <- read.csv("/home/krian/Downloads/clinical.tsv", sep = "\t")
