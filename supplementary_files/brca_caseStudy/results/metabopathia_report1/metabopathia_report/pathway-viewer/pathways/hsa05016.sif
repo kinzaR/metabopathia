@@ -1,0 +1,25 @@
+N-hsa05016-11	activation.up	N-hsa05016-12
+N-hsa05016-21	activation	N-hsa05016-29
+N-hsa05016-23	activation	N-hsa05016-25
+N-hsa05016-24	activation	N-hsa05016-23
+N-hsa05016-25	activation	N-hsa05016-28
+N-hsa05016-27	activation.down	N-hsa05016-21
+N-hsa05016-27	activation	N-hsa05016-21
+N-hsa05016-27	activation	N-hsa05016-24
+N-hsa05016-28	activation	N-hsa05016-26
+N-hsa05016-29	activation	N-hsa05016-55
+N-hsa05016-30	activation	N-hsa05016-26
+N-hsa05016-26	activation	N-hsa05016-29
+N-hsa05016-21	activation.down	N-hsa05016-22 9
+N-hsa05016-32	activation.up	N-hsa05016-59
+N-hsa05016-58	activation.up	N-hsa05016-59
+N-hsa05016-59	activation.up	N-hsa05016-60
+N-hsa05016-50	activation.up	N-hsa05016-52
+N-hsa05016-51	activation.up	N-hsa05016-48
+N-hsa05016-44 45 47	activation.up	N-hsa05016-46
+N-hsa05016-12	activation	N-hsa05016-12_func
+N-hsa05016-22 9	activation	N-hsa05016-22 9_func
+N-hsa05016-52	activation	N-hsa05016-52_func
+N-hsa05016-48	activation	N-hsa05016-48_func
+N-hsa05016-60	activation	N-hsa05016-60_func
+N-hsa05016-46	activation	N-hsa05016-46_func

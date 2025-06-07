@@ -1,0 +1,45 @@
+N-hsa05030-5	activation.down	N-hsa05030-38
+N-hsa05030-6	activation.down	N-hsa05030-39
+N-hsa05030-7	activation.down	N-hsa05030-34
+N-hsa05030-32	activation.down	N-hsa05030-6
+N-hsa05030-32	activation.down	N-hsa05030-7
+N-hsa05030-34	activation.down	N-hsa05030-35
+N-hsa05030-35	activation.down	N-hsa05030-40
+N-hsa05030-38	inhibition.down	N-hsa05030-35
+N-hsa05030-39	inhibition.down	N-hsa05030-35
+N-hsa05030-40	activation.down	N-hsa05030-37
+N-hsa05030-41	activation.down	N-hsa05030-5
+N-hsa05030-9	activation.down	N-hsa05030-43
+N-hsa05030-10	activation.down	N-hsa05030-45
+N-hsa05030-11	activation.down	N-hsa05030-44
+N-hsa05030-36	activation.down	N-hsa05030-10
+N-hsa05030-36	activation.down	N-hsa05030-11
+N-hsa05030-42	activation.down	N-hsa05030-9
+N-hsa05030-43	inhibition.down	N-hsa05030-47
+N-hsa05030-44	activation.down	N-hsa05030-47
+N-hsa05030-45	inhibition.down	N-hsa05030-47
+N-hsa05030-46	inhibition.down	N-hsa05030-43
+N-hsa05030-47	activation.down	N-hsa05030-49
+N-hsa05030-48	activation.down	N-hsa05030-75
+N-hsa05030-49	activation.down	N-hsa05030-48
+N-hsa05030-50	inhibition.down	N-hsa05030-45
+N-hsa05030-75	activation.down	N-hsa05030-76
+N-hsa05030-75	activation.down	N-hsa05030-77
+N-hsa05030-51	inhibition	N-hsa05030-13
+N-hsa05030-58	activation.down	N-hsa05030-66
+N-hsa05030-66	activation.down	N-hsa05030-67
+N-hsa05030-67	activation.down	N-hsa05030-68
+N-hsa05030-68	activation.down	N-hsa05030-74
+N-hsa05030-74	activation.down	N-hsa05030-69
+N-hsa05030-79	inhibition.down	N-hsa05030-69
+N-hsa05030-70 71	activation.down	N-hsa05030-72 83
+N-hsa05030-72 83	activation.down	N-hsa05030-79
+N-hsa05030-72 83	activation.down	N-hsa05030-80 81
+N-hsa05030-70 71	activation.down	N-hsa05030-78
+N-hsa05030-70 71	activation.down	N-hsa05030-73
+N-hsa05030-37	activation	N-hsa05030-37_func
+N-hsa05030-13	activation	N-hsa05030-13_func
+N-hsa05030-69	activation	N-hsa05030-69_func
+N-hsa05030-78	activation	N-hsa05030-78_func
+N-hsa05030-73	activation	N-hsa05030-73_func
+N-hsa05030-80 81	activation	N-hsa05030-80 81_func

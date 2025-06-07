@@ -1,0 +1,61 @@
+N-hsa04540-8	activation.up	N-hsa04540-18 19
+N-hsa04540-9	activation.down	N-hsa04540-14 16
+N-hsa04540-13	activation.down	N-hsa04540-41
+N-hsa04540-23	inhibition.down	N-hsa04540-14 16
+N-hsa04540-24	activation.down	N-hsa04540-25
+N-hsa04540-25	activation.down	N-hsa04540-23
+N-hsa04540-26	activation.down	N-hsa04540-14 16
+N-hsa04540-27	activation.down	N-hsa04540-48
+N-hsa04540-28	inhibition.down	N-hsa04540-14 16
+N-hsa04540-29	activation.down	N-hsa04540-13
+N-hsa04540-30	activation.down	N-hsa04540-14 16
+N-hsa04540-33	activation.down	N-hsa04540-30
+N-hsa04540-34	activation.down	N-hsa04540-24
+N-hsa04540-34	activation.down	N-hsa04540-14 16
+N-hsa04540-37	activation.down	N-hsa04540-26
+N-hsa04540-38	inhibition.down	N-hsa04540-14 16
+N-hsa04540-39	activation.down	N-hsa04540-38
+N-hsa04540-40	activation.down	N-hsa04540-39
+N-hsa04540-41	activation.down	N-hsa04540-40
+N-hsa04540-42	activation.down	N-hsa04540-41
+N-hsa04540-43	activation.down	N-hsa04540-42
+N-hsa04540-44	activation.down	N-hsa04540-43
+N-hsa04540-44	activation.down	N-hsa04540-34
+N-hsa04540-45	activation.down	N-hsa04540-44
+N-hsa04540-46	activation.down	N-hsa04540-47
+N-hsa04540-47	activation.down	N-hsa04540-33
+N-hsa04540-48	activation.down	N-hsa04540-52
+N-hsa04540-49	inhibition.down	N-hsa04540-33
+N-hsa04540-50	activation.down	N-hsa04540-48
+N-hsa04540-51	activation.down	N-hsa04540-49
+N-hsa04540-52	activation.down	N-hsa04540-9
+N-hsa04540-52	activation.down	N-hsa04540-54
+N-hsa04540-53	activation.down	N-hsa04540-47
+N-hsa04540-54	activation.down	N-hsa04540-9
+N-hsa04540-1	activation.down	N-hsa04540-29
+N-hsa04540-22	activation.down	N-hsa04540-46
+N-hsa04540-21	activation.down	N-hsa04540-53
+N-hsa04540-21	activation.down	N-hsa04540-51
+N-hsa04540-11	activation.down	N-hsa04540-27
+N-hsa04540-12	activation.down	N-hsa04540-50
+N-hsa04540-10	activation.down	N-hsa04540-37
+N-hsa04540-9	activation.down	N-hsa04540-14 15
+N-hsa04540-23	inhibition.down	N-hsa04540-14 15
+N-hsa04540-26	activation.down	N-hsa04540-14 15
+N-hsa04540-28	inhibition.down	N-hsa04540-14 15
+N-hsa04540-30	activation.down	N-hsa04540-14 15
+N-hsa04540-34	activation.down	N-hsa04540-14 15
+N-hsa04540-38	inhibition.down	N-hsa04540-14 15
+N-hsa04540-9	activation.down	N-hsa04540-14 31
+N-hsa04540-23	inhibition.down	N-hsa04540-14 31
+N-hsa04540-26	activation.down	N-hsa04540-14 31
+N-hsa04540-28	inhibition.down	N-hsa04540-14 31
+N-hsa04540-30	activation.down	N-hsa04540-14 31
+N-hsa04540-34	activation.down	N-hsa04540-14 31
+N-hsa04540-38	inhibition.down	N-hsa04540-14 31
+N-hsa04540-9	activation.down	N-hsa04540-16 17
+N-hsa04540-23	inhibition.down	N-hsa04540-16 17
+N-hsa04540-26	activation.down	N-hsa04540-16 17
+N-hsa04540-30	activation.down	N-hsa04540-16 17
+N-hsa04540-34	activation.down	N-hsa04540-16 17
+N-hsa04540-38	inhibition.down	N-hsa04540-16 17

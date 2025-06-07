@@ -1,0 +1,33 @@
+N-hsa04925-4	activation.down	N-hsa04925-20
+N-hsa04925-7	activation.down	N-hsa04925-27
+N-hsa04925-10	activation.down	N-hsa04925-7
+N-hsa04925-15	activation.down	N-hsa04925-16
+N-hsa04925-16	activation.down	N-hsa04925-45
+N-hsa04925-20	activation.down	N-hsa04925-30
+N-hsa04925-21	activation.down	N-hsa04925-20
+N-hsa04925-22	activation.down	N-hsa04925-10
+N-hsa04925-23	activation.down	N-hsa04925-22
+N-hsa04925-24	activation.down	N-hsa04925-26
+N-hsa04925-25	activation.down	N-hsa04925-24
+N-hsa04925-26	activation.down	N-hsa04925-15
+N-hsa04925-27	activation.down	N-hsa04925-28
+N-hsa04925-28	activation.down	N-hsa04925-29
+N-hsa04925-29	activation.down	N-hsa04925-14 64
+N-hsa04925-30	activation.down	N-hsa04925-14 64
+N-hsa04925-31	activation.down	N-hsa04925-33
+N-hsa04925-32	activation.down	N-hsa04925-33
+N-hsa04925-45	activation.down	N-hsa04925-14 64
+N-hsa04925-14 64	activation.down	N-hsa04925-33
+N-hsa04925-31	activation.down	N-hsa04925-34
+N-hsa04925-32	activation.down	N-hsa04925-34
+N-hsa04925-14 64	activation.down	N-hsa04925-34
+N-hsa04925-7	activation.down	N-hsa04925-9
+N-hsa04925-9	activation.down	N-hsa04925-3
+N-hsa04925-7	inhibition.down	N-hsa04925-5
+N-hsa04925-2	activation.down	N-hsa04925-18
+N-hsa04925-35	activation.down	N-hsa04925-2
+N-hsa04925-36	activation.down	N-hsa04925-35
+N-hsa04925-5	activation	N-hsa04925-5_func
+N-hsa04925-3	activation	N-hsa04925-3_func
+N-hsa04925-33	activation	N-hsa04925-33_func
+N-hsa04925-34	activation	N-hsa04925-34_func

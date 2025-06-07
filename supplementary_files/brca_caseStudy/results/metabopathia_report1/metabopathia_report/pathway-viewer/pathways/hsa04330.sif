@@ -1,0 +1,29 @@
+N-hsa04330-5	inhibition.up	N-hsa04330-13 14
+N-hsa04330-5	inhibition.down	N-hsa04330-13 14
+N-hsa04330-17	activation.up	N-hsa04330-22
+N-hsa04330-17	activation.down	N-hsa04330-22
+N-hsa04330-20	inhibition.up	N-hsa04330-22
+N-hsa04330-20	inhibition.down	N-hsa04330-22
+N-hsa04330-21	inhibition.up	N-hsa04330-22
+N-hsa04330-21	inhibition.down	N-hsa04330-22
+N-hsa04330-22	activation.up	N-hsa04330-13 14
+N-hsa04330-22	activation.down	N-hsa04330-13 14
+N-hsa04330-23	inhibition.up	N-hsa04330-22
+N-hsa04330-23	inhibition.down	N-hsa04330-22
+N-hsa04330-25	activation.up	N-hsa04330-22
+N-hsa04330-25	activation.down	N-hsa04330-22
+N-hsa04330-26	activation.up	N-hsa04330-22
+N-hsa04330-26	activation.down	N-hsa04330-22
+N-hsa04330-1 18 2 3	activation.up	N-hsa04330-22
+N-hsa04330-1 18 2 3	activation.down	N-hsa04330-22
+N-hsa04330-15 16	activation.up	N-hsa04330-13 14
+N-hsa04330-15 16	activation.down	N-hsa04330-13 14
+N-hsa04330-5 8	inhibition.up	N-hsa04330-13 14
+N-hsa04330-5 8	inhibition.down	N-hsa04330-13 14
+N-hsa04330-10 5 6	inhibition.up	N-hsa04330-13 14
+N-hsa04330-10 5 6	inhibition.down	N-hsa04330-13 14
+N-hsa04330-13 14	activation.down	N-hsa04330-12
+N-hsa04330-13 14	activation.up	N-hsa04330-11
+N-hsa04330-22	activation.up	N-hsa04330-19
+N-hsa04330-19	activation	N-hsa04330-19_func
+N-hsa04330-12	activation	N-hsa04330-12_func

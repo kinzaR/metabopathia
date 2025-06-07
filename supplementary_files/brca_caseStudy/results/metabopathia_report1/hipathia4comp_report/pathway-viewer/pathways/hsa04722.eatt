@@ -1,0 +1,403 @@
+id	status	color	pvalue	adj.pvalue	shape	P-hsa04722-38	P-hsa04722-37	P-hsa04722-35	P-hsa04722-33	P-hsa04722-34	P-hsa04722-46	P-hsa04722-85	P-hsa04722-53	P-hsa04722-50	P-hsa04722-73 77	P-hsa04722-70	P-hsa04722-84
+N-hsa04722-5_activation.up_N-hsa04722-2 15	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-5_activation.down_N-hsa04722-2 15	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-5_activation.up_N-hsa04722-2 64	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-5_activation.down_N-hsa04722-2 64	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-5_activation.up_N-hsa04722-2 47	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-5_activation.down_N-hsa04722-2 47	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-6_activation.up_N-hsa04722-2 15	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-6_activation.down_N-hsa04722-2 15	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-6_activation.up_N-hsa04722-2 64	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-6_activation.down_N-hsa04722-2 64	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-6_activation.up_N-hsa04722-2 47	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-6_activation.down_N-hsa04722-2 47	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-1 15	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-1 15	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-1 64	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-1 64	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-1 47	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-1 47	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-2 15	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-2 15	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-2 64	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-2 64	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-2 47	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-2 47	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-3 15	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-3 15	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-3 64	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-3 64	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-3 47	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-3 47	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-9_activation.up_N-hsa04722-16	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-9_activation.down_N-hsa04722-16	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-16_activation.up_N-hsa04722-21	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-16_activation.down_N-hsa04722-21	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-17_activation.up_N-hsa04722-1 15	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-17_activation.down_N-hsa04722-1 15	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-17_activation.up_N-hsa04722-1 64	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-17_activation.down_N-hsa04722-1 64	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-17_activation.up_N-hsa04722-1 47	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-17_activation.down_N-hsa04722-1 47	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-20_activation.up_N-hsa04722-22	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-20_activation.down_N-hsa04722-22	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-20_activation.down_N-hsa04722-57	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-20_activation.up_N-hsa04722-60	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-20_activation.down_N-hsa04722-60	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-21_activation.up_N-hsa04722-25	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-21_activation.down_N-hsa04722-25	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-22_activation.up_N-hsa04722-21	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-22_activation.down_N-hsa04722-21	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-25_inhibition.up_N-hsa04722-20	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-25_inhibition.down_N-hsa04722-20	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	inhibited	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-25_activation.up_N-hsa04722-26	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-25_activation.down_N-hsa04722-26	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-25_activation.down_N-hsa04722-44	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-26_inhibition.up_N-hsa04722-20	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-26_inhibition.down_N-hsa04722-20	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	inhibited	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-26_activation.down_N-hsa04722-38	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-29_activation.up_N-hsa04722-31	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-29_activation.down_N-hsa04722-31	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-31_activation.up_N-hsa04722-21	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-31_activation.down_N-hsa04722-21	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-44_activation.down_N-hsa04722-38	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-56_activation.down_N-hsa04722-38	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-57_activation.down_N-hsa04722-56	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-58_activation.up_N-hsa04722-59	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-58_activation.down_N-hsa04722-59	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-59_activation.up_N-hsa04722-26	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-59_activation.down_N-hsa04722-26	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-60_activation.up_N-hsa04722-58	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-60_activation.down_N-hsa04722-58	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.up_N-hsa04722-9	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.down_N-hsa04722-9	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-1 15_activation.up_N-hsa04722-62	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.down_N-hsa04722-62	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.up_N-hsa04722-63	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.down_N-hsa04722-63	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.up_N-hsa04722-27 39	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.down_N-hsa04722-27 39	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.up_N-hsa04722-27 43	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.down_N-hsa04722-27 43	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.up_N-hsa04722-9	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.down_N-hsa04722-9	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-1 64_activation.up_N-hsa04722-62	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.down_N-hsa04722-62	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.up_N-hsa04722-63	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.down_N-hsa04722-63	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.up_N-hsa04722-27 39	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.down_N-hsa04722-27 39	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.up_N-hsa04722-27 43	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.down_N-hsa04722-27 43	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.up_N-hsa04722-9	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.down_N-hsa04722-9	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-1 47_activation.up_N-hsa04722-62	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.down_N-hsa04722-62	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.up_N-hsa04722-63	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.down_N-hsa04722-63	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.up_N-hsa04722-27 39	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.down_N-hsa04722-27 39	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.up_N-hsa04722-27 43	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.down_N-hsa04722-27 43	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 15_activation.up_N-hsa04722-9	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 15_activation.down_N-hsa04722-9	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-2 15_activation.up_N-hsa04722-62	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 15_activation.down_N-hsa04722-62	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 15_activation.up_N-hsa04722-63	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 15_activation.down_N-hsa04722-63	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 64_activation.up_N-hsa04722-9	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 64_activation.down_N-hsa04722-9	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-2 64_activation.up_N-hsa04722-62	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 64_activation.down_N-hsa04722-62	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 64_activation.up_N-hsa04722-63	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 64_activation.down_N-hsa04722-63	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 47_activation.up_N-hsa04722-9	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 47_activation.down_N-hsa04722-9	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-2 47_activation.up_N-hsa04722-62	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 47_activation.down_N-hsa04722-62	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 47_activation.up_N-hsa04722-63	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 47_activation.down_N-hsa04722-63	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 15_activation.up_N-hsa04722-9	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 15_activation.down_N-hsa04722-9	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-3 15_activation.up_N-hsa04722-62	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 15_activation.down_N-hsa04722-62	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 15_activation.up_N-hsa04722-63	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 15_activation.down_N-hsa04722-63	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 64_activation.up_N-hsa04722-9	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 64_activation.down_N-hsa04722-9	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-3 64_activation.up_N-hsa04722-62	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 64_activation.down_N-hsa04722-62	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 64_activation.up_N-hsa04722-63	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 64_activation.down_N-hsa04722-63	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 47_activation.up_N-hsa04722-9	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 47_activation.down_N-hsa04722-9	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	1	0	0	0	0	0	0
+N-hsa04722-3 47_activation.up_N-hsa04722-62	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 47_activation.down_N-hsa04722-62	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 47_activation.up_N-hsa04722-63	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 47_activation.down_N-hsa04722-63	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-15 24_activation.up_N-hsa04722-20	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-15 24_activation.down_N-hsa04722-20	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-27 28_activation.up_N-hsa04722-29	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-27 28_activation.down_N-hsa04722-29	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-62_activation.up_N-hsa04722-15 24	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-62_activation.down_N-hsa04722-15 24	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-63_activation.up_N-hsa04722-15 24	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-63_activation.down_N-hsa04722-15 24	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-27 39_activation.up_N-hsa04722-27 28	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-27 39_activation.down_N-hsa04722-27 28	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-27 43_activation.up_N-hsa04722-27 28	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-27 43_activation.down_N-hsa04722-27 28	DOWN	#1f78b4	3.43333389253642e-15	1.96369950682876e-14	directed	1	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-5_activation.up_N-hsa04722-18 61	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-5_activation.down_N-hsa04722-18 61	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-5_activation_N-hsa04722-18 61	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-5_activation.up_N-hsa04722-18 72	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-5_activation.down_N-hsa04722-18 72	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-5_activation_N-hsa04722-18 72	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-5_activation.up_N-hsa04722-18 71	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-5_activation.down_N-hsa04722-18 71	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-5_activation_N-hsa04722-18 71	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-5_activation.up_N-hsa04722-18 69	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	1	0
+N-hsa04722-5_activation.down_N-hsa04722-18 69	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-5_activation_N-hsa04722-18 69	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-5_activation.up_N-hsa04722-18 74	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-5_activation.down_N-hsa04722-18 74	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-5_activation_N-hsa04722-18 74	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-5_activation.up_N-hsa04722-18 42	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-5_activation.down_N-hsa04722-18 42	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-5_activation_N-hsa04722-18 42	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-5_activation.up_N-hsa04722-18 75 76	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-5_activation.down_N-hsa04722-18 75 76	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	1
+N-hsa04722-5_activation_N-hsa04722-18 75 76	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-6_activation.up_N-hsa04722-18 61	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-6_activation.down_N-hsa04722-18 61	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-6_activation_N-hsa04722-18 61	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-6_activation.up_N-hsa04722-18 72	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-6_activation.down_N-hsa04722-18 72	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-6_activation_N-hsa04722-18 72	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-6_activation.up_N-hsa04722-18 71	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-6_activation.down_N-hsa04722-18 71	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-6_activation_N-hsa04722-18 71	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-6_activation.up_N-hsa04722-18 69	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	1	0
+N-hsa04722-6_activation.down_N-hsa04722-18 69	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-6_activation_N-hsa04722-18 69	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-6_activation.up_N-hsa04722-18 74	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-6_activation.down_N-hsa04722-18 74	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-6_activation_N-hsa04722-18 74	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-6_activation.up_N-hsa04722-18 42	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-6_activation.down_N-hsa04722-18 42	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-6_activation_N-hsa04722-18 42	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-6_activation.up_N-hsa04722-18 75 76	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-6_activation.down_N-hsa04722-18 75 76	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	1
+N-hsa04722-6_activation_N-hsa04722-18 75 76	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-18 61	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-18 61	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-7_activation_N-hsa04722-18 61	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-18 72	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-18 72	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-7_activation_N-hsa04722-18 72	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-18 71	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-18 71	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-7_activation_N-hsa04722-18 71	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-18 69	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	1	0
+N-hsa04722-7_activation.down_N-hsa04722-18 69	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-7_activation_N-hsa04722-18 69	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-18 74	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-18 74	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-7_activation_N-hsa04722-18 74	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-18 42	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-18 42	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-7_activation_N-hsa04722-18 42	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-7_activation.up_N-hsa04722-18 75 76	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-7_activation.down_N-hsa04722-18 75 76	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	1
+N-hsa04722-7_activation_N-hsa04722-18 75 76	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-17_activation.up_N-hsa04722-18 61	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-17_activation.down_N-hsa04722-18 61	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-17_activation_N-hsa04722-18 61	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-17_activation.up_N-hsa04722-18 72	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-17_activation.down_N-hsa04722-18 72	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-17_activation_N-hsa04722-18 72	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-17_activation.up_N-hsa04722-18 71	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-17_activation.down_N-hsa04722-18 71	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-17_activation_N-hsa04722-18 71	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-17_activation.up_N-hsa04722-18 69	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	1	0
+N-hsa04722-17_activation.down_N-hsa04722-18 69	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-17_activation_N-hsa04722-18 69	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-17_activation.up_N-hsa04722-18 74	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-17_activation.down_N-hsa04722-18 74	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-17_activation_N-hsa04722-18 74	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-17_activation.up_N-hsa04722-18 42	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-17_activation.down_N-hsa04722-18 42	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	0
+N-hsa04722-17_activation_N-hsa04722-18 42	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-17_activation.up_N-hsa04722-18 75 76	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-17_activation.down_N-hsa04722-18 75 76	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	1	0	1	0	1
+N-hsa04722-17_activation_N-hsa04722-18 75 76	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-19_activation.up_N-hsa04722-36	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-20_activation.up_N-hsa04722-8 30	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-20_activation.down_N-hsa04722-8 30	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-20_activation.up_N-hsa04722-8 32	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-20_activation.down_N-hsa04722-8 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-36_activation.up_N-hsa04722-37	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-40_activation.up_N-hsa04722-19	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-40_activation.down_N-hsa04722-19	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-55_activation.up_N-hsa04722-8 30	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-55_activation.down_N-hsa04722-8 30	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-55_activation.up_N-hsa04722-8 32	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-55_activation.down_N-hsa04722-8 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.up_N-hsa04722-55	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.down_N-hsa04722-55	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.up_N-hsa04722-14 32	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 15_activation.down_N-hsa04722-14 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.up_N-hsa04722-55	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.down_N-hsa04722-55	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.up_N-hsa04722-14 32	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 64_activation.down_N-hsa04722-14 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.up_N-hsa04722-55	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.down_N-hsa04722-55	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.up_N-hsa04722-14 32	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-1 47_activation.down_N-hsa04722-14 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 15_activation.up_N-hsa04722-55	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 15_activation.down_N-hsa04722-55	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 15_activation.up_N-hsa04722-14 32	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 15_activation.down_N-hsa04722-14 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 64_activation.up_N-hsa04722-55	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 64_activation.down_N-hsa04722-55	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 64_activation.up_N-hsa04722-14 32	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 64_activation.down_N-hsa04722-14 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 47_activation.up_N-hsa04722-55	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 47_activation.down_N-hsa04722-55	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-2 47_activation.up_N-hsa04722-14 32	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-2 47_activation.down_N-hsa04722-14 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 15_activation.up_N-hsa04722-55	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 15_activation.down_N-hsa04722-55	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 15_activation.up_N-hsa04722-14 32	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 15_activation.down_N-hsa04722-14 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 64_activation.up_N-hsa04722-55	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 64_activation.down_N-hsa04722-55	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 64_activation.up_N-hsa04722-14 32	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 64_activation.down_N-hsa04722-14 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 47_activation.up_N-hsa04722-55	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 47_activation.down_N-hsa04722-55	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-3 47_activation.up_N-hsa04722-14 32	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-3 47_activation.down_N-hsa04722-14 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-8 30_activation.up_N-hsa04722-19	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-8 30_activation.down_N-hsa04722-19	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-8 30_activation.up_N-hsa04722-40	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-8 30_activation.down_N-hsa04722-40	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-8 32_activation.up_N-hsa04722-19	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-8 32_activation.down_N-hsa04722-19	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-8 32_activation.up_N-hsa04722-40	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-8 32_activation.down_N-hsa04722-40	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 61_inhibition.up_N-hsa04722-8 30	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 61_inhibition.down_N-hsa04722-8 30	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 61_inhibition.up_N-hsa04722-8 32	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 61_inhibition.down_N-hsa04722-8 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 72_inhibition.up_N-hsa04722-8 30	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 72_inhibition.down_N-hsa04722-8 30	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 72_inhibition.up_N-hsa04722-8 32	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 72_inhibition.down_N-hsa04722-8 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 71_inhibition.up_N-hsa04722-8 30	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 71_inhibition.down_N-hsa04722-8 30	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 71_inhibition.up_N-hsa04722-8 32	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 71_inhibition.down_N-hsa04722-8 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 69_inhibition.up_N-hsa04722-8 30	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 69_inhibition.down_N-hsa04722-8 30	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 69_inhibition.up_N-hsa04722-8 32	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 69_inhibition.down_N-hsa04722-8 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 74_inhibition.up_N-hsa04722-8 30	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 74_inhibition.down_N-hsa04722-8 30	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 74_inhibition.up_N-hsa04722-8 32	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 74_inhibition.down_N-hsa04722-8 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 42_inhibition.up_N-hsa04722-8 30	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 42_inhibition.down_N-hsa04722-8 30	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 42_inhibition.up_N-hsa04722-8 32	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 42_inhibition.down_N-hsa04722-8 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 75 76_inhibition.up_N-hsa04722-8 30	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 75 76_inhibition.down_N-hsa04722-8 30	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-18 75 76_inhibition.up_N-hsa04722-8 32	UP	#e31a1c	0	0	inhibited	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-18 75 76_inhibition.down_N-hsa04722-8 32	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-14 32_activation.up_N-hsa04722-8 30	UP	#e31a1c	0	0	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-14 32_activation.down_N-hsa04722-8 30	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	directed	0	0	1	1	1	0	0	0	0	0	0	0
+N-hsa04722-19_inhibition.down_N-hsa04722-35	DOWN	#1f78b4	5.20540151298997e-17	4.24579706016052e-16	inhibited	0	0	1	0	0	0	0	0	0	0	0	0
+N-hsa04722-19_inhibition.down_N-hsa04722-33	DOWN	#1f78b4	3.84604532925723e-08	8.98528149151501e-08	inhibited	0	0	0	1	0	0	0	0	0	0	0	0
+N-hsa04722-19_inhibition.down_N-hsa04722-34	DOWN	#1f78b4	1.19326749758503e-12	4.41532509954539e-12	inhibited	0	0	0	0	1	0	0	0	0	0	0	0
+N-hsa04722-9_activation.down_N-hsa04722-80	DOWN	#1f78b4	3.44689186837306e-17	2.91277889417472e-16	directed	0	0	0	0	0	1	0	0	0	0	0	0
+N-hsa04722-45_activation.down_N-hsa04722-46	DOWN	#1f78b4	3.44689186837306e-17	2.91277889417472e-16	directed	0	0	0	0	0	1	0	0	0	0	0	0
+N-hsa04722-80_activation.down_N-hsa04722-45	DOWN	#1f78b4	3.44689186837306e-17	2.91277889417472e-16	directed	0	0	0	0	0	1	0	0	0	0	0	0
+N-hsa04722-49_activation_N-hsa04722-51	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-51_activation_N-hsa04722-85	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-52_activation.down_N-hsa04722-65	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-52_activation_N-hsa04722-65	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-54_activation.down_N-hsa04722-65	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-54_activation_N-hsa04722-65	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-65_activation.down_N-hsa04722-49	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-65_activation_N-hsa04722-49	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-66_activation.down_N-hsa04722-52	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-66_activation_N-hsa04722-52	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-66_activation.down_N-hsa04722-54	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-66_activation_N-hsa04722-54	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-67_activation.down_N-hsa04722-52	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-67_activation_N-hsa04722-52	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-67_activation.down_N-hsa04722-54	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-67_activation_N-hsa04722-54	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-68_inhibition_N-hsa04722-51	DOWN	darkgrey	0.146315032209085	0.177317183736591	inhibited	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 61_activation.down_N-hsa04722-66	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 61_activation_N-hsa04722-66	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 61_activation.down_N-hsa04722-67	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 61_activation_N-hsa04722-67	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 72_activation.down_N-hsa04722-66	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 72_activation_N-hsa04722-66	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 72_activation.down_N-hsa04722-67	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 72_activation_N-hsa04722-67	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 71_activation.down_N-hsa04722-66	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 71_activation_N-hsa04722-66	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 71_activation.down_N-hsa04722-67	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 71_activation_N-hsa04722-67	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 69_activation.down_N-hsa04722-49	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 69_activation_N-hsa04722-49	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 69_activation.down_N-hsa04722-66	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 69_activation_N-hsa04722-66	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 69_activation.down_N-hsa04722-67	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 69_activation_N-hsa04722-67	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 74_activation.down_N-hsa04722-66	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 74_activation_N-hsa04722-66	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 74_activation.down_N-hsa04722-67	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 74_activation_N-hsa04722-67	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 42_activation.down_N-hsa04722-66	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 42_activation_N-hsa04722-66	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 42_activation.down_N-hsa04722-67	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 42_activation_N-hsa04722-67	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 75 76_activation.down_N-hsa04722-66	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 75 76_activation_N-hsa04722-66	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-18 75 76_activation.down_N-hsa04722-67	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 75 76_activation_N-hsa04722-67	DOWN	darkgrey	0.146315032209085	0.177317183736591	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-49_activation.down_N-hsa04722-53	DOWN	#1f78b4	4.92012727736792e-19	7.26784155302536e-18	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-18 61_activation.up_N-hsa04722-50	UP	#e31a1c	0	0	directed	0	0	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-18 72_inhibition.up_N-hsa04722-50	UP	#e31a1c	0	0	inhibited	0	0	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-18 71_inhibition.up_N-hsa04722-50	UP	#e31a1c	0	0	inhibited	0	0	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-18 69_inhibition.up_N-hsa04722-50	UP	#e31a1c	0	0	inhibited	0	0	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-18 74_inhibition.up_N-hsa04722-50	UP	#e31a1c	0	0	inhibited	0	0	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-18 42_inhibition.up_N-hsa04722-50	UP	#e31a1c	0	0	inhibited	0	0	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-18 75 76_inhibition.up_N-hsa04722-50	UP	#e31a1c	0	0	inhibited	0	0	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-18 61_activation.down_N-hsa04722-73 77	DOWN	#1f78b4	1.19313549549567e-13	5.25427744025791e-13	directed	0	0	0	0	0	0	0	0	0	1	0	0
+N-hsa04722-18 72_activation.down_N-hsa04722-73 77	DOWN	#1f78b4	1.19313549549567e-13	5.25427744025791e-13	directed	0	0	0	0	0	0	0	0	0	1	0	0
+N-hsa04722-18 71_activation.down_N-hsa04722-73 77	DOWN	#1f78b4	1.19313549549567e-13	5.25427744025791e-13	directed	0	0	0	0	0	0	0	0	0	1	0	0
+N-hsa04722-18 69_activation.down_N-hsa04722-73 77	DOWN	#1f78b4	1.19313549549567e-13	5.25427744025791e-13	directed	0	0	0	0	0	0	0	0	0	1	0	0
+N-hsa04722-18 74_activation.down_N-hsa04722-73 77	DOWN	#1f78b4	1.19313549549567e-13	5.25427744025791e-13	directed	0	0	0	0	0	0	0	0	0	1	0	0
+N-hsa04722-18 42_activation.down_N-hsa04722-73 77	DOWN	#1f78b4	1.19313549549567e-13	5.25427744025791e-13	directed	0	0	0	0	0	0	0	0	0	1	0	0
+N-hsa04722-18 75 76_activation.down_N-hsa04722-73 77	DOWN	#1f78b4	1.19313549549567e-13	5.25427744025791e-13	directed	0	0	0	0	0	0	0	0	0	1	0	0
+N-hsa04722-18 69_inhibition.up_N-hsa04722-70	UP	#e31a1c	0	0	inhibited	0	0	0	0	0	0	0	0	0	0	1	0
+N-hsa04722-78_activation.down_N-hsa04722-86	DOWN	#1f78b4	8.88513074443074e-18	8.59201302915055e-17	directed	0	0	0	0	0	0	0	0	0	0	0	1
+N-hsa04722-86_activation.down_N-hsa04722-84	DOWN	#1f78b4	8.88513074443074e-18	8.59201302915055e-17	directed	0	0	0	0	0	0	0	0	0	0	0	1
+N-hsa04722-18 75 76_activation.down_N-hsa04722-78	DOWN	#1f78b4	8.88513074443074e-18	8.59201302915055e-17	directed	0	0	0	0	0	0	0	0	0	0	0	1
+N-hsa04722-35_activation_N-hsa04722-35_func	DOWN	darkgrey	N-hsa04722-35_activation_N-hsa04722-35_func	DOWN	directed	0	0	1	0	0	0	0	0	0	0	0	0
+N-hsa04722-33_activation_N-hsa04722-33_func	DOWN	darkgrey	N-hsa04722-33_activation_N-hsa04722-33_func	DOWN	directed	0	0	0	1	0	0	0	0	0	0	0	0
+N-hsa04722-34_activation_N-hsa04722-34_func	DOWN	darkgrey	N-hsa04722-34_activation_N-hsa04722-34_func	DOWN	directed	0	0	0	0	1	0	0	0	0	0	0	0
+N-hsa04722-38_activation_N-hsa04722-38_func	DOWN	darkgrey	N-hsa04722-38_activation_N-hsa04722-38_func	DOWN	directed	1	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-37_activation_N-hsa04722-37_func	DOWN	darkgrey	N-hsa04722-37_activation_N-hsa04722-37_func	DOWN	directed	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04722-46_activation_N-hsa04722-46_func	DOWN	darkgrey	N-hsa04722-46_activation_N-hsa04722-46_func	DOWN	directed	0	0	0	0	0	1	0	0	0	0	0	0
+N-hsa04722-53_activation_N-hsa04722-53_func	DOWN	darkgrey	N-hsa04722-53_activation_N-hsa04722-53_func	DOWN	directed	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04722-85_activation_N-hsa04722-85_func	DOWN	darkgrey	N-hsa04722-85_activation_N-hsa04722-85_func	DOWN	directed	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04722-84_activation_N-hsa04722-84_func	DOWN	darkgrey	N-hsa04722-84_activation_N-hsa04722-84_func	DOWN	directed	0	0	0	0	0	0	0	0	0	0	0	1
+N-hsa04722-50_activation_N-hsa04722-50_func	DOWN	darkgrey	N-hsa04722-50_activation_N-hsa04722-50_func	DOWN	directed	0	0	0	0	0	0	0	0	1	0	0	0
+N-hsa04722-73 77_activation_N-hsa04722-73 77_func	DOWN	darkgrey	N-hsa04722-73 77_activation_N-hsa04722-73 77_func	DOWN	directed	0	0	0	0	0	0	0	0	0	1	0	0
+N-hsa04722-70_activation_N-hsa04722-70_func	DOWN	darkgrey	N-hsa04722-70_activation_N-hsa04722-70_func	DOWN	directed	0	0	0	0	0	0	0	0	0	0	1	0

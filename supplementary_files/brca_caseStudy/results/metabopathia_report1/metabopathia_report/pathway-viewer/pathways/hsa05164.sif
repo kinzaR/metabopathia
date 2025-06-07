@@ -1,0 +1,70 @@
+N-hsa05164-9	activation.up	N-hsa05164-11
+N-hsa05164-10	activation.up	N-hsa05164-11
+N-hsa05164-11	activation.up	N-hsa05164-18
+N-hsa05164-12	inhibition.up	N-hsa05164-9
+N-hsa05164-12	inhibition.down	N-hsa05164-9
+N-hsa05164-12	inhibition	N-hsa05164-9
+N-hsa05164-16	activation.up	N-hsa05164-17
+N-hsa05164-17	activation.up	N-hsa05164-18
+N-hsa05164-18	activation.up	N-hsa05164-21
+N-hsa05164-21	activation.up	N-hsa05164-19
+N-hsa05164-64	activation.up	N-hsa05164-21
+N-hsa05164-65	inhibition.up	N-hsa05164-64
+N-hsa05164-65	inhibition.down	N-hsa05164-64
+N-hsa05164-65	inhibition	N-hsa05164-64
+N-hsa05164-152	activation.up	N-hsa05164-17
+N-hsa05164-11	activation.up	N-hsa05164-14 15
+N-hsa05164-16	activation.up	N-hsa05164-25
+N-hsa05164-17	activation.up	N-hsa05164-14 15
+N-hsa05164-25	activation.up	N-hsa05164-26
+N-hsa05164-26	activation.up	N-hsa05164-23
+N-hsa05164-14 15	activation.up	N-hsa05164-23
+N-hsa05164-9	activation	N-hsa05164-52
+N-hsa05164-16	activation	N-hsa05164-52
+N-hsa05164-52	activation	N-hsa05164-53
+N-hsa05164-64	activation	N-hsa05164-52
+N-hsa05164-9	activation.down	N-hsa05164-54
+N-hsa05164-16	activation.down	N-hsa05164-54
+N-hsa05164-54	activation.down	N-hsa05164-55
+N-hsa05164-55	activation.down	N-hsa05164-20
+N-hsa05164-64	activation.down	N-hsa05164-54
+N-hsa05164-9	activation.up	N-hsa05164-40 51
+N-hsa05164-38 40	activation.up	N-hsa05164-41 42
+N-hsa05164-40 51	activation.up	N-hsa05164-41 42
+N-hsa05164-25	inhibition.up	N-hsa05164-77
+N-hsa05164-76	activation.up	N-hsa05164-77
+N-hsa05164-25	inhibition.up	N-hsa05164-78
+N-hsa05164-28	activation.up	N-hsa05164-29
+N-hsa05164-29	activation.up	N-hsa05164-30
+N-hsa05164-30	activation.up	N-hsa05164-24
+N-hsa05164-33	activation.down	N-hsa05164-34
+N-hsa05164-33	activation.up	N-hsa05164-35
+N-hsa05164-33	activation.down	N-hsa05164-36
+N-hsa05164-37	activation.down	N-hsa05164-31 32 33
+N-hsa05164-64	activation.up	N-hsa05164-68
+N-hsa05164-67	inhibition.up	N-hsa05164-65 66
+N-hsa05164-69	activation.up	N-hsa05164-70
+N-hsa05164-87	activation.down	N-hsa05164-88
+N-hsa05164-88	activation.down	N-hsa05164-89
+N-hsa05164-89	activation.down	N-hsa05164-90
+N-hsa05164-100	inhibition.down	N-hsa05164-99
+N-hsa05164-38 39	activation.down	N-hsa05164-100
+N-hsa05164-151	activation	N-hsa05164-47
+N-hsa05164-149 150	activation	N-hsa05164-151
+N-hsa05164-19	activation	N-hsa05164-19_func
+N-hsa05164-77	activation	N-hsa05164-77_func
+N-hsa05164-78	activation	N-hsa05164-78_func
+N-hsa05164-23	activation	N-hsa05164-23_func
+N-hsa05164-24	activation	N-hsa05164-24_func
+N-hsa05164-34	activation	N-hsa05164-34_func
+N-hsa05164-36	activation	N-hsa05164-36_func
+N-hsa05164-31 32 33	activation	N-hsa05164-31 32 33_func
+N-hsa05164-53	activation	N-hsa05164-53_func
+N-hsa05164-20	activation	N-hsa05164-20_func
+N-hsa05164-68	activation	N-hsa05164-68_func
+N-hsa05164-65 66	activation	N-hsa05164-65 66_func
+N-hsa05164-70	activation	N-hsa05164-70_func
+N-hsa05164-90	activation	N-hsa05164-90_func
+N-hsa05164-99	activation	N-hsa05164-99_func
+N-hsa05164-47	activation	N-hsa05164-47_func
+N-hsa05164-41 42	activation	N-hsa05164-41 42_func

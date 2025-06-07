@@ -1,0 +1,6 @@
+  0% : Analysis is started
+ 20% : Data preprocessed successfully
+ 40% : Pathways loaded successfully
+ 60% : Signal propagation computed successfully
+ 80% : Differential Activity Analysis completed successfully
+100% : HTML report created successfully in the ./tmp/metabopathia_report1/metabopathia_report

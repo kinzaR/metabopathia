@@ -1,0 +1,44 @@
+ID	label	labelSize	X	Y	color	strokeColor	strokeSize	shape	type	labelCex	labelColor	size	genesList	tooltip	P-hsa04950-31	P-hsa04950-30	P-hsa04950-16	P-hsa04950-8	P-hsa04950-1	P-hsa04950-21	P-hsa04950-18	P-hsa04950-20	P-hsa04950-13	P-hsa04950-5	P-hsa04950-15	P-hsa04950-11	P-hsa04950-7	P-hsa04950-22
+N-hsa04950-2	HES1	10	484	500	white	lightgrey	2	ellipse	node	0.62	black	22	3280	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3280>3280</a> (HES1)	1	1	1	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04950-4	ONECUT1	10	400	500	#DE3535	#DE3535	2	ellipse	node	0.62	black	22	3175	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3175>3175</a> (ONECUT1)	1	1	1	1	1	0	0	0	0	0	0	0	0	0
+N-hsa04950-6	PDX1	10	442	138	#DC2D2D	#DC2D2D	2	ellipse	node	0.62	black	22	3651	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3651>3651</a> (PDX1)	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+N-hsa04950-10	MAFA	10	457	184	#DA1F1F	#DA1F1F	2	ellipse	node	0.62	black	22	389692	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:389692>389692</a> (MAFA)	0	0	0	0	0	1	1	1	1	0	0	0	0	0
+N-hsa04950-12	NKX2-2	10	580	92	#DA1F1F	#DA1F1F	2	ellipse	node	0.62	black	22	4821	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:4821>4821</a> (NKX2-2)	0	0	0	0	0	0	0	0	1	1	1	0	0	0
+N-hsa04950-14	HNF1A	10	359	92	white	lightgrey	2	ellipse	node	0.62	black	22	6927	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:6927>6927</a> (HNF1A)	0	0	0	0	0	1	1	0	0	0	0	1	1	0
+N-hsa04950-19	NEUROD1	10	629	92	white	lightgrey	2	ellipse	node	0.62	black	22	4760	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:4760>4760</a> (NEUROD1)	0	0	0	0	0	0	0	0	1	1	1	0	0	0
+N-hsa04950-23	NEUROG3	10	442	454	white	lightgrey	2	ellipse	node	0.62	black	22	50674	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:50674>50674</a> (NEUROG3)	1	1	1	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04950-24	PAX6	10	506	184	#DA1F1F	#DA1F1F	2	ellipse	node	0.62	black	22	5080	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:5080>5080</a> (PAX6)	0	0	0	0	0	1	1	1	1	1	1	0	0	0
+N-hsa04950-25	HNF4A	10	442	92	white	lightgrey	2	ellipse	node	0.62	black	22	3172	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3172>3172</a> (HNF4A)	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+N-hsa04950-26	PDX1	10	442	651	#DC2D2D	#DC2D2D	2	ellipse	node	0.62	black	22	3651	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3651>3651</a> (PDX1)	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+N-hsa04950-27	NKX2-2	10	442	390	#DA1F1F	#DA1F1F	2	ellipse	node	0.62	black	22	4821	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:4821>4821</a> (NKX2-2)	1	0	0	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04950-28	HHEX	10	459	743	white	lightgrey	2	ellipse	node	0.62	black	22	3087	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3087>3087</a> (HHEX)	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+N-hsa04950-29	MNX1	10	508	743	#DA1F1F	#DA1F1F	2	ellipse	node	0.62	black	22	3110	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3110>3110</a> (MNX1)	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+N-hsa04950-32	FOXA2	10	400	184	white	lightgrey	2	ellipse	node	0.62	black	22	3170	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3170>3170</a> (FOXA2)	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+N-hsa04950-34	ONECUT1	10	400	697	#DE3535	#DE3535	2	ellipse	node	0.62	black	22	3175	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3175>3175</a> (ONECUT1)	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+N-hsa04950-1	HNF1B	10	359	454	white	lightgrey	2	ellipse	node	0.62	black	22	6928	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:6928>6928</a> (HNF1B)	0	0	0	0	1	0	0	0	0	0	0	0	0	0
+N-hsa04950-20	NKX6-1	10	276	92	#DA1F1F	#DA1F1F	2	ellipse	node	0.62	black	22	4825	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:4825>4825</a> (NKX6-1)	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+N-hsa04950-13	INS	10	524	0	white	lightgrey	2	ellipse	node	0.62	black	22	3630	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3630>3630</a> (INS)	0	0	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04950-5	GCK	10	580	0	#1F9CDA	#1F9CDA	2	ellipse	node	0.62	black	22	2645	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:2645>2645</a> (GCK)	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04950-11	HNF4G	10	335	46	white	lightgrey	2	ellipse	node	0.62	black	22	3174	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3174>3174</a> (HNF4G)	0	0	0	0	0	0	0	0	0	0	0	1	0	0
+N-hsa04950-7	FOXA3	10	383	46	#E04444	#E04444	2	ellipse	node	0.62	black	22	3171	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3171>3171</a> (FOXA3)	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+N-hsa04950-30	PAX6	10	500	390	#DA1F1F	#DA1F1F	2	ellipse	node	0.62	black	22	5080	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:5080>5080</a> (PAX6)	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04950-16	PAX4	10	548	390	white	lightgrey	2	ellipse	node	0.62	black	22	5078	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:5078>5078</a> (PAX4)	0	0	1	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04950-8	NEUROD1	10	596	390	white	lightgrey	2	ellipse	node	0.62	black	22	4760	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:4760>4760</a> (NEUROD1)	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04950-21	PKLR	10	417	0	#F1AAAA	#F1AAAA	2	ellipse	node	0.62	black	22	5313	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:5313>5313</a> (PKLR)	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+N-hsa04950-18	SLC2A2	10	465	0	#239EDB	#239EDB	2	ellipse	node	0.62	black	22	6514	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:6514>6514</a> (SLC2A2)	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+N-hsa04950-22	NR5A2	10	442	605	#1F9CDA	#1F9CDA	2	ellipse	node	0.62	black	22	2494	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:2494>2494</a> (NR5A2)	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+N-hsa04950-31	NKX6-1	10	442	298	#DA1F1F	#DA1F1F	2	ellipse	node	0.62	black	22	4825	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:4825>4825</a> (NKX6-1)	1	0	0	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04950-15	IAPP	10	629	0	white	lightgrey	2	ellipse	node	0.62	black	22	3375	<a target=_blank href=http://www.genome.jp/dbget-bin/www_bget?hsa:3375>3375</a> (IAPP)	0	0	0	0	0	0	0	0	0	0	1	0	0	0
+N-hsa04950-1_func	Transcription regulation	10	468.241105983117	454	white	lightgrey	2	rectangle	node	0.62	black	-1		Transcription regulation	0	0	0	0	1	0	0	0	0	0	0	0	0	0
+N-hsa04950-20_func	Transcription regulation	10	385.241105983117	92	white	lightgrey	2	rectangle	node	0.62	black	-1		Transcription regulation	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+N-hsa04950-13_func	Glucose metabolism	10	622.433762031874	0	white	lightgrey	2	rectangle	node	0.62	black	-1		Glucose metabolism	0	0	0	0	0	0	0	0	1	0	0	0	0	0
+N-hsa04950-5_func	Glycolysis	10	686.451572106284	0	white	lightgrey	2	rectangle	node	0.62	black	-1		Glycolysis	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+N-hsa04950-11_func	Transcription regulation	10	441.451572106285	46	white	lightgrey	2	rectangle	node	0.62	black	-1		Transcription regulation	0	0	0	0	0	0	0	0	0	0	0	1	0	0
+N-hsa04950-7_func	Transcription regulation	10	489.451572106285	46	white	lightgrey	2	rectangle	node	0.62	black	-1		Transcription regulation	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+N-hsa04950-30_func	Transcription regulation	10	595.862334876343	390	white	lightgrey	2	rectangle	node	0.62	black	-1		Transcription regulation	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04950-16_func	Transcription regulation	10	654.451572106284	390	white	lightgrey	2	rectangle	node	0.62	black	-1		Transcription regulation	0	0	1	0	0	0	0	0	0	0	0	0	0	0
+N-hsa04950-8_func	Transcription regulation	10	702.451572106284	390	white	lightgrey	2	rectangle	node	0.62	black	-1		Transcription regulation	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+N-hsa04950-21_func	Glycolysis	10	516.005190232362	0	white	lightgrey	2	rectangle	node	0.62	black	-1		Glycolysis	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+N-hsa04950-18_func	Sugar transport	10	566.290902973022	0	white	lightgrey	2	rectangle	node	0.62	black	-1		Sugar transport	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+N-hsa04950-22_func	Transcription regulation	10	548.451572106284	605	white	lightgrey	2	rectangle	node	0.62	black	-1		Transcription regulation	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+N-hsa04950-31_func	Transcription regulation	10	548.451572106284	298	white	lightgrey	2	rectangle	node	0.62	black	-1		Transcription regulation	1	0	0	0	0	0	0	0	0	0	0	0	0	0

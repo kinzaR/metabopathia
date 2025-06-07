@@ -1,0 +1,170 @@
+N-hsa04360-16	activation.up	N-hsa04360-36
+N-hsa04360-16	activation.down	N-hsa04360-36
+N-hsa04360-16	activation.up	N-hsa04360-44
+N-hsa04360-16	activation.down	N-hsa04360-44
+N-hsa04360-17	activation.up	N-hsa04360-36
+N-hsa04360-17	activation.down	N-hsa04360-36
+N-hsa04360-17	activation.up	N-hsa04360-44
+N-hsa04360-17	activation.down	N-hsa04360-44
+N-hsa04360-34	inhibition.up	N-hsa04360-36
+N-hsa04360-34	inhibition.down	N-hsa04360-36
+N-hsa04360-36	activation.down	N-hsa04360-66
+N-hsa04360-44	activation.down	N-hsa04360-66
+N-hsa04360-66	inhibition.down	N-hsa04360-19
+N-hsa04360-124	activation.up	N-hsa04360-36
+N-hsa04360-124	activation.down	N-hsa04360-36
+N-hsa04360-124	activation.up	N-hsa04360-44
+N-hsa04360-124	activation.down	N-hsa04360-44
+N-hsa04360-36	activation.up	N-hsa04360-129 130
+N-hsa04360-44	activation.up	N-hsa04360-129 130
+N-hsa04360-129 130	activation.up	N-hsa04360-131
+N-hsa04360-8	activation.up	N-hsa04360-69
+N-hsa04360-37	inhibition.up	N-hsa04360-8
+N-hsa04360-37	inhibition.up	N-hsa04360-31
+N-hsa04360-42	activation.up	N-hsa04360-37
+N-hsa04360-42	activation	N-hsa04360-37
+N-hsa04360-48	activation.up	N-hsa04360-37
+N-hsa04360-48	activation	N-hsa04360-37
+N-hsa04360-69	activation.up	N-hsa04360-31
+N-hsa04360-47 54	activation.up	N-hsa04360-48
+N-hsa04360-47 54	activation	N-hsa04360-48
+N-hsa04360-23	activation	N-hsa04360-20
+N-hsa04360-37	activation	N-hsa04360-23
+N-hsa04360-38	inhibition.up	N-hsa04360-75
+N-hsa04360-42	activation.up	N-hsa04360-38
+N-hsa04360-48	activation.up	N-hsa04360-38
+N-hsa04360-75	activation.up	N-hsa04360-59
+N-hsa04360-39	activation	N-hsa04360-123
+N-hsa04360-42	activation	N-hsa04360-39
+N-hsa04360-48	activation	N-hsa04360-39
+N-hsa04360-42	activation.down	N-hsa04360-50
+N-hsa04360-42	activation	N-hsa04360-50
+N-hsa04360-50	activation	N-hsa04360-29
+N-hsa04360-50	activation.down	N-hsa04360-51
+N-hsa04360-28	activation.up	N-hsa04360-46
+N-hsa04360-46	activation.up	N-hsa04360-6
+N-hsa04360-49	activation.up	N-hsa04360-28
+N-hsa04360-49	activation.up	N-hsa04360-58
+N-hsa04360-62	activation.down	N-hsa04360-61 102
+N-hsa04360-62	activation.down	N-hsa04360-61 67
+N-hsa04360-68	activation.down	N-hsa04360-61 67
+N-hsa04360-98	activation.down	N-hsa04360-100
+N-hsa04360-99	activation.down	N-hsa04360-61 102
+N-hsa04360-99	activation.down	N-hsa04360-61 67
+N-hsa04360-100	activation.down	N-hsa04360-105
+N-hsa04360-105	inhibition.down	N-hsa04360-108
+N-hsa04360-107	activation.down	N-hsa04360-61 102
+N-hsa04360-107	activation.down	N-hsa04360-61 67
+N-hsa04360-61 102	activation.down	N-hsa04360-98
+N-hsa04360-61 67	activation.down	N-hsa04360-98
+N-hsa04360-104	inhibition.down	N-hsa04360-111
+N-hsa04360-61 102	inhibition.down	N-hsa04360-104
+N-hsa04360-7	activation	N-hsa04360-21
+N-hsa04360-64	activation.up	N-hsa04360-56 60
+N-hsa04360-64	activation	N-hsa04360-56 60
+N-hsa04360-64	activation.up	N-hsa04360-57 60
+N-hsa04360-64	activation	N-hsa04360-57 60
+N-hsa04360-64	activation.up	N-hsa04360-60 112
+N-hsa04360-64	activation	N-hsa04360-60 112
+N-hsa04360-56 60	inhibition	N-hsa04360-7
+N-hsa04360-57 60	inhibition	N-hsa04360-7
+N-hsa04360-60 112	inhibition	N-hsa04360-7
+N-hsa04360-22	activation.up	N-hsa04360-114
+N-hsa04360-113	activation.up	N-hsa04360-22
+N-hsa04360-56 60	activation.up	N-hsa04360-22
+N-hsa04360-56 60	inhibition.up	N-hsa04360-113
+N-hsa04360-57 60	inhibition.up	N-hsa04360-113
+N-hsa04360-60 112	activation.up	N-hsa04360-22
+N-hsa04360-60 112	inhibition.up	N-hsa04360-113
+N-hsa04360-5	activation	N-hsa04360-4
+N-hsa04360-70	activation	N-hsa04360-5
+N-hsa04360-41	activation.up	N-hsa04360-3
+N-hsa04360-70	activation.up	N-hsa04360-41
+N-hsa04360-47 54	inhibition.up	N-hsa04360-3
+N-hsa04360-77	activation.down	N-hsa04360-78
+N-hsa04360-78	activation.down	N-hsa04360-79
+N-hsa04360-78	activation.down	N-hsa04360-115
+N-hsa04360-79	activation.down	N-hsa04360-82
+N-hsa04360-80	activation.down	N-hsa04360-77
+N-hsa04360-115	activation.down	N-hsa04360-79
+N-hsa04360-80	activation	N-hsa04360-132
+N-hsa04360-132	activation	N-hsa04360-133
+N-hsa04360-133	activation	N-hsa04360-81
+N-hsa04360-88	activation	N-hsa04360-95
+N-hsa04360-90	activation	N-hsa04360-88
+N-hsa04360-95	activation	N-hsa04360-97
+N-hsa04360-97	activation	N-hsa04360-1 116
+N-hsa04360-97	activation	N-hsa04360-2 116
+N-hsa04360-1 116	activation	N-hsa04360-96
+N-hsa04360-2 116	activation	N-hsa04360-96
+N-hsa04360-93	activation	N-hsa04360-91 126
+N-hsa04360-94	activation	N-hsa04360-89
+N-hsa04360-91 126	activation	N-hsa04360-94
+N-hsa04360-99	activation	N-hsa04360-106
+N-hsa04360-106	activation	N-hsa04360-101 103
+N-hsa04360-107	activation	N-hsa04360-101 103
+N-hsa04360-109	activation	N-hsa04360-101 103
+N-hsa04360-124	activation.up	N-hsa04360-125
+N-hsa04360-74	activation.up	N-hsa04360-40 142
+N-hsa04360-141	activation.up	N-hsa04360-74
+N-hsa04360-141	activation.down	N-hsa04360-74
+N-hsa04360-141	activation.up	N-hsa04360-40 142
+N-hsa04360-10 53	activation.up	N-hsa04360-40 142
+N-hsa04360-30 53	activation.up	N-hsa04360-40 142
+N-hsa04360-74	activation.down	N-hsa04360-40 139
+N-hsa04360-141	activation.down	N-hsa04360-40 139
+N-hsa04360-10 53	activation.down	N-hsa04360-40 139
+N-hsa04360-30 53	activation.down	N-hsa04360-40 139
+N-hsa04360-12	activation.down	N-hsa04360-11
+N-hsa04360-32	activation.down	N-hsa04360-12
+N-hsa04360-128	activation.down	N-hsa04360-32
+N-hsa04360-10 33 30	activation.down	N-hsa04360-128
+N-hsa04360-30 53	activation.down	N-hsa04360-128
+N-hsa04360-9	activation.down	N-hsa04360-145
+N-hsa04360-135	activation.down	N-hsa04360-136
+N-hsa04360-135	activation.up	N-hsa04360-137
+N-hsa04360-135	activation.down	N-hsa04360-137
+N-hsa04360-136	activation.down	N-hsa04360-9
+N-hsa04360-136	activation.down	N-hsa04360-138
+N-hsa04360-137	activation.down	N-hsa04360-9
+N-hsa04360-137	activation.down	N-hsa04360-138
+N-hsa04360-138	activation.down	N-hsa04360-145
+N-hsa04360-10 33 30	activation.up	N-hsa04360-135
+N-hsa04360-10 33 30	activation.down	N-hsa04360-135
+N-hsa04360-30 53	activation.up	N-hsa04360-135
+N-hsa04360-30 53	activation.down	N-hsa04360-135
+N-hsa04360-9	activation.down	N-hsa04360-33 134
+N-hsa04360-138	activation.down	N-hsa04360-33 134
+N-hsa04360-52	activation.up	N-hsa04360-35
+N-hsa04360-137	inhibition.up	N-hsa04360-52
+N-hsa04360-71	activation.down	N-hsa04360-18
+N-hsa04360-47 54	activation.down	N-hsa04360-71
+N-hsa04360-87	inhibition	N-hsa04360-117
+N-hsa04360-83 86	activation	N-hsa04360-84 85
+N-hsa04360-84 85	activation	N-hsa04360-87
+N-hsa04360-118	activation	N-hsa04360-121
+N-hsa04360-119	activation	N-hsa04360-120
+N-hsa04360-120	activation	N-hsa04360-118
+N-hsa04360-121	activation	N-hsa04360-122
+N-hsa04360-84 85	activation	N-hsa04360-119
+N-hsa04360-4	activation	N-hsa04360-4_func
+N-hsa04360-21	activation	N-hsa04360-21_func
+N-hsa04360-33 134	activation	N-hsa04360-33 134_func
+N-hsa04360-11	activation	N-hsa04360-11_func
+N-hsa04360-20	activation	N-hsa04360-20_func
+N-hsa04360-31	activation	N-hsa04360-31_func
+N-hsa04360-3	activation	N-hsa04360-3_func
+N-hsa04360-6	activation	N-hsa04360-6_func
+N-hsa04360-51	activation	N-hsa04360-51_func
+N-hsa04360-35	activation	N-hsa04360-35_func
+N-hsa04360-19	activation	N-hsa04360-19_func
+N-hsa04360-18	activation	N-hsa04360-18_func
+N-hsa04360-40 142	activation	N-hsa04360-40 142_func
+N-hsa04360-40 139	activation	N-hsa04360-40 139_func
+N-hsa04360-59	activation	N-hsa04360-59_func
+N-hsa04360-89	activation	N-hsa04360-89_func
+N-hsa04360-111	activation	N-hsa04360-111_func
+N-hsa04360-101 103	activation	N-hsa04360-101 103_func
+N-hsa04360-81	activation	N-hsa04360-81_func
+N-hsa04360-96	activation	N-hsa04360-96_func
+N-hsa04360-131	activation	N-hsa04360-131_func

@@ -1,0 +1,30 @@
+id	status	color	pvalue	adj.pvalue	shape	P-hsa03460-48	P-hsa03460-25 40	P-hsa03460-28	P-hsa03460-7	P-hsa03460-27	P-hsa03460-16 49	P-hsa03460-16 34
+N-hsa03460-6_activation.up_N-hsa03460-24	UP	#e31a1c	8.88178419700125e-16	5.48099577420209e-15	directed	1	0	0	0	0	0	0
+N-hsa03460-24_activation.up_N-hsa03460-48	UP	#e31a1c	8.88178419700125e-16	5.48099577420209e-15	directed	1	0	0	0	0	0	0
+N-hsa03460-20 21_activation.up_N-hsa03460-1 10 11 13 2 3 32 35 4 50 51 8 9 14 17 18 19	UP	#e31a1c	8.88178419700125e-16	5.48099577420209e-15	directed	1	0	1	1	0	0	0
+N-hsa03460-20 21_activation_N-hsa03460-1 10 11 13 2 3 32 35 4 50 51 8 9 14 17 18 19	UP	darkgrey	0.257547463576173	0.297328641027016	directed	0	1	0	0	0	0	0
+N-hsa03460-30 31_inhibition.up_N-hsa03460-1 10 11 13 2 3 32 35 4 50 51 8 9 14 17 18 19	UP	#e31a1c	8.88178419700125e-16	5.48099577420209e-15	inhibited	1	0	1	1	0	0	0
+N-hsa03460-30 31_inhibition_N-hsa03460-1 10 11 13 2 3 32 35 4 50 51 8 9 14 17 18 19	UP	darkgrey	0.257547463576173	0.297328641027016	inhibited	0	1	0	0	0	0	0
+N-hsa03460-23 49_activation.up_N-hsa03460-20 21	UP	#e31a1c	8.88178419700125e-16	5.48099577420209e-15	directed	1	0	1	1	0	1	1
+N-hsa03460-23 49_activation_N-hsa03460-20 21	UP	darkgrey	0.257547463576173	0.297328641027016	directed	0	1	0	0	0	0	0
+N-hsa03460-1 10 11 13 2 3 32 35 4 50 51 8 9 14 17 18 19_inhibition.up_N-hsa03460-6	UP	#e31a1c	8.88178419700125e-16	5.48099577420209e-15	inhibited	1	0	1	0	0	0	0
+N-hsa03460-1 10 11 13 2 3 32 35 4 50 51 8 9 14 17 18 19_inhibition_N-hsa03460-6	UP	darkgrey	0.257547463576173	0.297328641027016	inhibited	0	1	0	0	0	0	0
+N-hsa03460-6_activation_N-hsa03460-29	UP	darkgrey	0.257547463576173	0.297328641027016	directed	0	1	0	0	0	0	0
+N-hsa03460-6_activation.up_N-hsa03460-26 12 24	UP	#e31a1c	8.47932390968253e-10	2.26598456617727e-09	directed	0	0	1	0	0	0	0
+N-hsa03460-6_activation_N-hsa03460-26 12 24	UP	darkgrey	0.257547463576173	0.297328641027016	directed	0	1	0	0	0	0	0
+N-hsa03460-29_activation_N-hsa03460-25 40	UP	darkgrey	0.257547463576173	0.297328641027016	directed	0	1	0	0	0	0	0
+N-hsa03460-26 12 24_activation_N-hsa03460-25 40	UP	darkgrey	0.257547463576173	0.297328641027016	directed	0	1	0	0	0	0	0
+N-hsa03460-26 12 24_activation.up_N-hsa03460-28	UP	#e31a1c	8.47932390968253e-10	2.26598456617727e-09	directed	0	0	1	0	0	0	0
+N-hsa03460-20 21_activation.up_N-hsa03460-7	UP	#e31a1c	6.58584298207643e-13	2.42731658828593e-12	directed	0	0	0	1	0	0	0
+N-hsa03460-1 10 11 13 2 3 32 35 4 50 51 8 9 14 17 18 19_inhibition.up_N-hsa03460-7	UP	#e31a1c	6.58584298207643e-13	2.42731658828593e-12	inhibited	0	0	0	1	0	0	0
+N-hsa03460-21_activation.up_N-hsa03460-27	UP	#e31a1c	0	0	directed	0	0	0	0	1	0	0
+N-hsa03460-23 49_activation.up_N-hsa03460-21	UP	#e31a1c	0	0	directed	0	0	0	0	1	0	0
+N-hsa03460-20 21_activation.up_N-hsa03460-16 49	UP	#e31a1c	0	0	directed	0	0	0	0	0	1	0
+N-hsa03460-20 21_activation.up_N-hsa03460-16 34	UP	#e31a1c	0	0	directed	0	0	0	0	0	0	1
+N-hsa03460-27_activation_N-hsa03460-27_func	DOWN	darkgrey	N-hsa03460-27_activation_N-hsa03460-27_func	DOWN	directed	0	0	0	0	1	0	0
+N-hsa03460-48_activation_N-hsa03460-48_func	DOWN	darkgrey	N-hsa03460-48_activation_N-hsa03460-48_func	DOWN	directed	1	0	0	0	0	0	0
+N-hsa03460-25 40_activation_N-hsa03460-25 40_func	DOWN	darkgrey	N-hsa03460-25 40_activation_N-hsa03460-25 40_func	DOWN	directed	0	1	0	0	0	0	0
+N-hsa03460-7_activation_N-hsa03460-7_func	DOWN	darkgrey	N-hsa03460-7_activation_N-hsa03460-7_func	DOWN	directed	0	0	0	1	0	0	0
+N-hsa03460-16 49_activation_N-hsa03460-16 49_func	DOWN	darkgrey	N-hsa03460-16 49_activation_N-hsa03460-16 49_func	DOWN	directed	0	0	0	0	0	1	0
+N-hsa03460-16 34_activation_N-hsa03460-16 34_func	DOWN	darkgrey	N-hsa03460-16 34_activation_N-hsa03460-16 34_func	DOWN	directed	0	0	0	0	0	0	1
+N-hsa03460-28_activation_N-hsa03460-28_func	DOWN	darkgrey	N-hsa03460-28_activation_N-hsa03460-28_func	DOWN	directed	0	0	1	0	0	0	0

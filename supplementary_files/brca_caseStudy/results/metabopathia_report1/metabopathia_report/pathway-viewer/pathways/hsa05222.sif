@@ -1,0 +1,47 @@
+N-hsa05222-12	activation.down	N-hsa05222-14 15
+N-hsa05222-20	activation.up	N-hsa05222-19
+N-hsa05222-27	activation.up	N-hsa05222-19
+N-hsa05222-17	activation.up	N-hsa05222-37
+N-hsa05222-17	activation.down	N-hsa05222-37
+N-hsa05222-23	inhibition.up	N-hsa05222-11
+N-hsa05222-23	inhibition.down	N-hsa05222-11
+N-hsa05222-24	activation.up	N-hsa05222-11
+N-hsa05222-24	activation.down	N-hsa05222-11
+N-hsa05222-25	activation.up	N-hsa05222-24
+N-hsa05222-25	activation.down	N-hsa05222-24
+N-hsa05222-28	activation.up	N-hsa05222-8 9
+N-hsa05222-28	activation.down	N-hsa05222-8 9
+N-hsa05222-37	activation.up	N-hsa05222-38
+N-hsa05222-37	activation.down	N-hsa05222-38
+N-hsa05222-38	activation.up	N-hsa05222-43
+N-hsa05222-38	activation.down	N-hsa05222-43
+N-hsa05222-43	activation.up	N-hsa05222-34
+N-hsa05222-8 9	activation.up	N-hsa05222-25
+N-hsa05222-8 9	activation.down	N-hsa05222-25
+N-hsa05222-11	activation.up	N-hsa05222-17
+N-hsa05222-11	activation.down	N-hsa05222-17
+N-hsa05222-43	activation.up	N-hsa05222-32
+N-hsa05222-43	activation.up	N-hsa05222-39
+N-hsa05222-43	activation.up	N-hsa05222-40
+N-hsa05222-43	activation.down	N-hsa05222-36
+N-hsa05222-43	activation.up	N-hsa05222-35
+N-hsa05222-10	activation.up	N-hsa05222-46
+N-hsa05222-13	inhibition.up	N-hsa05222-2 3
+N-hsa05222-18	activation.up	N-hsa05222-45
+N-hsa05222-41	activation.up	N-hsa05222-44
+N-hsa05222-45	inhibition.up	N-hsa05222-13
+N-hsa05222-46	inhibition.up	N-hsa05222-4 42
+N-hsa05222-4 42	activation.up	N-hsa05222-44
+N-hsa05222-2 3	activation.up	N-hsa05222-44
+N-hsa05222-21 22	inhibition.up	N-hsa05222-10
+N-hsa05222-21 22	activation.up	N-hsa05222-18
+N-hsa05222-21 22	activation.up	N-hsa05222-4 42
+N-hsa05222-14 15	activation	N-hsa05222-14 15_func
+N-hsa05222-19	activation	N-hsa05222-19_func
+N-hsa05222-44	activation	N-hsa05222-44_func
+N-hsa05222-34	activation	N-hsa05222-34_func
+N-hsa05222-32	activation	N-hsa05222-32_func
+N-hsa05222-39	activation	N-hsa05222-39_func
+N-hsa05222-40	activation	N-hsa05222-40_func
+N-hsa05222-36	activation	N-hsa05222-36_func
+N-hsa05222-35	activation	N-hsa05222-35_func

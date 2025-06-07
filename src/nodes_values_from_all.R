@@ -13,8 +13,8 @@ if (!require("hipathia", quietly = TRUE)) {
 nodes_values_from_all <- function(genes_vals, metabo_vals, ig, summ = "per90"){
   # Assuming that colnames(genes_vals) == colnames(metabo_vals)
   nodes <- igraph::as_data_frame(ig, what = "vertices") %>% 
-    select(c("name", "shape", "genesList","metaboID")) %>% 
-    filter(!grepl("_func", name))
+    dplyr::select(c("name", "shape", "genesList","metaboID")) %>% 
+    dplyr::filter(!grepl("_func", name))
   nodes_vals <- do.call(rbind,
                         lapply(nodes$name, function(n) get_node_value(nodes[n,], genes_vals, metabo_vals, summ = "per90")))
   rownames(nodes_vals) <- nodes$name 

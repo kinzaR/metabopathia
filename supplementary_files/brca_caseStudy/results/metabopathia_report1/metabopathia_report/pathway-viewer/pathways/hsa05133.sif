@@ -1,0 +1,39 @@
+N-hsa05133-16	activation.up	N-hsa05133-45
+N-hsa05133-45	activation.up	N-hsa05133-46
+N-hsa05133-17	activation.down	N-hsa05133-71
+N-hsa05133-17	activation.down	N-hsa05133-72
+N-hsa05133-19	activation.down	N-hsa05133-41
+N-hsa05133-19	activation.down	N-hsa05133-72
+N-hsa05133-19	activation.down	N-hsa05133-25 26
+N-hsa05133-41	activation.down	N-hsa05133-71
+N-hsa05133-41	activation.down	N-hsa05133-72
+N-hsa05133-41	activation.down	N-hsa05133-74
+N-hsa05133-71	activation.down	N-hsa05133-73
+N-hsa05133-72	activation.down	N-hsa05133-73
+N-hsa05133-74	activation.down	N-hsa05133-73
+N-hsa05133-77	activation.down	N-hsa05133-71
+N-hsa05133-77	activation.down	N-hsa05133-74
+N-hsa05133-76 97	activation.down	N-hsa05133-77
+N-hsa05133-25 26	activation.down	N-hsa05133-76 97
+N-hsa05133-19	activation	N-hsa05133-78
+N-hsa05133-78	activation	N-hsa05133-79
+N-hsa05133-79	activation	N-hsa05133-27
+N-hsa05133-77	activation.down	N-hsa05133-24
+N-hsa05133-28	activation	N-hsa05133-29
+N-hsa05133-29	activation	N-hsa05133-30
+N-hsa05133-55	inhibition.up	N-hsa05133-57 58
+N-hsa05133-56	inhibition.up	N-hsa05133-51 52 53
+N-hsa05133-51 52 53	activation.up	N-hsa05133-57 58
+N-hsa05133-57 58	activation.up	N-hsa05133-59
+N-hsa05133-57 58	activation.up	N-hsa05133-60
+N-hsa05133-89	activation	N-hsa05133-94
+N-hsa05133-90	activation	N-hsa05133-94
+N-hsa05133-91	activation.down	N-hsa05133-92 93 95
+N-hsa05133-92 93 95	activation.down	N-hsa05133-96
+N-hsa05133-30	activation	N-hsa05133-30_func
+N-hsa05133-73	activation	N-hsa05133-73_func
+N-hsa05133-24	activation	N-hsa05133-24_func
+N-hsa05133-27	activation	N-hsa05133-27_func
+N-hsa05133-96	activation	N-hsa05133-96_func
+N-hsa05133-59	activation	N-hsa05133-59_func
+N-hsa05133-60	activation	N-hsa05133-60_func
