@@ -3,7 +3,7 @@
 **Metabopathia** is a computational method designed to model signal transduction through cellular pathways by integrating transcriptomic and metabolic data. It builds on the Canonical Circuit Activity Analysis ([CCAA](https://pubmed.ncbi.nlm.nih.gov/28042959/)), an iterative algorithm that computes signal intensities through networks composed of nodes representing proteins, metabolites, and cellular functions or phenotypes. These networks include both signaling and metabolic pathways, currently utilizing pathway maps from databases like KEGG.
 ## Table of Contents  
 - [Key Concepts](#KeyConcepts)    
-- [Metabopathia approach](#MetabopathiaAproach)
+- [Metabopathia approach](#MetabopathiaApproach)
 - [Quick start](#QuickStart)
     - [Setting up the environment](#SettingUptheEnvironment)
     - [Getting started](#GettingStarted)
@@ -11,7 +11,7 @@
     - [Overview](#Overview)
     - Input data:
         - [Data preprocessing story: From TCGA repository to Metabopathia input dataset](#preprocessing)
-        - [Selected Signaling and metabolic pathways](#pathways)
+        - [Selected signaling and metabolic pathways](#pathways)
     - [Modeling approach](#Modeling)
     - [Differential Activity Analysis](#DAA)
     - [Results and discussion](#ResultsDiscussion) 
@@ -29,12 +29,12 @@
 - **Nodes in Biological Pathways**: In a biological network, nodes represent molecular entities, such as genes, proteins, or metabolites. Each node is a key player in the pathway, contributing to the overall biological process or signal transduction.
 
 - **Interactions in Biological Pathways**: The connections between nodes, known as edges, represent molecular interactions, such as activation, inhibition, or binding events. These interactions define how signals or molecular changes propagate through the network, leading to functional outcomes.
-- diagrams maps pathway network : Here I have to be clear about different terminology 
+- Terminology note: we use “pathway map”, “network”, and “diagram” interchangeably when referring to curated activity-flow representations.
 
 
-<a name="MetabopathiaAproach"> </a>      
+<a name="MetabopathiaApproach"> </a>      
 
-## Metabopathia aproach
+## Metabopathia approach
 
 The aim of Metabopathia is to offer a novel approach to multi-omics data integration for pathway activity analysis. It reduces the complexity of entire pathways by breaking them down into sub-pathways or circuits (segments that have only one final node, known as the effector). The activity of each individual node is then calculated depending on the type of molecular component involved in signal transduction. These components include proteins and metabolites, with gene expression levels and metabolite activity used as proxies for protein presence and metabolite concentration, respectively. Unlike enrichment-based methods, this algorithm distinguishes between activation and inhibition interactions when inferring signal propagation towards the effector. The final nodes, or effectors, are annotated with their corresponding cellular functions.
 
@@ -137,7 +137,7 @@ Follow these steps to launch the case study from the command line:
     ```R
     source("00_prep_env.R")
     ```
-   This ensures that RStudio uses the correct R version when launching.
+   This ensures that RStudio uses the correct R version when executing scripts.
 4. **Run the Breast cancer case study**    
 This command will load a set of breast cancer data that was previously preprocessed. [See the Jupyter notebook for more details on how the preprocessing is done](data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.ipynb). After loading the TCGA preprocessed data, the **Metabopathia** analysis is performed. A final report will be generated and launched from the server, which can be visualized through your web browser:
 
@@ -259,23 +259,74 @@ For help:
 
 <a name="Overview"> </a>         
 
-### Overview        
-The diagram below provides an overview of the workflow used in the breast cancer case study, detailing each key step in the analysis process:
-![workflow_BRCA_metabopathia drawio](https://github.com/user-attachments/assets/21037ce5-5baa-4026-a159-0f48dfb8cc4e)        
+### Overview
 
+The figure below summarizes the complete workflow used in the BRCA case study, from data selection to differential activity analysis and reporting.
+
+![workflow_BRCA_metabopathia drawio(1)](https://github.com/user-attachments/assets/0f8fe548-d193-421d-a6b7-8d59edf7a7f0)
+
+*In the following, we briefly describe each of these steps—from data preprocessing to reporting—to guide users through the full BRCA case study workflow.*
+This workflow not only illustrates the case study but also mirrors the structure of this repository: each step corresponds to scripts and reports provided in the data_examples/TCGA/ folder. Users can follow the arrows in the diagram and reproduce every result end-to-end.
+
+**Workflow steps**
+
+1. **Input data**
+   - **Omics:** Paired TCGA-BRCA RNA-seq (109 tumor vs 109 normal; preprocessed as described in
+     [`data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1`](data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1)).
+   - **Topology:** 146 KEGG **signaling** pathways and 48 KEGG **metabolic** pathways parsed as activity-flow maps.
+
+2. **Preprocessing (RNA-seq)**
+   - QC with PCA/HC → low-count filter (EdgeR `filterByExpr`) → TMM normalization →
+     log transform → 99th-percentile truncation → batch correction (ComBat).
+   - Final dataset used by Metabopathia: **218 paired samples** (109/109).
+
+3. **Modeling platform**
+   - **Pathway decomposition:** Signaling pathways → **1,876 receptor-to-effector circuits**;
+     metabolic KGML → **96 modules** (from 48 pathways).
+   - **Node values:**  
+     Protein families = 90th percentile; complexes = minimum subunit expression;  
+     metabolites = **inferred** activities via **Metabolizer** (16 metabolites integrated;
+     see [`supplementary_files/brca_caseStudy/inferred_metabolite_brca_metabolizer_v2.csv`](supplementary_files/brca_caseStudy/inferred_metabolite_brca_metabolizer_v2.csv)).
+   - **Signal propagation:** Iterative/recursive update from receptors to effectors using the
+     activation/inhibition rule implemented in `metabopathia()`.  
+     Circuit activity = signal at the last node (effector).
+
+4. **Differential Activity Analysis**
+   - **Sub-pathways:** Wilcoxon (paired design supported via `coin::wilcoxsign_test`) with
+     Benjamini–Hochberg FDR correction.
+   - **Nodes:** `limma` moderated t-statistics.
+   - Outputs include top altered pathways, significant circuits, and overview panels
+     (see `supplementary_files/brca_caseStudy/results/`).
+
+5. **Reports and interactive viewer**
+   - A self-contained HTML report and an interactive pathway viewer are generated
+     by `./01_main.R --example`. The viewer is served locally (default `http://127.0.0.1:4321`)
+     and a copy of figures/tables is saved under a time-stamped `metabopathia[Number]` folder.
+   - Preprocessing report:
+     [`TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.html`](http://hipathia.babelomics.org/metabopathia_dev/reports/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.html)
+
+**Reproduce this analysis**
+
+```bash
+git clone https://github.com/kinzaR/metabopathia.git
+cd metabopathia
+Rscript 00_prep_env.R    # one-time setup
+./01_main.R --example    # runs the full BRCA demo and launches the report/viewer
+```
+Next, we expand each step with concise details and links to the exact scripts and reports used to reproduce the BRCA analysis.
 <a name="Dataset"> </a>         
 
 ### Input data
 #### RNA-seq data
-For this case study, we are using breast cancer RNA-seq data from The Cancer Genome Atlas (TCGA). This dataset provides comprehensive genomic profiles of breast cancer. The original dataset had **1231 samples** and **60660 genes** (retrieved on June 27, 2024) (See Table 1). The raw data can be downloaded from the [TCGA data portal](https://portal.gdc.cancer.gov/) in the form of count matrices. (See [link](http://hipathia.babelomics.org/metabopathia_dev/reports/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.html#3) for data acquisition commands and scripts)    
+For this case study, we are using breast cancer RNA-seq data from The Cancer Genome Atlas (TCGA). This dataset provides comprehensive genomic profiles of breast cancer. The original dataset had **1,231 samples** and **60,660 genes** (retrieved on June 27, 2024) (See Table 1). The raw data can be downloaded from the [TCGA data portal](https://portal.gdc.cancer.gov/) in the form of count matrices. (See [link](http://hipathia.babelomics.org/metabopathia_dev/reports/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.html#3) for data acquisition commands and scripts)    
 
-**Table 1:** Summary table;Number of samples and  participants per tissue types in the breast cancer dataset.
+**Table 1:** Summary table; Number of samples and  participants per tissue types in the breast cancer dataset.
 | Sample Types         | Number of Samples | Number of Participants |
 |----------------------|------------------|-----------------------|
 | Metastatic           | 7                | 7                     |
-| Primary Tumor        | 1111             | 1095                  |
+| Primary Tumor        | 1,111             | 1,095                  |
 | Solid Tissue Normal   | 113              | 113                   |
-| **Total**            | **1231**         | **1215**              |
+| **Total**            | **1,231**         | **1,215**              |
 
 <a name="preprocessing"> </a>      
 
@@ -283,10 +334,10 @@ For this case study, we are using breast cancer RNA-seq data from The Cancer Gen
 
 The preprocessing pipeline for this case study follows a series of steps aimed to prepare TCGA RNA-seq data for our downstream analysis with Metabopathia:
 
-1. **Quality assessment via PCA and Hierarchical Clustering**: Principal Component Analysis ([PCA](https://doi.org/10.1038/s43586-022-00184-w)) and Hierarchical Clustering ([HC](10.21037/atm.2017.02.05)) are conducted to evaluate the quality of the dataset and detect any outliers or batch effects. This ensures that only clear and consistent RNA-seq data capturing the biological effect of interest (Tumor samples Vs Controls) are kept for further analysis.
+1. **Quality assessment via PCA and Hierarchical Clustering**: Principal Component Analysis ([PCA](https://doi.org/10.1038/s43586-022-00184-w)) and Hierarchical Clustering ([HC](https://doi.org/10.21037/atm.2017.02.05)) are conducted to evaluate the quality of the dataset and detect any outliers or batch effects. This ensures that only clear and consistent RNA-seq data capturing the biological effect of interest (Tumor samples Vs Controls) are kept for further analysis.
 
 2. **Low Count Removal**: In this analysis, filtering out lowly expressed genes has been adapted to our pathway activity analysis approach. Unlike differential expression analysis pipelines, which commonly remove lowly expressed genes, our mechanistic modeling approach requires the retention of all available data. Excluding these genes would lead to artificial imputation of missing values (e.g., using 0.5), which would not accurately represent the biological reality of low expression. By retaining lowly expressed genes, we ensure that the model reflects true biological conditions.     
-   For this dataset , we identified a total of 28502 genes considered lowly expressed across all cancers using `filterByExpr` [fuction](https://rdrr.io/bioc/edgeR/man/filterByExpr.html) of [EdgeR package]( 10.1093/bioinformatics/btp616). 294 genes of them belong to our integrated pathways (See [supplimentary table](supplementary_files/brca_caseStudy/brca_hipathia_null_genes_v1.tsv)).    
+   For this dataset , we identified a total of 28,502 genes considered lowly expressed across all cancers using `filterByExpr` [function](https://rdrr.io/bioc/edgeR/man/filterByExpr.html) of [EdgeR package](https://doi.org/10.1093/bioinformatics/btp616). 294 genes of them belong to our integrated pathways (See [supplementary table](supplementary_files/brca_caseStudy/brca_hipathia_null_genes_v1.tsv)).    
    Finally, we **filtered out 28,208 of the 60,660 genes** that were considered lowly expressed between the two groups.        
 4. **Gene Expression Normalization**: The data were normalized using the trimmed mean of M-values (TMM) method, which adjusts for differences in library sizes across samples. This normalization step is critical for ensuring accurate comparisons between gene expression levels across different samples.
 
@@ -307,7 +358,7 @@ The data consists of female cases, except for one male who is 58 years old. The 
 
 **For more information and reproducibility, check these links:**
 - This folder on GitHub: [data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1](data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1) contains all generated figures and the Jupyter notebook exported as:
-     -  [markdown](ata_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.md),
+     -  [markdown](data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.md),
      -  [HTML](data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.html),
      -  [notebook](data_examples/TCGA/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1/TCGA-BRCA_RNA-seq_Data_Analysis_Report_v1.1.1.ipynb).
 
@@ -344,7 +395,7 @@ We use the `hipathia::load_pathways` function to import the preselected pathways
 ![circuits_per_pathways_barplot](supplementary_files/circuits_per_pathways_barplot.svg)
 
 ###### Metabolite Annotation within Pathways
-Before applying Metabopathia, an adaptation step is required to integrate metabolite information. This is achieved using the `add_metabolite_to_mgi` function, which enriches the signaling pathways by adding metabolites ids to the meta-graph-info R object. This ensures that Metabopathia accurately identifies metabolites and includes them in the estimation of propagated signaling cascades.    
+Before applying Metabopathia, an adaptation step is required to integrate metabolite information. This is achieved using the `add_metabolite_to_mgi` function, which enriches the signaling pathways by adding metabolite IDs to the meta-graph-info R object. This ensures that Metabopathia accurately identifies metabolites and includes them in the estimation of propagated signaling cascades.    
 You can find detailed information about the selected signaling pathways, including columns such as `path_id`, `name`, `class`, `description`, `compounds`, `shortName`, `numberOfNodes`, `numberOfMetabolites`, `annotatedMetabolite`, and `metaboliteList` in this table: [pathways_information.tsv](supplementary_files/pathways_information.tsv).
 
 ##### Metabolic modules
@@ -411,7 +462,7 @@ The boxplot below illustrates the distribution of inferred metabolic activity us
 
 ![Boxplot of inferred metabolite (15) - Tumor Vs Normal](https://github.com/kinzaR/metabopathia/blob/dev/supplementary_files/brca_caseStudy/inferred_act_metabolites.svg)
 
-These inferred scores were used as proxies for metabolic activity in signaling pathways.
+These inferred activities are used as proxies for metabolites directly participating in signaling cascades, enabling integration across transcriptomic and metabolic layers
 
 ##### Imputation for Missing Molecules
 To calculate the propagated signal for the 146 KEGG pathways, an imputation step was necessary to account for missing genes and metabolites that participate in the signal propagation but whose values could not be inferred in the previous step.         
