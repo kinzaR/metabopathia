@@ -7,6 +7,7 @@
 - [Quick start](#QuickStart)
     - [Setting up the environment](#SettingUptheEnvironment)
     - [Getting started](#GettingStarted)
+    - [Repository documentation](#RepositoryDocumentation)
 - [Breast cancer case study](#BRCACaseStudy)
     - [Overview](#Overview)
     - Input data:
@@ -251,7 +252,144 @@ For help:
         -h, --help
             Show this help message and exit
 
-    ```
+    ``` 
+### <a name="RepositoryDocumentation"> </a> Repository Documentation
+
+#### 1. System Requirements
+- **Operating system:** Linux (Ubuntu 20.04 or later recommended), macOS (tested on Monterey).  
+- **R version:** ≥ 4.1.0  
+- **Required R packages:** `hipathia`, `Metabolizer`, `edgeR`, `sva`, `limma`, `ggplot2`  
+- **Hardware:**  
+  - Minimum: 8 GB RAM, 2 CPU cores  
+  - Recommended: 16 GB RAM, 4+ CPU cores for faster execution  
+- **Execution time:** typical runs with TCGA-BRCA dataset (~200 samples) complete in **15–25 minutes** on a standard workstation (16 GB RAM, 4 cores).  
+
+
+#### 2. Installation
+Clone the repository and install dependencies:  
+```bash
+git clone https://github.com/kinzaR/metabopathia.git
+cd metabopathia
+Rscript install_dependencies.R
+```
+#### 3. Example Usage
+##### Input Types
+
+Metabopathia currently supports three input modes for metabolite integration:
+
+1. **Inferred activities (default, recommended):**  
+   Metabolite activities are inferred from transcriptomic data using *Metabolizer*.  
+   This is the mode used in the BRCA case study.
+
+2. **Direct concentrations (metabolomics matrix):**  
+   *[Under development]* — planned support for using measured metabolomics concentration matrices directly as input.
+
+3. **Perturbation study (delta metabolite levels):**  
+   *[Under development]* — planned support for comparative studies based on metabolite perturbations (differences between conditions).
+
+
+##### A) Run the built-in BRCA demo (recommended first run)
+```bash
+./01_main.R --example
+# or
+Rscript 01_main.R --example
+```
+- Launches the full pipeline (preprocessed TCGA-BRCA), opens the local viewer at `http://127.0.0.1:4321`, and writes results to a new `metabopathia[Number]/` folder.
+
+##### B) Show command-line help
+```bash
+./01_main.R -h
+# or
+Rscript 01_main.R -h
+```
+
+##### C) Run with your own expression + design (categorical, paired)
+```bash
+Rscript 01_main.R \
+  -e data/my_expression_matrix.tsv \
+  -d data/my_design.tsv \
+  --group1 Tumor --group2 Normal \
+  --design_type categorical \
+  --paired \
+  --adjust \
+  --analysis compare \
+  --output_folder results/my_study_run1 -v
+```
+- `my_expression_matrix.tsv`: rows = Entrez IDs, cols = samples (preprocessed & scaled 0–1).  
+- `my_design.tsv`: at minimum, two columns: `sample_id` and `group` (values must match `--group1/--group2`).
+
+
+##### D) Add metabolite layer (choose one of the supported modes)
+
+**1) Inferred metabolites (Metabolizer scores as input)**
+```bash
+Rscript 01_main.R \
+  -e data/my_expression_matrix.tsv \
+  -d data/my_design.tsv \
+  -m supplementary_files/brca_caseStudy/inferred_metabolite_brca_metabolizer_v2.csv \
+  -t inferred \
+  --group1 Tumor --group2 Normal \
+  --analysis compare \
+  --output_folder results/run_inferred_met
+```
+
+**2) Direct concentrations (metabolomics matrix)** *[Under development]*
+```bash
+Rscript 01_main.R \
+  -e data/my_expression_matrix.tsv \
+  -d data/my_design.tsv \
+  -m data/my_metabolite_concentrations.tsv \
+  -t concentration_matrix \
+  --group1 Case --group2 Control \
+  --analysis compare \
+  --output_folder results/run_concentration_matrix
+```
+
+**3) Perturbation study (delta metabolite levels)** *[Under development]*
+```bash
+Rscript 01_main.R \
+  -e data/my_expression_matrix.tsv \
+  -d data/my_design.tsv \
+  -m data/my_metabolite_perturbations.tsv \
+  -t perturbations \
+  --group1 Treated --group2 Baseline \
+  --analysis compare \
+  --output_folder results/run_perturbations
+```
+
+
+##### E) Load only specific pathways (faster test run)
+```bash
+Rscript 01_main.R \
+  -e data/my_expression_matrix.tsv \
+  -d data/my_design.tsv \
+  --group1 Tumor --group2 Normal \
+  -p '04014,04015,04151' \
+  --analysis compare \
+  --output_folder results/subset_paths
+```
+- Example loads: Ras (04014), Rap1 (04015), PI3K-Akt (04151).
+
+
+##### F) (Optional) Compare against HiPathia results side-by-side
+```bash
+Rscript 01_main.R \
+  -e data/my_expression_matrix.tsv \
+  -d data/my_design.tsv \
+  --group1 Tumor --group2 Normal \
+  --hipathia \
+  --output_folder results/with_hipathia
+```
+
+
+##### G) Outputs
+- Local interactive viewer: `http://127.0.0.1:4321`  
+- Results folder: auto-incremented `metabopathia[Number]/` containing:  
+  - `results/` (TSVs with pathway/circuit/node stats),  
+  - `figures/` (SVG/PNG),  
+  - self-contained HTML report + pathway viewer.  
+
+> **Tip:** Use `-v` (`--verbose`) for progress logs; use `--decompose` if you also want values for decomposed sub-circuits in addition to effector circuits.
 
       
 <a name="BRCACaseStudy"> </a>        
