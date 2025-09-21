@@ -261,8 +261,7 @@ For help:
 
 ### Overview        
 The diagram below provides an overview of the workflow used in the breast cancer case study, detailing each key step in the analysis process:
-![workflow_BRCA_metabopathia drawio](https://github.com/user-attachments/assets/21037ce5-5baa-4026-a159-0f48dfb8cc4e)        
-
+![workflow_BRCA_metabopathia drawio(1)](https://github.com/user-attachments/assets/0f8fe548-d193-421d-a6b7-8d59edf7a7f0)
 <a name="Dataset"> </a>         
 
 ### Input data
